@@ -49,3 +49,5 @@ outputs/
 .coverage
 htmlcov/
 tests/test_inputs/
+ScreenCapture_*
+ScreenCamera_*
