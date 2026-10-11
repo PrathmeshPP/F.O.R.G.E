@@ -1,0 +1,308 @@
+﻿"""
+F.O.R.G.E — Spatial Reconstruction Module
+Converts VGGT-Omega predicted metric depth maps and camera poses into dense 3D colored point clouds.
+"""
+
+import os
+import time
+import json
+from pathlib import Path
+from typing import Dict, List, Optional, Tuple, Union, Any
+import numpy as np
+from PIL import Image
+
+
+def depth_to_points(
+    depth_map: np.ndarray,
+    extrinsics: np.ndarray,
+    intrinsics: np.ndarray
+) -> np.ndarray:
+    """
+    Backprojects metric depth map(s) to 3D world coordinates using camera intrinsics and extrinsics.
+
+    Args:
+        depth_map: Array of shape (N, H, W, 1), (N, H, W), (H, W, 1), or (H, W).
+        extrinsics: Camera-from-world extrinsics matrix [R | T] in OpenCV convention, shape (N, 3, 4) or (3, 4).
+        intrinsics: Camera pinhole calibration matrix, shape (N, 3, 3) or (3, 3).
+
+    Returns:
+        Array of 3D world coordinates, shape (N, H, W, 3) or (H, W, 3).
+    """
+    is_single_frame = (depth_map.ndim == 2) or (depth_map.ndim == 3 and depth_map.shape[-1] == 1)
+
+    if depth_map.ndim == 2:
+        depth = depth_map[None, ...]
+    elif depth_map.ndim == 3 and depth_map.shape[-1] == 1:
+        depth = depth_map[..., 0][None, ...]
+    elif depth_map.ndim == 4 and depth_map.shape[-1] == 1:
+        depth = depth_map[..., 0]
+    else:
+        depth = depth_map
+
+    ext = np.atleast_3d(extrinsics)
+    if ext.ndim == 2:
+        ext = ext[None, ...]
+
+    intr = np.atleast_3d(intrinsics)
+    if intr.ndim == 2:
+        intr = intr[None, ...]
+
+    num_frames, height, width = depth.shape
+
+    # Construct pixel coordinate grids (u: horizontal, v: vertical)
+    v, u = np.meshgrid(np.arange(height), np.arange(width), indexing="ij")
+    u_grid = np.broadcast_to(u[None, ...], (num_frames, height, width))
+    v_grid = np.broadcast_to(v[None, ...], (num_frames, height, width))
+
+    # Focal lengths and principal points
+    fx = intr[:, 0, 0][:, None, None]
+    fy = intr[:, 1, 1][:, None, None]
+    cx = intr[:, 0, 2][:, None, None]
+    cy = intr[:, 1, 2][:, None, None]
+
+    # Camera coordinate system (OpenCV convention: +X right, +Y down, +Z forward)
+    # X_cam = (u - cx) * depth / fx
+    # Y_cam = (v - cy) * depth / fy
+    # Z_cam = depth
+    camera_points = np.stack(
+        [
+            (u_grid - cx) / fx * depth,
+            (v_grid - cy) / fy * depth,
+            depth,
+        ],
+        axis=-1,
+    )  # Shape: (N, H, W, 3)
+
+    # In OpenCV camera convention: p_cam = R * p_world + T
+    # Therefore: p_world = R^T * (p_cam - T)
+    rotation = ext[:, :3, :3]       # Shape: (N, 3, 3)
+    translation = ext[:, :3, 3]     # Shape: (N, 3)
+
+    # R^T is np.transpose(rotation, (0, 2, 1))
+    world_points = np.einsum(
+        "sij,shwj->shwi",
+        np.transpose(rotation, (0, 2, 1)),
+        camera_points - translation[:, None, None, :],
+    )
+
+    if is_single_frame:
+        return world_points[0]
+    return world_points
+
+
+def save_ply(
+    points: np.ndarray,
+    colors: np.ndarray,
+    output_path: str,
+    binary: bool = True
+) -> int:
+    """
+    Exports 3D points and RGB colors to a standard PLY file.
+
+    Args:
+        points: (M, 3) float32 coordinates.
+        colors: (M, 3) uint8 or float [0, 1] RGB colors.
+        output_path: Target .ply file path.
+        binary: If True, writes binary_little_endian (fast & compact); else ASCII.
+
+    Returns:
+        File size in bytes.
+    """
+    out_file = Path(output_path)
+    out_file.parent.mkdir(parents=True, exist_ok=True)
+
+    points = np.asarray(points, dtype=np.float32)
+    if colors.dtype != np.uint8:
+        if colors.max() <= 1.0:
+            colors = (colors * 255.0).clip(0, 255).astype(np.uint8)
+        else:
+            colors = colors.clip(0, 255).astype(np.uint8)
+
+    num_vertices = len(points)
+    if len(colors) != num_vertices:
+        raise ValueError(f"Points count ({num_vertices}) must match colors count ({len(colors)})")
+
+    if binary:
+        # Create structured array for fast vectorized binary serialization
+        vertex_dtype = np.dtype([
+            ('x', '<f4'), ('y', '<f4'), ('z', '<f4'),
+            ('red', 'u1'), ('green', 'u1'), ('blue', 'u1')
+        ])
+        vertex_data = np.empty(num_vertices, dtype=vertex_dtype)
+        vertex_data['x'] = points[:, 0]
+        vertex_data['y'] = points[:, 1]
+        vertex_data['z'] = points[:, 2]
+        vertex_data['red'] = colors[:, 0]
+        vertex_data['green'] = colors[:, 1]
+        vertex_data['blue'] = colors[:, 2]
+
+        header = (
+            "ply\n"
+            "format binary_little_endian 1.0\n"
+            f"element vertex {num_vertices}\n"
+            "property float x\n"
+            "property float y\n"
+            "property float z\n"
+            "property uchar red\n"
+            "property uchar green\n"
+            "property uchar blue\n"
+            "end_header\n"
+        ).encode('ascii')
+
+        with open(out_file, 'wb') as f:
+            f.write(header)
+            vertex_data.tofile(f)
+    else:
+        with open(out_file, 'w', encoding='ascii') as f:
+            f.write("ply\n")
+            f.write("format ascii 1.0\n")
+            f.write(f"element vertex {num_vertices}\n")
+            f.write("property float x\nproperty float y\nproperty float z\n")
+            f.write("property uchar red\nproperty uchar green\nproperty uchar blue\n")
+            f.write("end_header\n")
+            for p, c in zip(points, colors):
+                f.write(f"{p[0]:.4f} {p[1]:.4f} {p[2]:.4f} {int(c[0])} {int(c[1])} {int(c[2])}\n")
+
+    return out_file.stat().st_size
+
+
+def create_point_cloud(
+    depth_npz_path: str,
+    poses_npz_path: str,
+    frames_dir: str,
+    output_ply_path: str,
+    metadata_output_path: Optional[str] = None,
+    min_depth: float = 0.1,
+    max_depth: Optional[float] = 100.0,
+    min_confidence: float = 0.1,
+    subsample_step: int = 1
+) -> Dict[str, Any]:
+    """
+    Loads depth predictions and camera poses, aligns frame colors, backprojects into 3D,
+    and saves the resulting colored point cloud to a PLY file.
+
+    Returns:
+        Dictionary of reconstruction statistics and metadata.
+    """
+    t_start = time.perf_counter()
+
+    # 1. Load predicted depth and confidence
+    depth_data = np.load(depth_npz_path)
+    depth_maps = depth_data["depth"]        # Shape: (N, H, W, 1) or (N, H, W)
+    if "confidence" in depth_data:
+        confidence_maps = depth_data["confidence"]  # Shape: (N, H, W)
+    else:
+        confidence_maps = np.ones(depth_maps.shape[:3], dtype=np.float32)
+
+    # 2. Load camera poses
+    poses_data = np.load(poses_npz_path)
+    extrinsics = poses_data["extrinsics"]    # Shape: (N, 3, 4)
+    intrinsics = poses_data["intrinsics"]    # Shape: (N, 3, 3)
+
+    num_frames = len(extrinsics)
+    if depth_maps.ndim == 4:
+        h, w = depth_maps.shape[1], depth_maps.shape[2]
+    else:
+        h, w = depth_maps.shape[1], depth_maps.shape[2]
+
+    # 3. Load and resize frame images for color mapping
+    frames_path = Path(frames_dir)
+    frame_files = sorted(list(frames_path.glob("*.png")) + list(frames_path.glob("*.jpg")))
+    if len(frame_files) < num_frames:
+        raise ValueError(f"Found {len(frame_files)} frames in {frames_dir}, but expected at least {num_frames}")
+
+    frame_colors_list = []
+    for i in range(num_frames):
+        img = Image.open(frame_files[i]).convert("RGB")
+        if img.size != (w, h):
+            img = img.resize((w, h), Image.Resampling.BILINEAR)
+        frame_colors_list.append(np.array(img, dtype=np.uint8))
+    frame_colors = np.stack(frame_colors_list, axis=0)  # Shape: (N, H, W, 3)
+
+    # 4. Backproject depth to 3D world points
+    t_backproject_start = time.perf_counter()
+    world_points = depth_to_points(depth_maps, extrinsics, intrinsics)  # Shape: (N, H, W, 3)
+    backproject_time = time.perf_counter() - t_backproject_start
+
+    # 5. Filter valid points
+    if depth_maps.ndim == 4:
+        depth_flat = depth_maps[..., 0]
+    else:
+        depth_flat = depth_maps
+
+    valid_mask = np.isfinite(depth_flat) & (depth_flat > min_depth)
+    if max_depth is not None:
+        valid_mask &= (depth_flat <= max_depth)
+    if min_confidence is not None and min_confidence > 0:
+        valid_mask &= (confidence_maps >= min_confidence)
+
+    # Subsampling if requested
+    if subsample_step > 1:
+        step_mask = np.zeros_like(valid_mask, dtype=bool)
+        step_mask[:, ::subsample_step, ::subsample_step] = True
+        valid_mask &= step_mask
+
+    selected_points = world_points[valid_mask]  # Shape: (M, 3)
+    selected_colors = frame_colors[valid_mask]  # Shape: (M, 3)
+
+    total_points = len(selected_points)
+    if total_points == 0:
+        raise RuntimeError("No valid 3D points survived the filtering criteria!")
+
+    # 6. Compute bounding box and spatial statistics
+    bbox_min = selected_points.min(axis=0).tolist()
+    bbox_max = selected_points.max(axis=0).tolist()
+    bbox_extents = (selected_points.max(axis=0) - selected_points.min(axis=0)).tolist()
+    centroid = selected_points.mean(axis=0).tolist()
+
+    # 7. Save PLY file
+    t_io_start = time.perf_counter()
+    ply_size_bytes = save_ply(selected_points, selected_colors, output_ply_path, binary=True)
+    io_time = time.perf_counter() - t_io_start
+
+    total_time = time.perf_counter() - t_start
+
+    result_metadata = {
+        "module": "F.O.R.G.E Spatial Reconstruction (Phase 2B)",
+        "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "input": {
+            "depth_predictions_path": str(Path(depth_npz_path).resolve()),
+            "camera_poses_path": str(Path(poses_npz_path).resolve()),
+            "frames_directory": str(Path(frames_dir).resolve()),
+            "num_frames": num_frames,
+            "depth_resolution": {"height": h, "width": w}
+        },
+        "filtering": {
+            "min_depth_m": min_depth,
+            "max_depth_m": max_depth,
+            "min_confidence": min_confidence,
+            "subsample_step": subsample_step
+        },
+        "reconstruction": {
+            "total_points": total_points,
+            "bounding_box": {
+                "min": [round(v, 4) for v in bbox_min],
+                "max": [round(v, 4) for v in bbox_max],
+                "extents": [round(v, 4) for v in bbox_extents],
+                "centroid": [round(v, 4) for v in centroid]
+            },
+            "output_ply_path": str(Path(output_ply_path).resolve()),
+            "output_ply_size_bytes": ply_size_bytes,
+            "output_ply_size_mb": round(ply_size_bytes / (1024**2), 2)
+        },
+        "performance": {
+            "backprojection_time_sec": round(backproject_time, 4),
+            "ply_io_time_sec": round(io_time, 4),
+            "total_reconstruction_time_sec": round(total_time, 4)
+        },
+        "status": "SUCCESS"
+    }
+
+    # Save reconstruction metadata if requested
+    if metadata_output_path:
+        meta_file = Path(metadata_output_path)
+        meta_file.parent.mkdir(parents=True, exist_ok=True)
+        with open(meta_file, "w", encoding="utf-8") as f:
+            json.dump(result_metadata, f, indent=2)
+
+    return result_metadata

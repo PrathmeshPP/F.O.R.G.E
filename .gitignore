@@ -1,0 +1,51 @@
+# Byte-compiled / optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+env/
+venv/
+ENV/
+
+# Secrets and environment variables
+.env
+.env.*
+*.env
+*.key
+*.pem
+
+# IDE & Editor artifacts
+.vscode/
+.idea/
+.vs/
+*.swp
+*.swo
+
+# Model checkpoints & large weights
+*.pt
+*.pth
+*.bin
+*.safetensors
+*.ckpt
+*.onnx
+models/
+
+# Raw video inputs
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Generated outputs & reconstruction artifacts
+outputs/
+*.ply
+*.npz
+
+# Testing / cache artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+tests/test_inputs/
