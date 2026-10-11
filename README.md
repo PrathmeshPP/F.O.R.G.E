@@ -42,9 +42,11 @@ FORGE/
  │    └── reconstruction/     # Depth-to-point-cloud backprojection & PLY export
  ├── scripts/
  │    ├── generate_point_cloud.py # CLI point cloud generation runner
- │    └── preview_point_cloud.py  # Dependency-free orthographic QA previewer
+ │    ├── preview_point_cloud.py  # Dependency-free orthographic QA previewer
+ │    └── view_point_cloud.py     # Interactive Open3D 3D point cloud visualizer
  ├── tests/
  │    └── test_vggt_loading.py    # Model loading and GPU smoke test
+ ├── requirements-viewer.txt      # Open3D 3D viewer dependency specification
  └── README.md
 ```
 
@@ -60,6 +62,8 @@ FORGE/
   - `numpy==1.26.4` (required by VGGT-Ω; `numpy < 2`)
   - `opencv-python==4.11.0.86`, `Pillow`, `einops`, `safetensors`
   - `vggt-omega` local package
+- **Interactive Viewer Dependency**:
+  - `open3d==0.20.0` (listed in `requirements-viewer.txt`)
 
 ### Checkpoint Configuration
 
@@ -107,7 +111,25 @@ python scripts/preview_point_cloud.py \
     --output-png outputs/run_01/reconstruction/point_cloud_preview.png
 ```
 
-### 4. Run Model Verification Smoke Test
+### 4. Interactive 3D Viewer (Open3D)
+Launch the interactive 3D viewer window with RGB vertex colors and coordinate axes:
+
+```bash
+python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply
+```
+
+Viewer options:
+- Mouse controls: Left-click drag (Orbit/Rotate), Right-click drag / Shift+Left drag (Pan), Scroll wheel (Zoom), `R` (Reset view), `Q` / `Esc` (Close).
+- Non-destructive downsampling for faster rendering (never alters original file):
+  ```bash
+  python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply --voxel-size 0.05
+  ```
+- Integrity validation without launching GUI:
+  ```bash
+  python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply --verify-only
+  ```
+
+### 5. Run Model Verification Smoke Test
 Verify environment readiness and CUDA inference without video dependencies:
 
 ```bash

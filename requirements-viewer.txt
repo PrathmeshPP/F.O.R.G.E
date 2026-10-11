@@ -1,0 +1,3 @@
+# F.O.R.G.E Phase 2D - Interactive 3D Viewer Dependencies
+# Installed in existing venv with numpy==1.26.4 pinned
+open3d==0.20.0
