@@ -29,24 +29,36 @@ The system is organized into modular phases:
    - Renders multi-view orthographic projections (X-Z Top-Down, X-Y Frontal, Z-Y Side Profile) using native NumPy and Pillow.
    - Preserves true metric aspect ratios for spatial geometry verification.
 
+5. **Camera Trajectory & Parallax Diagnostics (`scripts/analyze_trajectory_quality.py`, `scripts/screen_candidate_videos.py`)**:
+   - Analyzes predicted camera poses, translational baseline vs. angular rotation, depth consistency, and parallax dispersion.
+   - Screens prospective video candidates to ensure footage possesses adequate baseline for multi-view stereo reconstruction.
+
+6. **Surface Mesh Reconstruction & Presentation (`scripts/reconstruct_mesh.py`)**:
+   - Computes watertight Poisson surface meshes from dense point clouds with strict distance support and edge-length pruning.
+   - Restores authentic source RGB colors to mesh vertices via KD-tree inverse-distance-weighted interpolation.
+   - Creates a separate, neutral rectangular exhibition base for professional presentation without fabricating terrain or altering spatial measurements.
+
 ---
 
 ## Repository Structure
 
 ```
 FORGE/
- ├── run_pipeline.py          # End-to-end video-to-predictions pipeline
+ ├── run_pipeline.py                 # End-to-end video-to-predictions pipeline
  ├── src/
- │    ├── video/              # Frame extraction and temporal sampling
- │    ├── vggt/               # VGGT-Omega loading, inference, and camera decoding
- │    └── reconstruction/     # Depth-to-point-cloud backprojection & PLY export
+ │    ├── video/                     # Frame extraction and temporal sampling
+ │    ├── vggt/                      # VGGT-Omega loading, inference, and camera decoding
+ │    └── reconstruction/            # Depth-to-point-cloud backprojection & PLY export
  ├── scripts/
- │    ├── generate_point_cloud.py # CLI point cloud generation runner
- │    ├── preview_point_cloud.py  # Dependency-free orthographic QA previewer
- │    └── view_point_cloud.py     # Interactive Open3D 3D point cloud visualizer
+ │    ├── generate_point_cloud.py    # CLI point cloud generation runner
+ │    ├── preview_point_cloud.py     # Dependency-free orthographic QA previewer
+ │    ├── view_point_cloud.py        # Interactive Open3D 3D point cloud visualizer
+ │    ├── analyze_trajectory_quality.py # Trajectory, parallax, and baseline diagnostic tool
+ │    ├── screen_candidate_videos.py # Drone video candidate screening & motion analysis
+ │    └── reconstruct_mesh.py        # Surface mesh reconstruction & presentation base
  ├── tests/
- │    └── test_vggt_loading.py    # Model loading and GPU smoke test
- ├── requirements-viewer.txt      # Open3D 3D viewer dependency specification
+ │    └── test_vggt_loading.py       # Model loading and GPU smoke test
+ ├── requirements-viewer.txt         # Open3D 3D viewer dependency specification
  └── README.md
 ```
 
@@ -129,7 +141,44 @@ Viewer options:
   python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply --verify-only
   ```
 
-### 5. Run Model Verification Smoke Test
+### 5. Trajectory & Parallax Quality Diagnostics
+Analyze predicted camera poses, translational baseline, and depth consistency:
+
+```bash
+python scripts/analyze_trajectory_quality.py \
+    --poses outputs/run_01/predictions/camera_poses.npz \
+    --depth outputs/run_01/predictions/depth_predictions.npz \
+    --output-json outputs/run_01/predictions/trajectory_quality.json
+```
+
+### 6. Drone Video Candidate Screening
+Evaluate candidate drone videos or segments for translation vs. pure rotation and parallax dispersion before running full inference:
+
+```bash
+python scripts/screen_candidate_videos.py
+```
+
+### 7. Surface Mesh Reconstruction & Rectangular Presentation
+Generate a watertight surface mesh with authentic KD-tree vertex color interpolation and an optional neutral rectangular display plinth:
+
+```bash
+python scripts/reconstruct_mesh.py \
+    --input outputs/run_01/reconstruction/point_cloud.ply \
+    --output-dir outputs/run_01/reconstruction \
+    --voxel-size 0.01 \
+    --poisson-depth 9 \
+    --max-support-dist 0.02 \
+    --max-edge-length 0.05 \
+    --add-presentation-base
+```
+
+View the reconstructed presentation mesh directly in Open3D:
+
+```bash
+python scripts/reconstruct_mesh.py --view-only --output-dir outputs/run_01/reconstruction
+```
+
+### 8. Run Model Verification Smoke Test
 Verify environment readiness and CUDA inference without video dependencies:
 
 ```bash
