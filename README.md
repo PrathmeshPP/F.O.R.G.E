@@ -55,7 +55,9 @@ FORGE/
  │    ├── view_point_cloud.py        # Interactive Open3D 3D point cloud visualizer
  │    ├── analyze_trajectory_quality.py # Trajectory, parallax, and baseline diagnostic tool
  │    ├── screen_candidate_videos.py # Drone video candidate screening & motion analysis
- │    └── reconstruct_mesh.py        # Surface mesh reconstruction & presentation base
+ │    ├── reconstruct_mesh.py        # Surface mesh reconstruction & presentation base
+ │    ├── audit_accuracy.py          # Geometric accuracy audit & multi-view depth agreement
+ │    └── render_model_comparisons.py # Offscreen multi-angle comparative rendering diagnostic
  ├── tests/
  │    └── test_vggt_loading.py       # Model loading and GPU smoke test
  ├── requirements-viewer.txt         # Open3D 3D viewer dependency specification
@@ -178,7 +180,27 @@ View the reconstructed presentation mesh directly in Open3D:
 python scripts/reconstruct_mesh.py --view-only --output-dir outputs/run_01/reconstruction
 ```
 
-### 8. Run Model Verification Smoke Test
+### 8. Geometric Accuracy Audit & Multi-View Validation
+Perform quantitative multi-view depth agreement, ray intersection angle, and coordinate convention verification:
+
+```bash
+python scripts/audit_accuracy.py
+```
+
+Generate consistent offscreen multi-angle comparative rendering sheets (Top, Frontal, Oblique) for baseline models and point clouds:
+
+```bash
+python scripts/render_model_comparisons.py
+```
+
+### 9. Validation Baselines
+
+The repository tracks validated baseline models and execution metadata:
+- **Campus 0049 Baseline (`outputs/dji_0049_validation/`)**: Oblique flight over campus terrain and structures. Tracks authentic colored surface mesh baseline (`surface_mesh.ply`), visual QA preview, camera poses, and execution metadata documenting fragmented/incomplete regions for baseline comparison.
+- **River / Bridge Baseline (`outputs/dji_river_bridge_validation/`)**: Validated forward-translation corridor (52s–64s) exhibiting clean multi-view parallax and authentic structural surface geometry (`mesh_experiment_v2/surface_mesh.ply`).
+- **Accuracy Audit Evidence (`outputs/accuracy_experiment/`)**: Contains `review_report.md` and multi-angle inspection sheets comparing baseline geometries.
+
+### 10. Run Model Verification Smoke Test
 Verify environment readiness and CUDA inference without video dependencies:
 
 ```bash

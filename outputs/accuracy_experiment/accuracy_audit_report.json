@@ -1,0 +1,604 @@
+{
+  "bridge_0050": {
+    "name": "Candidate 0050 (River/Bridge Segment \u2014 Primary Candidate)",
+    "source_directory": "outputs/dji_river_bridge_validation",
+    "camera_and_pose_audit": {
+      "num_frames": 6,
+      "max_orthogonality_error": 1.1920928955078125e-07,
+      "max_determinant_error": 5.960464477539063e-08,
+      "is_valid_so3": true,
+      "total_camera_displacement_m": 0.00789,
+      "cumulative_trajectory_length_m": 0.01012,
+      "camera_centers_world": [
+        [
+          -2.8068134270142764e-05,
+          -1.423770754627185e-05,
+          -0.00012489627988543361
+        ],
+        [
+          -0.00012004299787804484,
+          0.00045351922744885087,
+          -0.000473547464935109
+        ],
+        [
+          0.0004645493463613093,
+          0.00018141564214602113,
+          0.001486804336309433
+        ],
+        [
+          -0.00016723036242183298,
+          -0.00033804867416620255,
+          0.0014349448028951883
+        ],
+        [
+          0.0013871827395632863,
+          -0.0011510250624269247,
+          0.005571245215833187
+        ],
+        [
+          0.0007283983286470175,
+          -0.0016714127268642187,
+          0.007553303148597479
+        ]
+      ],
+      "optical_axes_world": [
+        [
+          -0.0003230654983781278,
+          9.022319136420265e-05,
+          0.9999999403953552
+        ],
+        [
+          0.002882382133975625,
+          -0.0007084552198648453,
+          0.9999955892562866
+        ],
+        [
+          0.07804156839847565,
+          0.0002543616574257612,
+          0.996950089931488
+        ],
+        [
+          0.0808291956782341,
+          0.013786307536065578,
+          0.9966326355934143
+        ],
+        [
+          0.08344724029302597,
+          -0.06972125172615051,
+          0.9940701723098755
+        ],
+        [
+          0.06717168539762497,
+          -0.21187038719654083,
+          0.9749866127967834
+        ]
+      ],
+      "intrinsics_summary": {
+        "fx_mean": 1152.46,
+        "fy_mean": 1150.35,
+        "cx_mean": 344.0,
+        "cy_mean": 192.0,
+        "aspect_ratio_focal": 1.0018
+      }
+    },
+    "consistency_audit": {
+      "pairs_evaluated": 5,
+      "pair_details": [
+        {
+          "pair": "Frame 0 -> 1",
+          "points_evaluated": 251028,
+          "overlap_fraction": 1.0,
+          "median_relative_depth_error_pct": 0.38,
+          "mean_relative_depth_error_pct": 0.69,
+          "p90_relative_depth_error_pct": 1.62,
+          "photometric_rgb_mae": 8.7
+        },
+        {
+          "pair": "Frame 1 -> 2",
+          "points_evaluated": 111988,
+          "overlap_fraction": 0.4567,
+          "median_relative_depth_error_pct": 0.66,
+          "mean_relative_depth_error_pct": 0.97,
+          "p90_relative_depth_error_pct": 1.96,
+          "photometric_rgb_mae": 9.01
+        },
+        {
+          "pair": "Frame 2 -> 3",
+          "points_evaluated": 249947,
+          "overlap_fraction": 0.9461,
+          "median_relative_depth_error_pct": 0.16,
+          "mean_relative_depth_error_pct": 0.31,
+          "p90_relative_depth_error_pct": 0.64,
+          "photometric_rgb_mae": 7.0
+        },
+        {
+          "pair": "Frame 3 -> 4",
+          "points_evaluated": 186940,
+          "overlap_fraction": 0.7076,
+          "median_relative_depth_error_pct": 0.29,
+          "mean_relative_depth_error_pct": 0.51,
+          "p90_relative_depth_error_pct": 1.04,
+          "photometric_rgb_mae": 10.72
+        },
+        {
+          "pair": "Frame 4 -> 5",
+          "points_evaluated": 108502,
+          "overlap_fraction": 0.4489,
+          "median_relative_depth_error_pct": 1.81,
+          "mean_relative_depth_error_pct": 2.33,
+          "p90_relative_depth_error_pct": 4.58,
+          "photometric_rgb_mae": 30.46
+        }
+      ],
+      "overall_median_rel_depth_error_pct": 0.35,
+      "overall_mean_rel_depth_error_pct": 0.78,
+      "overall_mean_photometric_rgb_mae": 13.18
+    },
+    "point_cloud_correction": {
+      "output_ply": "outputs\\accuracy_experiment\\bridge_0050\\point_cloud_corrected.ply",
+      "total_raw_grid_points": 1585152,
+      "valid_confidence_points": 1246523,
+      "valid_depth_points": 1482349,
+      "points_after_thresholds": 1246523,
+      "points_after_voxel_consolidation": 26307,
+      "outliers_pruned_percentage": 98.34,
+      "bounding_box_min": [
+        -0.6813,
+        -0.4144,
+        0.4322
+      ],
+      "bounding_box_max": [
+        0.6814,
+        0.1061,
+        2.5038
+      ],
+      "bounding_box_extents": [
+        1.3627,
+        0.5205,
+        2.0716
+      ]
+    },
+    "mesh_correction": {
+      "output_ply": "outputs\\accuracy_experiment\\bridge_0050\\surface_mesh_corrected.ply",
+      "output_obj": "outputs\\accuracy_experiment\\bridge_0050\\surface_mesh_corrected.obj",
+      "vertex_count": 43774,
+      "triangle_count": 86210,
+      "bounds_min": [
+        -0.6764,
+        -0.4091,
+        0.4354
+      ],
+      "bounds_max": [
+        0.6766,
+        0.1071,
+        2.4882
+      ],
+      "extents": [
+        1.353,
+        0.5162,
+        2.0527
+      ]
+    },
+    "occlusion_audit": {
+      "num_vertices_audited": 43774,
+      "per_frame_visibility": [
+        {
+          "frame_index": 0,
+          "in_frustum_bounds_count": 43233,
+          "in_frustum_pct": 98.76,
+          "occluded_behind_foreground_count": 1038,
+          "occluded_percentage_of_in_bounds": 2.4,
+          "true_surface_visible_count": 41790,
+          "true_surface_percentage_of_in_bounds": 96.66
+        },
+        {
+          "frame_index": 1,
+          "in_frustum_bounds_count": 43749,
+          "in_frustum_pct": 99.94,
+          "occluded_behind_foreground_count": 1090,
+          "occluded_percentage_of_in_bounds": 2.49,
+          "true_surface_visible_count": 42293,
+          "true_surface_percentage_of_in_bounds": 96.67
+        },
+        {
+          "frame_index": 2,
+          "in_frustum_bounds_count": 32776,
+          "in_frustum_pct": 74.88,
+          "occluded_behind_foreground_count": 2646,
+          "occluded_percentage_of_in_bounds": 8.07,
+          "true_surface_visible_count": 29975,
+          "true_surface_percentage_of_in_bounds": 91.45
+        },
+        {
+          "frame_index": 3,
+          "in_frustum_bounds_count": 25317,
+          "in_frustum_pct": 57.84,
+          "occluded_behind_foreground_count": 1521,
+          "occluded_percentage_of_in_bounds": 6.01,
+          "true_surface_visible_count": 23581,
+          "true_surface_percentage_of_in_bounds": 93.14
+        },
+        {
+          "frame_index": 4,
+          "in_frustum_bounds_count": 35631,
+          "in_frustum_pct": 81.4,
+          "occluded_behind_foreground_count": 1340,
+          "occluded_percentage_of_in_bounds": 3.76,
+          "true_surface_visible_count": 34104,
+          "true_surface_percentage_of_in_bounds": 95.71
+        },
+        {
+          "frame_index": 5,
+          "in_frustum_bounds_count": 29443,
+          "in_frustum_pct": 67.26,
+          "occluded_behind_foreground_count": 108,
+          "occluded_percentage_of_in_bounds": 0.37,
+          "true_surface_visible_count": 27733,
+          "true_surface_percentage_of_in_bounds": 94.19
+        }
+      ],
+      "vertices_with_at_least_one_visible_view": 43368,
+      "vertices_with_at_least_one_occluded_view": 3353,
+      "vertices_completely_occluded_in_all_views": 265
+    },
+    "point_cloud_preview_png": "outputs\\accuracy_experiment\\bridge_0050\\accuracy_point_cloud_preview.png",
+    "comparison_sheet_png": "outputs\\accuracy_experiment\\bridge_0050\\audit_comparison_sheet.png"
+  },
+  "campus_0049": {
+    "name": "Candidate 0049 (Campus Oblique \u2014 Comparison Candidate)",
+    "source_directory": "outputs/dji_0049_validation",
+    "camera_and_pose_audit": {
+      "num_frames": 10,
+      "max_orthogonality_error": 4.76837158203125e-07,
+      "max_determinant_error": 3.5762786865234375e-07,
+      "is_valid_so3": true,
+      "total_camera_displacement_m": 0.04569,
+      "cumulative_trajectory_length_m": 0.06225,
+      "camera_centers_world": [
+        [
+          -9.450968718738295e-06,
+          7.753767567919567e-05,
+          2.3777527076163096e-06
+        ],
+        [
+          0.005098211579024792,
+          0.0005906751030124724,
+          0.006286751478910446
+        ],
+        [
+          0.002476957393810153,
+          0.005929356440901756,
+          0.010126317851245403
+        ],
+        [
+          -0.0005320470663718879,
+          0.006275509018450975,
+          0.02601996436715126
+        ],
+        [
+          -0.003271636785939336,
+          0.002257696818560362,
+          0.033908918499946594
+        ],
+        [
+          -0.004461516160517931,
+          0.001884366269223392,
+          0.03301088139414787
+        ],
+        [
+          -0.0055505046620965,
+          0.0020375431049615145,
+          0.03400453180074692
+        ],
+        [
+          -0.0050788517110049725,
+          0.003168846247717738,
+          0.03250398859381676
+        ],
+        [
+          -0.007162640802562237,
+          0.0025597354397177696,
+          0.03457256034016609
+        ],
+        [
+          -0.003928150981664658,
+          0.011932081542909145,
+          0.043953459709882736
+        ]
+      ],
+      "optical_axes_world": [
+        [
+          5.517743920790963e-05,
+          -6.396285698428983e-06,
+          1.0
+        ],
+        [
+          -0.0019615269266068935,
+          3.591311178752221e-05,
+          0.9999980926513672
+        ],
+        [
+          -0.0014008089201524854,
+          -0.001187933492474258,
+          0.9999983310699463
+        ],
+        [
+          0.0007855579606257379,
+          -0.002934007439762354,
+          0.9999954104423523
+        ],
+        [
+          0.0009233310702256858,
+          0.0019377770368009806,
+          0.9999976754188538
+        ],
+        [
+          0.0022601354867219925,
+          0.0025550732389092445,
+          0.999994158744812
+        ],
+        [
+          0.0024979012086987495,
+          0.002216413849964738,
+          0.9999943971633911
+        ],
+        [
+          -0.0012215556344017386,
+          0.008472254499793053,
+          0.9999633431434631
+        ],
+        [
+          -0.057485099881887436,
+          0.24260064959526062,
+          0.9684215784072876
+        ],
+        [
+          -0.12343278527259827,
+          0.46954935789108276,
+          0.8742355108261108
+        ]
+      ],
+      "intrinsics_summary": {
+        "fx_mean": 478.52,
+        "fy_mean": 482.6,
+        "cx_mean": 344.0,
+        "cy_mean": 192.0,
+        "aspect_ratio_focal": 0.9915
+      }
+    },
+    "consistency_audit": {
+      "pairs_evaluated": 9,
+      "pair_details": [
+        {
+          "pair": "Frame 0 -> 1",
+          "points_evaluated": 167483,
+          "overlap_fraction": 0.6339,
+          "median_relative_depth_error_pct": 0.22,
+          "mean_relative_depth_error_pct": 0.49,
+          "p90_relative_depth_error_pct": 1.13,
+          "photometric_rgb_mae": 14.33
+        },
+        {
+          "pair": "Frame 1 -> 2",
+          "points_evaluated": 164711,
+          "overlap_fraction": 0.6235,
+          "median_relative_depth_error_pct": 0.31,
+          "mean_relative_depth_error_pct": 0.59,
+          "p90_relative_depth_error_pct": 1.21,
+          "photometric_rgb_mae": 18.33
+        },
+        {
+          "pair": "Frame 2 -> 3",
+          "points_evaluated": 167290,
+          "overlap_fraction": 0.6332,
+          "median_relative_depth_error_pct": 0.27,
+          "mean_relative_depth_error_pct": 0.49,
+          "p90_relative_depth_error_pct": 1.02,
+          "photometric_rgb_mae": 15.87
+        },
+        {
+          "pair": "Frame 3 -> 4",
+          "points_evaluated": 229108,
+          "overlap_fraction": 0.8672,
+          "median_relative_depth_error_pct": 0.22,
+          "mean_relative_depth_error_pct": 0.42,
+          "p90_relative_depth_error_pct": 0.92,
+          "photometric_rgb_mae": 13.39
+        },
+        {
+          "pair": "Frame 4 -> 5",
+          "points_evaluated": 262953,
+          "overlap_fraction": 0.9953,
+          "median_relative_depth_error_pct": 0.1,
+          "mean_relative_depth_error_pct": 0.2,
+          "p90_relative_depth_error_pct": 0.41,
+          "photometric_rgb_mae": 9.24
+        },
+        {
+          "pair": "Frame 5 -> 6",
+          "points_evaluated": 263323,
+          "overlap_fraction": 0.9967,
+          "median_relative_depth_error_pct": 0.07,
+          "mean_relative_depth_error_pct": 0.17,
+          "p90_relative_depth_error_pct": 0.35,
+          "photometric_rgb_mae": 8.24
+        },
+        {
+          "pair": "Frame 6 -> 7",
+          "points_evaluated": 260065,
+          "overlap_fraction": 0.9844,
+          "median_relative_depth_error_pct": 0.15,
+          "mean_relative_depth_error_pct": 0.32,
+          "p90_relative_depth_error_pct": 0.75,
+          "photometric_rgb_mae": 10.02
+        },
+        {
+          "pair": "Frame 7 -> 8",
+          "points_evaluated": 174231,
+          "overlap_fraction": 0.6595,
+          "median_relative_depth_error_pct": 0.53,
+          "mean_relative_depth_error_pct": 0.81,
+          "p90_relative_depth_error_pct": 1.67,
+          "photometric_rgb_mae": 17.3
+        },
+        {
+          "pair": "Frame 8 -> 9",
+          "points_evaluated": 169877,
+          "overlap_fraction": 0.643,
+          "median_relative_depth_error_pct": 0.4,
+          "mean_relative_depth_error_pct": 0.77,
+          "p90_relative_depth_error_pct": 1.8,
+          "photometric_rgb_mae": 23.22
+        }
+      ],
+      "overall_median_rel_depth_error_pct": 0.2,
+      "overall_mean_rel_depth_error_pct": 0.44,
+      "overall_mean_photometric_rgb_mae": 14.44
+    },
+    "point_cloud_correction": {
+      "output_ply": "outputs\\accuracy_experiment\\campus_0049\\point_cloud_corrected.ply",
+      "total_raw_grid_points": 2641920,
+      "valid_confidence_points": 2641379,
+      "valid_depth_points": 2630218,
+      "points_after_thresholds": 2629884,
+      "points_after_voxel_consolidation": 52813,
+      "outliers_pruned_percentage": 98.0,
+      "bounding_box_min": [
+        -1.1096,
+        -0.7795,
+        0.6837
+      ],
+      "bounding_box_max": [
+        0.7271,
+        1.2158,
+        0.9817
+      ],
+      "bounding_box_extents": [
+        1.8367,
+        1.9953,
+        0.298
+      ]
+    },
+    "mesh_correction": {
+      "output_ply": "outputs\\accuracy_experiment\\campus_0049\\surface_mesh_corrected.ply",
+      "output_obj": "outputs\\accuracy_experiment\\campus_0049\\surface_mesh_corrected.obj",
+      "vertex_count": 130198,
+      "triangle_count": 256597,
+      "bounds_min": [
+        -0.8797,
+        -0.6735,
+        0.8019
+      ],
+      "bounds_max": [
+        0.7005,
+        1.0155,
+        0.9764
+      ],
+      "extents": [
+        1.5802,
+        1.689,
+        0.1744
+      ]
+    },
+    "occlusion_audit": {
+      "num_vertices_audited": 130198,
+      "per_frame_visibility": [
+        {
+          "frame_index": 0,
+          "in_frustum_bounds_count": 86357,
+          "in_frustum_pct": 66.33,
+          "occluded_behind_foreground_count": 1776,
+          "occluded_percentage_of_in_bounds": 2.06,
+          "true_surface_visible_count": 83723,
+          "true_surface_percentage_of_in_bounds": 96.95
+        },
+        {
+          "frame_index": 1,
+          "in_frustum_bounds_count": 89429,
+          "in_frustum_pct": 68.69,
+          "occluded_behind_foreground_count": 3888,
+          "occluded_percentage_of_in_bounds": 4.35,
+          "true_surface_visible_count": 83704,
+          "true_surface_percentage_of_in_bounds": 93.6
+        },
+        {
+          "frame_index": 2,
+          "in_frustum_bounds_count": 64066,
+          "in_frustum_pct": 49.21,
+          "occluded_behind_foreground_count": 2665,
+          "occluded_percentage_of_in_bounds": 4.16,
+          "true_surface_visible_count": 60509,
+          "true_surface_percentage_of_in_bounds": 94.45
+        },
+        {
+          "frame_index": 3,
+          "in_frustum_bounds_count": 80592,
+          "in_frustum_pct": 61.9,
+          "occluded_behind_foreground_count": 1172,
+          "occluded_percentage_of_in_bounds": 1.45,
+          "true_surface_visible_count": 78776,
+          "true_surface_percentage_of_in_bounds": 97.75
+        },
+        {
+          "frame_index": 4,
+          "in_frustum_bounds_count": 87807,
+          "in_frustum_pct": 67.44,
+          "occluded_behind_foreground_count": 2220,
+          "occluded_percentage_of_in_bounds": 2.53,
+          "true_surface_visible_count": 84819,
+          "true_surface_percentage_of_in_bounds": 96.6
+        },
+        {
+          "frame_index": 5,
+          "in_frustum_bounds_count": 87973,
+          "in_frustum_pct": 67.57,
+          "occluded_behind_foreground_count": 2038,
+          "occluded_percentage_of_in_bounds": 2.32,
+          "true_surface_visible_count": 85311,
+          "true_surface_percentage_of_in_bounds": 96.97
+        },
+        {
+          "frame_index": 6,
+          "in_frustum_bounds_count": 88015,
+          "in_frustum_pct": 67.6,
+          "occluded_behind_foreground_count": 2106,
+          "occluded_percentage_of_in_bounds": 2.39,
+          "true_surface_visible_count": 85283,
+          "true_surface_percentage_of_in_bounds": 96.9
+        },
+        {
+          "frame_index": 7,
+          "in_frustum_bounds_count": 89641,
+          "in_frustum_pct": 68.85,
+          "occluded_behind_foreground_count": 2435,
+          "occluded_percentage_of_in_bounds": 2.72,
+          "true_surface_visible_count": 86270,
+          "true_surface_percentage_of_in_bounds": 96.24
+        },
+        {
+          "frame_index": 8,
+          "in_frustum_bounds_count": 109138,
+          "in_frustum_pct": 83.82,
+          "occluded_behind_foreground_count": 4364,
+          "occluded_percentage_of_in_bounds": 4.0,
+          "true_surface_visible_count": 102723,
+          "true_surface_percentage_of_in_bounds": 94.12
+        },
+        {
+          "frame_index": 9,
+          "in_frustum_bounds_count": 82131,
+          "in_frustum_pct": 63.08,
+          "occluded_behind_foreground_count": 2517,
+          "occluded_percentage_of_in_bounds": 3.06,
+          "true_surface_visible_count": 74902,
+          "true_surface_percentage_of_in_bounds": 91.2
+        }
+      ],
+      "vertices_with_at_least_one_visible_view": 130113,
+      "vertices_with_at_least_one_occluded_view": 11766,
+      "vertices_completely_occluded_in_all_views": 79
+    },
+    "point_cloud_preview_png": "outputs\\accuracy_experiment\\campus_0049\\accuracy_point_cloud_preview.png",
+    "comparison_sheet_png": "outputs\\accuracy_experiment\\campus_0049\\audit_comparison_sheet.png"
+  }
+}

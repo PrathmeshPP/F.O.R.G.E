@@ -1,0 +1,54 @@
+{
+  "module": "F.O.R.G.E Spatial Reconstruction (Phase 2B)",
+  "timestamp_utc": "2026-10-17T17:55:10Z",
+  "input": {
+    "depth_predictions_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\predictions\\depth_predictions.npz",
+    "camera_poses_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\predictions\\camera_poses.npz",
+    "frames_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\frames",
+    "num_frames": 10,
+    "depth_resolution": {
+      "height": 384,
+      "width": 688
+    }
+  },
+  "filtering": {
+    "min_depth_m": 0.1,
+    "max_depth_m": 100.0,
+    "min_confidence": 0.1,
+    "subsample_step": 1
+  },
+  "reconstruction": {
+    "total_points": 2641920,
+    "bounding_box": {
+      "min": [
+        -1.1811,
+        -0.7928,
+        0.6798
+      ],
+      "max": [
+        0.7353,
+        1.2621,
+        0.9819
+      ],
+      "extents": [
+        1.9164,
+        2.055,
+        0.3021
+      ],
+      "centroid": [
+        -0.0178,
+        0.0748,
+        0.9147
+      ]
+    },
+    "output_ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\reconstruction\\point_cloud.ply",
+    "output_ply_size_bytes": 39628981,
+    "output_ply_size_mb": 37.79
+  },
+  "performance": {
+    "backprojection_time_sec": 0.3764,
+    "ply_io_time_sec": 0.0664,
+    "total_reconstruction_time_sec": 2.9425
+  },
+  "status": "SUCCESS"
+}

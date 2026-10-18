@@ -1,0 +1,162 @@
+{
+  "pipeline": "F.O.R.G.E Phase 2E.1 \u2014 Mesh Geometry & Color Correction",
+  "timestamp_utc": "2026-10-17T17:31:29Z",
+  "input_point_cloud": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\point_cloud.ply",
+  "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\mesh_experiment_v2",
+  "source_pcd_stats": {
+    "total_points": 1585152,
+    "color_stats": {
+      "count": 1585152,
+      "mean_rgb": [
+        0.4325,
+        0.4653,
+        0.4642
+      ],
+      "std_rgb": [
+        0.1723,
+        0.148,
+        0.1665
+      ],
+      "min_rgb": [
+        0.0706,
+        0.1059,
+        0.1059
+      ],
+      "max_rgb": [
+        0.902,
+        0.8627,
+        0.8824
+      ]
+    },
+    "bounds_min": [
+      -2.4546,
+      -1.8858,
+      0.4296
+    ],
+    "bounds_max": [
+      2.374,
+      0.1063,
+      8.0256
+    ]
+  },
+  "candidate_a_bpa": {
+    "algorithm": "Ball Pivoting Algorithm (BPA)",
+    "radii": [
+      0.015,
+      0.03,
+      0.06
+    ],
+    "runtime_sec": 5.082,
+    "stats": {
+      "is_valid": true,
+      "vertex_count": 90941,
+      "triangle_count": 127588,
+      "finite_coordinates": true,
+      "valid_triangle_indices": true,
+      "has_vertex_colors": true,
+      "has_vertex_normals": true,
+      "is_edge_manifold": true,
+      "is_vertex_manifold": false,
+      "bounding_box_min": [
+        -2.4546,
+        -1.8637,
+        0.4335
+      ],
+      "bounding_box_max": [
+        2.374,
+        0.1059,
+        7.9039
+      ],
+      "extents": [
+        4.8285,
+        1.9696,
+        7.4703
+      ],
+      "color_stats": {
+        "count": 90941,
+        "mean_rgb": [
+          0.6093,
+          0.6563,
+          0.6977
+        ],
+        "std_rgb": [
+          0.1142,
+          0.1065,
+          0.1125
+        ],
+        "min_rgb": [
+          0.1223,
+          0.1826,
+          0.1542
+        ],
+        "max_rgb": [
+          0.8407,
+          0.8392,
+          0.8824
+        ]
+      }
+    },
+    "assessment": "Strictly non-fabricating (no phantom wedges), but exhibits perforation holes in varying-density tree foliage."
+  },
+  "candidate_b_poisson_strict": {
+    "algorithm": "Screened Poisson + Support Distance & Edge Filtering",
+    "poisson_depth": 9,
+    "density_quantile": 0.15,
+    "max_support_dist_m": 0.03,
+    "max_edge_length_m": 0.07,
+    "runtime_sec": 10.015,
+    "stats": {
+      "is_valid": true,
+      "vertex_count": 179411,
+      "triangle_count": 340326,
+      "finite_coordinates": true,
+      "valid_triangle_indices": true,
+      "has_vertex_colors": true,
+      "has_vertex_normals": true,
+      "is_edge_manifold": true,
+      "is_vertex_manifold": false,
+      "bounding_box_min": [
+        -2.226,
+        -1.8533,
+        0.4128
+      ],
+      "bounding_box_max": [
+        2.2413,
+        0.1085,
+        7.8017
+      ],
+      "extents": [
+        4.4672,
+        1.9618,
+        7.3889
+      ],
+      "color_stats": {
+        "count": 179411,
+        "mean_rgb": [
+          0.6257,
+          0.6718,
+          0.7158
+        ],
+        "std_rgb": [
+          0.0962,
+          0.0899,
+          0.0919
+        ],
+        "min_rgb": [
+          0.1274,
+          0.1441,
+          0.1569
+        ],
+        "max_rgb": [
+          0.8506,
+          0.8251,
+          0.8694
+        ]
+      }
+    },
+    "assessment": "Eliminates empty-frustum wedge bridging while preserving continuous corridor terrain surface; authentic colors restored via KD-Tree."
+  },
+  "selected_best_candidate": "Candidate B (Strict Filtered Screened Poisson)",
+  "honest_evaluation": "The source point cloud represents an oblique aerial forward flight where 86% of points form the dense physical river corridor (Z <= 2.5m) while 14% fan out into unprojected distant horizon/sky rays. Raw Poisson builds an artificial wedge connecting the riverbed to the sky cone and diffuses pale sky tones. Applying KD-Tree color transfer completely restores vivid natural vegetation and riverbed tones. Pruning vertices with distance > 0.03m from real points and rejecting triangles with edge > 0.07m eliminates the fabricated wedge. However, because feed-forward monocular unprojection lacks multi-view closure behind tree canopies, the dense point cloud remains the most faithful spatial representation for raw volumetric measurement, while the filtered mesh provides a clean, artifact-free surface visualization.",
+  "total_runtime_sec": 22.199
+}

@@ -1,0 +1,77 @@
+{
+  "pipeline": "F.O.R.G.E Phase 2A \u2014 Real Video Inference Pipeline",
+  "timestamp_utc": "2026-10-11T14:48:05.365950Z",
+  "video": {
+    "source_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+    "frames_extracted": 6,
+    "target_fps": 0.5,
+    "max_frames_cap": 6,
+    "frame_list": [
+      {
+        "index": 0,
+        "timestamp_s": 0.0,
+        "filename": "frame_0000_0.000s.png",
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "index": 1,
+        "timestamp_s": 2.002,
+        "filename": "frame_0001_2.002s.png",
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "index": 2,
+        "timestamp_s": 4.004,
+        "filename": "frame_0002_4.004s.png",
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "index": 3,
+        "timestamp_s": 6.006,
+        "filename": "frame_0003_6.006s.png",
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "index": 4,
+        "timestamp_s": 8.008,
+        "filename": "frame_0004_8.008s.png",
+        "width": 3840,
+        "height": 2160
+      },
+      {
+        "index": 5,
+        "timestamp_s": 10.01,
+        "filename": "frame_0005_10.010s.png",
+        "width": 3840,
+        "height": 2160
+      }
+    ]
+  },
+  "model": {
+    "checkpoint_path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\models\\vggt_omega_1b_512.pt",
+    "resolution": 512,
+    "device": "cuda:0"
+  },
+  "performance": {
+    "model_load_time_sec": 12.008,
+    "frame_extraction_time_sec": 11.522,
+    "vggt_inference_time_sec": 33.5052,
+    "total_pipeline_time_sec": 58.52,
+    "peak_vram_allocated_mb": 12013.46,
+    "peak_vram_reserved_mb": 12444.0
+  },
+  "outputs": {
+    "frames_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\frames",
+    "predictions_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\predictions",
+    "saved_prediction_files": {
+      "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\predictions\\depth_predictions.npz",
+      "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\predictions\\camera_poses.npz",
+      "raw_predictions_pt": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\predictions\\predictions_raw.pt"
+    }
+  },
+  "status": "SUCCESS"
+}
