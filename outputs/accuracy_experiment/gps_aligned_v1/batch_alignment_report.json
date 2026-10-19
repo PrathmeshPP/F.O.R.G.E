@@ -1,0 +1,1221 @@
+{
+  "title": "F.O.R.G.E Dataset-Wide Batch Geospatial Alignment Report",
+  "timestamp_utc": "2026-10-18T20:04:07Z",
+  "total_videos_audited": 9,
+  "total_reconstructed": 9,
+  "total_aligned_successfully": 1,
+  "total_unreliable_constrained": 4,
+  "total_blocked_missing_telemetry": 4,
+  "total_errors": 0,
+  "total_processing_time_sec": 66.932,
+  "results": [
+    {
+      "video_id": "campus_0049",
+      "display_name": "Campus 0049 (Architectural Courtyard - Baseline)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "extracted_frames_count": 10,
+      "reconstructed_poses_count": 10,
+      "telemetry_samples_count": 966,
+      "matched_correspondences_count": 10,
+      "reconstruction_status": "SUCCESS_RECONSTRUCTED",
+      "alignment_status": "UNRELIABLE_POORLY_CONSTRAINED",
+      "quality_gate": {
+        "target_id": "campus_0049",
+        "overall_verdict": "PASS_WITH_WARNINGS",
+        "passed": true,
+        "num_checks": 11,
+        "num_failures": 0,
+        "num_warnings": 2,
+        "hard_failures": [],
+        "warnings": [
+          "Weak horizontal baseline (0.15m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation.",
+          "Acceptable alignment fit: RMSE 0.580m, 100.0% inliers."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 279375,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 279,375"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 557796,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 557,796"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 4.88,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [181.10, 185.28, 37.98], aspect ratio 4.88 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 99.8,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 99.8% in main component (17 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 0.34,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 0.34% (1,876 open edges)."
+          },
+          {
+            "name": "point_cloud_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 237842,
+            "threshold_str": ">= 50,000 (Pass), >= 10,000 (Warn)",
+            "message": "Dense point cloud: 237,842 points."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 10,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 10 valid camera poses in SO(3)."
+          },
+          {
+            "name": "gps_trajectory_conditioning",
+            "category": "geospatial",
+            "status": "WARN",
+            "metric_value": "WEAK_HORIZONTAL_BASELINE_HOVER",
+            "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+            "message": "Weak horizontal baseline (0.15m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+          },
+          {
+            "name": "gps_metric_scale_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 87.162,
+            "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+            "message": "Plausible metric scale: 87.162 m/unit."
+          },
+          {
+            "name": "gps_rotation_and_tilt_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": -0.978,
+            "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+            "message": "Proper SO(3) rotation (det=1.0) with physically sound camera tilt (Z_proj=-0.978)."
+          },
+          {
+            "name": "gps_fit_residual_and_inliers",
+            "category": "geospatial",
+            "status": "WARN",
+            "metric_value": 0.58,
+            "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+            "message": "Acceptable alignment fit: RMSE 0.580m, 100.0% inliers."
+          }
+        ]
+      },
+      "status_code": "poorly_constrained",
+      "failure_reason": "Horizontal flight translation baseline (< 1.5m) is below GPS noise floor. Orientation and metric scale are ill-conditioned; unaligned native model must be used for reliable geometry.",
+      "scale_factor_meters_per_unit": 87.16174,
+      "rotation_matrix": [
+        [
+          0.58289,
+          0.812257,
+          0.021871
+        ],
+        [
+          0.792022,
+          -0.57397,
+          0.207991
+        ],
+        [
+          0.181495,
+          -0.103914,
+          -0.977886
+        ]
+      ],
+      "translation_vector_enu_m": [
+        -0.194904,
+        -0.095435,
+        -0.983009
+      ],
+      "ransac_inliers": 10,
+      "total_correspondences": 10,
+      "inlier_ratio_pct": 100.0,
+      "residual_rmse_m": 0.58,
+      "residual_mae_m": 0.5016,
+      "residual_max_m": 1.0072,
+      "aligned_extents_m": [
+        181.1,
+        185.28,
+        37.98
+      ],
+      "estimated_footprint_m2": 33554.8,
+      "model_vertex_count": 279375,
+      "model_triangle_count": 557796,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049",
+      "processing_time_sec": 10.785,
+      "cached": false,
+      "artifacts": {
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049\\surface_mesh_gps_aligned.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049\\surface_mesh_gps_aligned.obj",
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049\\point_cloud_gps_aligned.ply",
+        "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049\\camera_poses_gps_aligned.npz",
+        "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049\\alignment_comparison_sheet.png"
+      },
+      "conditioning_verdict": "WEAK_HORIZONTAL_BASELINE_HOVER",
+      "warnings": [
+        "Horizontal flight span (0.15m) is below GPS noise floor (1.5m). Vertical scale is constrained by altitude change (4.10m), but horizontal heading is weakly constrained."
+      ]
+    },
+    {
+      "video_id": "campus_0049_repaired",
+      "display_name": "Campus 0049 (Architectural Courtyard - Repaired V2)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "extracted_frames_count": 10,
+      "reconstructed_poses_count": 10,
+      "telemetry_samples_count": 966,
+      "matched_correspondences_count": 10,
+      "reconstruction_status": "SUCCESS_RECONSTRUCTED",
+      "alignment_status": "UNRELIABLE_POORLY_CONSTRAINED",
+      "quality_gate": {
+        "target_id": "campus_0049_repaired",
+        "overall_verdict": "PASS_WITH_WARNINGS",
+        "passed": true,
+        "num_checks": 10,
+        "num_failures": 0,
+        "num_warnings": 2,
+        "hard_failures": [],
+        "warnings": [
+          "Weak horizontal baseline (0.15m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation.",
+          "Acceptable alignment fit: RMSE 0.580m, 100.0% inliers."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 264676,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 264,676"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 526742,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 526,742"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 4.81,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [169.33, 176.64, 36.69], aspect ratio 4.81 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 99.4,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 99.4% in main component (6 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 0.52,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 0.52% (2,728 open edges)."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 10,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 10 valid camera poses in SO(3)."
+          },
+          {
+            "name": "gps_trajectory_conditioning",
+            "category": "geospatial",
+            "status": "WARN",
+            "metric_value": "WEAK_HORIZONTAL_BASELINE_HOVER",
+            "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+            "message": "Weak horizontal baseline (0.15m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+          },
+          {
+            "name": "gps_metric_scale_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 87.162,
+            "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+            "message": "Plausible metric scale: 87.162 m/unit."
+          },
+          {
+            "name": "gps_rotation_and_tilt_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": -0.978,
+            "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+            "message": "Proper SO(3) rotation (det=1.0) with physically sound camera tilt (Z_proj=-0.978)."
+          },
+          {
+            "name": "gps_fit_residual_and_inliers",
+            "category": "geospatial",
+            "status": "WARN",
+            "metric_value": 0.58,
+            "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+            "message": "Acceptable alignment fit: RMSE 0.580m, 100.0% inliers."
+          }
+        ]
+      },
+      "status_code": "poorly_constrained",
+      "failure_reason": "Horizontal flight translation baseline (< 1.5m) is below GPS noise floor. Orientation and metric scale are ill-conditioned; unaligned native model must be used for reliable geometry.",
+      "scale_factor_meters_per_unit": 87.16174,
+      "rotation_matrix": [
+        [
+          0.58289,
+          0.812257,
+          0.021871
+        ],
+        [
+          0.792022,
+          -0.57397,
+          0.207991
+        ],
+        [
+          0.181495,
+          -0.103914,
+          -0.977886
+        ]
+      ],
+      "translation_vector_enu_m": [
+        -0.194904,
+        -0.095435,
+        -0.983009
+      ],
+      "ransac_inliers": 10,
+      "total_correspondences": 10,
+      "inlier_ratio_pct": 100.0,
+      "residual_rmse_m": 0.58,
+      "residual_mae_m": 0.5016,
+      "residual_max_m": 1.0072,
+      "aligned_extents_m": [
+        169.33,
+        176.64,
+        36.69
+      ],
+      "estimated_footprint_m2": 29910.6,
+      "model_vertex_count": 264676,
+      "model_triangle_count": 526742,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired",
+      "processing_time_sec": 10.266,
+      "cached": false,
+      "artifacts": {
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\surface_mesh_gps_aligned.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\surface_mesh_gps_aligned.obj",
+        "point_cloud_ply": null,
+        "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\camera_poses_gps_aligned.npz",
+        "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\alignment_comparison_sheet.png"
+      },
+      "conditioning_verdict": "WEAK_HORIZONTAL_BASELINE_HOVER",
+      "warnings": [
+        "Horizontal flight span (0.15m) is below GPS noise floor (1.5m). Vertical scale is constrained by altitude change (4.10m), but horizontal heading is weakly constrained."
+      ]
+    },
+    {
+      "video_id": "river_bridge_flight_corridor",
+      "display_name": "River Bridge (84.8m Flight Corridor - Solved)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+      "extracted_frames_count": 8,
+      "reconstructed_poses_count": 8,
+      "telemetry_samples_count": 4965,
+      "matched_correspondences_count": 8,
+      "reconstruction_status": "SUCCESS_RECONSTRUCTED",
+      "alignment_status": "SUCCESS_METRIC_ALIGNED",
+      "quality_gate": {
+        "target_id": "river_bridge_flight_corridor",
+        "overall_verdict": "PASS_WITH_WARNINGS",
+        "passed": true,
+        "num_checks": 11,
+        "num_failures": 0,
+        "num_warnings": 1,
+        "hard_failures": [],
+        "warnings": [
+          "Moderate terrain segmentation: 59.7% in main component (68 clusters). Multi-bank or segmented features present."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 323203,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 323,203"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 637405,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 637,405"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 3.24,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [2597.03, 2644.84, 815.75], aspect ratio 3.24 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "WARN",
+            "metric_value": 59.7,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Moderate terrain segmentation: 59.7% in main component (68 clusters). Multi-bank or segmented features present."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 2.38,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 2.38% (15,176 open edges)."
+          },
+          {
+            "name": "point_cloud_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 2071267,
+            "threshold_str": ">= 50,000 (Pass), >= 10,000 (Warn)",
+            "message": "Dense point cloud: 2,071,267 points."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 8,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 8 valid camera poses in SO(3)."
+          },
+          {
+            "name": "gps_trajectory_conditioning",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": "WELL_CONSTRAINED_TRANSLATION",
+            "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+            "message": "Flight trajectory is well-conditioned: 76.56m horizontal baseline span."
+          },
+          {
+            "name": "gps_metric_scale_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 357.54,
+            "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+            "message": "Plausible metric scale: 357.540 m/unit."
+          },
+          {
+            "name": "gps_rotation_and_tilt_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": -0.208,
+            "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+            "message": "Proper SO(3) rotation (det=1.0) with physically sound camera tilt (Z_proj=-0.208)."
+          },
+          {
+            "name": "gps_fit_residual_and_inliers",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 0.236,
+            "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+            "message": "Survey-grade alignment fit: RMSE 0.236m, 100.0% inliers."
+          }
+        ]
+      },
+      "status_code": "success",
+      "failure_reason": null,
+      "scale_factor_meters_per_unit": 357.540122,
+      "rotation_matrix": [
+        [
+          -0.587123,
+          -0.019036,
+          0.809274
+        ],
+        [
+          -0.767919,
+          0.329377,
+          -0.549373
+        ],
+        [
+          -0.256098,
+          -0.944007,
+          -0.208002
+        ]
+      ],
+      "translation_vector_enu_m": [
+        0.171141,
+        -0.21853,
+        0.008077
+      ],
+      "ransac_inliers": 8,
+      "total_correspondences": 8,
+      "inlier_ratio_pct": 100.0,
+      "residual_rmse_m": 0.2359,
+      "residual_mae_m": 0.2145,
+      "residual_max_m": 0.4464,
+      "aligned_extents_m": [
+        2597.03,
+        2644.84,
+        815.75
+      ],
+      "estimated_footprint_m2": 6868737.7,
+      "model_vertex_count": 323203,
+      "model_triangle_count": 637405,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor",
+      "processing_time_sec": 12.747,
+      "cached": false,
+      "artifacts": {
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\surface_mesh_gps_aligned.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\surface_mesh_gps_aligned.obj",
+        "point_cloud_ply": null,
+        "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\camera_poses_gps_aligned.npz",
+        "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\alignment_comparison_sheet.png"
+      },
+      "conditioning_verdict": "WELL_CONSTRAINED_TRANSLATION",
+      "warnings": []
+    },
+    {
+      "video_id": "river_bridge",
+      "display_name": "River Bridge (52s-64s Hover Baseline - Unreliable)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+      "extracted_frames_count": 6,
+      "reconstructed_poses_count": 6,
+      "telemetry_samples_count": 4965,
+      "matched_correspondences_count": 6,
+      "reconstruction_status": "SUCCESS_RECONSTRUCTED",
+      "alignment_status": "UNRELIABLE_POORLY_CONSTRAINED",
+      "quality_gate": {
+        "target_id": "river_bridge",
+        "overall_verdict": "FAIL",
+        "passed": false,
+        "num_checks": 11,
+        "num_failures": 1,
+        "num_warnings": 1,
+        "hard_failures": [
+          "Collinear hover orientation defect: optical axis projected straight up into sky (R[2,2] = 0.956 > 0.85). Background depth curtain falsely oriented as vertical height."
+        ],
+        "warnings": [
+          "Weak horizontal baseline (0.08m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 255497,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 255,497"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 507399,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 507,399"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 2.56,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [156.38, 264.73, 400.44], aspect ratio 2.56 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 99.1,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 99.1% in main component (73 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 1.08,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 1.08% (5,465 open edges)."
+          },
+          {
+            "name": "point_cloud_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 115942,
+            "threshold_str": ">= 50,000 (Pass), >= 10,000 (Warn)",
+            "message": "Dense point cloud: 115,942 points."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 6,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 6 valid camera poses in SO(3)."
+          },
+          {
+            "name": "gps_trajectory_conditioning",
+            "category": "geospatial",
+            "status": "WARN",
+            "metric_value": "WEAK_HORIZONTAL_BASELINE_HOVER",
+            "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+            "message": "Weak horizontal baseline (0.08m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+          },
+          {
+            "name": "gps_metric_scale_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 63.711,
+            "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+            "message": "Plausible metric scale: 63.711 m/unit."
+          },
+          {
+            "name": "gps_rotation_and_tilt_sanity",
+            "category": "geospatial",
+            "status": "FAIL",
+            "metric_value": 0.956,
+            "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+            "message": "Collinear hover orientation defect: optical axis projected straight up into sky (R[2,2] = 0.956 > 0.85). Background depth curtain falsely oriented as vertical height."
+          },
+          {
+            "name": "gps_fit_residual_and_inliers",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 0.184,
+            "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+            "message": "Survey-grade alignment fit: RMSE 0.184m, 100.0% inliers."
+          }
+        ]
+      },
+      "status_code": "poorly_constrained",
+      "failure_reason": "Horizontal flight translation baseline (< 1.5m) is below GPS noise floor. Orientation and metric scale are ill-conditioned; unaligned native model must be used for reliable geometry.",
+      "scale_factor_meters_per_unit": 63.71095,
+      "rotation_matrix": [
+        [
+          0.505539,
+          -0.814992,
+          -0.283228
+        ],
+        [
+          0.859204,
+          0.505486,
+          0.079069
+        ],
+        [
+          0.078727,
+          -0.283323,
+          0.955788
+        ]
+      ],
+      "translation_vector_enu_m": [
+        0.005374,
+        0.010107,
+        0.067019
+      ],
+      "ransac_inliers": 6,
+      "total_correspondences": 6,
+      "inlier_ratio_pct": 100.0,
+      "residual_rmse_m": 0.1843,
+      "residual_mae_m": 0.1405,
+      "residual_max_m": 0.3512,
+      "aligned_extents_m": [
+        156.38,
+        264.73,
+        400.44
+      ],
+      "estimated_footprint_m2": 41398.3,
+      "model_vertex_count": 255497,
+      "model_triangle_count": 507399,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge",
+      "processing_time_sec": 10.182,
+      "cached": false,
+      "artifacts": {
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge\\surface_mesh_gps_aligned.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge\\surface_mesh_gps_aligned.obj",
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge\\point_cloud_gps_aligned.ply",
+        "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge\\camera_poses_gps_aligned.npz",
+        "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge\\alignment_comparison_sheet.png"
+      },
+      "conditioning_verdict": "WEAK_HORIZONTAL_BASELINE_HOVER",
+      "warnings": [
+        "Horizontal flight span (0.08m) is below GPS noise floor (1.5m). Vertical scale is constrained by altitude change (0.60m), but horizontal heading is weakly constrained."
+      ]
+    },
+    {
+      "video_id": "river_bridge_hover_repaired",
+      "display_name": "River Bridge (52s-64s Hover Repaired - Unreliable)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+      "extracted_frames_count": 6,
+      "reconstructed_poses_count": 6,
+      "telemetry_samples_count": 4965,
+      "matched_correspondences_count": 6,
+      "reconstruction_status": "SUCCESS_RECONSTRUCTED",
+      "alignment_status": "UNRELIABLE_POORLY_CONSTRAINED",
+      "quality_gate": {
+        "target_id": "river_bridge_hover_repaired",
+        "overall_verdict": "FAIL",
+        "passed": false,
+        "num_checks": 10,
+        "num_failures": 1,
+        "num_warnings": 2,
+        "hard_failures": [
+          "Collinear hover orientation defect: optical axis projected straight up into sky (R[2,2] = 0.956 > 0.85). Background depth curtain falsely oriented as vertical height."
+        ],
+        "warnings": [
+          "Moderate terrain segmentation: 54.4% in main component (39 clusters). Multi-bank or segmented features present.",
+          "Weak horizontal baseline (0.08m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 404965,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 404,965"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 803536,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 803,536"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 1.87,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [101.20, 135.64, 189.42], aspect ratio 1.87 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "WARN",
+            "metric_value": 54.4,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Moderate terrain segmentation: 54.4% in main component (39 clusters). Multi-bank or segmented features present."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 1.16,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 1.16% (9,312 open edges)."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 6,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 6 valid camera poses in SO(3)."
+          },
+          {
+            "name": "gps_trajectory_conditioning",
+            "category": "geospatial",
+            "status": "WARN",
+            "metric_value": "WEAK_HORIZONTAL_BASELINE_HOVER",
+            "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+            "message": "Weak horizontal baseline (0.08m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+          },
+          {
+            "name": "gps_metric_scale_sanity",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 63.711,
+            "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+            "message": "Plausible metric scale: 63.711 m/unit."
+          },
+          {
+            "name": "gps_rotation_and_tilt_sanity",
+            "category": "geospatial",
+            "status": "FAIL",
+            "metric_value": 0.956,
+            "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+            "message": "Collinear hover orientation defect: optical axis projected straight up into sky (R[2,2] = 0.956 > 0.85). Background depth curtain falsely oriented as vertical height."
+          },
+          {
+            "name": "gps_fit_residual_and_inliers",
+            "category": "geospatial",
+            "status": "PASS",
+            "metric_value": 0.184,
+            "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+            "message": "Survey-grade alignment fit: RMSE 0.184m, 100.0% inliers."
+          }
+        ]
+      },
+      "status_code": "poorly_constrained",
+      "failure_reason": "Horizontal flight translation baseline (< 1.5m) is below GPS noise floor. Orientation and metric scale are ill-conditioned; unaligned native model must be used for reliable geometry.",
+      "scale_factor_meters_per_unit": 63.71095,
+      "rotation_matrix": [
+        [
+          0.505539,
+          -0.814992,
+          -0.283228
+        ],
+        [
+          0.859204,
+          0.505486,
+          0.079069
+        ],
+        [
+          0.078727,
+          -0.283323,
+          0.955788
+        ]
+      ],
+      "translation_vector_enu_m": [
+        0.005374,
+        0.010107,
+        0.067019
+      ],
+      "ransac_inliers": 6,
+      "total_correspondences": 6,
+      "inlier_ratio_pct": 100.0,
+      "residual_rmse_m": 0.1843,
+      "residual_mae_m": 0.1405,
+      "residual_max_m": 0.3512,
+      "aligned_extents_m": [
+        101.2,
+        135.64,
+        189.42
+      ],
+      "estimated_footprint_m2": 13726.7,
+      "model_vertex_count": 404965,
+      "model_triangle_count": 803536,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_hover_repaired",
+      "processing_time_sec": 15.316,
+      "cached": false,
+      "artifacts": {
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_hover_repaired\\surface_mesh_gps_aligned.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_hover_repaired\\surface_mesh_gps_aligned.obj",
+        "point_cloud_ply": null,
+        "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_hover_repaired\\camera_poses_gps_aligned.npz",
+        "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_hover_repaired\\alignment_comparison_sheet.png"
+      },
+      "conditioning_verdict": "WEAK_HORIZONTAL_BASELINE_HOVER",
+      "warnings": [
+        "Horizontal flight span (0.08m) is below GPS noise floor (1.5m). Vertical scale is constrained by altitude change (0.60m), but horizontal heading is weakly constrained."
+      ]
+    },
+    {
+      "video_id": "desert_road",
+      "display_name": "Desert Road (Highway Corridor Benchmark)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\desert_road.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\desert_road.mp4",
+      "extracted_frames_count": 3,
+      "reconstructed_poses_count": 3,
+      "telemetry_samples_count": 0,
+      "matched_correspondences_count": 0,
+      "reconstruction_status": "SUCCESS_NATIVE_COORDINATES",
+      "alignment_status": "BLOCKED_MISSING_TELEMETRY",
+      "quality_gate": {
+        "target_id": "desert_road",
+        "overall_verdict": "PASS_WITH_WARNINGS",
+        "passed": true,
+        "num_checks": 7,
+        "num_failures": 0,
+        "num_warnings": 1,
+        "hard_failures": [],
+        "warnings": [
+          "Elevated open boundary edges: 10.70% (40,130 edges). Some surface holes present."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 204937,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 204,937"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 374999,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 374,999"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 8.5,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [17.04, 2.01, 14.65], aspect ratio 8.50 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 97.3,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 97.3% in main component (149 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "WARN",
+            "metric_value": 10.7,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Elevated open boundary edges: 10.70% (40,130 edges). Some surface holes present."
+          },
+          {
+            "name": "point_cloud_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 281257,
+            "threshold_str": ">= 50,000 (Pass), >= 10,000 (Warn)",
+            "message": "Dense point cloud: 281,257 points."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 3,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 3 valid camera poses in SO(3)."
+          }
+        ]
+      },
+      "status_code": "telemetry_missing",
+      "failure_reason": "Video container or sidecars contain no embedded GPS/altitude telemetry (public benchmark or stripped metadata). Model retained in native coordinate system.",
+      "scale_factor_meters_per_unit": null,
+      "rotation_matrix": null,
+      "translation_vector_enu_m": null,
+      "ransac_inliers": 0,
+      "total_correspondences": 0,
+      "inlier_ratio_pct": 0.0,
+      "residual_rmse_m": null,
+      "residual_mae_m": null,
+      "residual_max_m": null,
+      "aligned_extents_m": null,
+      "estimated_footprint_m2": null,
+      "model_vertex_count": 204937,
+      "model_triangle_count": 374999,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\desert_road",
+      "processing_time_sec": 0.0,
+      "cached": false,
+      "artifacts": {}
+    },
+    {
+      "video_id": "forest_road",
+      "display_name": "Forest Road (Dense Canopy Drone Corridor)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\forest_road.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\forest_road.mp4",
+      "extracted_frames_count": 6,
+      "reconstructed_poses_count": 6,
+      "telemetry_samples_count": 0,
+      "matched_correspondences_count": 0,
+      "reconstruction_status": "SUCCESS_NATIVE_COORDINATES",
+      "alignment_status": "BLOCKED_MISSING_TELEMETRY",
+      "quality_gate": {
+        "target_id": "forest_road",
+        "overall_verdict": "PASS",
+        "passed": true,
+        "num_checks": 7,
+        "num_failures": 0,
+        "num_warnings": 0,
+        "hard_failures": [],
+        "warnings": [],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 395320,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 395,320"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 788192,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 788,192"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 3.22,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [1.69, 0.94, 0.52], aspect ratio 3.22 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 99.6,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 99.6% in main component (41 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 0.4,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 0.40% (3,118 open edges)."
+          },
+          {
+            "name": "point_cloud_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 1450495,
+            "threshold_str": ">= 50,000 (Pass), >= 10,000 (Warn)",
+            "message": "Dense point cloud: 1,450,495 points."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 6,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 6 valid camera poses in SO(3)."
+          }
+        ]
+      },
+      "status_code": "telemetry_missing",
+      "failure_reason": "Video container or sidecars contain no embedded GPS/altitude telemetry (public benchmark or stripped metadata). Model retained in native coordinate system.",
+      "scale_factor_meters_per_unit": null,
+      "rotation_matrix": null,
+      "translation_vector_enu_m": null,
+      "ransac_inliers": 0,
+      "total_correspondences": 0,
+      "inlier_ratio_pct": 0.0,
+      "residual_rmse_m": null,
+      "residual_mae_m": null,
+      "residual_max_m": null,
+      "aligned_extents_m": null,
+      "estimated_footprint_m2": null,
+      "model_vertex_count": 395320,
+      "model_triangle_count": 788192,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\forest_road",
+      "processing_time_sec": 0.0,
+      "cached": false,
+      "artifacts": {}
+    },
+    {
+      "video_id": "lake_speedboat",
+      "display_name": "Lake Speedboat (Third-Party Benchmark)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\lake_speedboat.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\lake_speedboat.mp4",
+      "extracted_frames_count": 5,
+      "reconstructed_poses_count": 5,
+      "telemetry_samples_count": 0,
+      "matched_correspondences_count": 0,
+      "reconstruction_status": "SUCCESS_NATIVE_COORDINATES",
+      "alignment_status": "BLOCKED_MISSING_TELEMETRY",
+      "quality_gate": {
+        "target_id": "lake_speedboat",
+        "overall_verdict": "PASS_WITH_WARNINGS",
+        "passed": true,
+        "num_checks": 6,
+        "num_failures": 0,
+        "num_warnings": 1,
+        "hard_failures": [],
+        "warnings": [
+          "Elevated open boundary edges: 14.67% (37,914 edges). Some surface holes present."
+        ],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 146912,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 146,912"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 258383,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 258,383"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 3.87,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [13.25, 3.42, 9.52], aspect ratio 3.87 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 86.1,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 86.1% in main component (120 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "WARN",
+            "metric_value": 14.67,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Elevated open boundary edges: 14.67% (37,914 edges). Some surface holes present."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 5,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 5 valid camera poses in SO(3)."
+          }
+        ]
+      },
+      "status_code": "telemetry_missing",
+      "failure_reason": "Video container or sidecars contain no embedded GPS/altitude telemetry (public benchmark or stripped metadata). Model retained in native coordinate system.",
+      "scale_factor_meters_per_unit": null,
+      "rotation_matrix": null,
+      "translation_vector_enu_m": null,
+      "ransac_inliers": 0,
+      "total_correspondences": 0,
+      "inlier_ratio_pct": 0.0,
+      "residual_rmse_m": null,
+      "residual_mae_m": null,
+      "residual_max_m": null,
+      "aligned_extents_m": null,
+      "estimated_footprint_m2": null,
+      "model_vertex_count": 146912,
+      "model_triangle_count": 258383,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\lake_speedboat",
+      "processing_time_sec": 0.0,
+      "cached": false,
+      "artifacts": {}
+    },
+    {
+      "video_id": "snow_lift",
+      "display_name": "Snow Lift (Third-Party Benchmark)",
+      "video_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\snow_lift.mp4",
+      "telemetry_source_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\snow_lift.mp4",
+      "extracted_frames_count": 5,
+      "reconstructed_poses_count": 5,
+      "telemetry_samples_count": 0,
+      "matched_correspondences_count": 0,
+      "reconstruction_status": "SUCCESS_NATIVE_COORDINATES",
+      "alignment_status": "BLOCKED_MISSING_TELEMETRY",
+      "quality_gate": {
+        "target_id": "snow_lift",
+        "overall_verdict": "PASS",
+        "passed": true,
+        "num_checks": 6,
+        "num_failures": 0,
+        "num_warnings": 0,
+        "hard_failures": [],
+        "warnings": [],
+        "checks": [
+          {
+            "name": "mesh_vertex_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 331478,
+            "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+            "message": "Dense vertex count: 331,478"
+          },
+          {
+            "name": "mesh_triangle_density",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 659912,
+            "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+            "message": "Solid triangle coverage: 659,912"
+          },
+          {
+            "name": "bounding_box_aspect_ratio",
+            "category": "geometry",
+            "status": "PASS",
+            "metric_value": 1.56,
+            "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+            "message": "Bounding box extents [0.98, 1.52, 1.00], aspect ratio 1.56 is well-proportioned."
+          },
+          {
+            "name": "topological_clustering",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 88.3,
+            "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+            "message": "Solid surface continuity: 88.3% in main component (32 clusters)."
+          },
+          {
+            "name": "surface_boundary_continuity",
+            "category": "topology",
+            "status": "PASS",
+            "metric_value": 0.61,
+            "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+            "message": "Solid mesh boundary ratio: 0.61% (4,003 open edges)."
+          },
+          {
+            "name": "camera_pose_validity",
+            "category": "kinematics",
+            "status": "PASS",
+            "metric_value": 5,
+            "threshold_str": ">= 3 frames & SO(3) valid rotations",
+            "message": "Trajectory verified: 5 valid camera poses in SO(3)."
+          }
+        ]
+      },
+      "status_code": "telemetry_missing",
+      "failure_reason": "Video container or sidecars contain no embedded GPS/altitude telemetry (public benchmark or stripped metadata). Model retained in native coordinate system.",
+      "scale_factor_meters_per_unit": null,
+      "rotation_matrix": null,
+      "translation_vector_enu_m": null,
+      "ransac_inliers": 0,
+      "total_correspondences": 0,
+      "inlier_ratio_pct": 0.0,
+      "residual_rmse_m": null,
+      "residual_mae_m": null,
+      "residual_max_m": null,
+      "aligned_extents_m": null,
+      "estimated_footprint_m2": null,
+      "model_vertex_count": 331478,
+      "model_triangle_count": 659912,
+      "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\snow_lift",
+      "processing_time_sec": 0.0,
+      "cached": false,
+      "artifacts": {}
+    }
+  ]
+}

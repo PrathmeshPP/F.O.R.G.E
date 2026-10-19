@@ -455,15 +455,27 @@ def main() -> int:
     surface_ply = out_dir / "surface_mesh.ply"
 
     if args.view_only:
-        target_ply = presentation_ply if presentation_ply.is_file() else surface_ply
+        inp = Path(args.input).resolve()
+        if inp.is_file():
+            target_ply = inp
+        elif (out_dir / "surface_mesh_gps_aligned.ply").is_file():
+            target_ply = out_dir / "surface_mesh_gps_aligned.ply"
+        elif presentation_ply.is_file():
+            target_ply = presentation_ply
+        else:
+            target_ply = surface_ply
+
         if not target_ply.is_file():
             print(f"[ERROR] Reconstructed mesh not found in: {out_dir}", file=sys.stderr)
             return 1
         print(f"[INFO] Loading mesh from: {target_ply}")
         mesh = o3d.io.read_triangle_mesh(str(target_ply))
+        mesh.compute_vertex_normals()
         print(f"       Vertices:  {len(mesh.vertices):,}")
         print(f"       Triangles: {len(mesh.triangles):,}")
-        coord_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=0.3)
+        ext_max = float(np.max(mesh.get_axis_aligned_bounding_box().get_extent())) if len(mesh.vertices) > 0 else 1.0
+        axis_size = max(0.3, ext_max * 0.1)
+        coord_frame = o3d.geometry.TriangleMesh.create_coordinate_frame(size=axis_size)
         print("[INFO] Launching Open3D interactive viewer...")
         o3d.visualization.draw_geometries(
             [mesh, coord_frame],

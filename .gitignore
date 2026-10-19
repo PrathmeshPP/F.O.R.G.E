@@ -1,3 +1,7 @@
+# =============================================================================
+# F.O.R.G.E — Git Ignore Configuration
+# =============================================================================
+
 # Byte-compiled / optimized files
 __pycache__/
 *.py[cod]
@@ -9,21 +13,27 @@ env/
 venv/
 ENV/
 
-# Secrets and environment variables
+# Secrets, credentials and environment variables
 .env
 .env.*
 *.env
 *.key
 *.pem
+*.cert
+credentials.json
+token.json
 
-# IDE & Editor artifacts
+# Operating System & IDE artifacts
 .vscode/
 .idea/
 .vs/
 *.swp
 *.swo
+Thumbs.db
+Desktop.ini
+.DS_Store
 
-# Model checkpoints & large weights
+# Model checkpoints & large binary weights (> 100MB / untracked foundation weights)
 *.pt
 *.pth
 *.bin
@@ -32,19 +42,20 @@ ENV/
 *.onnx
 models/
 
-# Raw video inputs
+# Raw video inputs (preserve source drone footage and terrestrial dashcams locally)
 *.mp4
 *.mov
 *.avi
 *.mkv
 *.webm
 
-# Generated outputs & reconstruction artifacts
+# Generated outputs & scratch caches (default exclude)
 outputs/
 *.ply
 *.npz
+*.obj
 
-# Testing / cache artifacts
+# Intermediate test and rendering artifacts
 .pytest_cache/
 .coverage
 htmlcov/

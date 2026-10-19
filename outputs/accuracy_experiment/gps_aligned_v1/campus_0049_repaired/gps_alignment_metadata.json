@@ -1,0 +1,195 @@
+{
+  "video_id": "campus_0049_repaired",
+  "display_name": "Campus 0049 (Architectural Courtyard - Repaired V2)",
+  "alignment_status": "UNRELIABLE_POORLY_CONSTRAINED",
+  "timestamp_utc": "2026-10-18T20:03:19Z",
+  "source_data": {
+    "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+    "telemetry_source": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+    "telemetry_type": "djmd_protobuf",
+    "matched_frames": 10,
+    "geodetic_anchor": {
+      "latitude_deg": 23.151852789172054,
+      "longitude_deg": 72.88235877880136,
+      "altitude_wgs84_m": 307.854
+    }
+  },
+  "similarity_transformation": {
+    "scale_factor_meters_per_unit": 87.16174,
+    "rotation_matrix": [
+      [
+        0.58289,
+        0.812257,
+        0.021871
+      ],
+      [
+        0.792022,
+        -0.57397,
+        0.207991
+      ],
+      [
+        0.181495,
+        -0.103914,
+        -0.977886
+      ]
+    ],
+    "rotation_determinant": 1.0,
+    "translation_vector_enu_m": [
+      -0.194904,
+      -0.095435,
+      -0.983009
+    ]
+  },
+  "fit_statistics": {
+    "inlier_threshold_m": 2.5,
+    "num_inliers": 10,
+    "total_correspondences": 10,
+    "inlier_ratio_pct": 100.0,
+    "residual_rmse_m": 0.58,
+    "residual_mae_m": 0.5016,
+    "residual_max_m": 1.0072,
+    "residuals_m": [
+      1.0072,
+      0.2913,
+      0.6369,
+      0.7079,
+      0.1839,
+      0.3131,
+      0.2985,
+      0.2878,
+      0.3103,
+      0.979
+    ]
+  },
+  "trajectory_conditioning": {
+    "num_poses": 10,
+    "net_translation_model": 0.0457,
+    "model_extent_ptp": [
+      0.0123,
+      0.0119,
+      0.044
+    ],
+    "net_translation_gps_m": 4.1,
+    "horizontal_span_gps_m": 0.151,
+    "vertical_span_gps_m": 4.1,
+    "motion_type": "vertical_hover_descent",
+    "conditioning_verdict": "WEAK_HORIZONTAL_BASELINE_HOVER",
+    "warnings": [
+      "Horizontal flight span (0.15m) is below GPS noise floor (1.5m). Vertical scale is constrained by altitude change (4.10m), but horizontal heading is weakly constrained."
+    ]
+  },
+  "aligned_model_statistics": {
+    "vertex_count": 264676,
+    "triangle_count": 526742,
+    "extents_enu_m": [
+      169.333,
+      176.638,
+      36.688
+    ],
+    "estimated_footprint_m2": 29910.56,
+    "ply_size_bytes": 20346448,
+    "obj_size_bytes": 46089959
+  },
+  "artifacts": {
+    "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\surface_mesh_gps_aligned.ply",
+    "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\surface_mesh_gps_aligned.obj",
+    "point_cloud_ply": null,
+    "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\camera_poses_gps_aligned.npz",
+    "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\campus_0049_repaired\\alignment_comparison_sheet.png"
+  },
+  "quality_gate": {
+    "target_id": "campus_0049_repaired",
+    "overall_verdict": "PASS_WITH_WARNINGS",
+    "passed": true,
+    "num_checks": 10,
+    "num_failures": 0,
+    "num_warnings": 2,
+    "hard_failures": [],
+    "warnings": [
+      "Weak horizontal baseline (0.15m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation.",
+      "Acceptable alignment fit: RMSE 0.580m, 100.0% inliers."
+    ],
+    "checks": [
+      {
+        "name": "mesh_vertex_density",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 264676,
+        "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+        "message": "Dense vertex count: 264,676"
+      },
+      {
+        "name": "mesh_triangle_density",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 526742,
+        "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+        "message": "Solid triangle coverage: 526,742"
+      },
+      {
+        "name": "bounding_box_aspect_ratio",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 4.81,
+        "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+        "message": "Bounding box extents [169.33, 176.64, 36.69], aspect ratio 4.81 is well-proportioned."
+      },
+      {
+        "name": "topological_clustering",
+        "category": "topology",
+        "status": "PASS",
+        "metric_value": 99.4,
+        "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+        "message": "Solid surface continuity: 99.4% in main component (6 clusters)."
+      },
+      {
+        "name": "surface_boundary_continuity",
+        "category": "topology",
+        "status": "PASS",
+        "metric_value": 0.52,
+        "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+        "message": "Solid mesh boundary ratio: 0.52% (2,728 open edges)."
+      },
+      {
+        "name": "camera_pose_validity",
+        "category": "kinematics",
+        "status": "PASS",
+        "metric_value": 10,
+        "threshold_str": ">= 3 frames & SO(3) valid rotations",
+        "message": "Trajectory verified: 10 valid camera poses in SO(3)."
+      },
+      {
+        "name": "gps_trajectory_conditioning",
+        "category": "geospatial",
+        "status": "WARN",
+        "metric_value": "WEAK_HORIZONTAL_BASELINE_HOVER",
+        "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+        "message": "Weak horizontal baseline (0.15m < 1.5m noise floor). Stationary hover flight prevents reliable horizontal orientation."
+      },
+      {
+        "name": "gps_metric_scale_sanity",
+        "category": "geospatial",
+        "status": "PASS",
+        "metric_value": 87.162,
+        "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+        "message": "Plausible metric scale: 87.162 m/unit."
+      },
+      {
+        "name": "gps_rotation_and_tilt_sanity",
+        "category": "geospatial",
+        "status": "PASS",
+        "metric_value": -0.978,
+        "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+        "message": "Proper SO(3) rotation (det=1.0) with physically sound camera tilt (Z_proj=-0.978)."
+      },
+      {
+        "name": "gps_fit_residual_and_inliers",
+        "category": "geospatial",
+        "status": "WARN",
+        "metric_value": 0.58,
+        "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+        "message": "Acceptable alignment fit: RMSE 0.580m, 100.0% inliers."
+      }
+    ]
+  }
+}

@@ -1,0 +1,1021 @@
+{
+  "title": "F.O.R.G.E Generalization, Tree-Dominated Reconstruction, and Disaster-Readiness Validation",
+  "timestamp_utc": "2026-10-18T10:37:08Z",
+  "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1",
+  "scenes": {
+    "forest_road_baseline": {
+      "pipeline": "GeneralReconstructionPipeline",
+      "timestamp_utc": "2026-10-18T10:37:42Z",
+      "scene_classification": "forest_canopy_trees",
+      "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+      "disaster_readiness_evaluation": {
+        "scale_verification_status": {
+          "is_metric_ground_truth_calibrated": false,
+          "scale_units": "model_relative_uncalibrated",
+          "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+        },
+        "coverage_diagnostics": {
+          "spatial_extents": [
+            1.7835999727249146,
+            0.9854000210762024,
+            0.48919999599456787
+          ],
+          "bounding_volume": 0.8597,
+          "estimated_ground_footprint": 1.7576,
+          "retained_points": 1332090,
+          "mesh_vertices": 340712,
+          "mesh_triangles": 678618
+        },
+        "uncertainty_and_occlusion": {
+          "weakly_observed_ray_ratio": 0.1,
+          "sub_canopy_occlusion_detected": true,
+          "unobserved_ground_status": "OCCLUDED_BY_CANOPY"
+        },
+        "geometric_integrity": {
+          "is_edge_manifold": false,
+          "is_vertex_manifold": true,
+          "has_finite_coordinates": true
+        },
+        "operational_readiness_verdict": {
+          "rough_visual_reconnaissance": "ACCEPTABLE",
+          "tactical_pathfinding_assessment": "NOT_RECOMMENDED",
+          "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+          "operational_warnings": [
+            "Low camera baseline (0.086 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors.",
+            "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+            "Near-zero camera baseline limits stereo parallax; vertical facade geometry and sub-canopy structures have high depth uncertainty.",
+            "Dense vegetation canopy produces top-down occlusion; ground surface beneath foliage is physically unobserved and cannot be used for vehicle/personnel traversability."
+          ]
+        }
+      },
+      "trajectory_diagnostics": {
+        "num_frames": 6,
+        "camera_centers": [
+          [
+            -0.0001,
+            0.0,
+            -0.0001
+          ],
+          [
+            0.0001,
+            0.0013,
+            0.0146
+          ],
+          [
+            0.0001,
+            0.0011,
+            0.0344
+          ],
+          [
+            -0.0003,
+            0.0033,
+            0.0547
+          ],
+          [
+            -0.004,
+            0.0065,
+            0.0678
+          ],
+          [
+            -0.01,
+            0.0128,
+            0.0856
+          ]
+        ],
+        "mean_camera_center": [
+          -0.0023,
+          0.0042,
+          0.0428
+        ],
+        "total_path_length": 0.0888,
+        "net_translation": 0.0872,
+        "trajectory_extent": 0.0857,
+        "mean_frame_rotation_deg": 0.116,
+        "motion_type": "low_baseline_hover",
+        "warnings": [
+          "Low camera baseline (0.086 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors."
+        ]
+      },
+      "adaptive_parameters": {
+        "resolved_min_depth": 0.1,
+        "resolved_max_depth": 1.1505,
+        "resolved_min_confidence": 0.1,
+        "resolved_voxel_size": 0.0016,
+        "scene_max_extent": 0.6505,
+        "median_depth_z": 0.9702,
+        "mean_focal_length_px": 414.38
+      },
+      "point_cloud": {
+        "raw_filtered_points": 1577228,
+        "active_points": 1332090,
+        "is_voxel_fused": true,
+        "voxel_size": 0.0016,
+        "surface_roughness_residual": 0.000614,
+        "bounds_min": [
+          -0.9539999961853027,
+          -0.5325999855995178,
+          0.7192999720573425
+        ],
+        "bounds_max": [
+          0.8295999765396118,
+          0.4528000056743622,
+          1.2085000276565552
+        ],
+        "extents": [
+          1.7835999727249146,
+          0.9854000210762024,
+          0.48919999599456787
+        ]
+      },
+      "surface_mesh": {
+        "vertex_count": 340712,
+        "triangle_count": 678618,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": true,
+        "mesh_bounds_min": [
+          -0.9589,
+          -0.5403,
+          0.7217
+        ],
+        "mesh_bounds_max": [
+          0.8349,
+          0.4582,
+          1.2077
+        ],
+        "mesh_extents": [
+          1.7938,
+          0.9986,
+          0.486
+        ],
+        "color_stats": {
+          "mean_rgb": [
+            0.185,
+            0.3271,
+            0.1989
+          ],
+          "std_rgb": [
+            0.1062,
+            0.1167,
+            0.0829
+          ]
+        },
+        "meshing_time_sec": 19.562
+      },
+      "performance": {
+        "total_pipeline_time_sec": 31.715
+      },
+      "artifacts": {
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_baseline\\point_cloud_filtered.ply",
+        "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_baseline\\point_cloud_fused.ply",
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_baseline\\surface_mesh.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_baseline\\surface_mesh.obj"
+      }
+    },
+    "forest_road_uniform_span": {
+      "pipeline": "GeneralReconstructionPipeline",
+      "timestamp_utc": "2026-10-18T10:38:22Z",
+      "scene_classification": "forest_canopy_trees",
+      "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+      "disaster_readiness_evaluation": {
+        "scale_verification_status": {
+          "is_metric_ground_truth_calibrated": false,
+          "scale_units": "model_relative_uncalibrated",
+          "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+        },
+        "coverage_diagnostics": {
+          "spatial_extents": [
+            1.676200032234192,
+            0.9192000031471252,
+            0.5275999903678894
+          ],
+          "bounding_volume": 0.8129,
+          "estimated_ground_footprint": 1.5407,
+          "retained_points": 1450495,
+          "mesh_vertices": 395320,
+          "mesh_triangles": 788192
+        },
+        "uncertainty_and_occlusion": {
+          "weakly_observed_ray_ratio": 0.1,
+          "sub_canopy_occlusion_detected": true,
+          "unobserved_ground_status": "OCCLUDED_BY_CANOPY"
+        },
+        "geometric_integrity": {
+          "is_edge_manifold": false,
+          "is_vertex_manifold": false,
+          "has_finite_coordinates": true
+        },
+        "operational_readiness_verdict": {
+          "rough_visual_reconnaissance": "ACCEPTABLE",
+          "tactical_pathfinding_assessment": "MARGINAL_CAUTION",
+          "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+          "operational_warnings": [
+            "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+            "Dense vegetation canopy produces top-down occlusion; ground surface beneath foliage is physically unobserved and cannot be used for vehicle/personnel traversability."
+          ]
+        }
+      },
+      "trajectory_diagnostics": {
+        "num_frames": 6,
+        "camera_centers": [
+          [
+            -0.0,
+            0.0001,
+            0.0
+          ],
+          [
+            -0.017,
+            0.0172,
+            0.1052
+          ],
+          [
+            -0.0592,
+            0.045,
+            0.1925
+          ],
+          [
+            -0.1052,
+            0.0663,
+            0.2558
+          ],
+          [
+            -0.1492,
+            0.0841,
+            0.301
+          ],
+          [
+            -0.2125,
+            0.0928,
+            0.3401
+          ]
+        ],
+        "mean_camera_center": [
+          -0.0905,
+          0.0509,
+          0.1991
+        ],
+        "total_path_length": 0.4303,
+        "net_translation": 0.4116,
+        "trajectory_extent": 0.3401,
+        "mean_frame_rotation_deg": 0.307,
+        "motion_type": "multi_axis_survey",
+        "warnings": []
+      },
+      "adaptive_parameters": {
+        "resolved_min_depth": 0.1,
+        "resolved_max_depth": 1.1968,
+        "resolved_min_confidence": 0.5,
+        "resolved_voxel_size": 0.0012,
+        "scene_max_extent": 0.5913,
+        "median_depth_z": 1.0303,
+        "mean_focal_length_px": 468.83
+      },
+      "point_cloud": {
+        "raw_filtered_points": 1577231,
+        "active_points": 1450495,
+        "is_voxel_fused": true,
+        "voxel_size": 0.0012,
+        "surface_roughness_residual": 0.000512,
+        "bounds_min": [
+          -0.8866000175476074,
+          -0.4894999861717224,
+          0.7572000026702881
+        ],
+        "bounds_max": [
+          0.7896000146865845,
+          0.42969998717308044,
+          1.2848999500274658
+        ],
+        "extents": [
+          1.676200032234192,
+          0.9192000031471252,
+          0.5275999903678894
+        ]
+      },
+      "surface_mesh": {
+        "vertex_count": 395320,
+        "triangle_count": 788192,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": false,
+        "mesh_bounds_min": [
+          -0.8923,
+          -0.494,
+          0.7575
+        ],
+        "mesh_bounds_max": [
+          0.7978,
+          0.4429,
+          1.2825
+        ],
+        "mesh_extents": [
+          1.6901,
+          0.937,
+          0.525
+        ],
+        "color_stats": {
+          "mean_rgb": [
+            0.1806,
+            0.316,
+            0.1896
+          ],
+          "std_rgb": [
+            0.1003,
+            0.1118,
+            0.0771
+          ]
+        },
+        "meshing_time_sec": 22.55
+      },
+      "performance": {
+        "total_pipeline_time_sec": 36.075
+      },
+      "artifacts": {
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_uniform_span\\point_cloud_filtered.ply",
+        "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_uniform_span\\point_cloud_fused.ply",
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_uniform_span\\surface_mesh.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_uniform_span\\surface_mesh.obj"
+      }
+    },
+    "forest_road_viewpoint_diversity": {
+      "pipeline": "GeneralReconstructionPipeline",
+      "timestamp_utc": "2026-10-18T10:39:02Z",
+      "scene_classification": "forest_canopy_trees",
+      "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+      "disaster_readiness_evaluation": {
+        "scale_verification_status": {
+          "is_metric_ground_truth_calibrated": false,
+          "scale_units": "model_relative_uncalibrated",
+          "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+        },
+        "coverage_diagnostics": {
+          "spatial_extents": [
+            1.6829999685287476,
+            0.9258000254631042,
+            0.5439000129699707
+          ],
+          "bounding_volume": 0.8475,
+          "estimated_ground_footprint": 1.5581,
+          "retained_points": 1452709,
+          "mesh_vertices": 386252,
+          "mesh_triangles": 769761
+        },
+        "uncertainty_and_occlusion": {
+          "weakly_observed_ray_ratio": 0.1,
+          "sub_canopy_occlusion_detected": true,
+          "unobserved_ground_status": "OCCLUDED_BY_CANOPY"
+        },
+        "geometric_integrity": {
+          "is_edge_manifold": false,
+          "is_vertex_manifold": true,
+          "has_finite_coordinates": true
+        },
+        "operational_readiness_verdict": {
+          "rough_visual_reconnaissance": "ACCEPTABLE",
+          "tactical_pathfinding_assessment": "MARGINAL_CAUTION",
+          "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+          "operational_warnings": [
+            "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+            "Dense vegetation canopy produces top-down occlusion; ground surface beneath foliage is physically unobserved and cannot be used for vehicle/personnel traversability."
+          ]
+        }
+      },
+      "trajectory_diagnostics": {
+        "num_frames": 6,
+        "camera_centers": [
+          [
+            -0.0001,
+            0.0001,
+            -0.0
+          ],
+          [
+            -0.0359,
+            0.0304,
+            0.1001
+          ],
+          [
+            -0.0603,
+            0.0444,
+            0.1431
+          ],
+          [
+            -0.0887,
+            0.0567,
+            0.1844
+          ],
+          [
+            -0.166,
+            0.0881,
+            0.268
+          ],
+          [
+            -0.187,
+            0.0934,
+            0.2787
+          ]
+        ],
+        "mean_camera_center": [
+          -0.0897,
+          0.0522,
+          0.1624
+        ],
+        "total_path_length": 0.3559,
+        "net_translation": 0.3484,
+        "trajectory_extent": 0.2788,
+        "mean_frame_rotation_deg": 0.229,
+        "motion_type": "multi_axis_survey",
+        "warnings": []
+      },
+      "adaptive_parameters": {
+        "resolved_min_depth": 0.1,
+        "resolved_max_depth": 1.1857,
+        "resolved_min_confidence": 0.5,
+        "resolved_voxel_size": 0.0012,
+        "scene_max_extent": 0.5967,
+        "median_depth_z": 1.0188,
+        "mean_focal_length_px": 461.65
+      },
+      "point_cloud": {
+        "raw_filtered_points": 1577229,
+        "active_points": 1452709,
+        "is_voxel_fused": true,
+        "voxel_size": 0.0012,
+        "surface_roughness_residual": 0.000524,
+        "bounds_min": [
+          -0.8899000287055969,
+          -0.492000013589859,
+          0.7376000285148621
+        ],
+        "bounds_max": [
+          0.7929999828338623,
+          0.43380001187324524,
+          1.281499981880188
+        ],
+        "extents": [
+          1.6829999685287476,
+          0.9258000254631042,
+          0.5439000129699707
+        ]
+      },
+      "surface_mesh": {
+        "vertex_count": 386252,
+        "triangle_count": 769761,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": true,
+        "mesh_bounds_min": [
+          -0.9018,
+          -0.4998,
+          0.7361
+        ],
+        "mesh_bounds_max": [
+          0.7926,
+          0.4476,
+          1.2793
+        ],
+        "mesh_extents": [
+          1.6944,
+          0.9474,
+          0.5432
+        ],
+        "color_stats": {
+          "mean_rgb": [
+            0.1787,
+            0.3159,
+            0.188
+          ],
+          "std_rgb": [
+            0.1014,
+            0.1129,
+            0.0772
+          ]
+        },
+        "meshing_time_sec": 22.041
+      },
+      "performance": {
+        "total_pipeline_time_sec": 35.347
+      },
+      "artifacts": {
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_viewpoint_diversity\\point_cloud_filtered.ply",
+        "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_viewpoint_diversity\\point_cloud_fused.ply",
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_viewpoint_diversity\\surface_mesh.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\forest_road\\candidate_viewpoint_diversity\\surface_mesh.obj"
+      }
+    },
+    "campus_0049": {
+      "pipeline": "GeneralReconstructionPipeline",
+      "timestamp_utc": "2026-10-18T10:39:30Z",
+      "scene_classification": "campus_courtyard_architecture",
+      "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+      "disaster_readiness_evaluation": {
+        "scale_verification_status": {
+          "is_metric_ground_truth_calibrated": false,
+          "scale_units": "model_relative_uncalibrated",
+          "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+        },
+        "coverage_diagnostics": {
+          "spatial_extents": [
+            1.8652000427246094,
+            2.027899980545044,
+            0.30140000581741333
+          ],
+          "bounding_volume": 1.1399,
+          "estimated_ground_footprint": 3.7826,
+          "retained_points": 237842,
+          "mesh_vertices": 279375,
+          "mesh_triangles": 557796
+        },
+        "uncertainty_and_occlusion": {
+          "weakly_observed_ray_ratio": 0.1,
+          "sub_canopy_occlusion_detected": false,
+          "unobserved_ground_status": "PARTIALLY_VISIBLE"
+        },
+        "geometric_integrity": {
+          "is_edge_manifold": false,
+          "is_vertex_manifold": true,
+          "has_finite_coordinates": true
+        },
+        "operational_readiness_verdict": {
+          "rough_visual_reconnaissance": "ACCEPTABLE",
+          "tactical_pathfinding_assessment": "NOT_RECOMMENDED",
+          "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+          "operational_warnings": [
+            "Low camera baseline (0.044 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors.",
+            "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+            "Near-zero camera baseline limits stereo parallax; vertical facade geometry and sub-canopy structures have high depth uncertainty."
+          ]
+        }
+      },
+      "trajectory_diagnostics": {
+        "num_frames": 10,
+        "camera_centers": [
+          [
+            -0.0,
+            0.0001,
+            0.0
+          ],
+          [
+            0.0051,
+            0.0006,
+            0.0063
+          ],
+          [
+            0.0025,
+            0.0059,
+            0.0101
+          ],
+          [
+            -0.0005,
+            0.0063,
+            0.026
+          ],
+          [
+            -0.0033,
+            0.0023,
+            0.0339
+          ],
+          [
+            -0.0045,
+            0.0019,
+            0.033
+          ],
+          [
+            -0.0056,
+            0.002,
+            0.034
+          ],
+          [
+            -0.0051,
+            0.0032,
+            0.0325
+          ],
+          [
+            -0.0072,
+            0.0026,
+            0.0346
+          ],
+          [
+            -0.0039,
+            0.0119,
+            0.044
+          ]
+        ],
+        "mean_camera_center": [
+          -0.0022,
+          0.0037,
+          0.0254
+        ],
+        "total_path_length": 0.0622,
+        "net_translation": 0.0457,
+        "trajectory_extent": 0.044,
+        "mean_frame_rotation_deg": 24.876,
+        "motion_type": "low_baseline_hover",
+        "warnings": [
+          "Low camera baseline (0.044 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors."
+        ]
+      },
+      "adaptive_parameters": {
+        "resolved_min_depth": 0.1,
+        "resolved_max_depth": 1.2447,
+        "resolved_min_confidence": 0.5,
+        "resolved_voxel_size": 0.0052,
+        "scene_max_extent": 2.0917,
+        "median_depth_z": 0.9074,
+        "mean_focal_length_px": 478.52
+      },
+      "point_cloud": {
+        "raw_filtered_points": 2628717,
+        "active_points": 237842,
+        "is_voxel_fused": true,
+        "voxel_size": 0.0052,
+        "surface_roughness_residual": 0.001207,
+        "bounds_min": [
+          -1.1309000253677368,
+          -0.7914999723434448,
+          0.6804999709129333
+        ],
+        "bounds_max": [
+          0.7343000173568726,
+          1.2364000082015991,
+          0.9818999767303467
+        ],
+        "extents": [
+          1.8652000427246094,
+          2.027899980545044,
+          0.30140000581741333
+        ]
+      },
+      "surface_mesh": {
+        "vertex_count": 279375,
+        "triangle_count": 557796,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": true,
+        "mesh_bounds_min": [
+          -1.1307,
+          -0.797,
+          0.6742
+        ],
+        "mesh_bounds_max": [
+          0.7428,
+          1.2507,
+          0.98
+        ],
+        "mesh_extents": [
+          1.8735,
+          2.0477,
+          0.3058
+        ],
+        "color_stats": {
+          "mean_rgb": [
+            0.4336,
+            0.4609,
+            0.3575
+          ],
+          "std_rgb": [
+            0.1867,
+            0.1535,
+            0.1882
+          ]
+        },
+        "meshing_time_sec": 12.775
+      },
+      "performance": {
+        "total_pipeline_time_sec": 24.015
+      },
+      "artifacts": {
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\campus_0049\\point_cloud_filtered.ply",
+        "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\campus_0049\\point_cloud_fused.ply",
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\campus_0049\\surface_mesh.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\campus_0049\\surface_mesh.obj"
+      }
+    },
+    "desert_road": {
+      "pipeline": "GeneralReconstructionPipeline",
+      "timestamp_utc": "2026-10-18T10:39:51Z",
+      "scene_classification": "terrestrial_road_highway",
+      "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+      "disaster_readiness_evaluation": {
+        "scale_verification_status": {
+          "is_metric_ground_truth_calibrated": false,
+          "scale_units": "model_relative_uncalibrated",
+          "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+        },
+        "coverage_diagnostics": {
+          "spatial_extents": [
+            17.901500701904297,
+            2.015199899673462,
+            14.685500144958496
+          ],
+          "bounding_volume": 529.7921,
+          "estimated_ground_footprint": 262.8927,
+          "retained_points": 281257,
+          "mesh_vertices": 204937,
+          "mesh_triangles": 374999
+        },
+        "uncertainty_and_occlusion": {
+          "weakly_observed_ray_ratio": 0.5136,
+          "sub_canopy_occlusion_detected": false,
+          "unobserved_ground_status": "PARTIALLY_VISIBLE"
+        },
+        "geometric_integrity": {
+          "is_edge_manifold": false,
+          "is_vertex_manifold": false,
+          "has_finite_coordinates": true
+        },
+        "operational_readiness_verdict": {
+          "rough_visual_reconnaissance": "ACCEPTABLE",
+          "tactical_pathfinding_assessment": "NOT_RECOMMENDED",
+          "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+          "operational_warnings": [
+            "Predominantly forward camera translation. Distant depth observations exhibit smaller stereo parallax; far-field confidence naturally decreases toward the horizon.",
+            "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+            "High proportion of weakly observed regions (51.4% low confidence). Structural voids or occlusion likely."
+          ]
+        }
+      },
+      "trajectory_diagnostics": {
+        "num_frames": 3,
+        "camera_centers": [
+          [
+            0.0,
+            -0.0,
+            -0.0001
+          ],
+          [
+            0.0103,
+            0.0109,
+            -0.1903
+          ],
+          [
+            0.0154,
+            0.0202,
+            -0.3883
+          ]
+        ],
+        "mean_camera_center": [
+          0.0086,
+          0.0103,
+          -0.1929
+        ],
+        "total_path_length": 0.3891,
+        "net_translation": 0.389,
+        "trajectory_extent": 0.3882,
+        "mean_frame_rotation_deg": 0.105,
+        "motion_type": "forward_axial_motion",
+        "warnings": [
+          "Predominantly forward camera translation. Distant depth observations exhibit smaller stereo parallax; far-field confidence naturally decreases toward the horizon."
+        ]
+      },
+      "adaptive_parameters": {
+        "resolved_min_depth": 0.1,
+        "resolved_max_depth": 14.7378,
+        "resolved_min_confidence": 0.5,
+        "resolved_voxel_size": 0.0183,
+        "scene_max_extent": 14.6301,
+        "median_depth_z": 2.6618,
+        "mean_focal_length_px": 564.05
+      },
+      "point_cloud": {
+        "raw_filtered_points": 784650,
+        "active_points": 281257,
+        "is_voxel_fused": true,
+        "voxel_size": 0.0183,
+        "surface_roughness_residual": 0.00585,
+        "bounds_min": [
+          -9.000200271606445,
+          -1.8207000494003296,
+          0.05480000004172325
+        ],
+        "bounds_max": [
+          8.901300430297852,
+          0.19460000097751617,
+          14.740400314331055
+        ],
+        "extents": [
+          17.901500701904297,
+          2.015199899673462,
+          14.685500144958496
+        ]
+      },
+      "surface_mesh": {
+        "vertex_count": 204937,
+        "triangle_count": 374999,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": false,
+        "mesh_bounds_min": [
+          -8.7063,
+          -1.813,
+          0.0517
+        ],
+        "mesh_bounds_max": [
+          8.3349,
+          0.1923,
+          14.705
+        ],
+        "mesh_extents": [
+          17.0412,
+          2.0053,
+          14.6533
+        ],
+        "color_stats": {
+          "mean_rgb": [
+            0.6807,
+            0.6417,
+            0.6202
+          ],
+          "std_rgb": [
+            0.0659,
+            0.0879,
+            0.1359
+          ]
+        },
+        "meshing_time_sec": 10.849
+      },
+      "performance": {
+        "total_pipeline_time_sec": 18.134
+      },
+      "artifacts": {
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\desert_road\\point_cloud_filtered.ply",
+        "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\desert_road\\point_cloud_fused.ply",
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\desert_road\\surface_mesh.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\desert_road\\surface_mesh.obj"
+      }
+    },
+    "river_bridge": {
+      "pipeline": "GeneralReconstructionPipeline",
+      "timestamp_utc": "2026-10-18T10:40:14Z",
+      "scene_classification": "river_bridge_corridor",
+      "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+      "disaster_readiness_evaluation": {
+        "scale_verification_status": {
+          "is_metric_ground_truth_calibrated": false,
+          "scale_units": "model_relative_uncalibrated",
+          "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+        },
+        "coverage_diagnostics": {
+          "spatial_extents": [
+            4.826399803161621,
+            1.6615999937057495,
+            5.951900005340576
+          ],
+          "bounding_volume": 47.7309,
+          "estimated_ground_footprint": 28.726,
+          "retained_points": 115942,
+          "mesh_vertices": 255497,
+          "mesh_triangles": 507399
+        },
+        "uncertainty_and_occlusion": {
+          "weakly_observed_ray_ratio": 0.1682,
+          "sub_canopy_occlusion_detected": false,
+          "unobserved_ground_status": "PARTIALLY_VISIBLE"
+        },
+        "geometric_integrity": {
+          "is_edge_manifold": false,
+          "is_vertex_manifold": false,
+          "has_finite_coordinates": true
+        },
+        "operational_readiness_verdict": {
+          "rough_visual_reconnaissance": "ACCEPTABLE",
+          "tactical_pathfinding_assessment": "NOT_RECOMMENDED",
+          "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+          "operational_warnings": [
+            "Low camera baseline (0.008 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors.",
+            "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+            "Near-zero camera baseline limits stereo parallax; vertical facade geometry and sub-canopy structures have high depth uncertainty."
+          ]
+        }
+      },
+      "trajectory_diagnostics": {
+        "num_frames": 6,
+        "camera_centers": [
+          [
+            -0.0,
+            -0.0,
+            -0.0001
+          ],
+          [
+            -0.0001,
+            0.0005,
+            -0.0005
+          ],
+          [
+            0.0005,
+            0.0002,
+            0.0015
+          ],
+          [
+            -0.0002,
+            -0.0003,
+            0.0014
+          ],
+          [
+            0.0014,
+            -0.0012,
+            0.0056
+          ],
+          [
+            0.0007,
+            -0.0017,
+            0.0076
+          ]
+        ],
+        "mean_camera_center": [
+          0.0004,
+          -0.0004,
+          0.0026
+        ],
+        "total_path_length": 0.0101,
+        "net_translation": 0.0079,
+        "trajectory_extent": 0.008,
+        "mean_frame_rotation_deg": 3.699,
+        "motion_type": "low_baseline_hover",
+        "warnings": [
+          "Low camera baseline (0.008 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors."
+        ]
+      },
+      "adaptive_parameters": {
+        "resolved_min_depth": 0.1,
+        "resolved_max_depth": 6.3868,
+        "resolved_min_confidence": 0.5,
+        "resolved_voxel_size": 0.0149,
+        "scene_max_extent": 5.9465,
+        "median_depth_z": 1.022,
+        "mean_focal_length_px": 1152.46
+      },
+      "point_cloud": {
+        "raw_filtered_points": 1577229,
+        "active_points": 115942,
+        "is_voxel_fused": true,
+        "voxel_size": 0.0149,
+        "surface_roughness_residual": 0.003655,
+        "bounds_min": [
+          -2.452399969100952,
+          -1.5556000471115112,
+          0.4336000084877014
+        ],
+        "bounds_max": [
+          2.374000072479248,
+          0.10599999874830246,
+          6.385499954223633
+        ],
+        "extents": [
+          4.826399803161621,
+          1.6615999937057495,
+          5.951900005340576
+        ]
+      },
+      "surface_mesh": {
+        "vertex_count": 255497,
+        "triangle_count": 507399,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": false,
+        "mesh_bounds_min": [
+          -2.4362,
+          -1.5682,
+          0.4173
+        ],
+        "mesh_bounds_max": [
+          2.3903,
+          0.1091,
+          6.4099
+        ],
+        "mesh_extents": [
+          4.8265,
+          1.6773,
+          5.9926
+        ],
+        "color_stats": {
+          "mean_rgb": [
+            0.6228,
+            0.6687,
+            0.712
+          ],
+          "std_rgb": [
+            0.1012,
+            0.0939,
+            0.097
+          ]
+        },
+        "meshing_time_sec": 12.09
+      },
+      "performance": {
+        "total_pipeline_time_sec": 20.937
+      },
+      "artifacts": {
+        "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\river_bridge\\point_cloud_filtered.ply",
+        "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\river_bridge\\point_cloud_fused.ply",
+        "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\river_bridge\\surface_mesh.ply",
+        "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\generalization_disaster_validation_v1\\river_bridge\\surface_mesh.obj"
+      }
+    }
+  }
+}

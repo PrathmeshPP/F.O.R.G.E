@@ -1,0 +1,198 @@
+{
+  "video_id": "river_bridge_flight_corridor",
+  "display_name": "River Bridge (84.8m Flight Corridor - Solved)",
+  "alignment_status": "SUCCESS_METRIC_ALIGNED",
+  "timestamp_utc": "2026-10-18T20:03:32Z",
+  "source_data": {
+    "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+    "telemetry_source": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+    "telemetry_type": "djmd_protobuf",
+    "matched_frames": 8,
+    "geodetic_anchor": {
+      "latitude_deg": 23.151596290313186,
+      "longitude_deg": 72.88283763136864,
+      "altitude_wgs84_m": 303.654
+    }
+  },
+  "similarity_transformation": {
+    "scale_factor_meters_per_unit": 357.540122,
+    "rotation_matrix": [
+      [
+        -0.587123,
+        -0.019036,
+        0.809274
+      ],
+      [
+        -0.767919,
+        0.329377,
+        -0.549373
+      ],
+      [
+        -0.256098,
+        -0.944007,
+        -0.208002
+      ]
+    ],
+    "rotation_determinant": 1.0,
+    "translation_vector_enu_m": [
+      0.171141,
+      -0.21853,
+      0.008077
+    ]
+  },
+  "fit_statistics": {
+    "inlier_threshold_m": 2.5,
+    "num_inliers": 8,
+    "total_correspondences": 8,
+    "inlier_ratio_pct": 100.0,
+    "residual_rmse_m": 0.2359,
+    "residual_mae_m": 0.2145,
+    "residual_max_m": 0.4464,
+    "residuals_m": [
+      0.2884,
+      0.1929,
+      0.4464,
+      0.1349,
+      0.1505,
+      0.174,
+      0.1487,
+      0.1801
+    ]
+  },
+  "trajectory_conditioning": {
+    "num_poses": 8,
+    "net_translation_model": 0.2132,
+    "model_extent_ptp": [
+      0.0124,
+      0.0485,
+      0.2072
+    ],
+    "net_translation_gps_m": 76.559,
+    "horizontal_span_gps_m": 76.558,
+    "vertical_span_gps_m": 0.1,
+    "motion_type": "translational_corridor_flight",
+    "conditioning_verdict": "WELL_CONSTRAINED_TRANSLATION",
+    "warnings": []
+  },
+  "aligned_model_statistics": {
+    "vertex_count": 323203,
+    "triangle_count": 637405,
+    "extents_enu_m": [
+      2597.029,
+      2644.845,
+      815.748
+    ],
+    "estimated_footprint_m2": 6868737.68,
+    "ply_size_bytes": 24769944,
+    "obj_size_bytes": 56276188
+  },
+  "artifacts": {
+    "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\surface_mesh_gps_aligned.ply",
+    "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\surface_mesh_gps_aligned.obj",
+    "point_cloud_ply": null,
+    "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\camera_poses_gps_aligned.npz",
+    "comparison_sheet_png": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\gps_aligned_v1\\river_bridge_flight_corridor\\alignment_comparison_sheet.png"
+  },
+  "quality_gate": {
+    "target_id": "river_bridge_flight_corridor",
+    "overall_verdict": "PASS_WITH_WARNINGS",
+    "passed": true,
+    "num_checks": 11,
+    "num_failures": 0,
+    "num_warnings": 1,
+    "hard_failures": [],
+    "warnings": [
+      "Moderate terrain segmentation: 59.7% in main component (68 clusters). Multi-bank or segmented features present."
+    ],
+    "checks": [
+      {
+        "name": "mesh_vertex_density",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 323203,
+        "threshold_str": ">= 20,000 (Pass), >= 5,000 (Warn)",
+        "message": "Dense vertex count: 323,203"
+      },
+      {
+        "name": "mesh_triangle_density",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 637405,
+        "threshold_str": ">= 40,000 (Pass), >= 10,000 (Warn)",
+        "message": "Solid triangle coverage: 637,405"
+      },
+      {
+        "name": "bounding_box_aspect_ratio",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 3.24,
+        "threshold_str": "< 25.0 (Pass), < 60.0 (Warn)",
+        "message": "Bounding box extents [2597.03, 2644.84, 815.75], aspect ratio 3.24 is well-proportioned."
+      },
+      {
+        "name": "topological_clustering",
+        "category": "topology",
+        "status": "WARN",
+        "metric_value": 59.7,
+        "threshold_str": ">= 75% (Pass), >= 40% (Warn)",
+        "message": "Moderate terrain segmentation: 59.7% in main component (68 clusters). Multi-bank or segmented features present."
+      },
+      {
+        "name": "surface_boundary_continuity",
+        "category": "topology",
+        "status": "PASS",
+        "metric_value": 2.38,
+        "threshold_str": "< 8.0% (Pass), < 20.0% (Warn)",
+        "message": "Solid mesh boundary ratio: 2.38% (15,176 open edges)."
+      },
+      {
+        "name": "point_cloud_density",
+        "category": "geometry",
+        "status": "PASS",
+        "metric_value": 2071267,
+        "threshold_str": ">= 50,000 (Pass), >= 10,000 (Warn)",
+        "message": "Dense point cloud: 2,071,267 points."
+      },
+      {
+        "name": "camera_pose_validity",
+        "category": "kinematics",
+        "status": "PASS",
+        "metric_value": 8,
+        "threshold_str": ">= 3 frames & SO(3) valid rotations",
+        "message": "Trajectory verified: 8 valid camera poses in SO(3)."
+      },
+      {
+        "name": "gps_trajectory_conditioning",
+        "category": "geospatial",
+        "status": "PASS",
+        "metric_value": "WELL_CONSTRAINED_TRANSLATION",
+        "threshold_str": "WELL_CONSTRAINED_TRANSLATION (Pass)",
+        "message": "Flight trajectory is well-conditioned: 76.56m horizontal baseline span."
+      },
+      {
+        "name": "gps_metric_scale_sanity",
+        "category": "geospatial",
+        "status": "PASS",
+        "metric_value": 357.54,
+        "threshold_str": "0.1 <= s <= 2000.0 m/unit",
+        "message": "Plausible metric scale: 357.540 m/unit."
+      },
+      {
+        "name": "gps_rotation_and_tilt_sanity",
+        "category": "geospatial",
+        "status": "PASS",
+        "metric_value": -0.208,
+        "threshold_str": "det(R)=1.0 & R[2,2] <= 0.85",
+        "message": "Proper SO(3) rotation (det=1.0) with physically sound camera tilt (Z_proj=-0.208)."
+      },
+      {
+        "name": "gps_fit_residual_and_inliers",
+        "category": "geospatial",
+        "status": "PASS",
+        "metric_value": 0.236,
+        "threshold_str": "RMSE <= 0.50m (Pass), <= 2.50m (Warn)",
+        "message": "Survey-grade alignment fit: RMSE 0.236m, 100.0% inliers."
+      }
+    ]
+  }
+}

@@ -1,4 +1,4 @@
-﻿"""
+"""
 F.O.R.G.E — Spatial Reconstruction Module
 Converts VGGT-Omega predicted metric depth maps and camera poses into dense 3D colored point clouds.
 """
@@ -39,11 +39,11 @@ def depth_to_points(
     else:
         depth = depth_map
 
-    ext = np.atleast_3d(extrinsics)
+    ext = np.asarray(extrinsics)
     if ext.ndim == 2:
         ext = ext[None, ...]
 
-    intr = np.atleast_3d(intrinsics)
+    intr = np.asarray(intrinsics)
     if intr.ndim == 2:
         intr = intr[None, ...]
 
@@ -166,6 +166,70 @@ def save_ply(
     return out_file.stat().st_size
 
 
+def voxel_grid_fusion(
+    points: np.ndarray,
+    colors: np.ndarray,
+    voxel_size: Optional[float] = None
+) -> Tuple[np.ndarray, np.ndarray]:
+    """
+    Consolidates nearby 3D points and averages their RGB colors using a regular 3D voxel grid.
+
+    Note on Coordinate Units:
+        The voxel_size parameter operates in the model's coordinate units (nominally meters
+        in VGGT-Omega convention). These units are derived directly from model predictions
+        and have not been independently verified against ground truth survey measurements or GCPs.
+
+    Args:
+        points: (M, 3) float array of 3D coordinates.
+        colors: (M, 3) array of RGB colors (uint8 or float [0, 1]).
+        voxel_size: Grid cell dimension in model coordinate units (e.g., 0.005).
+                    If None or <= 0, points and colors are returned without consolidation.
+
+    Returns:
+        Tuple of (fused_points, fused_colors) where colors are uint8 [0, 255].
+    """
+    if voxel_size is None or voxel_size <= 0:
+        if colors.dtype != np.uint8:
+            if colors.max() <= 1.0:
+                colors = (colors * 255.0).clip(0, 255).astype(np.uint8)
+            else:
+                colors = colors.clip(0, 255).astype(np.uint8)
+        return points.astype(np.float32), colors
+
+    try:
+        import open3d as o3d
+        pcd = o3d.geometry.PointCloud()
+        pcd.points = o3d.utility.Vector3dVector(points.astype(np.float64))
+        if colors.dtype == np.uint8 or colors.max() > 1.0:
+            c_float = colors.astype(np.float64) / 255.0
+        else:
+            c_float = colors.astype(np.float64)
+        pcd.colors = o3d.utility.Vector3dVector(c_float)
+
+        down_pcd = pcd.voxel_down_sample(voxel_size=float(voxel_size))
+        fused_pts = np.asarray(down_pcd.points, dtype=np.float32)
+        fused_cols = (np.asarray(down_pcd.colors, dtype=np.float32) * 255.0).clip(0, 255).astype(np.uint8)
+        return fused_pts, fused_cols
+    except Exception:
+        # Vectorized NumPy voxel averaging fallback
+        voxel_coords = np.floor(points / float(voxel_size)).astype(np.int64)
+        _, inverse_indices, counts = np.unique(voxel_coords, axis=0, return_inverse=True, return_counts=True)
+        num_voxels = len(counts)
+
+        sum_pts = np.zeros((num_voxels, 3), dtype=np.float64)
+        np.add.at(sum_pts, inverse_indices, points.astype(np.float64))
+        fused_pts = (sum_pts / counts[:, None]).astype(np.float32)
+
+        sum_cols = np.zeros((num_voxels, 3), dtype=np.float64)
+        if colors.dtype == np.uint8 or colors.max() > 1.0:
+            c_arr = colors.astype(np.float64)
+        else:
+            c_arr = colors.astype(np.float64) * 255.0
+        np.add.at(sum_cols, inverse_indices, c_arr)
+        fused_cols = (sum_cols / counts[:, None]).clip(0, 255).astype(np.uint8)
+        return fused_pts, fused_cols
+
+
 def create_point_cloud(
     depth_npz_path: str,
     poses_npz_path: str,
@@ -175,11 +239,35 @@ def create_point_cloud(
     min_depth: float = 0.1,
     max_depth: Optional[float] = 100.0,
     min_confidence: float = 0.1,
-    subsample_step: int = 1
+    subsample_step: int = 1,
+    voxel_size: Optional[float] = None,
+    save_unfused_ply_path: Optional[str] = None
 ) -> Dict[str, Any]:
     """
     Loads depth predictions and camera poses, aligns frame colors, backprojects into 3D,
-    and saves the resulting colored point cloud to a PLY file.
+    applies configurable confidence filtering and optional voxel-grid fusion, and saves
+    the resulting colored point cloud to a PLY file.
+
+    Note on Coordinate Units:
+        Depth, bounding box dimensions, and voxel_size are expressed in model coordinate
+        units (nominally meters in VGGT-Omega convention). These units are model-predicted
+        and have not been independently verified against ground truth survey data or GCPs.
+
+    Args:
+        depth_npz_path: Path to predicted depth NPZ (containing "depth" and optional "confidence").
+        poses_npz_path: Path to camera poses NPZ (containing "extrinsics" and "intrinsics").
+        frames_dir: Directory containing input video frames.
+        output_ply_path: Destination path for the primary output PLY.
+        metadata_output_path: Optional destination path for reconstruction metadata JSON.
+        min_depth: Minimum valid depth in model units (default: 0.1).
+        max_depth: Maximum valid depth in model units (default: 100.0). Configurable; not hardcoded.
+        min_confidence: Minimum depth confidence threshold (default: 0.1). Preserves all valid points
+                        by default; set higher (e.g. 1.2 or 1.5) or use adaptive filtering only when justified.
+        subsample_step: Pixel sampling stride (default: 1).
+        voxel_size: Optional voxel grid size in model units (e.g. 0.005) to consolidate nearby
+                    points and average their colors. If None, points remain un-fused.
+        save_unfused_ply_path: Optional path to save the confidence-filtered point cloud prior
+                               to voxel fusion for direct comparison.
 
     Returns:
         Dictionary of reconstruction statistics and metadata.
@@ -219,7 +307,7 @@ def create_point_cloud(
         frame_colors_list.append(np.array(img, dtype=np.uint8))
     frame_colors = np.stack(frame_colors_list, axis=0)  # Shape: (N, H, W, 3)
 
-    # 4. Backproject depth to 3D world points
+    # 4. Backproject depth to 3D world points (official VGGT-Omega camera convention)
     t_backproject_start = time.perf_counter()
     world_points = depth_to_points(depth_maps, extrinsics, intrinsics)  # Shape: (N, H, W, 3)
     backproject_time = time.perf_counter() - t_backproject_start
@@ -242,29 +330,50 @@ def create_point_cloud(
         step_mask[:, ::subsample_step, ::subsample_step] = True
         valid_mask &= step_mask
 
-    selected_points = world_points[valid_mask]  # Shape: (M, 3)
-    selected_colors = frame_colors[valid_mask]  # Shape: (M, 3)
+    raw_filtered_points = world_points[valid_mask]  # Shape: (M, 3)
+    raw_filtered_colors = frame_colors[valid_mask]  # Shape: (M, 3)
 
-    total_points = len(selected_points)
-    if total_points == 0:
+    raw_points_count = len(raw_filtered_points)
+    if raw_points_count == 0:
         raise RuntimeError("No valid 3D points survived the filtering criteria!")
 
-    # 6. Compute bounding box and spatial statistics
-    bbox_min = selected_points.min(axis=0).tolist()
-    bbox_max = selected_points.max(axis=0).tolist()
-    bbox_extents = (selected_points.max(axis=0) - selected_points.min(axis=0)).tolist()
-    centroid = selected_points.mean(axis=0).tolist()
+    # Optionally persist the unfused point cloud for comparison
+    unfused_ply_size_bytes = None
+    if save_unfused_ply_path:
+        unfused_ply_size_bytes = save_ply(raw_filtered_points, raw_filtered_colors, save_unfused_ply_path, binary=True)
 
-    # 7. Save PLY file
+    # 6. Optional voxel-grid fusion
+    t_fusion_start = time.perf_counter()
+    if voxel_size is not None and voxel_size > 0:
+        fused_points, fused_colors = voxel_grid_fusion(raw_filtered_points, raw_filtered_colors, voxel_size)
+    else:
+        fused_points, fused_colors = raw_filtered_points, raw_filtered_colors
+    fusion_time = time.perf_counter() - t_fusion_start
+
+    total_points = len(fused_points)
+    if total_points == 0:
+        raise RuntimeError("No valid 3D points remained after voxel-grid fusion!")
+
+    # 7. Compute spatial bounding box and color statistics
+    bbox_min = fused_points.min(axis=0).tolist()
+    bbox_max = fused_points.max(axis=0).tolist()
+    bbox_extents = (fused_points.max(axis=0) - fused_points.min(axis=0)).tolist()
+    centroid = fused_points.mean(axis=0).tolist()
+
+    color_mean = fused_colors.mean(axis=0).tolist()
+    color_std = fused_colors.std(axis=0).tolist()
+
+    # 8. Save primary output PLY file
     t_io_start = time.perf_counter()
-    ply_size_bytes = save_ply(selected_points, selected_colors, output_ply_path, binary=True)
+    ply_size_bytes = save_ply(fused_points, fused_colors, output_ply_path, binary=True)
     io_time = time.perf_counter() - t_io_start
 
     total_time = time.perf_counter() - t_start
 
     result_metadata = {
-        "module": "F.O.R.G.E Spatial Reconstruction (Phase 2B)",
+        "module": "F.O.R.G.E Spatial Reconstruction (Phase 2B - Controlled Accuracy)",
         "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "coordinate_units_note": "Model coordinate units (nominally meters); not independently verified against ground truth survey/GCPs.",
         "input": {
             "depth_predictions_path": str(Path(depth_npz_path).resolve()),
             "camera_poses_path": str(Path(poses_npz_path).resolve()),
@@ -273,25 +382,35 @@ def create_point_cloud(
             "depth_resolution": {"height": h, "width": w}
         },
         "filtering": {
-            "min_depth_m": min_depth,
-            "max_depth_m": max_depth,
+            "min_depth": min_depth,
+            "max_depth": max_depth,
             "min_confidence": min_confidence,
-            "subsample_step": subsample_step
+            "subsample_step": subsample_step,
+            "voxel_size": voxel_size
         },
         "reconstruction": {
+            "raw_filtered_points": raw_points_count,
             "total_points": total_points,
+            "fusion_reduction_ratio": round(raw_points_count / total_points, 3) if total_points > 0 else 1.0,
             "bounding_box": {
                 "min": [round(v, 4) for v in bbox_min],
                 "max": [round(v, 4) for v in bbox_max],
                 "extents": [round(v, 4) for v in bbox_extents],
                 "centroid": [round(v, 4) for v in centroid]
             },
+            "color_statistics": {
+                "mean_rgb": [round(float(v), 2) for v in color_mean],
+                "std_rgb": [round(float(v), 2) for v in color_std]
+            },
             "output_ply_path": str(Path(output_ply_path).resolve()),
             "output_ply_size_bytes": ply_size_bytes,
-            "output_ply_size_mb": round(ply_size_bytes / (1024**2), 2)
+            "output_ply_size_mb": round(ply_size_bytes / (1024**2), 2),
+            "unfused_ply_path": str(Path(save_unfused_ply_path).resolve()) if save_unfused_ply_path else None,
+            "unfused_ply_size_bytes": unfused_ply_size_bytes
         },
         "performance": {
             "backprojection_time_sec": round(backproject_time, 4),
+            "fusion_time_sec": round(fusion_time, 4),
             "ply_io_time_sec": round(io_time, 4),
             "total_reconstruction_time_sec": round(total_time, 4)
         },

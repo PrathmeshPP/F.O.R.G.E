@@ -38,6 +38,18 @@ The system is organized into modular phases:
    - Restores authentic source RGB colors to mesh vertices via KD-tree inverse-distance-weighted interpolation.
    - Creates a separate, neutral rectangular exhibition base for professional presentation without fabricating terrain or altering spatial measurements.
 
+7. **Geospatial Alignment & Telemetry Engine (`src/geo/`, `scripts/align_reconstruction_gps.py`)**:
+   - Extracts onboard drone GPS telemetry from embedded metadata (`djmd_protobuf`) and companion subtitle tracks (`.SRT`).
+   - Projects WGS-84 geodetic coordinates to local metric East-North-Up (ENU) coordinates.
+   - Performs trajectory baseline conditioning analysis, detecting ill-conditioned stationary hovers against the GNSS noise floor.
+   - Estimates optimal 7-DoF similarity transformations (scale, 3D rotation, 3D translation) via robust Umeyama–RANSAC alignment.
+   - Transforms 3D geometry and camera trajectories into georeferenced metric coordinate space.
+
+8. **Automated Quality Gates & Verification (`src/geo/quality_gates.py`)**:
+   - Evaluates multi-criteria geometric, topological, kinematic, and geospatial acceptance gates.
+   - Enforces vertex density, triangle completeness, aspect-ratio needle outlier limits, and topological clustering.
+   - Detects 1D collinear hover orientation defects ($R_{3,3} > 0.85$ optical tilt into sky).
+
 ---
 
 ## Repository Structure
@@ -45,11 +57,16 @@ The system is organized into modular phases:
 ```
 FORGE/
  ├── run_pipeline.py                 # End-to-end video-to-predictions pipeline
+ ├── requirements.txt                # Core pipeline dependency specification
+ ├── requirements-viewer.txt         # Open3D 3D viewer dependency specification
  ├── src/
- │    ├── video/                     # Frame extraction and temporal sampling
+ │    ├── video/                     # Frame extraction, temporal sampling, and adaptive selection
  │    ├── vggt/                      # VGGT-Omega loading, inference, and camera decoding
- │    └── reconstruction/            # Depth-to-point-cloud backprojection & PLY export
+ │    ├── reconstruction/            # Depth backprojection, voxel fusion, and generalized pipeline
+ │    └── geo/                       # Telemetry extraction, Umeyama-RANSAC, and quality gates
  ├── scripts/
+ │    ├── align_reconstruction_gps.py # Dataset-wide batch GPS alignment runner
+ │    ├── generate_contact_sheets.py # Multi-view diagnostic contact sheet generator
  │    ├── generate_point_cloud.py    # CLI point cloud generation runner
  │    ├── preview_point_cloud.py     # Dependency-free orthographic QA previewer
  │    ├── view_point_cloud.py        # Interactive Open3D 3D point cloud visualizer
@@ -59,8 +76,10 @@ FORGE/
  │    ├── audit_accuracy.py          # Geometric accuracy audit & multi-view depth agreement
  │    └── render_model_comparisons.py # Offscreen multi-angle comparative rendering diagnostic
  ├── tests/
- │    └── test_vggt_loading.py       # Model loading and GPU smoke test
- ├── requirements-viewer.txt         # Open3D 3D viewer dependency specification
+ │    ├── test_vggt_loading.py       # Model loading and GPU smoke test
+ │    ├── test_geo_alignment.py      # Automated tests for telemetry, Umeyama-RANSAC & quality gates
+ │    ├── test_general_pipeline.py   # General reconstruction pipeline automated tests
+ │    └── test_point_cloud_accuracy.py # Point cloud fusion and backprojection tests
  └── README.md
 ```
 
@@ -193,16 +212,31 @@ Generate consistent offscreen multi-angle comparative rendering sheets (Top, Fro
 python scripts/render_model_comparisons.py
 ```
 
-### 9. Validation Baselines
+### 9. Validation Baselines & Metric-Aligned Models
 
-The repository tracks validated baseline models and execution metadata:
-- **Campus 0049 Baseline (`outputs/dji_0049_validation/`)**: Oblique flight over campus terrain and structures. Tracks authentic colored surface mesh baseline (`surface_mesh.ply`), visual QA preview, camera poses, and execution metadata documenting fragmented/incomplete regions for baseline comparison.
-- **River / Bridge Baseline (`outputs/dji_river_bridge_validation/`)**: Validated forward-translation corridor (52s–64s) exhibiting clean multi-view parallax and authentic structural surface geometry (`mesh_experiment_v2/surface_mesh.ply`).
-- **Accuracy Audit Evidence (`outputs/accuracy_experiment/`)**: Contains `review_report.md` and multi-angle inspection sheets comparing baseline geometries.
+The repository tracks validated baseline models, repaired candidates, and execution metadata:
+- **River Bridge Flight Corridor (`outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/`)**: Georeferenced metric model (`surface_mesh_gps_aligned.ply`, 323k vertices, 637k triangles) solved across 84.8 m active forward flight corridor, achieving 100% inlier alignment at 0.236 m RMSE.
+- **Campus 0049 Baseline & Repaired Models (`outputs/dji_0049_validation/`, `outputs/accuracy_experiment/generalization_disaster_validation_v1/campus_0049/`)**: Authentic colored surface mesh baselines, visual QA previews, camera poses, and execution metadata.
+- **River / Bridge Baseline (`outputs/dji_river_bridge_validation/`)**: Validated forward-translation corridor exhibiting clean multi-view parallax (`mesh_experiment_v2/surface_mesh.ply`).
+- **Audit & Alignment Evidence (`outputs/accuracy_experiment/gps_aligned_v1/`)**: Contains consolidated `batch_alignment_report.json`, `batch_alignment_summary.csv`, and visual comparison sheets.
 
-### 10. Run Model Verification Smoke Test
-Verify environment readiness and CUDA inference without video dependencies:
+### 10. Robust GPS Telemetry Alignment Runner
+Perform automated trajectory baseline conditioning, Umeyama-RANSAC 7-DoF alignment, and quality gate assessment across all project videos:
 
 ```bash
-python tests/test_vggt_loading.py
+python scripts/align_reconstruction_gps.py --all
+```
+
+### 11. Diagnostic Comparison Contact Sheet Generator
+Generate high-resolution multi-view comparison sheets comparing original baselines, repaired candidates, and metric models:
+
+```bash
+python scripts/generate_contact_sheets.py
+```
+
+### 12. Run Automated Test Suite
+Run the full test suite covering synthetic 7-DoF recovery, RANSAC outlier rejection, trajectory conditioning, quality gates, and reconstruction pipelines:
+
+```bash
+python -m unittest discover tests
 ```
