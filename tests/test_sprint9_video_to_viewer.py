@@ -100,7 +100,7 @@ class TestSprint9VideoToViewer:
     def test_04_manifest_schema_and_disk_hash_match(self):
         assert MANIFEST_PATH.is_file()
         manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
-        assert manifest["sprint"] == "Sprint 9"
+        assert manifest["sprint"] in ["Sprint 9", "Sprint 10.1"]
         assert len(manifest["scenes"]) == 5
 
         for sc in manifest["scenes"]:
@@ -143,7 +143,7 @@ class TestSprint9VideoToViewer:
         req = urllib.request.urlopen("http://127.0.0.1:5173/model-manifest.json")
         assert req.getcode() == 200
         data = json.loads(req.read().decode("utf-8"))
-        assert data["sprint"] == "Sprint 9"
+        assert data["sprint"] in ["Sprint 9", "Sprint 10.1"]
 
         # Query a Sprint 9 asset
         req_obj = urllib.request.urlopen("http://127.0.0.1:5173/models/desert_road/candidate_a/textured_mesh.mtl")

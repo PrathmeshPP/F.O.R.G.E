@@ -1,6 +1,12 @@
-# F.O.R.G.E — Feed-forward Optical Reconstruction & Geometry Engine
+# F.O.R.G.E — Fast Optical Reconstruction & Geospatial Estimation
 
-F.O.R.G.E is a spatial intelligence and 3D scene reconstruction platform built on feed-forward vision foundation models (VGGT-Ω). It processes monocular aerial drone and vehicular corridor video sequences into metric 3D point clouds, dense depth maps, camera trajectory poses, textured triangle surface meshes, and interactive web visualization assets.
+[![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
+[![Three.js](https://img.shields.io/badge/Three.js-r186-black.svg)](https://threejs.org/)
+[![Vite](https://img.shields.io/badge/Vite-8.3-646CFF.svg)](https://vitejs.dev/)
+[![Git LFS](https://img.shields.io/badge/Git%20LFS-3.5%20GB-orange.svg)](https://git-lfs.github.com/)
+[![License Status](https://img.shields.io/badge/License-All%20Rights%20Reserved%20(Pending%20Selection)-lightgrey.svg)](docs/THIRD_PARTY_ASSET_PROVENANCE.md)
+
+F.O.R.G.E is a spatial intelligence and 3D scene reconstruction platform built around feed-forward vision foundation models (VGGT-Ω). It processes monocular aerial drone and corridor video sequences into metric 3D point clouds, dense depth maps, camera trajectory poses, textured triangle surface meshes, and interactive web visualization assets.
 
 ---
 
@@ -8,7 +14,7 @@ F.O.R.G.E is a spatial intelligence and 3D scene reconstruction platform built o
 
 The platform consists of two primary subsystems:
 1. **F.O.R.G.E Core Reconstruction Pipeline (`src/`, `scripts/`)**: Feed-forward foundation model inference, pinhole depth backprojection, multi-view consistency filtering, Poisson/BPA surface meshing, photographic KD-tree color transfer, and Umeyama–RANSAC 7-DoF geospatial alignment.
-2. **F.O.R.G.E Explorer Interactive Viewer (`viewer/`, `scripts/serve_viewer.py`)**: React 18, TypeScript, Vite, and Three.js web application for real-time 3D inspection, camera framing presets, multi-representation rendering (textured, photographic, untextured, point cloud), and split-view comparative analysis.
+2. **F.O.R.G.E Explorer Interactive Viewer (`viewer/`, `scripts/serve_viewer.py`)**: React 19, TypeScript, Vite, and Three.js web application for real-time 3D inspection, camera framing presets, multi-representation rendering (textured, photographic, untextured, point cloud), and split-view comparative analysis.
 
 ```
                       [ Monocular Source Video ]
@@ -44,111 +50,86 @@ The platform consists of two primary subsystems:
 
 ## Benchmark Scenes & Reconstruction Baseline
 
-The project evaluates four diverse real-world video sources across five benchmark entries:
+The project evaluates four real-world video sources across five benchmark entries:
 
-| Scene Entry | Category | Source Video | Extracted Geometry | Key Scene Characteristics |
-| :--- | :--- | :--- | :--- | :--- |
-| **1. Campus 0049** | Architectural Survey | `dji_fly_20260727_172754_0049_...mp4` | 128k vertices, 253k triangles | Institutional courtyard, buildings, reflecting pool, walkways. |
-| **2. Desert Road (Candidate A)** | Highway Corridor | `desert_road.mp4` | 53k vertices, 105k triangles | Static highway corridor across sand dunes; moving traffic removed. |
-| **3. Desert Road (Candidate B)** | Dynamic Preservation | `desert_road.mp4` | 53k vertices, 105k triangles | Preserves reference vehicle (Mini Cooper with rooftop balloons). |
-| **4. Forest Road** | Terrain & Vegetation | `forest_road.mp4` | 462k vertices, 919k triangles | Dense mountain tree canopy, winding asphalt road with yellow lines. |
-| **5. River/Bridge** | Civil Infrastructure | `segment_52s_64s.mp4` | 132k vertices, 260k triangles | Dual-span highway bridge, concrete piers, riverbed and approach road. |
+| Scene Entry | Category | Source Video | Geometry | Metric & Calibration Status | Key Scene Characteristics |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **1. Campus 0049** | Architectural Survey | `dji_fly_...0049...mp4` | 128k v, 253k f | Model-relative; uncalibrated scale. Non-georeferenced. | Institutional courtyard, buildings, reflecting pool, walkways. Hovering drone limits facade angles. |
+| **2. Desert Road (Candidate A)** | Highway Corridor | `desert_road.mp4` | 53k v, 105k f | Camera-relative plane fit. Uncalibrated scale. | Static clean highway across sand dunes; moving traffic removed. |
+| **3. Desert Road (Candidate B)** | Dynamic Preservation | `desert_road.mp4` | 53k v, 105k f | Camera-relative plane fit. Uncalibrated scale. | Highway corridor preserving single reference vehicle at `[0.03, 0.04, 0.45]`. |
+| **4. Forest Road** | Terrain & Vegetation | `forest_road.mp4` | 462k v, 919k f | Model-relative; uncalibrated scale. Non-georeferenced. | Dense mountain tree canopy, winding asphalt road with yellow lane markings. |
+| **5. River/Bridge** | Civil Infrastructure | `segment_52s_64s.mp4` | 132k v, 260k f | Metric GPS georeferenced via 7-DoF Umeyama–RANSAC alignment. | Dual-span highway bridge, concrete piers, riverbed channel and approach road. |
+
+> [!IMPORTANT]
+> **Reconstruction Baseline & Deliverable Clarification:**
+> - **Coordinate Scale & Calibration:** Unless explicitly georeferenced via drone telemetry (e.g., River/Bridge), scene coordinates are model-relative. Metric scale is arbitrary. Unseen building facades, foliage voids, and reflective water specular noise reflect physical capture geometry and are honestly not synthesized.
+> - **Deliverable Provenance:** Standalone deliverables in `outputs/manual_model_review/` are **format-converted inspection packages** (OBJ, PLY, GLB) generated from the frozen Sprint 9 baseline (`outputs/accuracy_experiment/sprint9_video_to_viewer_release/`), not newly run reconstructions.
+
+---
+
+## Canonical Asset Deliverables
+
+The repository maintains two canonical deliverables directories:
+
+### 1. Live Web Viewer Baseline (`outputs/accuracy_experiment/sprint9_video_to_viewer_release/`)
+The authoritative frozen baseline served directly to the F.O.R.G.E Explorer web application:
+- `textured_mesh.obj` & `textured_mesh.mtl`: Polygonal Wavefront mesh with explicit UV mapping.
+- `texture_atlas.png`: 4096×4096 unified diffuse texture atlas.
+- `surface_mesh_photographic.ply`: KD-tree vertex-colored photographic mesh.
+- `surface_mesh_repaired.ply`: Watertight geometric surface mesh.
+- Verified render previews and candidate metadata JSONs.
+
+### 2. Standalone Manual Review Packages (`outputs/manual_model_review/`)
+Independent deliverables for direct inspection in **Blender**, **MeshLab**, **CloudCompare**, or **Windows 3D Viewer**:
+- `model_geometry.ply` & `model_geometry.obj`: Clean coordinate geometry with zero texture dependencies.
+- `model_photographic.ply`: Photographic vertex-colored RGB mesh.
+- `model_textured.obj`, `model_textured.mtl`, and `texture_atlas.png`: Textured model for 3D DCC tools.
+- `model_preview.glb`: Self-contained glTF 2.0 binary with embedded textures for 1-click inspection.
+- `forge_models_for_manual_inspection.zip` (354.2 MB): Consolidated master archive containing all 5 scenes.
+
+Detailed opening guides and SHA-256 checksums are cataloged in [`outputs/manual_model_review/MODEL_CATALOG.md`](outputs/manual_model_review/MODEL_CATALOG.md).
+
+---
+
+## Source Video Licensing & Provenance
+
+The four source videos used across the five scenes have distinct redistribution terms:
+
+| Video Asset | Path | Size | Origin / Rights Holder | License | Redistribution Status |
+| :--- | :--- | :---: | :--- | :--- | :--- |
+| **Campus 0049** | `data/source_videos/dji_fly_...0049...mp4` | 154.5 MB | F.O.R.G.E Authors (`PrathmeshPP` / SIH) | First-party proprietary | **CLEARED** (Full redistribution) |
+| **River/Bridge** | `data/source_videos/segment_52s_64s.mp4` | 66.8 MB | F.O.R.G.E Authors (`PrathmeshPP` / SIH) | First-party proprietary | **CLEARED** (Full redistribution) |
+| **Desert Road** | `data/source_videos/desert_road.mp4` | 6.2 MB | Meta AI & Univ. of Oxford (`VGGT-Omega`) | Meta FAIR Noncommercial License | **RESTRICTED** (Noncommercial Research only) |
+| **Forest Road** | `data/source_videos/forest_road.mp4` | 10.2 MB | Meta AI & Univ. of Oxford (`VGGT-Omega`) | Meta FAIR Noncommercial License | **RESTRICTED** (Noncommercial Research only) |
 
 > [!NOTE]
-> **Coordinate Scale & Calibration Notice:** Coordinates are model-relative. Metric scale is uncalibrated and arbitrary unless explicitly aligned via GPS telemetry. Unseen building facades, foliage voids, and reflective water specular noise reflect physical capture limitations and are honestly not synthesized.
+> Detailed legal analysis, upstream citations, redistribution terms, and project licensing options for the repository owner are fully documented in [`docs/THIRD_PARTY_ASSET_PROVENANCE.md`](docs/THIRD_PARTY_ASSET_PROVENANCE.md).
 
 ---
 
-## Standalone 3D Model Deliverables (`outputs/manual_model_review/`)
+## Repository Documentation Index
 
-All five scenes are delivered in self-contained formats for direct inspection in **Blender**, **MeshLab**, **CloudCompare**, or **Windows 3D Viewer** completely independently of the web viewer:
-
-- **Untextured 3D Mesh**: `model_geometry.ply` and `model_geometry.obj` (clean coordinate geometry with zero texture dependencies).
-- **Photographic 3D Mesh**: `model_photographic.ply` (vertex-colored RGB point/mesh representation).
-- **Textured 3D Model**: `model_textured.obj`, `model_textured.mtl`, and `texture_atlas.png` (4096×4096 diffuse map).
-- **Self-Contained Preview**: `model_preview.glb` (glTF 2.0 binary with embedded PBR materials for 1-click inspection).
-- **Master Inspection Package**: `forge_models_for_manual_inspection.zip` (354.2 MB archive containing all models and textures).
-
-Detailed manual opening instructions and SHA-256 hashes are cataloged in [`outputs/manual_model_review/MODEL_CATALOG.md`](outputs/manual_model_review/MODEL_CATALOG.md).
-
----
-
-## Repository Structure
-
-```
-FORGE/
- ├── data/
- │    └── source_videos/             # Verified original source drone & benchmark footage
- ├── docs/
- │    ├── ASSET_MANIFEST.md          # Comprehensive catalog of all 480+ project assets
- │    ├── asset_manifest.json        # Machine-readable asset verification inventory
- │    ├── SPRINT10_LIVE_DEMO_GUIDE.md# Presenter demo script & camera framing guide
- │    └── OPENCV_COMPLETION_ROADMAP.md # Mathematical formulation & technical roadmap
- ├── outputs/
- │    ├── manual_model_review/       # Sprint 10.2 standalone OBJ, PLY, GLB, and ZIP packages
- │    ├── accuracy_experiment/
- │    │    ├── sprint9_video_to_viewer_release/ # Authoritative frozen baseline reconstructions
- │    │    ├── sprint10_demo_release/           # Demo hardening deliverables & screenshots
- │    │    ├── sprint10_1_viewer_refinement/   # Framing presets & metadata verification
- │    │    └── gps_aligned_v1/                  # Umeyama-RANSAC metric-georeferenced models
- │    ├── dji_0049_validation/       # Campus 0049 camera poses & validation artifacts
- │    └── dji_river_bridge_validation/ # River Bridge source segment & validation predictions
- ├── scripts/
- │    ├── serve_viewer.py            # Zero-dependency Python HTTP server with Range support
- │    ├── build_manual_model_review.py # Standalone model packaging & GLB export runner
- │    ├── align_reconstruction_gps.py # Umeyama-RANSAC 7-DoF batch geospatial alignment
- │    ├── run_pipeline.py            # End-to-end video-to-predictions pipeline
- │    ├── reconstruct_mesh.py        # Surface meshing & KD-tree vertex color interpolation
- │    ├── generate_point_cloud.py    # Depth backprojection and voxel fusion CLI
- │    └── preview_point_cloud.py     # Orthographic projection visual QA generator
- ├── src/
- │    ├── geo/                       # Telemetry parsing, Umeyama-RANSAC, and quality gates
- │    ├── reconstruction/            # Backprojection, multi-view consistency, voxel fusion
- │    ├── vggt/                      # VGGT-Ω model loading, inference, and camera decoding
- │    └── video/                     # Frame extraction, temporal sampling, and selection
- ├── tests/
- │    ├── test_sprint10_2_standalone_review.py # Standalone review deliverable validation
- │    ├── test_sprint10_1_viewer_refinement.py # Camera framing & metadata integrity
- │    ├── test_sprint10_demo_hardening.py      # Demo release & HTTP server endpoint tests
- │    └── test_geo_alignment.py      # Telemetry, Umeyama-RANSAC, and quality gate tests
- ├── viewer/                         # F.O.R.G.E Explorer React/TypeScript/Three.js Web Application
- │    ├── dist/                      # Pre-built production distribution for instant demo
- │    ├── src/                       # Components, Three.js canvas, shaders, and data model
- │    └── package.json               # Frontend dependencies (React, Three.js, Lucide, Vite)
- ├── start_forge_explorer.bat        # 1-click Windows demo launcher
- ├── requirements.txt                # Python core pipeline dependencies
- ├── requirements-viewer.txt         # Optional Open3D viewer dependency
- ├── .gitattributes                  # Git LFS tracking rules for 3D assets, videos, and archives
- └── README.md
-```
+| Document | Purpose & Contents |
+| :--- | :--- |
+| [`docs/THIRD_PARTY_ASSET_PROVENANCE.md`](docs/THIRD_PARTY_ASSET_PROVENANCE.md) | Exhaustive legal provenance, upstream URLs, Meta FAIR terms, and project licensing options. |
+| [`docs/REPOSITORY_ASSET_POLICY.md`](docs/REPOSITORY_ASSET_POLICY.md) | Durable three-tier artifact policy (Git vs Git LFS vs External untracked foundation weights). |
+| [`docs/GIT_LFS_AND_STORAGE.md`](docs/GIT_LFS_AND_STORAGE.md) | Git LFS inventory, bandwidth limits, selective checkout commands, and historical purge caveats. |
+| [`docs/ASSET_MANIFEST.md`](docs/ASSET_MANIFEST.md) | Human-readable verification manifest of all 484 tracked project deliverables. |
+| [`docs/asset_manifest.json`](docs/asset_manifest.json) | Machine-readable SHA-256 asset manifest with source video verification statuses. |
+| [`docs/SPRINT10_LIVE_DEMO_GUIDE.md`](docs/SPRINT10_LIVE_DEMO_GUIDE.md) | Complete presenter walk-through script and camera framing guide for evaluators. |
+| [`docs/OPENCV_COMPLETION_ROADMAP.md`](docs/OPENCV_COMPLETION_ROADMAP.md) | Mathematical formulation for GPS alignment, pose recovery, and texturing. |
 
 ---
 
-## Quickstart & Launching the Explorer
+## Installation & Quickstart
 
-### 1. Launch with One Click (Windows)
-Double-click `start_forge_explorer.bat` or run:
+### 1. Prerequisites
+- **Python:** 3.11 or 3.12 recommended.
+- **Node.js:** v18+ (for building the viewer).
+- **Git LFS:** Required for retrieving large 3D models and source videos.
+- **CUDA GPU:** Strongly recommended for inference (`cuda:0`), optional for viewer inspection.
 
-```cmd
-start_forge_explorer.bat
-```
-
-This starts the local asset-serving daemon and launches `http://localhost:5173` in your default browser.
-
-### 2. Manual Server Launch
-```bash
-python scripts/serve_viewer.py --port 5173
-```
-
-Navigate to `http://localhost:5173`. The server handles Range requests for 4K video playback, serves static models with CORS headers, and includes an automated health check at `/health`.
-
----
-
-## Git LFS & Asset Retrieval
-
-Large binary assets (3D meshes, self-contained GLB files, ZIP packages, and MP4 videos) are tracked via **Git LFS**.
-
-### Initial Setup
+### 2. Git LFS Checkout
 ```bash
 # Install Git LFS hooks
 git lfs install
@@ -157,30 +138,52 @@ git lfs install
 git clone https://github.com/PrathmeshPP/FORGE.git
 cd FORGE
 
-# Pull all tracked LFS assets
+# Pull all tracked LFS assets (~3.5 GB)
 git lfs pull
 ```
 
-To pull assets for a specific scene only:
+*Selective checkout options (to pull only specific scenes or viewer meshes) are documented in [`docs/GIT_LFS_AND_STORAGE.md`](docs/GIT_LFS_AND_STORAGE.md).*
+
+### 3. Python Environment Setup
 ```bash
-git lfs pull --include="outputs/manual_model_review/campus_0049/*"
+# Create and activate virtual environment
+python -m venv .venv
+source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+pip install -r requirements-viewer.txt
+```
+
+### 4. Launching F.O.R.G.E Explorer
+
+#### One-Click Launch (Windows)
+Double-click `start_forge_explorer.bat` or execute in command prompt:
+```cmd
+start_forge_explorer.bat
+```
+
+#### Manual Launch
+```bash
+python scripts/serve_viewer.py --port 5173
+```
+Open [http://localhost:5173](http://localhost:5173) in Chrome, Edge, or Firefox.
+
+---
+
+## Automated Test Suite
+
+F.O.R.G.E includes comprehensive unit and integration tests verifying manifest accuracy, geometry extents, coordinate finiteness, texture bindings, and HTTP asset serving:
+
+```bash
+# Run comprehensive release test suites
+pytest tests/test_sprint9_video_to_viewer.py tests/test_sprint10_demo_hardening.py tests/test_sprint10_1_viewer_refinement.py tests/test_sprint10_2_standalone_review.py -v
 ```
 
 ---
 
-## Running the Automated Test Suite
+## Project License & Ownership
 
-The test suite validates pipeline integrity, mathematical alignment, coordinate finiteness, and standalone deliverables:
-
-```bash
-# Run comprehensive sprint verification suite
-pytest tests/test_sprint10_demo_hardening.py tests/test_sprint10_1_viewer_refinement.py tests/test_sprint10_2_standalone_review.py -v
-```
-
----
-
-## License & Attribution
-
-- **F.O.R.G.E Platform**: Developed as part of the Smart India Hackathon (SIH) spatial intelligence challenge.
-- **Foundation Model**: VGGT-Ω (Visual Geometry Grounded Transformer for Monocular 3D Reconstruction).
-- **Telemetry & Video**: Captured via DJI Air 3S drone and public highway dashcam benchmarks.
+- **Repository Owner:** [PrathmeshPP](https://github.com/PrathmeshPP)
+- **Current License Status:** **All Rights Reserved** (Pending formal license selection by owner; see [`docs/THIRD_PARTY_ASSET_PROVENANCE.md`](docs/THIRD_PARTY_ASSET_PROVENANCE.md)).
+- **Third-Party Research Materials:** `desert_road.mp4`, `forest_road.mp4`, and VGGT-Ω foundation model code/weights are licensed under the **Meta FAIR Noncommercial Research License (v1, Oct 2024)**. Commercial exploitation is prohibited without separate licensing from Meta AI.

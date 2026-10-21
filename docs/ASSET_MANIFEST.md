@@ -1,9 +1,9 @@
 # F.O.R.G.E — Comprehensive Project Asset Manifest
 
 > **Repository:** [PrathmeshPP/FORGE](https://github.com/PrathmeshPP/FORGE)  
-> **Generated UTC:** 2026-10-21T16:22:33Z  
-> **Total Assets Indexed:** 489 files  
-> **Total Deliverables Volume:** 3565.5 MB (3.48 GB)  
+> **Generated UTC:** 2026-10-21T17:00:00Z  
+> **Total Assets Indexed:** 484 files  
+> **Total Deliverables Volume:** 3211.4 MB (3.14 GB)  
 
 ---
 
@@ -29,29 +29,24 @@ The four source videos used for 3D reconstruction were verified against the refe
 | `MANUAL_MODEL_REVIEW_REPORT.md` | `outputs/manual_model_review/MANUAL_MODEL_REVIEW_REPORT.md` | 0.021 MB | Markdown Technical Report / Document | `5df22426368e1e82...` |
 | `MODEL_CATALOG.md` | `outputs/manual_model_review/MODEL_CATALOG.md` | 0.021 MB | Markdown Technical Report / Document | `d8a9fd3f241d539f...` |
 | `SOURCE_VIDEO_LOCATIONS.md` | `outputs/manual_model_review/SOURCE_VIDEO_LOCATIONS.md` | 0.012 MB | Markdown Technical Report / Document | `672404b773949c4b...` |
-| `campus_0049.zip` | `outputs/manual_model_review/campus_0049.zip` | 82.469 MB | Deliverable Archive (ZIP) | `57b7e7996177678b...` |
 | `metadata.json` | `outputs/manual_model_review/campus_0049/metadata.json` | 0.006 MB | Metadata / Manifest (JSON) | `41dc0d480ab4759e...` |
 | `model_preview.glb` | `outputs/manual_model_review/campus_0049/model_preview.glb` | 46.132 MB | Self-Contained 3D Model (glTF 2.0) | `33cc62d81833c5f7...` |
 | `render_oblique.png` | `outputs/manual_model_review/campus_0049/render_oblique.png` | 0.171 MB | Texture Map / Preview Render (PNG) | `3d91dac9bf5ba4ac...` |
 | `render_overview.png` | `outputs/manual_model_review/campus_0049/render_overview.png` | 0.205 MB | Texture Map / Preview Render (PNG) | `aeafa272011f99f2...` |
-| `desert_road_candidate_a.zip` | `outputs/manual_model_review/desert_road_candidate_a.zip` | 29.866 MB | Deliverable Archive (ZIP) | `e625945de1289e8b...` |
 | `metadata.json` | `outputs/manual_model_review/desert_road_candidate_a/metadata.json` | 0.006 MB | Metadata / Manifest (JSON) | `2f9f3034cb0deedd...` |
 | `model_preview.glb` | `outputs/manual_model_review/desert_road_candidate_a/model_preview.glb` | 19.224 MB | Self-Contained 3D Model (glTF 2.0) | `dd7c799df2f227b4...` |
 | `render_oblique.png` | `outputs/manual_model_review/desert_road_candidate_a/render_oblique.png` | 0.059 MB | Texture Map / Preview Render (PNG) | `afaff77a0c110ebd...` |
 | `render_overview.png` | `outputs/manual_model_review/desert_road_candidate_a/render_overview.png` | 0.064 MB | Texture Map / Preview Render (PNG) | `578a5ce742efa8ed...` |
-| `desert_road_candidate_b.zip` | `outputs/manual_model_review/desert_road_candidate_b.zip` | 29.875 MB | Deliverable Archive (ZIP) | `7d6613f4943d3d96...` |
 | `metadata.json` | `outputs/manual_model_review/desert_road_candidate_b/metadata.json` | 0.006 MB | Metadata / Manifest (JSON) | `3aa6d58a1eb347c9...` |
 | `model_preview.glb` | `outputs/manual_model_review/desert_road_candidate_b/model_preview.glb` | 19.229 MB | Self-Contained 3D Model (glTF 2.0) | `750a30ae96ae09a0...` |
 | `render_oblique.png` | `outputs/manual_model_review/desert_road_candidate_b/render_oblique.png` | 0.059 MB | Texture Map / Preview Render (PNG) | `b34df575517024d1...` |
 | `render_overview.png` | `outputs/manual_model_review/desert_road_candidate_b/render_overview.png` | 0.066 MB | Texture Map / Preview Render (PNG) | `e429660d4961b838...` |
-| `forest_road.zip` | `outputs/manual_model_review/forest_road.zip` | 145.49 MB | Deliverable Archive (ZIP) | `28a6b7972f6c2897...` |
 | `metadata.json` | `outputs/manual_model_review/forest_road/metadata.json` | 0.006 MB | Metadata / Manifest (JSON) | `38201d2d50d2c72e...` |
 | `model_preview.glb` | `outputs/manual_model_review/forest_road/model_preview.glb` | 87.976 MB | Self-Contained 3D Model (glTF 2.0) | `125d6a5a20e8abab...` |
 | `render_oblique.png` | `outputs/manual_model_review/forest_road/render_oblique.png` | 0.22 MB | Texture Map / Preview Render (PNG) | `0baa9424a8aad0b8...` |
 | `render_overview.png` | `outputs/manual_model_review/forest_road/render_overview.png` | 0.231 MB | Texture Map / Preview Render (PNG) | `68e316d1a643bf71...` |
 | `forge_models_for_manual_inspection.zip` | `outputs/manual_model_review/forge_models_for_manual_inspection.zip` | 354.202 MB | Deliverable Archive (ZIP) | `65f84bfe2950e1ae...` |
 | `model_integrity_report.json` | `outputs/manual_model_review/model_integrity_report.json` | 0.034 MB | Metadata / Manifest (JSON) | `4008c47c52c17895...` |
-| `river_bridge.zip` | `outputs/manual_model_review/river_bridge.zip` | 66.382 MB | Deliverable Archive (ZIP) | `ffeae323bf2e8504...` |
 | `metadata.json` | `outputs/manual_model_review/river_bridge/metadata.json` | 0.006 MB | Metadata / Manifest (JSON) | `7cbc70d3ea30eee5...` |
 | `model_preview.glb` | `outputs/manual_model_review/river_bridge/model_preview.glb` | 38.397 MB | Self-Contained 3D Model (glTF 2.0) | `13db2cfb85f1c69a...` |
 | `render_oblique.png` | `outputs/manual_model_review/river_bridge/render_oblique.png` | 0.168 MB | Texture Map / Preview Render (PNG) | `69d8469759107d3b...` |
@@ -440,7 +435,6 @@ The four source videos used for 3D reconstruction were verified against the refe
 | `outputs/manual_model_review/MODEL_CATALOG.md` | 0.021 | Markdown Technical Report / Document | `d8a9fd3f241d539fb1e642cd7b22d4a6c982a8d63195c04fc9048e6c0e84f6e1` |
 | `outputs/manual_model_review/README.txt` | 0.002 | Text Configuration | `058cfad0ee54ed527707f1a02d938f0666ef60effda580b07e437efaba907048` |
 | `outputs/manual_model_review/SOURCE_VIDEO_LOCATIONS.md` | 0.012 | Markdown Technical Report / Document | `672404b773949c4b1d4b8063c2de8b9d0037e457611c053c9a183bb6416df9c2` |
-| `outputs/manual_model_review/campus_0049.zip` | 82.469 | Deliverable Archive (ZIP) | `57b7e7996177678b6497f06d4d059e33895853ba435de9c039d9a59125461940` |
 | `outputs/manual_model_review/campus_0049/metadata.json` | 0.006 | Metadata / Manifest (JSON) | `41dc0d480ab4759e270fbbd319fa04f0f1d074498f9106eb74b30ee69a23a66c` |
 | `outputs/manual_model_review/campus_0049/model_geometry.obj` | 17.479 | 3D Geometry Mesh (Wavefront OBJ) | `1daef6e7f552a580be47a55cdea00b968bb056138384f283f96c163b6fcde92f` |
 | `outputs/manual_model_review/campus_0049/model_geometry.ply` | 9.385 | 3D Point Cloud / Mesh (Polygon PLY) | `adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb` |
@@ -451,7 +445,6 @@ The four source videos used for 3D reconstruction were verified against the refe
 | `outputs/manual_model_review/campus_0049/render_oblique.png` | 0.171 | Texture Map / Preview Render (PNG) | `3d91dac9bf5ba4ac2b9d31bbf0065e41085b59748e2f2a3d1e0333b59b62db72` |
 | `outputs/manual_model_review/campus_0049/render_overview.png` | 0.205 | Texture Map / Preview Render (PNG) | `aeafa272011f99f2b00154bdea247c5b1fd6b3f76eaf4c0b014915e895db7e3d` |
 | `outputs/manual_model_review/campus_0049/texture_atlas.png` | 27.944 | Texture Map / Preview Render (PNG) | `35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3` |
-| `outputs/manual_model_review/desert_road_candidate_a.zip` | 29.866 | Deliverable Archive (ZIP) | `e625945de1289e8b6f10a0ee588d4adc74b4aaf234391c491ff6672ebdaeb2a9` |
 | `outputs/manual_model_review/desert_road_candidate_a/metadata.json` | 0.006 | Metadata / Manifest (JSON) | `2f9f3034cb0deeddbbb77e79200d458833558f98f2403ce1963f5f118286734c` |
 | `outputs/manual_model_review/desert_road_candidate_a/model_geometry.obj` | 7.278 | 3D Geometry Mesh (Wavefront OBJ) | `0b197d6a16d35ef72d626f869cde15d2bab9079a2cac34aabc418a551fea49e9` |
 | `outputs/manual_model_review/desert_road_candidate_a/model_geometry.ply` | 3.889 | 3D Point Cloud / Mesh (Polygon PLY) | `b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11` |
@@ -462,7 +455,6 @@ The four source videos used for 3D reconstruction were verified against the refe
 | `outputs/manual_model_review/desert_road_candidate_a/render_oblique.png` | 0.059 | Texture Map / Preview Render (PNG) | `afaff77a0c110ebdcc87da9fd349a5959cebb4aa2fca7c54e292a3a640b49542` |
 | `outputs/manual_model_review/desert_road_candidate_a/render_overview.png` | 0.064 | Texture Map / Preview Render (PNG) | `578a5ce742efa8edd62039a3ea564e4d06c3454e7ca80c15a47a6cba7f5a1e13` |
 | `outputs/manual_model_review/desert_road_candidate_a/texture_atlas.png` | 8.359 | Texture Map / Preview Render (PNG) | `8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d` |
-| `outputs/manual_model_review/desert_road_candidate_b.zip` | 29.875 | Deliverable Archive (ZIP) | `7d6613f4943d3d968b011fd859620191fda6d735a57d57e0d2f1098237982a87` |
 | `outputs/manual_model_review/desert_road_candidate_b/metadata.json` | 0.006 | Metadata / Manifest (JSON) | `3aa6d58a1eb347c934761809abdc9f59e081a1f92bdbed51ca7455fff63f0b31` |
 | `outputs/manual_model_review/desert_road_candidate_b/model_geometry.obj` | 7.282 | 3D Geometry Mesh (Wavefront OBJ) | `d4e936326204f2773fe40fa19fdba496a36ac03828ebf26edae008657ac5dba0` |
 | `outputs/manual_model_review/desert_road_candidate_b/model_geometry.ply` | 3.891 | 3D Point Cloud / Mesh (Polygon PLY) | `3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185` |
@@ -473,7 +465,6 @@ The four source videos used for 3D reconstruction were verified against the refe
 | `outputs/manual_model_review/desert_road_candidate_b/render_oblique.png` | 0.059 | Texture Map / Preview Render (PNG) | `b34df575517024d17bf04495b704db37bbb82422b2added9c8ed85faaed99239` |
 | `outputs/manual_model_review/desert_road_candidate_b/render_overview.png` | 0.066 | Texture Map / Preview Render (PNG) | `e429660d4961b8385c1c38b7fd1df70dd0abcd5cc72e060bda7d5aa3330d09ed` |
 | `outputs/manual_model_review/desert_road_candidate_b/texture_atlas.png` | 8.359 | Texture Map / Preview Render (PNG) | `8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d` |
-| `outputs/manual_model_review/forest_road.zip` | 145.49 | Deliverable Archive (ZIP) | `28a6b7972f6c28977282dd522a61d127c88b4e54e295963a37ff9f36b76eb706` |
 | `outputs/manual_model_review/forest_road/metadata.json` | 0.006 | Metadata / Manifest (JSON) | `38201d2d50d2c72efd0cf35818feb7534e3db3e3f5a0fdef5d1042d1bbcce69e` |
 | `outputs/manual_model_review/forest_road/model_geometry.obj` | 66.86 | 3D Geometry Mesh (Wavefront OBJ) | `51d28d50ff566f44d6583a26c44957a77636211f45a101854f9d47d7c1768aa2` |
 | `outputs/manual_model_review/forest_road/model_geometry.ply` | 33.912 | 3D Point Cloud / Mesh (Polygon PLY) | `1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c` |
@@ -486,7 +477,6 @@ The four source videos used for 3D reconstruction were verified against the refe
 | `outputs/manual_model_review/forest_road/texture_atlas.png` | 23.984 | Texture Map / Preview Render (PNG) | `c7cc73c3cc954045729402eaf785fbacd4d34e249efb9b019aba01f3fa28dea9` |
 | `outputs/manual_model_review/forge_models_for_manual_inspection.zip` | 354.202 | Deliverable Archive (ZIP) | `65f84bfe2950e1ae535b5c60478863d7174229310362357fdd120a96511404f0` |
 | `outputs/manual_model_review/model_integrity_report.json` | 0.034 | Metadata / Manifest (JSON) | `4008c47c52c178955d25a43d15dcd615d154918de6bb7af66cb012d9910d721a` |
-| `outputs/manual_model_review/river_bridge.zip` | 66.382 | Deliverable Archive (ZIP) | `ffeae323bf2e850473b3ca23696315193eb0507669c08768ca0643f3dad5a51b` |
 | `outputs/manual_model_review/river_bridge/metadata.json` | 0.006 | Metadata / Manifest (JSON) | `7cbc70d3ea30eee5536c41a3fc8fb71bd491921cf636ef35ea5ae816a999348c` |
 | `outputs/manual_model_review/river_bridge/model_geometry.obj` | 18.252 | 3D Geometry Mesh (Wavefront OBJ) | `0e75db13f508bafcff0f2adebfe903bb081a2a1acdc31ee88645874c73e3fe6a` |
 | `outputs/manual_model_review/river_bridge/model_geometry.ply` | 9.673 | 3D Point Cloud / Mesh (Polygon PLY) | `7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7` |

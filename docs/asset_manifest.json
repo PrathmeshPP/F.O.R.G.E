@@ -1,10 +1,10 @@
 {
   "manifest_version": "1.0.0",
-  "timestamp_utc": "2026-10-21T16:22:33Z",
+  "timestamp_utc": "2026-10-21T17:00:00Z",
   "repository": "PrathmeshPP/FORGE",
-  "total_indexed_assets": 489,
-  "total_size_bytes": 3738694006,
-  "total_size_mb": 3565.5,
+  "total_indexed_assets": 484,
+  "total_size_bytes": 3367413119,
+  "total_size_mb": 3211.42,
   "source_video_verification": {
     "campus_0049": {
       "filename": "dji_fly_20260727_172754_0049_1785175051818_video.mp4",
@@ -2241,14 +2241,6 @@
       "type": "Markdown Technical Report / Document"
     },
     {
-      "relative_path": "outputs/manual_model_review/campus_0049.zip",
-      "filename": "campus_0049.zip",
-      "size_bytes": 86474572,
-      "size_mb": 82.469,
-      "sha256": "57b7e7996177678b6497f06d4d059e33895853ba435de9c039d9a59125461940",
-      "type": "Deliverable Archive (ZIP)"
-    },
-    {
       "relative_path": "outputs/manual_model_review/campus_0049/metadata.json",
       "filename": "metadata.json",
       "size_bytes": 6339,
@@ -2327,14 +2319,6 @@
       "size_mb": 27.944,
       "sha256": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3",
       "type": "Texture Map / Preview Render (PNG)"
-    },
-    {
-      "relative_path": "outputs/manual_model_review/desert_road_candidate_a.zip",
-      "filename": "desert_road_candidate_a.zip",
-      "size_bytes": 31316409,
-      "size_mb": 29.866,
-      "sha256": "e625945de1289e8b6f10a0ee588d4adc74b4aaf234391c491ff6672ebdaeb2a9",
-      "type": "Deliverable Archive (ZIP)"
     },
     {
       "relative_path": "outputs/manual_model_review/desert_road_candidate_a/metadata.json",
@@ -2417,14 +2401,6 @@
       "type": "Texture Map / Preview Render (PNG)"
     },
     {
-      "relative_path": "outputs/manual_model_review/desert_road_candidate_b.zip",
-      "filename": "desert_road_candidate_b.zip",
-      "size_bytes": 31326179,
-      "size_mb": 29.875,
-      "sha256": "7d6613f4943d3d968b011fd859620191fda6d735a57d57e0d2f1098237982a87",
-      "type": "Deliverable Archive (ZIP)"
-    },
-    {
       "relative_path": "outputs/manual_model_review/desert_road_candidate_b/metadata.json",
       "filename": "metadata.json",
       "size_bytes": 6557,
@@ -2503,14 +2479,6 @@
       "size_mb": 8.359,
       "sha256": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
       "type": "Texture Map / Preview Render (PNG)"
-    },
-    {
-      "relative_path": "outputs/manual_model_review/forest_road.zip",
-      "filename": "forest_road.zip",
-      "size_bytes": 152557124,
-      "size_mb": 145.49,
-      "sha256": "28a6b7972f6c28977282dd522a61d127c88b4e54e295963a37ff9f36b76eb706",
-      "type": "Deliverable Archive (ZIP)"
     },
     {
       "relative_path": "outputs/manual_model_review/forest_road/metadata.json",
@@ -2607,14 +2575,6 @@
       "size_mb": 0.034,
       "sha256": "4008c47c52c178955d25a43d15dcd615d154918de6bb7af66cb012d9910d721a",
       "type": "Metadata / Manifest (JSON)"
-    },
-    {
-      "relative_path": "outputs/manual_model_review/river_bridge.zip",
-      "filename": "river_bridge.zip",
-      "size_bytes": 69606603,
-      "size_mb": 66.382,
-      "sha256": "ffeae323bf2e850473b3ca23696315193eb0507669c08768ca0643f3dad5a51b",
-      "type": "Deliverable Archive (ZIP)"
     },
     {
       "relative_path": "outputs/manual_model_review/river_bridge/metadata.json",
