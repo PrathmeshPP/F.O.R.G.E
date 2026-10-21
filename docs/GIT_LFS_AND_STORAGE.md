@@ -15,14 +15,14 @@ F.O.R.G.E relies on Git Large File Storage (Git LFS) to manage large multimedia 
 
 | Metric | Measured Value | Notes / Verification Basis |
 | :--- | :--- | :--- |
-| **Total Git Tracked Files** | 718 files | Verified via `git ls-files` (post redundant-archive cleanup) |
-| **Git LFS Tracked Objects** | 156 objects | Verified via `git lfs ls-files` |
-| **Current Working Tree (Tracked Assets)** | ~3.59 GB | Verified from local disk size of tracked files |
+| **Total Git Tracked Files** | 718 files | Verified via `git ls-files` (post-cleanup) |
+| **Current Files Tracked by LFS (`HEAD`)** | 156 files / 3,594.19 MB (~3.51 GiB) | Active LFS pointers checked out in the current working tree |
+| **Historical LFS Objects Retained in History** | 161 objects / 3,946.52 MB (~3.85 GiB) | Referenced across Git history (includes 5 historical ZIPs in commit `428a455` totaling 354.1 MB) |
+| **Local Git LFS Cache (`.git/lfs/objects`)** | 3,646.37 MB (~3.56 GiB) | Local deduplicated Git LFS object blob store |
 | **Complete Working Tree (incl. Ignored Caches)** | ~24.5 GB | Includes ~20.9 GB of untracked research scratch runs in `outputs/` |
 | **Core Git Object Database (`.git/objects`)** | ~543 MB | Standard Git packfiles and commit tree objects |
-| **Local Git LFS Cache (`.git/lfs/objects`)** | ~3.65 GB | Local LFS object blob cache |
-| **Verified Remote GitHub Commit** | `428a455` | Remote `origin/main` synchronized at checkpoint |
-| **GitHub Account Quota Notice** | **Estimated** | Free GitHub personal accounts include 1 GB LFS storage and 1 GB/month bandwidth. Active repository usage is ~3.85 GB. Continued hosting may require GitHub LFS data packs or university/organization sponsorship. |
+| **GitHub Remote LFS Quota (Official Current Limit)** | **10 GiB Storage / 10 GiB/mo Bandwidth** | GitHub Free and Pro accounts include 10 GiB of storage and 10 GiB of monthly bandwidth. Historical usage (~3.85 GiB) consumes ~38.5% of the included allocation. |
+| **Actual Account-Wide Remote Billing Usage** | **Not Accessible Locally** | Account-wide usage across all repositories requires GitHub Billing API access / token; single-repo usage estimated at ~3.85 GiB based on LFS object history. |
 
 ---
 

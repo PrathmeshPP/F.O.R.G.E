@@ -97,13 +97,13 @@ The four source videos used across the five scenes have distinct redistribution 
 
 | Video Asset | Path | Size | Origin / Rights Holder | License | Redistribution Status |
 | :--- | :--- | :---: | :--- | :--- | :--- |
-| **Campus 0049** | `data/source_videos/dji_fly_...0049...mp4` | 154.5 MB | F.O.R.G.E Authors (`PrathmeshPP` / SIH) | First-party proprietary | **CLEARED** (Full redistribution) |
-| **River/Bridge** | `data/source_videos/segment_52s_64s.mp4` | 66.8 MB | F.O.R.G.E Authors (`PrathmeshPP` / SIH) | First-party proprietary | **CLEARED** (Full redistribution) |
-| **Desert Road** | `data/source_videos/desert_road.mp4` | 6.2 MB | Meta AI & Univ. of Oxford (`VGGT-Omega`) | Meta FAIR Noncommercial License | **RESTRICTED** (Noncommercial Research only) |
-| **Forest Road** | `data/source_videos/forest_road.mp4` | 10.2 MB | Meta AI & Univ. of Oxford (`VGGT-Omega`) | Meta FAIR Noncommercial License | **RESTRICTED** (Noncommercial Research only) |
+| **Campus 0049** | `data/source_videos/dji_fly_...0049...mp4` | 154.5 MB | Attributed to Team (`PrathmeshPP` / SIH) | First-party proprietary | **UNCONFIRMED** (Plausible First-Party Inference; Pending Formal Release) |
+| **River/Bridge** | `data/source_videos/segment_52s_64s.mp4` | 66.8 MB | Attributed to Team (`PrathmeshPP` / SIH) | First-party proprietary | **UNCONFIRMED** (Plausible First-Party Inference; Pending Formal Release) |
+| **Desert Road** | `data/source_videos/desert_road.mp4` | 6.2 MB | Meta AI & Univ. of Oxford (`VGGT-Omega`) | [Meta FAIR Noncommercial License](docs/licenses/META_FAIR_NONCOMMERCIAL_LICENSE.txt) | **RESTRICTED** (Noncommercial Research only; AUP restrictions apply) |
+| **Forest Road** | `data/source_videos/forest_road.mp4` | 10.2 MB | Meta AI & Univ. of Oxford (`VGGT-Omega`) | [Meta FAIR Noncommercial License](docs/licenses/META_FAIR_NONCOMMERCIAL_LICENSE.txt) | **RESTRICTED** (Noncommercial Research only; AUP restrictions apply) |
 
 > [!NOTE]
-> Detailed legal analysis, upstream citations, redistribution terms, and project licensing options for the repository owner are fully documented in [`docs/THIRD_PARTY_ASSET_PROVENANCE.md`](docs/THIRD_PARTY_ASSET_PROVENANCE.md).
+> Detailed legal analysis, upstream acceptable use policy constraints (including military/warfare prohibitions), and project licensing options for the repository owner are fully documented in [`docs/THIRD_PARTY_ASSET_PROVENANCE.md`](docs/THIRD_PARTY_ASSET_PROVENANCE.md). A complete copy of the upstream Meta FAIR Noncommercial Research License is provided at [`docs/licenses/META_FAIR_NONCOMMERCIAL_LICENSE.txt`](docs/licenses/META_FAIR_NONCOMMERCIAL_LICENSE.txt).
 
 ---
 
