@@ -1,0 +1,38 @@
+{
+  "sprint": "F.O.R.G.E Sprint 11 Recovery V2.1",
+  "operating_mode": "STRICT_LOCAL_ONLY",
+  "git_policy": "NO_COMMITS_NO_PUSH_NO_REMOTE_WRITES",
+  "scenes": {
+    "desert_road": {
+      "status": "UPGRADED_V2_1",
+      "action": "Complete elimination of residual vehicle marks, floating balloons, and shadow projections",
+      "root_cause_resolved": "YOLOv8n-seg missed the multicolored balloons floating 50-80px above the blue Mini Cooper roof; balloon pixels were projected by cameras 0 and 1 onto the road center. In V2.1, dilated dynamic masks enclose vehicle + balloons, 8 atlas tiles are inpainted, and fronto-parallel vertex coloring rejects all masked pixels.",
+      "numerical_verification": {
+        "residual_red_balloon_vertices_v2": 35,
+        "residual_red_balloon_vertices_v2_1": 0,
+        "road_corridor_plane_residual_mean_mm": 2.0,
+        "vehicle_geometry_bumps": 0
+      },
+      "deliverables_dir": "outputs/dynamic_object_masking/sprint11/recovery_v2_1/desert_road"
+    },
+    "campus_0049": {
+      "status": "AUDITED_AND_VERIFIED",
+      "action": "Separate geometry vs texture audit with 4 diagnostic close-up contact sheets; retained manual-review baseline mesh and 4096x4096 texture atlas",
+      "distortion_attribution": {
+        "mesh_geometry": "Underlying geometry (128,336 vertices, 253,487 triangles) retained from manual-review baseline. Building facades are naturally smoothed by Poisson meshing due to hovering nadir drone telemetry (< 0.10m translation baseline); vertical walls are observed only obliquely.",
+        "photographic_textures": "4096x4096 texture atlas resolves crisp ground lettering ('FIRE LANE', 'STOP'), courtyard pavers, crosswalks, and roof parapet boundaries without geometric hallucinations."
+      },
+      "deliverables_dir": "outputs/dynamic_object_masking/sprint11/recovery_v2_1/campus_0049"
+    },
+    "forest_road": {
+      "status": "INTENTIONALLY_RETAINED",
+      "action": "Retained Recovery V2 candidate without unnecessary reconstruction; high-fidelity canopy (396,498 vertices, 792,976 triangles) and verified 0 residual vehicle points.",
+      "source_dir": "outputs/dynamic_object_masking/sprint11/recovery_v2/forest_road"
+    },
+    "river_bridge": {
+      "status": "INTENTIONALLY_RETAINED",
+      "action": "Retained Recovery V2 candidate without unnecessary reconstruction; structural bridge deck and riverbed geometry (109,878 vertices, 219,738 triangles) verified intact.",
+      "source_dir": "outputs/dynamic_object_masking/sprint11/recovery_v2/river_bridge"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+# F.O.R.G.E Sprint 11 Recovery V2.1 Material Library
+newmtl Material_Atlas
+Ka 1.000 1.000 1.000
+Kd 1.000 1.000 1.000
+Ks 0.000 0.000 0.000
+d 1.0
+illum 2
+map_Kd texture_atlas.png

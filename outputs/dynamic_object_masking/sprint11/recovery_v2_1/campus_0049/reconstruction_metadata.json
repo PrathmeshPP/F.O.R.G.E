@@ -1,0 +1,42 @@
+{
+  "scene_name": "campus_0049",
+  "recovery_version": "v2.1",
+  "action": "retained_manual_review_geometry_and_4k_atlas",
+  "provenance": {
+    "source_review_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049",
+    "source_atlas_sha256": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3",
+    "source_glb_sha256": "33cc62d81833c5f74a88cb6436a18e5e2434193c82ffa76b2480da68b254827e"
+  },
+  "geometry_vs_texture_investigation": {
+    "underlying_geometry_source": "Screened Poisson reconstruction from aerial DJI drone hover baseline (128,336 vertices, 253,487 triangles)",
+    "ground_lettering_fidelity": "Preserved sharply via 4096x4096 texture atlas mapping; vertex coloring inherently lacks spatial resolution to resolve fine letters",
+    "building_facades_and_rooflines": "Roof boundaries and courtyard edges follow mesh geometry; vertical wall facades are rounded due to monocular nadir drone telemetry (< 0.10m translation baseline); facades are observed only obliquely from above",
+    "distortion_attribution": {
+      "mesh_geometry": "Naturally smoothed roof-to-ground transitions from Poisson meshing without hallucinated cliff walls",
+      "uv_coordinates": "1:1 conformal mapping to native drone frames with zero texture tearing",
+      "source_imagery": "High-altitude oblique drone footage; vertical walls are largely occluded in true nadir viewpoints"
+    }
+  },
+  "deliverables": {
+    "glb": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\campus_0049\\masked_reconstruction.glb",
+      "size_bytes": 48372492,
+      "sha256": "33cc62d81833c5f74a88cb6436a18e5e2434193c82ffa76b2480da68b254827e"
+    },
+    "obj": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\campus_0049\\masked_reconstruction.obj",
+      "size_bytes": 31281384,
+      "sha256": "fa18c9e2a3380e2bc1d4b38db750355ac70c3688ca163607846c267dc34b2fdf"
+    },
+    "ply": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\campus_0049\\masked_reconstruction.ply",
+      "size_bytes": 9840793,
+      "sha256": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f"
+    },
+    "texture_atlas": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\campus_0049\\texture_atlas.png",
+      "size_bytes": 29301787,
+      "sha256": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3"
+    }
+  }
+}

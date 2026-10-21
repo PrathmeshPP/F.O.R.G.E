@@ -1,0 +1,48 @@
+{
+  "scene_name": "desert_road",
+  "recovery_version": "v2.1",
+  "action": "complete_vehicle_and_balloon_elimination",
+  "diagnostic_investigation": {
+    "root_cause_identified": "YOLO car bounding box covered car body up to roof (y=411), missing floating balloons (y=360-411) and trailer shadows; camera 0 projected unmasked balloons onto road centerline",
+    "texture_atlas_audit": "Texture atlas tiles were raw frames containing the vehicle; atlas has now been synthesized with inpainted clean asphalt/sand",
+    "mtl_binding_fix": "Synchronized newmtl Material_Atlas to match usemtl Material_Atlas in OBJ",
+    "residual_red_vertices": 0,
+    "residual_vehicle_geometry": false,
+    "fitted_road_plane_residual_mm": 2.0
+  },
+  "quality_metrics": {
+    "vertex_count": 53069,
+    "triangle_count": 105467,
+    "photographic_coverage_pct": 84.29,
+    "texture_atlas_resolution": "4096x4096",
+    "interior_holes_count": 0,
+    "boundary_loops_count": 1
+  },
+  "deliverables": {
+    "glb": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\desert_road\\masked_reconstruction.glb",
+      "size_bytes": 11484784,
+      "sha256": "6ac4cbf538c68c70acb1f8df6f39df5f11ace87cf1abb7105a0385f4158b4b04"
+    },
+    "obj": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\desert_road\\masked_reconstruction.obj",
+      "size_bytes": 14301222,
+      "sha256": "0f169ca493f3945afb91292299716dc368809051093f48f04bd1500e250de71d"
+    },
+    "ply": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\desert_road\\masked_reconstruction.ply",
+      "size_bytes": 4077915,
+      "sha256": "8bcebf6bf31ff62a10ccb045cdf64345e19004e0a33aef55c1d439076ba565e4"
+    },
+    "mtl": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\desert_road\\masked_reconstruction.mtl",
+      "size_bytes": 185,
+      "sha256": "f2f54a8a17581f0f2bc09a24bc44cea145e2a72d1a83132535550129a22aa9fb"
+    },
+    "texture_atlas": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v2_1\\desert_road\\texture_atlas.png",
+      "size_bytes": 8332389,
+      "sha256": "fd6848e36adfd489b29d7c743b3beaa6fe3014b286db8c94fa2d80942aa5e370"
+    }
+  }
+}

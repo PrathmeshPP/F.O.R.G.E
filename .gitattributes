@@ -8,6 +8,9 @@
 *.glb filter=lfs diff=lfs merge=lfs -text
 *.gltf filter=lfs diff=lfs merge=lfs -text
 
+# High-Resolution Texture Atlases (> 5 MB)
+*texture_atlas*.png filter=lfs diff=lfs merge=lfs -text
+
 # Video & Media Streams
 *.mp4 filter=lfs diff=lfs merge=lfs -text
 *.mov filter=lfs diff=lfs merge=lfs -text

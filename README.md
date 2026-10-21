@@ -89,6 +89,15 @@ Independent deliverables for direct inspection in **Blender**, **MeshLab**, **Cl
 
 Detailed opening guides and SHA-256 checksums are cataloged in [`outputs/manual_model_review/MODEL_CATALOG.md`](outputs/manual_model_review/MODEL_CATALOG.md).
 
+### 3. Sprint 11 Dynamic Masking & Recovery V2.1 Deliverables (`outputs/dynamic_object_masking/sprint11/`)
+The canonical deliverables integrating pixel-accurate instance segmentation dynamic masking:
+- **Campus 0049 (Recovery V2.1):** [`outputs/dynamic_object_masking/sprint11/recovery_v2_1/campus_0049/`](outputs/dynamic_object_masking/sprint11/recovery_v2_1/campus_0049/) — Audited baseline geometry (128k v, 253k f) + 4096×4096 texture atlas with sharp ground lettering.
+- **Desert Road (Recovery V2.1):** [`outputs/dynamic_object_masking/sprint11/recovery_v2_1/desert_road/`](outputs/dynamic_object_masking/sprint11/recovery_v2_1/desert_road/) — Moving vehicle & floating balloon projections completely excised; clean inpainted 4K atlas; planar road corridor (< 2.0 mm mean deviation).
+- **Forest Road (Recovery V2):** [`outputs/dynamic_object_masking/sprint11/recovery_v2/forest_road/`](outputs/dynamic_object_masking/sprint11/recovery_v2/forest_road/) — High-fidelity canopy (445k v, 889k f) with verified 0 residual vehicle points.
+- **River/Bridge (Recovery V2):** [`outputs/dynamic_object_masking/sprint11/recovery_v2/river_bridge/`](outputs/dynamic_object_masking/sprint11/recovery_v2/river_bridge/) — Structural concrete bridge deck, piers, and riverbanks (127k v, 251k f).
+
+Complete catalog, SHA-256 checksums, and LFS accounting are documented in [`docs/SPRINT11_RELEASE_MANIFEST.md`](docs/SPRINT11_RELEASE_MANIFEST.md).
+
 ---
 
 ## Source Video Licensing & Provenance
@@ -111,6 +120,7 @@ The four source videos used across the five scenes have distinct redistribution 
 
 | Document | Purpose & Contents |
 | :--- | :--- |
+| [`docs/SPRINT11_RELEASE_MANIFEST.md`](docs/SPRINT11_RELEASE_MANIFEST.md) | **Sprint 11 Canonical Release Manifest:** Selected models, SHA-256 hashes, LFS accounting, and reproduction scripts. |
 | [`docs/THIRD_PARTY_ASSET_PROVENANCE.md`](docs/THIRD_PARTY_ASSET_PROVENANCE.md) | Exhaustive legal provenance, upstream URLs, Meta FAIR terms, and project licensing options. |
 | [`docs/REPOSITORY_ASSET_POLICY.md`](docs/REPOSITORY_ASSET_POLICY.md) | Durable three-tier artifact policy (Git vs Git LFS vs External untracked foundation weights). |
 | [`docs/GIT_LFS_AND_STORAGE.md`](docs/GIT_LFS_AND_STORAGE.md) | Git LFS inventory, bandwidth limits, selective checkout commands, and historical purge caveats. |

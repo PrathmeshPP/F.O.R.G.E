@@ -1,0 +1,90 @@
+{
+  "scene_name": "river_bridge",
+  "recovery_version": "v2",
+  "action": "preserved_verified_good_model",
+  "provenance": {
+    "source_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dynamic_object_masking\\sprint11\\recovery_v1\\river_bridge",
+    "source_ply_sha256": "b2ffd5934c9a433c853f499fe5ecedd1d0c5e650ba1a9f98e5b0faa311ec3ef5"
+  },
+  "quality_metrics": {
+    "bridge_deck_intact": true,
+    "structural_piers_preserved": true,
+    "water_reflection_artifacts_suppressed": true,
+    "vertex_count": 127887,
+    "triangle_count": 251054
+  },
+  "deliverables": {
+    "glb": {
+      "verified": true,
+      "format": "glb",
+      "file_size_bytes": 5059824,
+      "file_size_mb": 4.825,
+      "vertex_count": 127887,
+      "triangle_count": 251054,
+      "extents": [
+        3.9346,
+        0.7062,
+        3.0266
+      ],
+      "bounds_min": [
+        -1.4121,
+        -0.4078,
+        -0.3063
+      ],
+      "bounds_max": [
+        2.5225,
+        0.2984,
+        2.7203
+      ],
+      "sha256": "2db3e110fe17348a7bfe57f5d549dcc118843a347aeba33af5c20fbce8da8491"
+    },
+    "obj": {
+      "verified": true,
+      "format": "obj",
+      "file_size_bytes": 21786747,
+      "file_size_mb": 20.777,
+      "vertex_count": 127887,
+      "triangle_count": 251054,
+      "extents": [
+        3.9346,
+        0.7062,
+        3.0266
+      ],
+      "bounds_min": [
+        -1.4121,
+        -0.4078,
+        -0.3063
+      ],
+      "bounds_max": [
+        2.5225,
+        0.2984,
+        2.7203
+      ],
+      "sha256": "7a4cd81d1665e2be52dbdf437ab30d5ed4be0db3a38038b631d9ab5287fa2cec"
+    },
+    "ply": {
+      "verified": true,
+      "format": "ply",
+      "file_size_bytes": 9786265,
+      "file_size_mb": 9.333,
+      "vertex_count": 127887,
+      "triangle_count": 251054,
+      "extents": [
+        3.9346,
+        0.7062,
+        3.0266
+      ],
+      "bounds_min": [
+        -1.4121,
+        -0.4078,
+        -0.3063
+      ],
+      "bounds_max": [
+        2.5225,
+        0.2984,
+        2.7203
+      ],
+      "sha256": "b2ffd5934c9a433c853f499fe5ecedd1d0c5e650ba1a9f98e5b0faa311ec3ef5"
+    }
+  }
+}
