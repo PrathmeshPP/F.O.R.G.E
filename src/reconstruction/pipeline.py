@@ -33,6 +33,7 @@ from dataclasses import dataclass, field, asdict
 from typing import Dict, Any, Tuple, List, Optional, Union
 
 import numpy as np
+import cv2
 import open3d as o3d
 from PIL import Image, ImageDraw
 
@@ -525,13 +526,14 @@ class GeneralReconstructionPipeline:
         frames_dir: str,
         output_dir: str,
         reference_camera_json: Optional[str] = None,
-        scene_classification: str = "general"
+        scene_classification: str = "general",
+        dynamic_masks: Optional[Union[np.ndarray, List[np.ndarray]]] = None
     ) -> Dict[str, Any]:
         """
         Executes all pipeline stages:
         1. Metadata & Trajectory Assessment
         2. Scale-relative Adaptive Parameter Estimation
-        3. Backprojection & Filtering
+        3. Backprojection & Filtering (including Dynamic Object Masking)
         4. Optional Voxel-Grid Fusion
         5. Geometry Reconstruction & Mesh Validation
         6. Multimodal Quality Evaluation & Matched Rendering
@@ -595,6 +597,29 @@ class GeneralReconstructionPipeline:
             valid_mask &= (depth_vals <= max_depth)
         if confidences is not None and min_confidence > 0.0:
             valid_mask &= (confidences >= min_confidence)
+
+        # Apply dynamic object mask filtering (excludes moving vehicles/objects from static reconstruction)
+        dynamic_points_removed = 0
+        if dynamic_masks is not None:
+            dyn_arr = np.asarray(dynamic_masks)
+            if dyn_arr.ndim == 4 and dyn_arr.shape[-1] == 1:
+                dyn_arr = dyn_arr[..., 0]
+            
+            # Ensure spatial alignment to depth_maps (H, W) using nearest-neighbor interpolation
+            h, w = depth_maps.shape[1], depth_maps.shape[2]
+            if dyn_arr.shape[1:] != (h, w):
+                resized_list = []
+                for m in dyn_arr:
+                    rm = cv2.resize(m.astype(np.uint8), (w, h), interpolation=cv2.INTER_NEAREST)
+                    resized_list.append(rm > 0)
+                dyn_bool = np.stack(resized_list, axis=0)
+            else:
+                dyn_bool = (dyn_arr > 0)
+            
+            pts_before = int(np.count_nonzero(valid_mask))
+            valid_mask &= (~dyn_bool)
+            pts_after = int(np.count_nonzero(valid_mask))
+            dynamic_points_removed = pts_before - pts_after
 
         raw_points = world_points[valid_mask]
         raw_colors = frame_colors[valid_mask]
@@ -719,6 +744,10 @@ class GeneralReconstructionPipeline:
                 "active_points": len(active_points),
                 "is_voxel_fused": voxel_size is not None and voxel_size > 0,
                 "voxel_size": voxel_size,
+                "dynamic_object_filtering": {
+                    "applied": dynamic_masks is not None,
+                    "dynamic_points_removed": dynamic_points_removed
+                },
                 "surface_roughness_residual": round(roughness, 6),
                 "bounds_min": active_points.min(axis=0).round(4).tolist(),
                 "bounds_max": active_points.max(axis=0).round(4).tolist(),

@@ -117,6 +117,7 @@ The four source videos used across the five scenes have distinct redistribution 
 | [`docs/ASSET_MANIFEST.md`](docs/ASSET_MANIFEST.md) | Human-readable verification manifest of all 484 tracked project deliverables. |
 | [`docs/asset_manifest.json`](docs/asset_manifest.json) | Machine-readable SHA-256 asset manifest with source video verification statuses. |
 | [`docs/SPRINT10_LIVE_DEMO_GUIDE.md`](docs/SPRINT10_LIVE_DEMO_GUIDE.md) | Complete presenter walk-through script and camera framing guide for evaluators. |
+| [`docs/SPRINT11_DYNAMIC_MASKING_REPORT.md`](docs/SPRINT11_DYNAMIC_MASKING_REPORT.md) | Sprint 11 YOLO dynamic object masking, visual diagnostics, and 3D reconstruction benchmark report. |
 | [`docs/OPENCV_COMPLETION_ROADMAP.md`](docs/OPENCV_COMPLETION_ROADMAP.md) | Mathematical formulation for GPS alignment, pose recovery, and texturing. |
 
 ---
@@ -169,6 +170,18 @@ python scripts/serve_viewer.py --port 5173
 ```
 Open [http://localhost:5173](http://localhost:5173) in Chrome, Edge, or Firefox.
 
+### 5. Running YOLO Dynamic-Object Masking
+```bash
+# Run YOLO dynamic masking on GPU across all benchmark scenes
+python scripts/run_dynamic_masking.py --scene all --device cuda
+
+# Run on Desert Road specifically
+python scripts/run_dynamic_masking.py --scene desert_road --device cuda
+
+# Execute comparative masked vs unmasked 3D reconstruction benchmark
+python scripts/run_desert_road_masked_reconstruction.py
+```
+
 ---
 
 ## Automated Test Suite
@@ -177,7 +190,7 @@ F.O.R.G.E includes comprehensive unit and integration tests verifying manifest a
 
 ```bash
 # Run comprehensive release test suites
-pytest tests/test_sprint9_video_to_viewer.py tests/test_sprint10_demo_hardening.py tests/test_sprint10_1_viewer_refinement.py tests/test_sprint10_2_standalone_review.py -v
+pytest tests/test_sprint9_video_to_viewer.py tests/test_sprint10_demo_hardening.py tests/test_sprint10_1_viewer_refinement.py tests/test_sprint10_2_standalone_review.py tests/test_sprint11_dynamic_masking.py -v
 ```
 
 ---

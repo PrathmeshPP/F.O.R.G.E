@@ -16,9 +16,10 @@ import json
 import time
 from pathlib import Path
 from dataclasses import dataclass, asdict
-from typing import List, Dict, Any, Optional, Tuple
+from typing import List, Dict, Any, Optional, Tuple, Union
 
 import numpy as np
+import cv2
 import open3d as o3d
 from PIL import Image
 
@@ -266,12 +267,13 @@ class MultiFrameDensePointCloud:
         extrinsics: np.ndarray,
         intrinsics: np.ndarray,
         frame_rgbs: np.ndarray,
-        orientation_class: str = "auto"
+        orientation_class: str = "auto",
+        dynamic_masks: Optional[Union[np.ndarray, List[np.ndarray]]] = None
     ) -> Dict[str, Any]:
         """
         Backprojects depth maps and builds:
         1. Unfused Dense Cloud (all valid points).
-        2. Lightly Filtered Cloud (depth-edge & horizon-filtered, zero decimation).
+        2. Lightly Filtered Cloud (depth-edge, horizon-filtered, and dynamic-object filtered).
         3. Fine Fused Cloud (scale-relative high resolution).
         """
         num_frames, H, W_img = depth_maps.shape[0], depth_maps.shape[1], depth_maps.shape[2]
@@ -312,6 +314,29 @@ class MultiFrameDensePointCloud:
 
         # Clean mask
         clean_mask = base_valid & (~jump_mask) & (~horizon_mask)
+
+        # Apply dynamic object mask filtering (excludes moving vehicles/objects from static reconstruction)
+        dynamic_points_removed = 0
+        if dynamic_masks is not None:
+            dyn_arr = np.asarray(dynamic_masks)
+            if dyn_arr.ndim == 4 and dyn_arr.shape[-1] == 1:
+                dyn_arr = dyn_arr[..., 0]
+
+            if dyn_arr.shape[1:] != (H, W_img):
+                resized_list = []
+                for m in dyn_arr:
+                    rm = cv2.resize(m.astype(np.uint8), (W_img, H), interpolation=cv2.INTER_NEAREST)
+                    resized_list.append(rm > 0)
+                dyn_bool = np.stack(resized_list, axis=0)
+            else:
+                dyn_bool = (dyn_arr > 0)
+
+            dyn_flat = dyn_bool.reshape(-1)
+            pts_before = int(np.count_nonzero(clean_mask))
+            clean_mask &= (~dyn_flat)
+            pts_after = int(np.count_nonzero(clean_mask))
+            dynamic_points_removed = pts_before - pts_after
+
         clean_pts = flat_world[clean_mask]
         clean_cols = flat_rgb[clean_mask]
 
@@ -363,6 +388,7 @@ class MultiFrameDensePointCloud:
             "raw_valid_count": len(raw_valid_pts),
             "clean_valid_count": len(clean_pts),
             "fused_count": len(fused_pts),
+            "dynamic_points_removed": dynamic_points_removed,
             "fine_voxel_size": round(fine_voxel_size, 5),
             "median_point_spacing": round(median_spacing, 5),
             "spatial_extents": extents.round(4).tolist(),

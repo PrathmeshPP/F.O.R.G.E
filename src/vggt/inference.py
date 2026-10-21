@@ -7,12 +7,27 @@ import os
 import time
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple, Any
+import sys
 import numpy as np
 import torch
 
-from vggt_omega.models import VGGTOmega
-from vggt_omega.utils.load_fn import load_and_preprocess_images
-from vggt_omega.utils.pose_enc import encoding_to_camera
+# Search candidate directories for external vggt_omega repository
+for _candidate_vggt_dir in [
+    r"C:\Users\25beevdt025\Desktop\SIH\third_party\vggt_omega",
+    r"C:\Users\25beevdt025\Desktop\SIH\third_party\vggt-omega-main",
+    r"C:\Users\25beevdt025\Desktop\coding\third_party\vggt_omega",
+]:
+    if os.path.isdir(_candidate_vggt_dir) and _candidate_vggt_dir not in sys.path:
+        sys.path.insert(0, _candidate_vggt_dir)
+
+try:
+    from vggt_omega.models import VGGTOmega
+    from vggt_omega.utils.load_fn import load_and_preprocess_images
+    from vggt_omega.utils.pose_enc import encoding_to_camera
+except ImportError:
+    VGGTOmega = None
+    load_and_preprocess_images = None
+    encoding_to_camera = None
 
 DEFAULT_CHECKPOINT_PATH = os.environ.get(
     "VGGT_OMEGA_CHECKPOINT",

@@ -85,3 +85,4 @@ outputs/snow_lift_validation/
 outputs/dji_fly_validation/
 outputs/diagnostics/
 outputs/diagnostics.zip
+outputs/dynamic_object_masking/
