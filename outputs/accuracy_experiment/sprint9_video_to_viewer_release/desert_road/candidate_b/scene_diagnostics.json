@@ -1,0 +1,19 @@
+{
+  "scene": "desert_road_candidate_b",
+  "status": "PASS",
+  "vehicle_preserved": true,
+  "segmentation_method": "GrabCut Shape-Aware Mask + Shadow",
+  "rectangular_patch_eliminated": true,
+  "interior_holes": 0,
+  "total_boundary_edges": 682,
+  "bounding_box_min": [
+    -0.6558319638816589,
+    -0.04672108625502866,
+    -2.4083720359690752
+  ],
+  "bounding_box_max": [
+    0.5475759577950647,
+    0.2334004927330087,
+    2.235515543594848
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "module": "F.O.R.G.E Spatial Reconstruction (Phase 2B - Controlled Accuracy)",
+  "timestamp_utc": "2026-10-17T19:37:36Z",
+  "coordinate_units_note": "Model coordinate units (nominally meters); not independently verified against ground truth survey/GCPs.",
+  "input": {
+    "depth_predictions_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\predictions\\depth_predictions.npz",
+    "camera_poses_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\predictions\\camera_poses.npz",
+    "frames_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\frames",
+    "num_frames": 10,
+    "depth_resolution": {
+      "height": 384,
+      "width": 688
+    }
+  },
+  "filtering": {
+    "min_depth": 0.1,
+    "max_depth": 100.0,
+    "min_confidence": 1.5,
+    "subsample_step": 1,
+    "voxel_size": 0.005
+  },
+  "reconstruction": {
+    "raw_filtered_points": 2641913,
+    "total_points": 264329,
+    "fusion_reduction_ratio": 9.995,
+    "bounding_box": {
+      "min": [
+        -1.1804,
+        -0.792,
+        0.6799
+      ],
+      "max": [
+        0.734,
+        1.2618,
+        0.9814
+      ],
+      "extents": [
+        1.9144,
+        2.0538,
+        0.3015
+      ],
+      "centroid": [
+        -0.0488,
+        0.2217,
+        0.9124
+      ]
+    },
+    "color_statistics": {
+      "mean_rgb": [
+        110.23,
+        116.97,
+        89.41
+      ],
+      "std_rgb": [
+        50.36,
+        41.66,
+        49.89
+      ]
+    },
+    "output_ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\production_validation\\campus_0049\\point_cloud_fused_005.ply",
+    "output_ply_size_bytes": 3965115,
+    "output_ply_size_mb": 3.78,
+    "unfused_ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\production_validation\\campus_0049\\point_cloud_conf_filtered.ply",
+    "unfused_ply_size_bytes": 39628876
+  },
+  "performance": {
+    "backprojection_time_sec": 0.3679,
+    "fusion_time_sec": 1.0036,
+    "ply_io_time_sec": 0.0129,
+    "total_reconstruction_time_sec": 3.7689
+  },
+  "status": "SUCCESS"
+}

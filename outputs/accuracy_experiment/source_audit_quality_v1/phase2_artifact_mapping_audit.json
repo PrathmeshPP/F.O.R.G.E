@@ -1,0 +1,366 @@
+{
+  "screenshot_to_artifact_mappings": {
+    "campus_0049": {
+      "screenshot_contact_sheet": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\texture_comparison_contact_sheet.png",
+      "rendered_model_files": {
+        "panel_1_baseline": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\surface_mesh_baseline.ply",
+          "origin": "Direct copy of Sprint 3 quality_recovery_v2 repaired mesh",
+          "appearance_source": "Vertex colors from voxel grid fusion and photographic ray projection",
+          "vertices": 141979,
+          "triangles": 277377,
+          "sha256_hash": "12fd265948437b08345bb81387341383d6420ebb5648f0b2ff84f94dfcf948f5"
+        },
+        "panel_2_and_3_photographic": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\surface_mesh_photographic.ply",
+          "origin": "Sprint 4 photographic vertex-colored mesh",
+          "appearance_source": "Direct fronto-parallel photographic projection from native video frames",
+          "vertices": 141979,
+          "triangles": 277377,
+          "sha256_hash": "12fd265948437b08345bb81387341383d6420ebb5648f0b2ff84f94dfcf948f5"
+        },
+        "panel_4_atlas": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\texture_atlas.png",
+          "associated_mesh": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\textured_mesh.obj",
+          "material_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\textured_mesh.mtl",
+          "origin": "Sprint 4 packed UV texture atlas"
+        },
+        "uncompressed_multiview_model": {
+          "obj_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\multiview_textured_mesh.obj",
+          "mtl_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\multiview_textured_mesh.mtl",
+          "textures_dir": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\textures",
+          "origin": "Sprint 4 Multi-Material Photographic Wavefront OBJ"
+        }
+      },
+      "rendering_configuration": {
+        "rendering_engine": "Open3D Headless Visualizer (create_window, capture_screen_float_buffer)",
+        "resolution": [
+          640,
+          480
+        ],
+        "background_color": [
+          0.08,
+          0.1,
+          0.14
+        ],
+        "orientation_class": "nadir_overhead",
+        "camera_viewpoints": {
+          "overview": {
+            "front": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.75
+          },
+          "closeup": {
+            "front": [
+              0.3,
+              0.4,
+              -0.85
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.3
+          }
+        }
+      },
+      "source_data_provenance": {
+        "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+        "ingested_frames_count": 8,
+        "timestamps": [
+          0.0,
+          2.302,
+          4.605,
+          6.907,
+          9.193,
+          11.495,
+          13.797,
+          16.099
+        ],
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\campus_0049\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\campus_0049\\predictions\\depth_predictions.npz"
+      }
+    },
+    "desert_road": {
+      "screenshot_contact_sheet": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\texture_comparison_contact_sheet.png",
+      "rendered_model_files": {
+        "panel_1_baseline": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\surface_mesh_baseline.ply",
+          "origin": "Direct copy of Sprint 3 quality_recovery_v2 repaired mesh",
+          "appearance_source": "Vertex colors from voxel grid fusion and photographic ray projection",
+          "vertices": 90507,
+          "triangles": 172900,
+          "sha256_hash": "8c80a7afaebfe7e71b606bd8441addfc495e49d616c9d29745c8ad58257562ca"
+        },
+        "panel_2_and_3_photographic": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\surface_mesh_photographic.ply",
+          "origin": "Sprint 4 photographic vertex-colored mesh",
+          "appearance_source": "Direct fronto-parallel photographic projection from native video frames",
+          "vertices": 90507,
+          "triangles": 172900,
+          "sha256_hash": "8c80a7afaebfe7e71b606bd8441addfc495e49d616c9d29745c8ad58257562ca"
+        },
+        "panel_4_atlas": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\texture_atlas.png",
+          "associated_mesh": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\textured_mesh.obj",
+          "material_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\textured_mesh.mtl",
+          "origin": "Sprint 4 packed UV texture atlas"
+        },
+        "uncompressed_multiview_model": {
+          "obj_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\multiview_textured_mesh.obj",
+          "mtl_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\multiview_textured_mesh.mtl",
+          "textures_dir": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\textures",
+          "origin": "Sprint 4 Multi-Material Photographic Wavefront OBJ"
+        }
+      },
+      "rendering_configuration": {
+        "rendering_engine": "Open3D Headless Visualizer (create_window, capture_screen_float_buffer)",
+        "resolution": [
+          640,
+          480
+        ],
+        "background_color": [
+          0.08,
+          0.1,
+          0.14
+        ],
+        "orientation_class": "forward_corridor",
+        "camera_viewpoints": {
+          "overview": {
+            "front": [
+              0.0,
+              -0.2,
+              -0.98
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.75
+          },
+          "closeup": {
+            "front": [
+              0.0,
+              -0.3,
+              -0.95
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.3
+          }
+        }
+      },
+      "source_data_provenance": {
+        "video_path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt_omega\\examples\\desert_road.mp4",
+        "ingested_frames_count": 8,
+        "timestamps": [
+          0.0,
+          2.836,
+          5.672,
+          8.508,
+          11.345,
+          14.181,
+          17.017,
+          19.853
+        ],
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\desert_road\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\desert_road\\predictions\\depth_predictions.npz"
+      }
+    },
+    "forest_road": {
+      "screenshot_contact_sheet": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\texture_comparison_contact_sheet.png",
+      "rendered_model_files": {
+        "panel_1_baseline": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\surface_mesh_baseline.ply",
+          "origin": "Direct copy of Sprint 3 quality_recovery_v2 repaired mesh",
+          "appearance_source": "Vertex colors from voxel grid fusion and photographic ray projection",
+          "vertices": 445303,
+          "triangles": 888651,
+          "sha256_hash": "ef031ea1205af8a76fb742a6a7e9270b5700bf17198e5d3fdc62f80711191245"
+        },
+        "panel_2_and_3_photographic": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\surface_mesh_photographic.ply",
+          "origin": "Sprint 4 photographic vertex-colored mesh",
+          "appearance_source": "Direct fronto-parallel photographic projection from native video frames",
+          "vertices": 445303,
+          "triangles": 888651,
+          "sha256_hash": "ef031ea1205af8a76fb742a6a7e9270b5700bf17198e5d3fdc62f80711191245"
+        },
+        "panel_4_atlas": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\texture_atlas.png",
+          "associated_mesh": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\textured_mesh.obj",
+          "material_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\textured_mesh.mtl",
+          "origin": "Sprint 4 packed UV texture atlas"
+        },
+        "uncompressed_multiview_model": {
+          "obj_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\multiview_textured_mesh.obj",
+          "mtl_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\multiview_textured_mesh.mtl",
+          "textures_dir": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\textures",
+          "origin": "Sprint 4 Multi-Material Photographic Wavefront OBJ"
+        }
+      },
+      "rendering_configuration": {
+        "rendering_engine": "Open3D Headless Visualizer (create_window, capture_screen_float_buffer)",
+        "resolution": [
+          640,
+          480
+        ],
+        "background_color": [
+          0.08,
+          0.1,
+          0.14
+        ],
+        "orientation_class": "nadir_overhead",
+        "camera_viewpoints": {
+          "overview": {
+            "front": [
+              0.0,
+              0.0,
+              -1.0
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.75
+          },
+          "closeup": {
+            "front": [
+              0.3,
+              0.4,
+              -0.85
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.3
+          }
+        }
+      },
+      "source_data_provenance": {
+        "video_path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt_omega\\examples\\forest_road.mp4",
+        "ingested_frames_count": 10,
+        "timestamps": [
+          0.0,
+          3.378,
+          6.757,
+          10.135,
+          13.513,
+          16.892,
+          20.27,
+          23.649,
+          27.027,
+          30.405
+        ],
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\forest_road\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\forest_road\\predictions\\depth_predictions.npz"
+      }
+    },
+    "river_bridge": {
+      "screenshot_contact_sheet": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\texture_comparison_contact_sheet.png",
+      "rendered_model_files": {
+        "panel_1_baseline": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\surface_mesh_baseline.ply",
+          "origin": "Direct copy of Sprint 3 quality_recovery_v2 repaired mesh",
+          "appearance_source": "Vertex colors from voxel grid fusion and photographic ray projection",
+          "vertices": 135584,
+          "triangles": 263628,
+          "sha256_hash": "24f62425f9e3dbcee58faeae675620152e64bb8182b75c60ee458f72477936ef"
+        },
+        "panel_2_and_3_photographic": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\surface_mesh_photographic.ply",
+          "origin": "Sprint 4 photographic vertex-colored mesh",
+          "appearance_source": "Direct fronto-parallel photographic projection from native video frames",
+          "vertices": 135584,
+          "triangles": 263628,
+          "sha256_hash": "24f62425f9e3dbcee58faeae675620152e64bb8182b75c60ee458f72477936ef"
+        },
+        "panel_4_atlas": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\texture_atlas.png",
+          "associated_mesh": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\textured_mesh.obj",
+          "material_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\textured_mesh.mtl",
+          "origin": "Sprint 4 packed UV texture atlas"
+        },
+        "uncompressed_multiview_model": {
+          "obj_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\multiview_textured_mesh.obj",
+          "mtl_file": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\multiview_textured_mesh.mtl",
+          "textures_dir": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\textures",
+          "origin": "Sprint 4 Multi-Material Photographic Wavefront OBJ"
+        }
+      },
+      "rendering_configuration": {
+        "rendering_engine": "Open3D Headless Visualizer (create_window, capture_screen_float_buffer)",
+        "resolution": [
+          640,
+          480
+        ],
+        "background_color": [
+          0.08,
+          0.1,
+          0.14
+        ],
+        "orientation_class": "forward_corridor",
+        "camera_viewpoints": {
+          "overview": {
+            "front": [
+              0.0,
+              -0.2,
+              -0.98
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.75
+          },
+          "closeup": {
+            "front": [
+              0.0,
+              -0.3,
+              -0.95
+            ],
+            "up": [
+              0.0,
+              -1.0,
+              0.0
+            ],
+            "zoom": 0.3
+          }
+        }
+      },
+      "source_data_provenance": {
+        "video_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+        "ingested_frames_count": 8,
+        "timestamps": [
+          17.985,
+          22.272,
+          26.56,
+          30.847,
+          35.135,
+          39.423,
+          43.71,
+          47.998
+        ],
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\river_bridge\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\river_bridge\\predictions\\depth_predictions.npz"
+      }
+    }
+  }
+}

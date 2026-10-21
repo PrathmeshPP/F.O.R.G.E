@@ -1,0 +1,181 @@
+{
+  "pipeline": "F.O.R.G.E \u2014 Surface Mesh Reconstruction & Rectangular Presentation",
+  "timestamp_utc": "2026-10-17T19:46:40Z",
+  "input_point_cloud": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\production_validation\\campus_0049\\point_cloud_fused_005.ply",
+  "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\production_validation\\campus_0049\\mesh",
+  "source_pcd_stats": {
+    "total_points": 264329,
+    "color_stats": {
+      "count": 264329,
+      "mean_rgb": [
+        0.4323,
+        0.4587,
+        0.3506
+      ],
+      "std_rgb": [
+        0.1975,
+        0.1634,
+        0.1956
+      ],
+      "min_rgb": [
+        0.0353,
+        0.051,
+        0.051
+      ],
+      "max_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    },
+    "bounds_min": [
+      -1.1804,
+      -0.792,
+      0.6799
+    ],
+    "bounds_max": [
+      0.734,
+      1.2618,
+      0.9814
+    ],
+    "extents": [
+      1.9144,
+      2.0538,
+      0.3015
+    ]
+  },
+  "pure_reconstruction_stats": {
+    "is_valid": true,
+    "vertex_count": 245682,
+    "triangle_count": 485752,
+    "finite_coordinates": true,
+    "valid_triangle_indices": true,
+    "has_vertex_colors": true,
+    "has_vertex_normals": true,
+    "is_edge_manifold": true,
+    "is_vertex_manifold": false,
+    "bounding_box_min": [
+      -1.1675,
+      -0.7755,
+      0.6844
+    ],
+    "bounding_box_max": [
+      0.7309,
+      1.2596,
+      0.978
+    ],
+    "extents": [
+      1.8984,
+      2.0351,
+      0.2936
+    ],
+    "color_stats": {
+      "count": 245682,
+      "mean_rgb": [
+        0.434,
+        0.4607,
+        0.3567
+      ],
+      "std_rgb": [
+        0.189,
+        0.1558,
+        0.1898
+      ],
+      "min_rgb": [
+        0.042,
+        0.0675,
+        0.0638
+      ],
+      "max_rgb": [
+        0.9994,
+        0.9917,
+        0.9989
+      ]
+    }
+  },
+  "presentation_base": {
+    "is_presentation_only": true,
+    "included_in_measurements": false,
+    "elevation_axis": "Z (Depth)",
+    "dimensions_m": [
+      1.9984,
+      2.1351,
+      0.03
+    ],
+    "color_rgb": [
+      0.16,
+      0.18,
+      0.22
+    ],
+    "vertex_count": 8,
+    "triangle_count": 12
+  },
+  "bpa_baseline_stats": {
+    "is_valid": true,
+    "vertex_count": 93138,
+    "triangle_count": 180976,
+    "finite_coordinates": true,
+    "valid_triangle_indices": true,
+    "has_vertex_colors": true,
+    "has_vertex_normals": true,
+    "is_edge_manifold": true,
+    "is_vertex_manifold": false,
+    "bounding_box_min": [
+      -1.1804,
+      -0.792,
+      0.6803
+    ],
+    "bounding_box_max": [
+      0.734,
+      1.2616,
+      0.9814
+    ],
+    "extents": [
+      1.9144,
+      2.0536,
+      0.3011
+    ],
+    "color_stats": {
+      "count": 93138,
+      "mean_rgb": [
+        0.46,
+        0.4828,
+        0.371
+      ],
+      "std_rgb": [
+        0.1923,
+        0.1565,
+        0.1928
+      ],
+      "min_rgb": [
+        0.0628,
+        0.0863,
+        0.0589
+      ],
+      "max_rgb": [
+        1.0,
+        1.0,
+        1.0
+      ]
+    }
+  },
+  "parameters": {
+    "voxel_size_m": 0.005,
+    "poisson_depth": 9,
+    "density_quantile": 0.15,
+    "max_support_dist_m": 0.02,
+    "max_edge_length_m": 0.05,
+    "min_cluster_faces": 100,
+    "base_padding_m": 0.05,
+    "base_thickness_m": 0.03
+  },
+  "suitability_assessment": {
+    "video_id": "0049",
+    "camera_trajectory": "Near-zero translation (0.046m baseline), substantial in-place yaw rotation (179.1 deg)",
+    "geometry_quality": "WEAK \u2014 Lacks parallax baseline for reliable triangulation depth; reconstruction is essentially an unprojected planar panorama with thin depth relief (dZ=0.30m)",
+    "visual_presentation": "Cleaned with support distance and cluster filtering, mounted on a neutral rectangular plinth without artificial terrain fabrication",
+    "suitable_for_disaster_response_demo": false,
+    "recommendation": "Retain video 0050 (river bridge corridor) as the primary F.O.R.G.E demonstration footage due to true forward flight baseline and rich 3D structural parallax."
+  },
+  "total_runtime_sec": 438.69
+}

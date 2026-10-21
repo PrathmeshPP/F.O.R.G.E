@@ -1,0 +1,80 @@
+{
+  "pipeline": "F.O.R.G.E Phase 2E \u2014 Screened Poisson Surface Mesh Reconstruction",
+  "timestamp_utc": "2026-10-17T16:29:55Z",
+  "input_point_cloud": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\point_cloud.ply",
+  "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\mesh_experiment",
+  "parameters": {
+    "voxel_size_m": 0.02,
+    "normal_radius_m": 0.06,
+    "normal_max_nn": 30,
+    "poisson_depth": 9,
+    "density_quantile": 0.05
+  },
+  "performance": {
+    "load_time_sec": 0.18,
+    "downsampling_time_sec": 0.092,
+    "normal_estimation_time_sec": 0.061,
+    "poisson_reconstruction_time_sec": 2.668,
+    "cleanup_time_sec": 1.03,
+    "io_time_sec": 4.439,
+    "total_runtime_sec": 10.701
+  },
+  "mesh_stats": {
+    "is_valid": true,
+    "vertex_count": 185899,
+    "triangle_count": 369441,
+    "finite_coordinates": true,
+    "valid_triangle_indices": true,
+    "has_vertex_colors": true,
+    "has_vertex_normals": true,
+    "is_edge_manifold": true,
+    "is_vertex_manifold": false,
+    "is_watertight": false,
+    "bounding_box_min": [
+      -2.4349,
+      -1.8802,
+      0.4367
+    ],
+    "bounding_box_max": [
+      2.3417,
+      0.105,
+      7.8833
+    ],
+    "extents": [
+      4.7766,
+      1.9852,
+      7.4466
+    ],
+    "point_cloud_bounds_min": [
+      -2.4546,
+      -1.8858,
+      0.4296
+    ],
+    "point_cloud_bounds_max": [
+      2.374,
+      0.1063,
+      8.0256
+    ],
+    "point_cloud_extents": [
+      4.8285,
+      1.992,
+      7.596
+    ],
+    "bounds_aligned_with_pcd": true
+  },
+  "files": {
+    "ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\mesh_experiment\\surface_mesh.ply",
+    "ply_size_bytes": 14283908,
+    "ply_size_mb": 13.62,
+    "obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\mesh_experiment\\surface_mesh.obj",
+    "obj_size_bytes": 32145501,
+    "obj_size_mb": 30.66,
+    "preview_image_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\reconstruction\\mesh_experiment\\mesh_preview.png"
+  },
+  "artifact_analysis": {
+    "boundary_extrapolation": "Pruned via 5% low-density quantile filtering and point cloud bounding box crop.",
+    "topological_state": "Manifold edge topology verified; degenerate triangles and duplicates removed.",
+    "color_fidelity": "Vertex colors smoothly transferred across octree structure; slight low-pass diffusion at tree canopy edges.",
+    "horizon_fanning": "Distantly unprojected rays form larger triangular facets towards Z > 7m due to natural monocular perspective divergence."
+  }
+}

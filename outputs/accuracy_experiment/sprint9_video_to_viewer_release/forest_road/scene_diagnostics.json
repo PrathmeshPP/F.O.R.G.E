@@ -1,0 +1,17 @@
+{
+  "scene": "forest_road",
+  "status": "PASS",
+  "acceptance_label": "Fully Accepted",
+  "interior_holes": 87,
+  "total_boundary_edges": 9166,
+  "bounding_box_min": [
+    -0.8832963705062866,
+    -0.5073967576026917,
+    0.75914466381073
+  ],
+  "bounding_box_max": [
+    0.8014446496963501,
+    0.4298086166381836,
+    1.230013370513916
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "is_valid": true,
+  "vertex_count": 12619,
+  "triangle_count": 24690,
+  "finite_coordinates": true,
+  "valid_triangle_indices": true,
+  "has_vertex_colors": true,
+  "has_vertex_normals": true,
+  "is_edge_manifold": false,
+  "is_vertex_manifold": false,
+  "bounding_box_min": [
+    -1.4778,
+    -0.1112,
+    -0.0049
+  ],
+  "bounding_box_max": [
+    1.6389,
+    0.21,
+    3.7934
+  ],
+  "extents": [
+    3.1167,
+    0.3213,
+    3.7983
+  ],
+  "color_stats": {
+    "count": 12619,
+    "mean_rgb": [
+      0.5805,
+      0.4944,
+      0.417
+    ],
+    "std_rgb": [
+      0.1596,
+      0.1015,
+      0.076
+    ],
+    "min_rgb": [
+      0.1416,
+      0.1913,
+      0.223
+    ],
+    "max_rgb": [
+      0.7846,
+      0.6767,
+      0.7442
+    ]
+  },
+  "reconstruction_time_sec": 1.042
+}

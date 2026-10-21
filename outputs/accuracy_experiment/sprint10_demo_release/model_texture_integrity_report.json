@@ -1,0 +1,158 @@
+{
+  "timestamp_utc": "2026-10-20T20:59:07Z",
+  "description": "Model, Material, and Texture Atlas Interoperability Audit",
+  "total_targets_audited": 5,
+  "all_passed": true,
+  "targets": [
+    {
+      "scene_id": "campus_0049",
+      "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049",
+      "obj_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\textured_mesh.obj",
+        "size_bytes": 31281376,
+        "has_mtllib_reference": true,
+        "referenced_mtl_filename": "textured_mesh.mtl",
+        "references_local_mtl": true
+      },
+      "mtl_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\textured_mesh.mtl",
+        "size_bytes": 176,
+        "references_texture_atlas": true,
+        "material_name": "Material_Atlas"
+      },
+      "texture_atlas": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\texture_atlas.png",
+        "dimensions": "4096x4096",
+        "color_mode": "RGB",
+        "size_bytes": 29301787,
+        "is_readable": true
+      },
+      "ply_meshes": {
+        "photographic_ply_bytes": 9840793,
+        "repaired_ply_bytes": 9840793,
+        "both_exist": true
+      },
+      "bundle_integrity_status": "PASS"
+    },
+    {
+      "scene_id": "desert_road_candidate_a",
+      "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a",
+      "obj_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a\\textured_mesh.obj",
+        "size_bytes": 14301214,
+        "has_mtllib_reference": true,
+        "referenced_mtl_filename": "textured_mesh.mtl",
+        "references_local_mtl": true
+      },
+      "mtl_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a\\textured_mesh.mtl",
+        "size_bytes": 175,
+        "references_texture_atlas": true,
+        "material_name": "Material_Atlas"
+      },
+      "texture_atlas": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a\\texture_atlas.png",
+        "dimensions": "4096x4096",
+        "color_mode": "RGB",
+        "size_bytes": 8765408,
+        "is_readable": true
+      },
+      "ply_meshes": {
+        "photographic_ply_bytes": 4077915,
+        "repaired_ply_bytes": 4077915,
+        "both_exist": true
+      },
+      "bundle_integrity_status": "PASS"
+    },
+    {
+      "scene_id": "desert_road_candidate_b",
+      "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b",
+      "obj_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\textured_mesh.obj",
+        "size_bytes": 14308562,
+        "has_mtllib_reference": true,
+        "referenced_mtl_filename": "textured_mesh.mtl",
+        "references_local_mtl": true
+      },
+      "mtl_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\textured_mesh.mtl",
+        "size_bytes": 175,
+        "references_texture_atlas": true,
+        "material_name": "Material_Atlas"
+      },
+      "texture_atlas": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\texture_atlas.png",
+        "dimensions": "4096x4096",
+        "color_mode": "RGB",
+        "size_bytes": 8765408,
+        "is_readable": true
+      },
+      "ply_meshes": {
+        "photographic_ply_bytes": 4080210,
+        "repaired_ply_bytes": 4080210,
+        "both_exist": true
+      },
+      "bundle_integrity_status": "PASS"
+    },
+    {
+      "scene_id": "forest_road",
+      "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road",
+      "obj_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\textured_mesh.obj",
+        "size_bytes": 117409995,
+        "has_mtllib_reference": true,
+        "referenced_mtl_filename": "textured_mesh.mtl",
+        "references_local_mtl": true
+      },
+      "mtl_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\textured_mesh.mtl",
+        "size_bytes": 176,
+        "references_texture_atlas": true,
+        "material_name": "Material_Atlas"
+      },
+      "texture_atlas": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\texture_atlas.png",
+        "dimensions": "4096x4096",
+        "color_mode": "RGB",
+        "size_bytes": 25149397,
+        "is_readable": true
+      },
+      "ply_meshes": {
+        "photographic_ply_bytes": 35558818,
+        "repaired_ply_bytes": 35558818,
+        "both_exist": true
+      },
+      "bundle_integrity_status": "PASS"
+    },
+    {
+      "scene_id": "river_bridge",
+      "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge",
+      "obj_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\textured_mesh.obj",
+        "size_bytes": 32270618,
+        "has_mtllib_reference": true,
+        "referenced_mtl_filename": "textured_mesh.mtl",
+        "references_local_mtl": true
+      },
+      "mtl_file": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\textured_mesh.mtl",
+        "size_bytes": 176,
+        "references_texture_atlas": true,
+        "material_name": "Material_Atlas"
+      },
+      "texture_atlas": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\texture_atlas.png",
+        "dimensions": "4096x4096",
+        "color_mode": "RGB",
+        "size_bytes": 20836942,
+        "is_readable": true
+      },
+      "ply_meshes": {
+        "photographic_ply_bytes": 10142855,
+        "repaired_ply_bytes": 10142855,
+        "both_exist": true
+      },
+      "bundle_integrity_status": "PASS"
+    }
+  ]
+}

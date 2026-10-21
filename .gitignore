@@ -13,6 +13,13 @@ env/
 venv/
 ENV/
 
+# Node modules & frontend dependency caches
+node_modules/
+**/node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 # Secrets, credentials and environment variables
 .env
 .env.*
@@ -33,32 +40,48 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 
-# Model checkpoints & large binary weights (> 100MB / untracked foundation weights)
-*.pt
-*.pth
-*.bin
-*.safetensors
-*.ckpt
-*.onnx
+# Intermediate foundation model weights (> 1GB untracked foundation checkpoints)
 models/
+*.ckpt
+*.safetensors
 
-# Raw video inputs (preserve source drone footage and terrestrial dashcams locally)
-*.mp4
-*.mov
-*.avi
-*.mkv
-*.webm
-
-# Generated outputs & scratch caches (default exclude)
-outputs/
-*.ply
-*.npz
-*.obj
-
-# Intermediate test and rendering artifacts
+# Test & coverage artifacts
 .pytest_cache/
 .coverage
 htmlcov/
 tests/test_inputs/
 ScreenCapture_*
 ScreenCamera_*
+
+# Ephemeral root scratch captures and debug visualization dumps
+scratch_*.png
+scratch_*.ply
+scratch_comp_frames/
+test_*.png
+test_*.ply
+clean_desert_road_top.png
+pipeline_view_*.png
+
+# Disposable/superseded intermediate experiment runs
+# (Preserves Sprint 9 release baseline, Sprint 10 deliverables, manual model review,
+#  GPS alignment, production validation, and core validation outputs)
+outputs/accuracy_experiment/high_quality_multiframe_v1/
+outputs/accuracy_experiment/multiframe_stitch_recovery_v1/
+outputs/accuracy_experiment/all_scenes_quality_v1/
+outputs/accuracy_experiment/quality_recovery_v2/
+outputs/accuracy_experiment/photographic_texturing_v1/
+outputs/accuracy_experiment/regression_diagnosis_v1/
+outputs/accuracy_experiment/regression_diagnosis_v2/
+outputs/accuracy_experiment/sprint7*
+outputs/accuracy_experiment/generalization_disaster_validation_v1/
+outputs/candidate_screening/
+outputs/frames/
+outputs/predictions/
+outputs/reconstruction/
+outputs/screening_0049/
+outputs/desert_road_validation/
+outputs/lake_speedboat_validation/
+outputs/snow_lift_validation/
+outputs/dji_fly_validation/
+outputs/diagnostics/
+outputs/diagnostics.zip

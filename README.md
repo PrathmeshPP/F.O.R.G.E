@@ -1,54 +1,75 @@
 # F.O.R.G.E — Feed-forward Optical Reconstruction & Geometry Engine
 
-F.O.R.G.E is a spatial intelligence and 3D scene reconstruction pipeline built on feed-forward foundation models (VGGT-Ω). It processes monocular aerial/drone video sequences into metric 3D point clouds, dense depth maps, and camera trajectory poses.
+F.O.R.G.E is a spatial intelligence and 3D scene reconstruction platform built on feed-forward vision foundation models (VGGT-Ω). It processes monocular aerial drone and vehicular corridor video sequences into metric 3D point clouds, dense depth maps, camera trajectory poses, textured triangle surface meshes, and interactive web visualization assets.
 
 ---
 
-## Architecture & Current Pipeline
+## Architecture & System Overview
 
-The system is organized into modular phases:
+The platform consists of two primary subsystems:
+1. **F.O.R.G.E Core Reconstruction Pipeline (`src/`, `scripts/`)**: Feed-forward foundation model inference, pinhole depth backprojection, multi-view consistency filtering, Poisson/BPA surface meshing, photographic KD-tree color transfer, and Umeyama–RANSAC 7-DoF geospatial alignment.
+2. **F.O.R.G.E Explorer Interactive Viewer (`viewer/`, `scripts/serve_viewer.py`)**: React 18, TypeScript, Vite, and Three.js web application for real-time 3D inspection, camera framing presets, multi-representation rendering (textured, photographic, untextured, point cloud), and split-view comparative analysis.
 
-1. **Video Ingestion & Frame Extraction (`src/video/extract_frames.py`)**:
-   - Samples ordered RGB frames from video inputs at configurable FPS and frame caps.
-   - Embeds millisecond timestamps into file naming and extracted metadata.
+```
+                      [ Monocular Source Video ]
+                                  │
+                                  ▼
+                     [ Frame Sampling & Telemetry ]
+                                  │
+                                  ▼
+                [ VGGT-Ω 1B Feed-Forward Foundation Model ]
+                                  │
+                ┌─────────────────┴─────────────────┐
+                ▼                                   ▼
+      [ Metric Depth & Confidence ]      [ Camera Poses (R, T, K) ]
+                │                                   │
+                └─────────────────┬─────────────────┘
+                                  ▼
+                   [ Dense Point Cloud Fusion ]
+                                  │
+                                  ▼
+                     [ Surface Mesh Generation ]
+                    (Poisson / Ball-Pivoting)
+                                  │
+                                  ▼
+                  [ Photographic Texture Mapping ]
+                                  │
+          ┌───────────────────────┴───────────────────────┐
+          ▼                                               ▼
+[ F.O.R.G.E Explorer Viewer ]              [ Standalone Inspection Exports ]
+  (Three.js Web Application)                 (OBJ, PLY, GLB, MTL, 4K Atlases)
+```
 
-2. **Spatial Inference Engine (`src/vggt/inference.py`)**:
-   - Loads the local VGGT-Ω 1B foundation model (`vggt_omega_1b_512.pt`) into GPU memory.
-   - Executes FP16-autocast forward passes with `torch.inference_mode()`.
-   - Predicts per-frame metric depth, depth confidence, and decodes $[R \mid T]$ extrinsics and $K$ intrinsics.
+---
 
-3. **Dense 3D Reconstruction (`src/reconstruction/point_cloud.py`)**:
-   - Vectorized pinhole backprojection from metric depth into camera space:
-     $$X = (u - c_x) \cdot \frac{Z}{f_x}, \quad Y = (v - c_y) \cdot \frac{Z}{f_y}, \quad Z = \text{depth}$$
-   - Transforms camera coordinates into global world space using camera extrinsics:
-     $$p_{\text{world}} = R^T \cdot (p_{\text{cam}} - T)$$
-   - Samples matched RGB pixel colors and filters invalid/low-confidence points.
-   - Exports high-performance binary little-endian PLY files and bounding-box metadata.
+## Benchmark Scenes & Reconstruction Baseline
 
-4. **Visual Quality Assurance (`scripts/preview_point_cloud.py`)**:
-   - Renders multi-view orthographic projections (X-Z Top-Down, X-Y Frontal, Z-Y Side Profile) using native NumPy and Pillow.
-   - Preserves true metric aspect ratios for spatial geometry verification.
+The project evaluates four diverse real-world video sources across five benchmark entries:
 
-5. **Camera Trajectory & Parallax Diagnostics (`scripts/analyze_trajectory_quality.py`, `scripts/screen_candidate_videos.py`)**:
-   - Analyzes predicted camera poses, translational baseline vs. angular rotation, depth consistency, and parallax dispersion.
-   - Screens prospective video candidates to ensure footage possesses adequate baseline for multi-view stereo reconstruction.
+| Scene Entry | Category | Source Video | Extracted Geometry | Key Scene Characteristics |
+| :--- | :--- | :--- | :--- | :--- |
+| **1. Campus 0049** | Architectural Survey | `dji_fly_20260727_172754_0049_...mp4` | 128k vertices, 253k triangles | Institutional courtyard, buildings, reflecting pool, walkways. |
+| **2. Desert Road (Candidate A)** | Highway Corridor | `desert_road.mp4` | 53k vertices, 105k triangles | Static highway corridor across sand dunes; moving traffic removed. |
+| **3. Desert Road (Candidate B)** | Dynamic Preservation | `desert_road.mp4` | 53k vertices, 105k triangles | Preserves reference vehicle (Mini Cooper with rooftop balloons). |
+| **4. Forest Road** | Terrain & Vegetation | `forest_road.mp4` | 462k vertices, 919k triangles | Dense mountain tree canopy, winding asphalt road with yellow lines. |
+| **5. River/Bridge** | Civil Infrastructure | `segment_52s_64s.mp4` | 132k vertices, 260k triangles | Dual-span highway bridge, concrete piers, riverbed and approach road. |
 
-6. **Surface Mesh Reconstruction & Presentation (`scripts/reconstruct_mesh.py`)**:
-   - Computes watertight Poisson surface meshes from dense point clouds with strict distance support and edge-length pruning.
-   - Restores authentic source RGB colors to mesh vertices via KD-tree inverse-distance-weighted interpolation.
-   - Creates a separate, neutral rectangular exhibition base for professional presentation without fabricating terrain or altering spatial measurements.
+> [!NOTE]
+> **Coordinate Scale & Calibration Notice:** Coordinates are model-relative. Metric scale is uncalibrated and arbitrary unless explicitly aligned via GPS telemetry. Unseen building facades, foliage voids, and reflective water specular noise reflect physical capture limitations and are honestly not synthesized.
 
-7. **Geospatial Alignment & Telemetry Engine (`src/geo/`, `scripts/align_reconstruction_gps.py`)**:
-   - Extracts onboard drone GPS telemetry from embedded metadata (`djmd_protobuf`) and companion subtitle tracks (`.SRT`).
-   - Projects WGS-84 geodetic coordinates to local metric East-North-Up (ENU) coordinates.
-   - Performs trajectory baseline conditioning analysis, detecting ill-conditioned stationary hovers against the GNSS noise floor.
-   - Estimates optimal 7-DoF similarity transformations (scale, 3D rotation, 3D translation) via robust Umeyama–RANSAC alignment.
-   - Transforms 3D geometry and camera trajectories into georeferenced metric coordinate space.
+---
 
-8. **Automated Quality Gates & Verification (`src/geo/quality_gates.py`)**:
-   - Evaluates multi-criteria geometric, topological, kinematic, and geospatial acceptance gates.
-   - Enforces vertex density, triangle completeness, aspect-ratio needle outlier limits, and topological clustering.
-   - Detects 1D collinear hover orientation defects ($R_{3,3} > 0.85$ optical tilt into sky).
+## Standalone 3D Model Deliverables (`outputs/manual_model_review/`)
+
+All five scenes are delivered in self-contained formats for direct inspection in **Blender**, **MeshLab**, **CloudCompare**, or **Windows 3D Viewer** completely independently of the web viewer:
+
+- **Untextured 3D Mesh**: `model_geometry.ply` and `model_geometry.obj` (clean coordinate geometry with zero texture dependencies).
+- **Photographic 3D Mesh**: `model_photographic.ply` (vertex-colored RGB point/mesh representation).
+- **Textured 3D Model**: `model_textured.obj`, `model_textured.mtl`, and `texture_atlas.png` (4096×4096 diffuse map).
+- **Self-Contained Preview**: `model_preview.glb` (glTF 2.0 binary with embedded PBR materials for 1-click inspection).
+- **Master Inspection Package**: `forge_models_for_manual_inspection.zip` (354.2 MB archive containing all models and textures).
+
+Detailed manual opening instructions and SHA-256 hashes are cataloged in [`outputs/manual_model_review/MODEL_CATALOG.md`](outputs/manual_model_review/MODEL_CATALOG.md).
 
 ---
 
@@ -56,187 +77,110 @@ The system is organized into modular phases:
 
 ```
 FORGE/
- ├── run_pipeline.py                 # End-to-end video-to-predictions pipeline
- ├── requirements.txt                # Core pipeline dependency specification
- ├── requirements-viewer.txt         # Open3D 3D viewer dependency specification
- ├── src/
- │    ├── video/                     # Frame extraction, temporal sampling, and adaptive selection
- │    ├── vggt/                      # VGGT-Omega loading, inference, and camera decoding
- │    ├── reconstruction/            # Depth backprojection, voxel fusion, and generalized pipeline
- │    └── geo/                       # Telemetry extraction, Umeyama-RANSAC, and quality gates
+ ├── data/
+ │    └── source_videos/             # Verified original source drone & benchmark footage
+ ├── docs/
+ │    ├── ASSET_MANIFEST.md          # Comprehensive catalog of all 480+ project assets
+ │    ├── asset_manifest.json        # Machine-readable asset verification inventory
+ │    ├── SPRINT10_LIVE_DEMO_GUIDE.md# Presenter demo script & camera framing guide
+ │    └── OPENCV_COMPLETION_ROADMAP.md # Mathematical formulation & technical roadmap
+ ├── outputs/
+ │    ├── manual_model_review/       # Sprint 10.2 standalone OBJ, PLY, GLB, and ZIP packages
+ │    ├── accuracy_experiment/
+ │    │    ├── sprint9_video_to_viewer_release/ # Authoritative frozen baseline reconstructions
+ │    │    ├── sprint10_demo_release/           # Demo hardening deliverables & screenshots
+ │    │    ├── sprint10_1_viewer_refinement/   # Framing presets & metadata verification
+ │    │    └── gps_aligned_v1/                  # Umeyama-RANSAC metric-georeferenced models
+ │    ├── dji_0049_validation/       # Campus 0049 camera poses & validation artifacts
+ │    └── dji_river_bridge_validation/ # River Bridge source segment & validation predictions
  ├── scripts/
- │    ├── align_reconstruction_gps.py # Dataset-wide batch GPS alignment runner
- │    ├── generate_contact_sheets.py # Multi-view diagnostic contact sheet generator
- │    ├── generate_point_cloud.py    # CLI point cloud generation runner
- │    ├── preview_point_cloud.py     # Dependency-free orthographic QA previewer
- │    ├── view_point_cloud.py        # Interactive Open3D 3D point cloud visualizer
- │    ├── analyze_trajectory_quality.py # Trajectory, parallax, and baseline diagnostic tool
- │    ├── screen_candidate_videos.py # Drone video candidate screening & motion analysis
- │    ├── reconstruct_mesh.py        # Surface mesh reconstruction & presentation base
- │    ├── audit_accuracy.py          # Geometric accuracy audit & multi-view depth agreement
- │    └── render_model_comparisons.py # Offscreen multi-angle comparative rendering diagnostic
+ │    ├── serve_viewer.py            # Zero-dependency Python HTTP server with Range support
+ │    ├── build_manual_model_review.py # Standalone model packaging & GLB export runner
+ │    ├── align_reconstruction_gps.py # Umeyama-RANSAC 7-DoF batch geospatial alignment
+ │    ├── run_pipeline.py            # End-to-end video-to-predictions pipeline
+ │    ├── reconstruct_mesh.py        # Surface meshing & KD-tree vertex color interpolation
+ │    ├── generate_point_cloud.py    # Depth backprojection and voxel fusion CLI
+ │    └── preview_point_cloud.py     # Orthographic projection visual QA generator
+ ├── src/
+ │    ├── geo/                       # Telemetry parsing, Umeyama-RANSAC, and quality gates
+ │    ├── reconstruction/            # Backprojection, multi-view consistency, voxel fusion
+ │    ├── vggt/                      # VGGT-Ω model loading, inference, and camera decoding
+ │    └── video/                     # Frame extraction, temporal sampling, and selection
  ├── tests/
- │    ├── test_vggt_loading.py       # Model loading and GPU smoke test
- │    ├── test_geo_alignment.py      # Automated tests for telemetry, Umeyama-RANSAC & quality gates
- │    ├── test_general_pipeline.py   # General reconstruction pipeline automated tests
- │    └── test_point_cloud_accuracy.py # Point cloud fusion and backprojection tests
+ │    ├── test_sprint10_2_standalone_review.py # Standalone review deliverable validation
+ │    ├── test_sprint10_1_viewer_refinement.py # Camera framing & metadata integrity
+ │    ├── test_sprint10_demo_hardening.py      # Demo release & HTTP server endpoint tests
+ │    └── test_geo_alignment.py      # Telemetry, Umeyama-RANSAC, and quality gate tests
+ ├── viewer/                         # F.O.R.G.E Explorer React/TypeScript/Three.js Web Application
+ │    ├── dist/                      # Pre-built production distribution for instant demo
+ │    ├── src/                       # Components, Three.js canvas, shaders, and data model
+ │    └── package.json               # Frontend dependencies (React, Three.js, Lucide, Vite)
+ ├── start_forge_explorer.bat        # 1-click Windows demo launcher
+ ├── requirements.txt                # Python core pipeline dependencies
+ ├── requirements-viewer.txt         # Optional Open3D viewer dependency
+ ├── .gitattributes                  # Git LFS tracking rules for 3D assets, videos, and archives
  └── README.md
 ```
 
 ---
 
-## Setup & Prerequisites
+## Quickstart & Launching the Explorer
 
-- **OS**: Windows 11 / Linux (tested on Windows 11)
-- **Python**: 3.11.9
-- **GPU**: NVIDIA GPU with CUDA support (tested on RTX 2070 SUPER, 8 GB VRAM)
-- **Core Dependencies**:
-  - `torch==2.8.0+cu126`, `torchvision==0.23.0+cu126`
-  - `numpy==1.26.4` (required by VGGT-Ω; `numpy < 2`)
-  - `opencv-python==4.11.0.86`, `Pillow`, `einops`, `safetensors`
-  - `vggt-omega` local package
-- **Interactive Viewer Dependency**:
-  - `open3d==0.20.0` (listed in `requirements-viewer.txt`)
+### 1. Launch with One Click (Windows)
+Double-click `start_forge_explorer.bat` or run:
 
-### Checkpoint Configuration
-
-Set the path to your local VGGT-Ω model checkpoint via environment variable or CLI argument:
-
-```bash
-# Windows PowerShell
-$env:VGGT_OMEGA_CHECKPOINT = "C:\path\to\vggt_omega_1b_512.pt"
-
-# Linux / macOS
-export VGGT_OMEGA_CHECKPOINT="/path/to/vggt_omega_1b_512.pt"
+```cmd
+start_forge_explorer.bat
 ```
 
-If not set, the pipeline defaults to the local development checkpoint path or accepts `--checkpoint <path>`.
+This starts the local asset-serving daemon and launches `http://localhost:5173` in your default browser.
+
+### 2. Manual Server Launch
+```bash
+python scripts/serve_viewer.py --port 5173
+```
+
+Navigate to `http://localhost:5173`. The server handles Range requests for 4K video playback, serves static models with CORS headers, and includes an automated health check at `/health`.
 
 ---
 
-## Usage
+## Git LFS & Asset Retrieval
 
-### 1. Run Video Inference Pipeline
-Extract frames, execute VGGT-Ω spatial inference, and save metric depth and camera poses:
+Large binary assets (3D meshes, self-contained GLB files, ZIP packages, and MP4 videos) are tracked via **Git LFS**.
 
+### Initial Setup
 ```bash
-python run_pipeline.py --video path/to/input.mp4 --fps 1.0 --max-frames 3 --output-dir outputs/run_01
+# Install Git LFS hooks
+git lfs install
+
+# Clone the repository
+git clone https://github.com/PrathmeshPP/FORGE.git
+cd FORGE
+
+# Pull all tracked LFS assets
+git lfs pull
 ```
 
-### 2. Generate 3D Point Cloud
-Backproject predicted depth maps into a colored PLY point cloud:
-
+To pull assets for a specific scene only:
 ```bash
-python scripts/generate_point_cloud.py \
-    --depth outputs/run_01/predictions/depth_predictions.npz \
-    --poses outputs/run_01/predictions/camera_poses.npz \
-    --frames outputs/run_01/frames \
-    --output-ply outputs/run_01/reconstruction/point_cloud.ply \
-    --output-meta outputs/run_01/reconstruction/reconstruction_metadata.json
+git lfs pull --include="outputs/manual_model_review/campus_0049/*"
 ```
 
-### 3. Render Visual QA Preview
-Render top-down, frontal, and profile projections to verify reconstruction geometry:
+---
+
+## Running the Automated Test Suite
+
+The test suite validates pipeline integrity, mathematical alignment, coordinate finiteness, and standalone deliverables:
 
 ```bash
-python scripts/preview_point_cloud.py \
-    --input-ply outputs/run_01/reconstruction/point_cloud.ply \
-    --output-png outputs/run_01/reconstruction/point_cloud_preview.png
+# Run comprehensive sprint verification suite
+pytest tests/test_sprint10_demo_hardening.py tests/test_sprint10_1_viewer_refinement.py tests/test_sprint10_2_standalone_review.py -v
 ```
 
-### 4. Interactive 3D Viewer (Open3D)
-Launch the interactive 3D viewer window with RGB vertex colors and coordinate axes:
+---
 
-```bash
-python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply
-```
+## License & Attribution
 
-Viewer options:
-- Mouse controls: Left-click drag (Orbit/Rotate), Right-click drag / Shift+Left drag (Pan), Scroll wheel (Zoom), `R` (Reset view), `Q` / `Esc` (Close).
-- Non-destructive downsampling for faster rendering (never alters original file):
-  ```bash
-  python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply --voxel-size 0.05
-  ```
-- Integrity validation without launching GUI:
-  ```bash
-  python scripts/view_point_cloud.py --input outputs/run_01/reconstruction/point_cloud.ply --verify-only
-  ```
-
-### 5. Trajectory & Parallax Quality Diagnostics
-Analyze predicted camera poses, translational baseline, and depth consistency:
-
-```bash
-python scripts/analyze_trajectory_quality.py \
-    --poses outputs/run_01/predictions/camera_poses.npz \
-    --depth outputs/run_01/predictions/depth_predictions.npz \
-    --output-json outputs/run_01/predictions/trajectory_quality.json
-```
-
-### 6. Drone Video Candidate Screening
-Evaluate candidate drone videos or segments for translation vs. pure rotation and parallax dispersion before running full inference:
-
-```bash
-python scripts/screen_candidate_videos.py
-```
-
-### 7. Surface Mesh Reconstruction & Rectangular Presentation
-Generate a watertight surface mesh with authentic KD-tree vertex color interpolation and an optional neutral rectangular display plinth:
-
-```bash
-python scripts/reconstruct_mesh.py \
-    --input outputs/run_01/reconstruction/point_cloud.ply \
-    --output-dir outputs/run_01/reconstruction \
-    --voxel-size 0.01 \
-    --poisson-depth 9 \
-    --max-support-dist 0.02 \
-    --max-edge-length 0.05 \
-    --add-presentation-base
-```
-
-View the reconstructed presentation mesh directly in Open3D:
-
-```bash
-python scripts/reconstruct_mesh.py --view-only --output-dir outputs/run_01/reconstruction
-```
-
-### 8. Geometric Accuracy Audit & Multi-View Validation
-Perform quantitative multi-view depth agreement, ray intersection angle, and coordinate convention verification:
-
-```bash
-python scripts/audit_accuracy.py
-```
-
-Generate consistent offscreen multi-angle comparative rendering sheets (Top, Frontal, Oblique) for baseline models and point clouds:
-
-```bash
-python scripts/render_model_comparisons.py
-```
-
-### 9. Validation Baselines & Metric-Aligned Models
-
-The repository tracks validated baseline models, repaired candidates, and execution metadata:
-- **River Bridge Flight Corridor (`outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/`)**: Georeferenced metric model (`surface_mesh_gps_aligned.ply`, 323k vertices, 637k triangles) solved across 84.8 m active forward flight corridor, achieving 100% inlier alignment at 0.236 m RMSE.
-- **Campus 0049 Baseline & Repaired Models (`outputs/dji_0049_validation/`, `outputs/accuracy_experiment/generalization_disaster_validation_v1/campus_0049/`)**: Authentic colored surface mesh baselines, visual QA previews, camera poses, and execution metadata.
-- **River / Bridge Baseline (`outputs/dji_river_bridge_validation/`)**: Validated forward-translation corridor exhibiting clean multi-view parallax (`mesh_experiment_v2/surface_mesh.ply`).
-- **Audit & Alignment Evidence (`outputs/accuracy_experiment/gps_aligned_v1/`)**: Contains consolidated `batch_alignment_report.json`, `batch_alignment_summary.csv`, and visual comparison sheets.
-
-### 10. Robust GPS Telemetry Alignment Runner
-Perform automated trajectory baseline conditioning, Umeyama-RANSAC 7-DoF alignment, and quality gate assessment across all project videos:
-
-```bash
-python scripts/align_reconstruction_gps.py --all
-```
-
-### 11. Diagnostic Comparison Contact Sheet Generator
-Generate high-resolution multi-view comparison sheets comparing original baselines, repaired candidates, and metric models:
-
-```bash
-python scripts/generate_contact_sheets.py
-```
-
-### 12. Run Automated Test Suite
-Run the full test suite covering synthetic 7-DoF recovery, RANSAC outlier rejection, trajectory conditioning, quality gates, and reconstruction pipelines:
-
-```bash
-python -m unittest discover tests
-```
+- **F.O.R.G.E Platform**: Developed as part of the Smart India Hackathon (SIH) spatial intelligence challenge.
+- **Foundation Model**: VGGT-Ω (Visual Geometry Grounded Transformer for Monocular 3D Reconstruction).
+- **Telemetry & Video**: Captured via DJI Air 3S drone and public highway dashcam benchmarks.

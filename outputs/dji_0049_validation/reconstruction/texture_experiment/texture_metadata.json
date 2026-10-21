@@ -1,0 +1,109 @@
+{
+  "pipeline": "F.O.R.G.E Phase 2F \u2014 High-Resolution 4K Texture Experiment",
+  "timestamp_utc": "2026-10-17T18:29:01Z",
+  "source_video": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+  "geometry_mesh": "outputs/dji_0049_validation/reconstruction/surface_mesh.ply",
+  "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_0049_validation\\reconstruction\\texture_experiment",
+  "texture_specifications": {
+    "texture_atlas_resolution": [
+      4096,
+      4096
+    ],
+    "texture_file": "texture.png",
+    "texture_file_size_mb": 12.25,
+    "uv_mapping_type": "Continuous Planar Orthographic (X-Y Terrain)",
+    "coverage_percentage": 97.84,
+    "covered_texels": 6461361,
+    "total_mesh_texels": 6603840
+  },
+  "frame_ingestion": {
+    "source_type": "Uncompressed 4K Frames directly extracted from source MP4",
+    "frame_resolution": [
+      3840,
+      2160
+    ],
+    "total_frames_ingested": 10,
+    "frame_details": [
+      {
+        "frame_index": 0,
+        "filename": "frame_4k_00_0.000s.png",
+        "visible_texels": 3623284,
+        "visible_percentage": 54.87
+      },
+      {
+        "frame_index": 1,
+        "filename": "frame_4k_01_1.001s.png",
+        "visible_texels": 3480617,
+        "visible_percentage": 52.71
+      },
+      {
+        "frame_index": 2,
+        "filename": "frame_4k_02_2.002s.png",
+        "visible_texels": 2936387,
+        "visible_percentage": 44.46
+      },
+      {
+        "frame_index": 3,
+        "filename": "frame_4k_03_3.003s.png",
+        "visible_texels": 3333979,
+        "visible_percentage": 50.49
+      },
+      {
+        "frame_index": 4,
+        "filename": "frame_4k_04_4.004s.png",
+        "visible_texels": 3398210,
+        "visible_percentage": 51.46
+      },
+      {
+        "frame_index": 5,
+        "filename": "frame_4k_05_5.005s.png",
+        "visible_texels": 3403031,
+        "visible_percentage": 51.53
+      },
+      {
+        "frame_index": 6,
+        "filename": "frame_4k_06_6.006s.png",
+        "visible_texels": 3404586,
+        "visible_percentage": 51.55
+      },
+      {
+        "frame_index": 7,
+        "filename": "frame_4k_07_7.007s.png",
+        "visible_texels": 3419441,
+        "visible_percentage": 51.78
+      },
+      {
+        "frame_index": 8,
+        "filename": "frame_4k_08_8.008s.png",
+        "visible_texels": 3787478,
+        "visible_percentage": 57.35
+      },
+      {
+        "frame_index": 9,
+        "filename": "frame_4k_09_9.009s.png",
+        "visible_texels": 3630975,
+        "visible_percentage": 54.98
+      }
+    ]
+  },
+  "mesh_specifications": {
+    "vertex_count": 142928,
+    "triangle_count": 281225,
+    "obj_file": "textured_mesh.obj",
+    "obj_file_size_mb": 43.79,
+    "has_uv_coordinates": true,
+    "has_material_file": true
+  },
+  "presentation_base": {
+    "is_presentation_only": true,
+    "included_in_measurements": false,
+    "status": "Preserved separately in display_base.ply without altering measured terrain"
+  },
+  "sharpness_and_artifact_assessment": {
+    "is_genuinely_sharper": true,
+    "sharpness_verdict": "The 4096x4096 UV texture is GENUINELY SHARPER than the vertex-color mesh on all planar and semi-planar features (roadways, parking lots, crosswalk stripes, and large building roof planes). Individual painted crosswalk bars, pavement symbols, and solar panel arrays are clearly resolved in the texture map, whereas they were blurred into smooth indistinct gradients in the vertex-color mesh.",
+    "color_seams_and_ghosting": "Because video 0049 consists of a 179-degree in-place yaw rotation with only 4.5 cm of translation, slight rotational calibration discrepancies between frames produce visible shearing and boundary seams along vertical structures (e.g. building facades and tree canopy edges). Best-camera fronto-parallel selection prevents multi-view ghosting/blurring, but leaves sharp transition seams where different cameras meet.",
+    "distortion_and_missing_regions": "Distortion is minimal across the horizontal terrain plane due to planar orthographic UV parameterization. However, vertical walls suffer from elongation distortion due to nadir projection angles. Missing texture regions occur only outside the rotating drone camera frustum, where no valid photographic coverage exists."
+  },
+  "total_runtime_sec": 15.279
+}

@@ -1,0 +1,17 @@
+{
+  "scene": "river_bridge",
+  "status": "PASS",
+  "acceptance_label": "Fully Accepted",
+  "interior_holes": 84,
+  "total_boundary_edges": 4227,
+  "bounding_box_min": [
+    -1.4923851490020752,
+    -0.4361720085144043,
+    -0.33456850051879883
+  ],
+  "bounding_box_max": [
+    2.407782554626465,
+    0.3036537170410156,
+    2.7488975524902344
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "scenes": {
+    "campus_0049": {
+      "source_video": {
+        "exact_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+        "exists": true,
+        "provenance": "User-supplied DJI drone flight video located directly on Desktop",
+        "size_bytes": 162041214,
+        "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "fps": 59.94,
+        "frame_count": 966,
+        "duration_sec": 16.12,
+        "codec": "hevc"
+      },
+      "prediction_artifacts": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\campus_0049\\predictions",
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\campus_0049\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\campus_0049\\predictions\\depth_predictions.npz",
+        "num_cameras": 8,
+        "extrinsics_shape": [
+          8,
+          3,
+          4
+        ],
+        "intrinsics_shape": [
+          8,
+          3,
+          3
+        ],
+        "depth_shape": [
+          8,
+          384,
+          688,
+          1
+        ],
+        "confidence_shape": [
+          8,
+          384,
+          688
+        ]
+      },
+      "inference_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\campus_0049\\frames",
+        "count": 8,
+        "filenames": [
+          "frame_0000_0.000s.png",
+          "frame_0001_2.302s.png",
+          "frame_0002_4.605s.png",
+          "frame_0003_6.907s.png",
+          "frame_0004_9.193s.png",
+          "frame_0005_11.495s.png",
+          "frame_0006_13.797s.png",
+          "frame_0007_16.099s.png"
+        ]
+      },
+      "native_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\campus_0049\\native_frames",
+        "count": 8,
+        "filenames": [
+          "frame_0000_0.000s.png",
+          "frame_0001_2.302s.png",
+          "frame_0002_4.605s.png",
+          "frame_0003_6.907s.png",
+          "frame_0004_9.193s.png",
+          "frame_0005_11.495s.png",
+          "frame_0006_13.797s.png",
+          "frame_0007_16.099s.png"
+        ]
+      }
+    },
+    "desert_road": {
+      "source_video": {
+        "exact_path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt_omega\\examples\\desert_road.mp4",
+        "exists": true,
+        "provenance": "Selected from third-party VGGT example repository (SIH / coding)",
+        "size_bytes": 6539814,
+        "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 23.98,
+        "frame_count": 477,
+        "duration_sec": 19.89,
+        "codec": "h264"
+      },
+      "prediction_artifacts": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\desert_road\\predictions",
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\desert_road\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\desert_road\\predictions\\depth_predictions.npz",
+        "num_cameras": 8,
+        "extrinsics_shape": [
+          8,
+          3,
+          4
+        ],
+        "intrinsics_shape": [
+          8,
+          3,
+          3
+        ],
+        "depth_shape": [
+          8,
+          384,
+          688,
+          1
+        ],
+        "confidence_shape": [
+          8,
+          384,
+          688
+        ]
+      },
+      "inference_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\desert_road\\frames",
+        "count": 8,
+        "filenames": [
+          "frame_0000_0.000s.png",
+          "frame_0001_2.836s.png",
+          "frame_0002_5.672s.png",
+          "frame_0003_8.508s.png",
+          "frame_0004_11.345s.png",
+          "frame_0005_14.181s.png",
+          "frame_0006_17.017s.png",
+          "frame_0007_19.853s.png"
+        ]
+      },
+      "native_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\desert_road\\native_frames",
+        "count": 8,
+        "filenames": [
+          "frame_0000_0.000s.png",
+          "frame_0001_2.836s.png",
+          "frame_0002_5.672s.png",
+          "frame_0003_8.508s.png",
+          "frame_0004_11.345s.png",
+          "frame_0005_14.181s.png",
+          "frame_0006_17.017s.png",
+          "frame_0007_19.853s.png"
+        ]
+      }
+    },
+    "forest_road": {
+      "source_video": {
+        "exact_path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt_omega\\examples\\forest_road.mp4",
+        "exists": true,
+        "provenance": "Selected from third-party VGGT example repository (SIH / coding)",
+        "size_bytes": 10681415,
+        "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+        "resolution": [
+          1280,
+          720
+        ],
+        "fps": 23.98,
+        "frame_count": 730,
+        "duration_sec": 30.45,
+        "codec": "h264"
+      },
+      "prediction_artifacts": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\forest_road\\predictions",
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\forest_road\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\forest_road\\predictions\\depth_predictions.npz",
+        "num_cameras": 10,
+        "extrinsics_shape": [
+          10,
+          3,
+          4
+        ],
+        "intrinsics_shape": [
+          10,
+          3,
+          3
+        ],
+        "depth_shape": [
+          10,
+          384,
+          688,
+          1
+        ],
+        "confidence_shape": [
+          10,
+          384,
+          688
+        ]
+      },
+      "inference_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\forest_road\\frames",
+        "count": 10,
+        "filenames": [
+          "frame_0000_0.000s.png",
+          "frame_0001_3.378s.png",
+          "frame_0002_6.757s.png",
+          "frame_0003_10.135s.png",
+          "frame_0004_13.513s.png",
+          "frame_0005_16.892s.png",
+          "frame_0006_20.270s.png",
+          "frame_0007_23.649s.png",
+          "frame_0008_27.027s.png",
+          "frame_0009_30.405s.png"
+        ]
+      },
+      "native_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\forest_road\\native_frames",
+        "count": 10,
+        "filenames": [
+          "frame_0000_0.000s.png",
+          "frame_0001_3.378s.png",
+          "frame_0002_6.757s.png",
+          "frame_0003_10.135s.png",
+          "frame_0004_13.513s.png",
+          "frame_0005_16.892s.png",
+          "frame_0006_20.270s.png",
+          "frame_0007_23.649s.png",
+          "frame_0008_27.027s.png",
+          "frame_0009_30.405s.png"
+        ]
+      }
+    },
+    "river_bridge": {
+      "source_video": {
+        "exact_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172812_0050_1785175896547_video.mp4",
+        "exists": true,
+        "provenance": "User-supplied DJI drone flight video located directly on Desktop",
+        "size_bytes": 737144565,
+        "sha256": "b539bb2bb5977630528c40fd5df9605d9032c9b18daa8df38209ef040e57225f",
+        "resolution": [
+          3840,
+          2160
+        ],
+        "fps": 59.94,
+        "frame_count": 4965,
+        "duration_sec": 82.83,
+        "codec": "hevc"
+      },
+      "prediction_artifacts": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\river_bridge\\predictions",
+        "poses_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\river_bridge\\predictions\\camera_poses.npz",
+        "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\river_bridge\\predictions\\depth_predictions.npz",
+        "num_cameras": 8,
+        "extrinsics_shape": [
+          8,
+          3,
+          4
+        ],
+        "intrinsics_shape": [
+          8,
+          3,
+          3
+        ],
+        "depth_shape": [
+          8,
+          384,
+          688,
+          1
+        ],
+        "confidence_shape": [
+          8,
+          384,
+          688
+        ]
+      },
+      "inference_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_recovery_v2\\river_bridge\\frames",
+        "count": 8,
+        "filenames": [
+          "frame_0000_17.985s.png",
+          "frame_0001_22.272s.png",
+          "frame_0002_26.560s.png",
+          "frame_0003_30.847s.png",
+          "frame_0004_35.135s.png",
+          "frame_0005_39.423s.png",
+          "frame_0006_43.710s.png",
+          "frame_0007_47.998s.png"
+        ]
+      },
+      "native_frames": {
+        "directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\photographic_texturing_v1\\river_bridge\\native_frames",
+        "count": 8,
+        "filenames": [
+          "frame_0000_17.985s.png",
+          "frame_0001_22.272s.png",
+          "frame_0002_26.560s.png",
+          "frame_0003_30.847s.png",
+          "frame_0004_35.135s.png",
+          "frame_0005_39.423s.png",
+          "frame_0006_43.710s.png",
+          "frame_0007_47.998s.png"
+        ]
+      }
+    }
+  }
+}

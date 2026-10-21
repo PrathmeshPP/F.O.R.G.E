@@ -1,0 +1,56 @@
+{
+  "pipeline": "F.O.R.G.E Phase 2A \u2014 Real Video Inference Pipeline",
+  "timestamp_utc": "2026-10-11T12:15:14.832722Z",
+  "video": {
+    "source_path": "C:\\Users\\25beevdt025\\Desktop\\coding\\third_party\\vggt_omega\\examples\\desert_road.mp4",
+    "frames_extracted": 3,
+    "target_fps": 1.0,
+    "max_frames_cap": 3,
+    "frame_list": [
+      {
+        "index": 0,
+        "timestamp_s": 0.0,
+        "filename": "frame_0000_0.000s.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "index": 1,
+        "timestamp_s": 1.001,
+        "filename": "frame_0001_1.001s.png",
+        "width": 1280,
+        "height": 720
+      },
+      {
+        "index": 2,
+        "timestamp_s": 2.002,
+        "filename": "frame_0002_2.002s.png",
+        "width": 1280,
+        "height": 720
+      }
+    ]
+  },
+  "model": {
+    "checkpoint_path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\models\\vggt_omega_1b_512.pt",
+    "resolution": 512,
+    "device": "cuda:0"
+  },
+  "performance": {
+    "model_load_time_sec": 9.743,
+    "frame_extraction_time_sec": 0.309,
+    "vggt_inference_time_sec": 3.3683,
+    "total_pipeline_time_sec": 13.839,
+    "peak_vram_allocated_mb": 7699.57,
+    "peak_vram_reserved_mb": 7788.0
+  },
+  "outputs": {
+    "frames_directory": "C:\\Users\\25beevdt025\\Desktop\\forge-spatial\\outputs\\frames",
+    "predictions_directory": "C:\\Users\\25beevdt025\\Desktop\\forge-spatial\\outputs\\predictions",
+    "saved_prediction_files": {
+      "depth_npz": "C:\\Users\\25beevdt025\\Desktop\\forge-spatial\\outputs\\predictions\\depth_predictions.npz",
+      "camera_poses_npz": "C:\\Users\\25beevdt025\\Desktop\\forge-spatial\\outputs\\predictions\\camera_poses.npz",
+      "raw_predictions_pt": "C:\\Users\\25beevdt025\\Desktop\\forge-spatial\\outputs\\predictions\\predictions_raw.pt"
+    }
+  },
+  "status": "SUCCESS"
+}

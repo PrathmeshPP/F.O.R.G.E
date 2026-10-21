@@ -1,0 +1,3956 @@
+{
+  "manifest_version": "1.0.0",
+  "timestamp_utc": "2026-10-21T16:22:33Z",
+  "repository": "PrathmeshPP/FORGE",
+  "total_indexed_assets": 489,
+  "total_size_bytes": 3738694006,
+  "total_size_mb": 3565.5,
+  "source_video_verification": {
+    "campus_0049": {
+      "filename": "dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "path": "data/source_videos/dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+      "expected_sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+      "verified": true,
+      "status": "PASS"
+    },
+    "desert_road": {
+      "filename": "desert_road.mp4",
+      "path": "data/source_videos/desert_road.mp4",
+      "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+      "expected_sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+      "verified": true,
+      "status": "PASS"
+    },
+    "forest_road": {
+      "filename": "forest_road.mp4",
+      "path": "data/source_videos/forest_road.mp4",
+      "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+      "expected_sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+      "verified": true,
+      "status": "PASS"
+    },
+    "river_bridge": {
+      "filename": "segment_52s_64s.mp4",
+      "path": "data/source_videos/segment_52s_64s.mp4",
+      "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+      "expected_sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+      "verified": true,
+      "status": "PASS"
+    }
+  },
+  "assets": [
+    {
+      "relative_path": "README.md",
+      "filename": "README.md",
+      "size_bytes": 12045,
+      "size_mb": 0.011,
+      "sha256": "76df438170da8c1f8b59c80bc8aae152a6f9d72e1ff3302d2a488edcf5b25477",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT10_1_REFINEMENT_REPORT.md",
+      "filename": "SPRINT10_1_REFINEMENT_REPORT.md",
+      "size_bytes": 20507,
+      "size_mb": 0.02,
+      "sha256": "57f865d7044eff278aa157c1e23baa12b3e2dee818cab003649bc76f1eb44238",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT10_2_MANUAL_MODEL_REVIEW_REPORT.md",
+      "filename": "SPRINT10_2_MANUAL_MODEL_REVIEW_REPORT.md",
+      "size_bytes": 22223,
+      "size_mb": 0.021,
+      "sha256": "5df22426368e1e8276404981a3d1b50ba611876fb4894b27c8dce20041f8c02e",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT10_DEMO_READINESS_REPORT.md",
+      "filename": "SPRINT10_DEMO_READINESS_REPORT.md",
+      "size_bytes": 5195,
+      "size_mb": 0.005,
+      "sha256": "75b195f5a804547f497ece751ea6f1733efe92b3df8de0bda367059a9d662be2",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT7C_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT7C_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 12453,
+      "size_mb": 0.012,
+      "sha256": "7442b7a35d2aa670ce51a98a6299756077b4a02dd74432933e85c7d15c06589d",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT7D_MASTER_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT7D_MASTER_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 36948,
+      "size_mb": 0.035,
+      "sha256": "94af214706618d0943b1db5908e4fdf18496edd451223af906a062a838f809d1",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT7E_MASTER_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT7E_MASTER_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 29756,
+      "size_mb": 0.028,
+      "sha256": "968181abad4577027bc281f466f146fef98038d1287bef053e54dc60edbca491",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT7F_MASTER_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT7F_MASTER_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 19895,
+      "size_mb": 0.019,
+      "sha256": "3ec8689be298d6ba787db2845f7410290c35bbc72fc459fd62ad2481f7702b7a",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT7G_MASTER_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT7G_MASTER_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 24155,
+      "size_mb": 0.023,
+      "sha256": "1c7c8c604c360c42b74bdd6ad1b5108c1d0d5beec9cde288766e2e8c33f935ef",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT7H_MASTER_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT7H_MASTER_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 17909,
+      "size_mb": 0.017,
+      "sha256": "77baa69849e1c5b37c4a2339cff4f406b78801ea88a862600d01dc0520b93a9d",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT8_VIEWER_INTEGRATION_REPORT.md",
+      "filename": "SPRINT8_VIEWER_INTEGRATION_REPORT.md",
+      "size_bytes": 14820,
+      "size_mb": 0.014,
+      "sha256": "75574be36d851ecbd72330a88336cc0c64a0b9289e35f40a1ee0dd804366cbc9",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT9_INTEGRATION_REPORT.md",
+      "filename": "SPRINT9_INTEGRATION_REPORT.md",
+      "size_bytes": 5093,
+      "size_mb": 0.005,
+      "sha256": "9b4c1a79ac364a67452a13f2246f5b94a5a0cdcf44cb7ccd043ca6b24969f05a",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "SPRINT9_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT9_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 4039,
+      "size_mb": 0.004,
+      "sha256": "c9f2f0dfa3ae8c0d24c829b4cb5c201b362c6b768e8619a5b196ea51663945fb",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "data/source_videos/desert_road.mp4",
+      "filename": "desert_road.mp4",
+      "size_bytes": 6539814,
+      "size_mb": 6.237,
+      "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+      "type": "Source Video (MP4)"
+    },
+    {
+      "relative_path": "data/source_videos/dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "filename": "dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "size_bytes": 162041214,
+      "size_mb": 154.535,
+      "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+      "type": "Source Video (MP4)"
+    },
+    {
+      "relative_path": "data/source_videos/forest_road.mp4",
+      "filename": "forest_road.mp4",
+      "size_bytes": 10681415,
+      "size_mb": 10.187,
+      "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+      "type": "Source Video (MP4)"
+    },
+    {
+      "relative_path": "data/source_videos/segment_52s_64s.mp4",
+      "filename": "segment_52s_64s.mp4",
+      "size_bytes": 70005949,
+      "size_mb": 66.763,
+      "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+      "type": "Source Video (MP4)"
+    },
+    {
+      "relative_path": "docs/OPENCV_COMPLETION_ROADMAP.md",
+      "filename": "OPENCV_COMPLETION_ROADMAP.md",
+      "size_bytes": 34501,
+      "size_mb": 0.033,
+      "sha256": "b3d17bf03332e2e36ea662c3e62b89401396216d257fafa0db09ad365cb9197c",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "docs/SPRINT10_LIVE_DEMO_GUIDE.md",
+      "filename": "SPRINT10_LIVE_DEMO_GUIDE.md",
+      "size_bytes": 10215,
+      "size_mb": 0.01,
+      "sha256": "1c199beaf7b4fd1dd5fe2802c108a45b8ba78de4bbde835d7633e32af3fc0986",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/batch_alignment_report.json",
+      "filename": "batch_alignment_report.json",
+      "size_bytes": 51887,
+      "size_mb": 0.049,
+      "sha256": "320db9fd8b96aed472d304d1012d11a3f9273dc15cc9ced083cb02d1506f48a6",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/batch_alignment_summary.csv",
+      "filename": "batch_alignment_summary.csv",
+      "size_bytes": 3290,
+      "size_mb": 0.003,
+      "sha256": "77cee84a30d74e3b4f2ad0c866a2ea20afd0fd57862a77f4feb295dd02a2d7a4",
+      "type": "Binary/Data (.csv)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/aligned_mesh_view_frontal.png",
+      "filename": "aligned_mesh_view_frontal.png",
+      "size_bytes": 126538,
+      "size_mb": 0.121,
+      "sha256": "2a80633f338c201d1ffc88e9ecad74133faa2d778037f0e48429acc87ea8bcbe",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/aligned_mesh_view_oblique.png",
+      "filename": "aligned_mesh_view_oblique.png",
+      "size_bytes": 165719,
+      "size_mb": 0.158,
+      "sha256": "20ce28010501eb96ec8dd99ce4e7d414efc232905299965c073c374ba39b2aad",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/aligned_mesh_view_top.png",
+      "filename": "aligned_mesh_view_top.png",
+      "size_bytes": 293942,
+      "size_mb": 0.28,
+      "sha256": "c1ca0bf2a90019a610a11582820c42db452218890fe90570a18423e06d43c6d3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/alignment_comparison_sheet.png",
+      "filename": "alignment_comparison_sheet.png",
+      "size_bytes": 238495,
+      "size_mb": 0.227,
+      "sha256": "17ae8df425ad2699e722576e26a4b062d74991a1ce31315e3f642bfc4d81aec6",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/camera_poses_gps_aligned.npz",
+      "filename": "camera_poses_gps_aligned.npz",
+      "size_bytes": 2913,
+      "size_mb": 0.003,
+      "sha256": "173b198322b9b4f8f15c5aab810f1ecdf57e0110870f4288202388a8c3cda052",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/gps_alignment_metadata.json",
+      "filename": "gps_alignment_metadata.json",
+      "size_bytes": 7028,
+      "size_mb": 0.007,
+      "sha256": "29a180b7a0111daae8b75605e422c4e9efed66b74c5430eafa2be83f0ed3e39d",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/point_cloud_gps_aligned.ply",
+      "filename": "point_cloud_gps_aligned.ply",
+      "size_bytes": 6421943,
+      "size_mb": 6.124,
+      "sha256": "115610bd9aa80d87789d8c30f7e673a3769779ccdc518b61bb51b2ff378245a8",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/surface_mesh_gps_aligned.obj",
+      "filename": "surface_mesh_gps_aligned.obj",
+      "size_bytes": 48786062,
+      "size_mb": 46.526,
+      "sha256": "4560b3b2a4423dee99ae3c48b7be98627d6fe2c00f83c3ddcb98c7b43dd7b1c7",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049/surface_mesh_gps_aligned.ply",
+      "filename": "surface_mesh_gps_aligned.ply",
+      "size_bytes": 21499799,
+      "size_mb": 20.504,
+      "sha256": "9015e46903b636d9d96e618f22b829cd5d00876d1e88ee482b9ce099b14f8889",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repair_comparison_sheet.png",
+      "filename": "campus_0049_repair_comparison_sheet.png",
+      "size_bytes": 120371,
+      "size_mb": 0.115,
+      "sha256": "f5a1e7f955fbac1bb378d48fc50af6e0429cec7bb3eb17f654a1c12c556863fe",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/aligned_mesh_view_frontal.png",
+      "filename": "aligned_mesh_view_frontal.png",
+      "size_bytes": 126500,
+      "size_mb": 0.121,
+      "sha256": "20492b7bef552207d7547880b09b0c29267b0e26c2f998c047723ba205e6fa2f",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/aligned_mesh_view_oblique.png",
+      "filename": "aligned_mesh_view_oblique.png",
+      "size_bytes": 170035,
+      "size_mb": 0.162,
+      "sha256": "2aad329374edc157b01730b38936ef1f69e46fccbec62c1fd7dc2b16af545a34",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/aligned_mesh_view_top.png",
+      "filename": "aligned_mesh_view_top.png",
+      "size_bytes": 306448,
+      "size_mb": 0.292,
+      "sha256": "47670abbfcbd4133bd2305258e98b3dc8d9157164d2d37daa07d01899a3620c7",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/alignment_comparison_sheet.png",
+      "filename": "alignment_comparison_sheet.png",
+      "size_bytes": 236833,
+      "size_mb": 0.226,
+      "sha256": "011bcd944d7571238544eeb54cd8deed0458e177ca4745c466216e1c0bd76bb5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/camera_poses_gps_aligned.npz",
+      "filename": "camera_poses_gps_aligned.npz",
+      "size_bytes": 2913,
+      "size_mb": 0.003,
+      "sha256": "173b198322b9b4f8f15c5aab810f1ecdf57e0110870f4288202388a8c3cda052",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/gps_alignment_metadata.json",
+      "filename": "gps_alignment_metadata.json",
+      "size_bytes": 6689,
+      "size_mb": 0.006,
+      "sha256": "3627c42560674f8a4fe8e9d9ecce8d5413b5a0f181d14b0853b58488c12cb5a5",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/surface_mesh_gps_aligned.obj",
+      "filename": "surface_mesh_gps_aligned.obj",
+      "size_bytes": 46089959,
+      "size_mb": 43.955,
+      "sha256": "5a83e579d275f386a9d6fdd3d68ea40f8c5af323119ec9924715df36dfd64f67",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/campus_0049_repaired/surface_mesh_gps_aligned.ply",
+      "filename": "surface_mesh_gps_aligned.ply",
+      "size_bytes": 20346448,
+      "size_mb": 19.404,
+      "sha256": "1abb716b5c0c690fb1a9763597bb09874b38dbb0c1eb2492ee1faf4d0c874016",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/dataset_overview_contact_sheet.png",
+      "filename": "dataset_overview_contact_sheet.png",
+      "size_bytes": 242171,
+      "size_mb": 0.231,
+      "sha256": "c8b0a60e2795d208f7f5aff9ee4da6db645109f01ebaaff2e8939c06dd989cea",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/aligned_mesh_view_frontal.png",
+      "filename": "aligned_mesh_view_frontal.png",
+      "size_bytes": 153098,
+      "size_mb": 0.146,
+      "sha256": "c97a43bc1601b8f80759c928fe7e685a91cd79277235e15c7f2d1b795103a594",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/aligned_mesh_view_oblique.png",
+      "filename": "aligned_mesh_view_oblique.png",
+      "size_bytes": 245094,
+      "size_mb": 0.234,
+      "sha256": "76bea6d2aa828cea79c3e683b85e5f2b7853a3a8805e059d13a99ea3815e9cf6",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/aligned_mesh_view_top.png",
+      "filename": "aligned_mesh_view_top.png",
+      "size_bytes": 46465,
+      "size_mb": 0.044,
+      "sha256": "169b37d20d456106c547627e0e5b9945502f96965468394488355863f9c7ead7",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/alignment_comparison_sheet.png",
+      "filename": "alignment_comparison_sheet.png",
+      "size_bytes": 273926,
+      "size_mb": 0.261,
+      "sha256": "b6e5895a9e1f04c398664de9a153c97a2dd3db4728e96fc5c5a3fa0ac22a0490",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/camera_poses_gps_aligned.npz",
+      "filename": "camera_poses_gps_aligned.npz",
+      "size_bytes": 2306,
+      "size_mb": 0.002,
+      "sha256": "4c20ee255f043f32fb12bff959e8dde426e61e3e92270450e9dad0e3ad9e28fa",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/gps_alignment_metadata.json",
+      "filename": "gps_alignment_metadata.json",
+      "size_bytes": 7176,
+      "size_mb": 0.007,
+      "sha256": "8024c252262badaa66eef8463fe2579faf467b01df8f37db6765f94f65b85f4d",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/point_cloud_gps_aligned.ply",
+      "filename": "point_cloud_gps_aligned.ply",
+      "size_bytes": 3130643,
+      "size_mb": 2.986,
+      "sha256": "a3edc0ea5cf40b8e7832aed40574c9948c82572044dce5c4a25ad124dbe6f36f",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/surface_mesh_gps_aligned.obj",
+      "filename": "surface_mesh_gps_aligned.obj",
+      "size_bytes": 44409891,
+      "size_mb": 42.353,
+      "sha256": "824f60ef0c8b80588dc5a0ccbe7c8d408f8c36cd26f288f5804cde0ed113f6a8",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge/surface_mesh_gps_aligned.ply",
+      "filename": "surface_mesh_gps_aligned.ply",
+      "size_bytes": 19626860,
+      "size_mb": 18.718,
+      "sha256": "d4675972b520155513bbcda1a74e368c8f65d050a47d8c52b277bf59a4b664eb",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/aligned_mesh_view_frontal.png",
+      "filename": "aligned_mesh_view_frontal.png",
+      "size_bytes": 129327,
+      "size_mb": 0.123,
+      "sha256": "3defdecd935c04e3d509fa23b5ca0a567c62de3c10201132c49f3507ab41f432",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/aligned_mesh_view_oblique.png",
+      "filename": "aligned_mesh_view_oblique.png",
+      "size_bytes": 150136,
+      "size_mb": 0.143,
+      "sha256": "b7396f23cd4f7000ece34f79cf4076acf593a45794b53605199e9b71717ed7f1",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/aligned_mesh_view_top.png",
+      "filename": "aligned_mesh_view_top.png",
+      "size_bytes": 318391,
+      "size_mb": 0.304,
+      "sha256": "eced41d03472f75c08d16ec1051b3d9ec6611351474c7bc13428107cd3983a70",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/alignment_comparison_sheet.png",
+      "filename": "alignment_comparison_sheet.png",
+      "size_bytes": 279541,
+      "size_mb": 0.267,
+      "sha256": "5a7c87d0b95ce2454e4062a66bfb14686f26bd04f48962b7af06979c5bbcfcb5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/camera_poses_gps_aligned.npz",
+      "filename": "camera_poses_gps_aligned.npz",
+      "size_bytes": 2614,
+      "size_mb": 0.002,
+      "sha256": "957a033824505d7071e7690de6e0dab92b9c2c81fe5b1ffb34d9d3cb38730526",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/gps_alignment_metadata.json",
+      "filename": "gps_alignment_metadata.json",
+      "size_bytes": 6738,
+      "size_mb": 0.006,
+      "sha256": "5afb28d1147812c7c13bcbeea4881ab2e552daef6692c86ad03868b0ef659cd7",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/point_cloud_gps_aligned.ply",
+      "filename": "point_cloud_gps_aligned.ply",
+      "size_bytes": 55924419,
+      "size_mb": 53.334,
+      "sha256": "e24fbfb4ec519dd6d17fcaf98e0d5835c21af33ae9ce9c9d5b6374409fd05732",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/surface_mesh_gps_aligned.obj",
+      "filename": "surface_mesh_gps_aligned.obj",
+      "size_bytes": 56276188,
+      "size_mb": 53.669,
+      "sha256": "509b3d467c362bc4e522dc63161338cb6506ad0e72b6304d47443dbf624281fc",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_flight_corridor/surface_mesh_gps_aligned.ply",
+      "filename": "surface_mesh_gps_aligned.ply",
+      "size_bytes": 24769944,
+      "size_mb": 23.622,
+      "sha256": "3daf9467c9c7dfe8f8f1837cf4f0c2b8d09ef2eef99608eb77053c153c3b0c11",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/aligned_mesh_view_frontal.png",
+      "filename": "aligned_mesh_view_frontal.png",
+      "size_bytes": 191124,
+      "size_mb": 0.182,
+      "sha256": "4c30d68b6b852064db072ce727619299315322e3a26d678314fa2ffd2a7cc1a9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/aligned_mesh_view_oblique.png",
+      "filename": "aligned_mesh_view_oblique.png",
+      "size_bytes": 276793,
+      "size_mb": 0.264,
+      "sha256": "391e6581ec223e814bc1c2cde6b84de1d5914410e7f1b1beefa83dba75b19861",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/aligned_mesh_view_top.png",
+      "filename": "aligned_mesh_view_top.png",
+      "size_bytes": 87316,
+      "size_mb": 0.083,
+      "sha256": "41528b0d554818f5d5c4a17e602ba6aacc11d273b7451ee06cd6877d016323a3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/alignment_comparison_sheet.png",
+      "filename": "alignment_comparison_sheet.png",
+      "size_bytes": 329500,
+      "size_mb": 0.314,
+      "sha256": "f717f085e38f0b0f1ba9535545afe69d0858390b5b754f29b6ceacb04b85d1c4",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/camera_poses_gps_aligned.npz",
+      "filename": "camera_poses_gps_aligned.npz",
+      "size_bytes": 2306,
+      "size_mb": 0.002,
+      "sha256": "4c20ee255f043f32fb12bff959e8dde426e61e3e92270450e9dad0e3ad9e28fa",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/gps_alignment_metadata.json",
+      "filename": "gps_alignment_metadata.json",
+      "size_bytes": 7037,
+      "size_mb": 0.007,
+      "sha256": "07d44b4cc634d7fedb16f8958de0b41954f4f0f96f76c05d9bcb83dab765fd6d",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/surface_mesh_gps_aligned.obj",
+      "filename": "surface_mesh_gps_aligned.obj",
+      "size_bytes": 71105189,
+      "size_mb": 67.811,
+      "sha256": "7a72a6bb8e518b7fccacc9f687c48b7aeeb208651f7e84306334587f934052d7",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_hover_repaired/surface_mesh_gps_aligned.ply",
+      "filename": "surface_mesh_gps_aligned.ply",
+      "size_bytes": 31099509,
+      "size_mb": 29.659,
+      "sha256": "2d71586383653dc94f102cae555a9e6ca7bac86e17527cc9839d09ddbaf84da4",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/gps_aligned_v1/river_bridge_repair_comparison_sheet.png",
+      "filename": "river_bridge_repair_comparison_sheet.png",
+      "size_bytes": 496609,
+      "size_mb": 0.474,
+      "sha256": "1696cec45c1f6bdff7853b44a39c09e846f7e65ec24715bef9eb14cbce82e46b",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/SPRINT10_1_REFINEMENT_REPORT.md",
+      "filename": "SPRINT10_1_REFINEMENT_REPORT.md",
+      "size_bytes": 20507,
+      "size_mb": 0.02,
+      "sha256": "57f865d7044eff278aa157c1e23baa12b3e2dee818cab003649bc76f1eb44238",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/metadata_integrity_report.json",
+      "filename": "metadata_integrity_report.json",
+      "size_bytes": 13327,
+      "size_mb": 0.013,
+      "sha256": "319605a820f7b1733ce219879d8acbef376b8760123aabfc64040dffab3885fa",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_campus_0049_facade.png",
+      "filename": "demo_campus_0049_facade.png",
+      "size_bytes": 1366062,
+      "size_mb": 1.303,
+      "sha256": "b50f42ba42e268de70b0750ffaf90de117473f00a1e43c1a2923cca8440cadf3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_campus_0049_overview.png",
+      "filename": "demo_campus_0049_overview.png",
+      "size_bytes": 703545,
+      "size_mb": 0.671,
+      "sha256": "0a7e6d388ca3139945a0008959072eff32eb3b9578397dcf1933974df84ba06e",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_desert_candidate_a.png",
+      "filename": "demo_desert_candidate_a.png",
+      "size_bytes": 488670,
+      "size_mb": 0.466,
+      "sha256": "997dfb9f4b102e3034aecccedf36c2d6b8546a1fff83699a394fe9d9b4a445af",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_desert_candidate_b_vehicle_focus.png",
+      "filename": "demo_desert_candidate_b_vehicle_focus.png",
+      "size_bytes": 907972,
+      "size_mb": 0.866,
+      "sha256": "93e254fee9877c56743a89fa31c096f77cc63a2601d6dcb0e6078fd8923f4660",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_desert_comparison.png",
+      "filename": "demo_desert_comparison.png",
+      "size_bytes": 662479,
+      "size_mb": 0.632,
+      "sha256": "4fd31bd8c3a22fd9275d068c92a8de789fc83ae5dba189e966da67d7d0f70096",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_forest_road_roadway.png",
+      "filename": "demo_forest_road_roadway.png",
+      "size_bytes": 1097371,
+      "size_mb": 1.047,
+      "sha256": "0ed56e5cb11fabf876ce67901b31dd62dabd891f6748fb27050c14e703b64535",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_river_bridge_structure.png",
+      "filename": "demo_river_bridge_structure.png",
+      "size_bytes": 862019,
+      "size_mb": 0.822,
+      "sha256": "cf559ff7b9da3673416cee415b9ce52dbfd9c95e5ae518a66117104b27084b01",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/screenshot_manifest.json",
+      "filename": "screenshot_manifest.json",
+      "size_bytes": 1113,
+      "size_mb": 0.001,
+      "sha256": "1e8724f7042254c8ea47434d55d4724837ac0dc51ff4e268a08cc038c2e10c8e",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/sprint10_1_validation.json",
+      "filename": "sprint10_1_validation.json",
+      "size_bytes": 6396,
+      "size_mb": 0.006,
+      "sha256": "ebcb9caa3ae05a013db067fc719c1f5908545da15d5552c975f449dbaecce554",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/SPRINT10_DEMO_READINESS_REPORT.md",
+      "filename": "SPRINT10_DEMO_READINESS_REPORT.md",
+      "size_bytes": 5195,
+      "size_mb": 0.005,
+      "sha256": "75b195f5a804547f497ece751ea6f1733efe92b3df8de0bda367059a9d662be2",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/model_texture_integrity_report.json",
+      "filename": "model_texture_integrity_report.json",
+      "size_bytes": 7047,
+      "size_mb": 0.007,
+      "sha256": "b6fd37a8dce2ba670d095eef2df565785fa06a5ccae96c0791b8c2284a08e4d5",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/screenshots/demo_campus_0049.png",
+      "filename": "demo_campus_0049.png",
+      "size_bytes": 395136,
+      "size_mb": 0.377,
+      "sha256": "f09372d5f244b2a81d9d106ba22be627a860abc98f3e9feba5a3c25ee13208f4",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/screenshots/demo_desert_candidate_a.png",
+      "filename": "demo_desert_candidate_a.png",
+      "size_bytes": 298929,
+      "size_mb": 0.285,
+      "sha256": "58b4c396662baa446b407674128113c1a2e43a75561c112a544eafea0f3411e5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/screenshots/demo_desert_candidate_b.png",
+      "filename": "demo_desert_candidate_b.png",
+      "size_bytes": 301429,
+      "size_mb": 0.287,
+      "sha256": "cd9f7c7a6c00c1a1fbb8d6ea95f13594a84d289ac227a32c48f154ac572da10d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/screenshots/demo_desert_comparison.png",
+      "filename": "demo_desert_comparison.png",
+      "size_bytes": 357925,
+      "size_mb": 0.341,
+      "sha256": "5c0dc82a0ba07934dd62bbe423435dfcdc8d83bafbd7f74717a6a2e808a53798",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/screenshots/demo_forest_road.png",
+      "filename": "demo_forest_road.png",
+      "size_bytes": 418451,
+      "size_mb": 0.399,
+      "sha256": "372fb9374c5d8a21f06c03dc7eb056b33b526a00f2cd7f2c6dd006e050175c46",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/screenshots/demo_river_bridge.png",
+      "filename": "demo_river_bridge.png",
+      "size_bytes": 382170,
+      "size_mb": 0.364,
+      "sha256": "118924720a0513290fa3eb7868a54cd40b2fd36a9b1d356a59c66484cdae6892",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/sprint10_demo_readiness.json",
+      "filename": "sprint10_demo_readiness.json",
+      "size_bytes": 1432,
+      "size_mb": 0.001,
+      "sha256": "90a10ab2bf2a24c1f29f32d99135256f7584878c2845ad7ad49f2c3640ac7e2b",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/test_and_build_report.json",
+      "filename": "test_and_build_report.json",
+      "size_bytes": 940,
+      "size_mb": 0.001,
+      "sha256": "c6042a681e1b09365dff59e04f250a5daa90ad5af09e19df199eb2ddd0253a1c",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/verified_manifest_snapshot.json",
+      "filename": "verified_manifest_snapshot.json",
+      "size_bytes": 7419,
+      "size_mb": 0.007,
+      "sha256": "4c691ec1cf12c0116a6090f1d626d67fa345d899b27fff75a5d3b70caf0a948e",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint10_demo_release/viewer_browser_validation.json",
+      "filename": "viewer_browser_validation.json",
+      "size_bytes": 2087,
+      "size_mb": 0.002,
+      "sha256": "0429129afea635a9ef4ba0f448e028999473dd9191435627916de9d38d83909e",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/SPRINT9_INTEGRATION_REPORT.md",
+      "filename": "SPRINT9_INTEGRATION_REPORT.md",
+      "size_bytes": 5093,
+      "size_mb": 0.005,
+      "sha256": "9b4c1a79ac364a67452a13f2246f5b94a5a0cdcf44cb7ccd043ca6b24969f05a",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/SPRINT9_RECONSTRUCTION_REPORT.md",
+      "filename": "SPRINT9_RECONSTRUCTION_REPORT.md",
+      "size_bytes": 4039,
+      "size_mb": 0.004,
+      "sha256": "c9f2f0dfa3ae8c0d24c829b4cb5c201b362c6b768e8619a5b196ea51663945fb",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/all_scenes_before_after.png",
+      "filename": "all_scenes_before_after.png",
+      "size_bytes": 1534750,
+      "size_mb": 1.464,
+      "sha256": "54d2047c9c1f077215c1e4293c75c952043e85f08fb8b37780527aedee7814a6",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/all_scenes_release_contact_sheet.png",
+      "filename": "all_scenes_release_contact_sheet.png",
+      "size_bytes": 1982344,
+      "size_mb": 1.891,
+      "sha256": "86a48d1590f0a08cc806d1f005dfd27143805e8dc1f8038c8e74226d3fcecdbf",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/baseline_vs_new.png",
+      "filename": "baseline_vs_new.png",
+      "size_bytes": 153418,
+      "size_mb": 0.146,
+      "sha256": "63628d0f307e3758a3625b4e4cd4dec1136ecc98c6805ededad7d78a8c0f79d4",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/candidate_metadata.json",
+      "filename": "candidate_metadata.json",
+      "size_bytes": 2700,
+      "size_mb": 0.003,
+      "sha256": "3d4cdd66fb77bbaaa0f43d6c5b1a1dfa90d8dc4e75e1014780511a0db653c3b1",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/depth_confidence_preview.png",
+      "filename": "depth_confidence_preview.png",
+      "size_bytes": 677926,
+      "size_mb": 0.647,
+      "sha256": "02c28630c4e5802dcfdefc2da68252d83720d118de956524168f08209c73e422",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/point_cloud_fused.ply",
+      "filename": "point_cloud_fused.ply",
+      "size_bytes": 13713158,
+      "size_mb": 13.078,
+      "sha256": "b2f2ac13b463df669ce66a120be26030c84bc4874dc248688cc80150c561986b",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/point_cloud_unfused.ply",
+      "filename": "point_cloud_unfused.ply",
+      "size_bytes": 57065682,
+      "size_mb": 54.422,
+      "sha256": "9e30926933d412eb4597fc7418c3e577adca09e597f9ad436acfdf2bf0ec8434",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/processing.log",
+      "filename": "processing.log",
+      "size_bytes": 407,
+      "size_mb": 0.0,
+      "sha256": "a19aa43588429a15926aa3c3c490319bbac0003b29dbb7d2096cc26c9c1d14cc",
+      "type": "Binary/Data (.log)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/render_closeup.png",
+      "filename": "render_closeup.png",
+      "size_bytes": 442732,
+      "size_mb": 0.422,
+      "sha256": "d0de122f21d3a956d546eb78d5446f363e6eba6bcdf229537ee5bd61e73e657e",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 131682,
+      "size_mb": 0.126,
+      "sha256": "5f8ac97136bd1058a96125f6660f9ed6f831baea38dbff916f7b543a16b5714d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/render_top.png",
+      "filename": "render_top.png",
+      "size_bytes": 136356,
+      "size_mb": 0.13,
+      "sha256": "6deac9626486756d11028c9f94678f708d38e6dba35bef6922f6d39c4f64796a",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/render_view_closeup_verified.png",
+      "filename": "render_view_closeup_verified.png",
+      "size_bytes": 442732,
+      "size_mb": 0.422,
+      "sha256": "d0de122f21d3a956d546eb78d5446f363e6eba6bcdf229537ee5bd61e73e657e",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/render_view_oblique_verified.png",
+      "filename": "render_view_oblique_verified.png",
+      "size_bytes": 131682,
+      "size_mb": 0.126,
+      "sha256": "5f8ac97136bd1058a96125f6660f9ed6f831baea38dbff916f7b543a16b5714d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/render_view_top_verified.png",
+      "filename": "render_view_top_verified.png",
+      "size_bytes": 136356,
+      "size_mb": 0.13,
+      "sha256": "6deac9626486756d11028c9f94678f708d38e6dba35bef6922f6d39c4f64796a",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/scene_diagnostics.json",
+      "filename": "scene_diagnostics.json",
+      "size_bytes": 397,
+      "size_mb": 0.0,
+      "sha256": "ce344e9a45e2388d9ed207568a3c91eedc012321e35b13edb2161daf2994a3e7",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/source_frames_contact_sheet.png",
+      "filename": "source_frames_contact_sheet.png",
+      "size_bytes": 1069887,
+      "size_mb": 1.02,
+      "sha256": "fa095426f9ba86c7b4776ebf1f9cba7f1836761218e1414012fdbc8c1e38cdde",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/surface_mesh_photographic.ply",
+      "filename": "surface_mesh_photographic.ply",
+      "size_bytes": 9840793,
+      "size_mb": 9.385,
+      "sha256": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/surface_mesh_repaired.ply",
+      "filename": "surface_mesh_repaired.ply",
+      "size_bytes": 9840793,
+      "size_mb": 9.385,
+      "sha256": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 29301787,
+      "size_mb": 27.944,
+      "sha256": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/textured_mesh.mtl",
+      "filename": "textured_mesh.mtl",
+      "size_bytes": 176,
+      "size_mb": 0.0,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/textured_mesh.obj",
+      "filename": "textured_mesh.obj",
+      "size_bytes": 31281376,
+      "size_mb": 29.832,
+      "sha256": "7278af1cbeb04ce8c31d83db50b09d59ea9516903f62f4561b3d05bbd62daf82",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/baseline_vs_new.png",
+      "filename": "baseline_vs_new.png",
+      "size_bytes": 66588,
+      "size_mb": 0.064,
+      "sha256": "25545ac69fb8067ac993c05ff47f943cebb290d49eb3beb6fb54d3b66e79f961",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/candidate_a_oblique_verified.png",
+      "filename": "candidate_a_oblique_verified.png",
+      "size_bytes": 55191,
+      "size_mb": 0.053,
+      "sha256": "b50e1e4114ec57a0f0d40abcace2082e585774b27dca6e9a8fed87f9d8d82b29",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/candidate_a_road_surface_closeup_verified.png",
+      "filename": "candidate_a_road_surface_closeup_verified.png",
+      "size_bytes": 122129,
+      "size_mb": 0.116,
+      "sha256": "7a707ed6d877b75d7c53a91b91ca7c1d08076af08107bfd0906d692d4c140fdb",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/candidate_a_top_verified.png",
+      "filename": "candidate_a_top_verified.png",
+      "size_bytes": 49716,
+      "size_mb": 0.047,
+      "sha256": "a1bde4ffd98264883e2e8a2378512aaf43fdbb9007d1be815f8ec780a2eb94c5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/candidate_metadata.json",
+      "filename": "candidate_metadata.json",
+      "size_bytes": 2927,
+      "size_mb": 0.003,
+      "sha256": "3b4e410f50358c3bc1cb9a55e73a782781687d2fece195824bf52d7a53e1a5fd",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/depth_confidence_preview.png",
+      "filename": "depth_confidence_preview.png",
+      "size_bytes": 445226,
+      "size_mb": 0.425,
+      "sha256": "9de2c03d8e28a382824ddc9f9be8effbf1b3690d792642c0219104b1741653dc",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/point_cloud_fused.ply",
+      "filename": "point_cloud_fused.ply",
+      "size_bytes": 1723635,
+      "size_mb": 1.644,
+      "sha256": "0281e8dd03d8b57eef691a69a4eb11b91ad12dc32bf3ba9daa64f47040ea2068",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/point_cloud_static_clean.ply",
+      "filename": "point_cloud_static_clean.ply",
+      "size_bytes": 1723635,
+      "size_mb": 1.644,
+      "sha256": "0281e8dd03d8b57eef691a69a4eb11b91ad12dc32bf3ba9daa64f47040ea2068",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/point_cloud_unfused.ply",
+      "filename": "point_cloud_unfused.ply",
+      "size_bytes": 30058014,
+      "size_mb": 28.666,
+      "sha256": "fc63fb65cbdf6c9d82aad1db32d86e3fb32c3eefe215126d6455e5826bf941eb",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/processing.log",
+      "filename": "processing.log",
+      "size_bytes": 114,
+      "size_mb": 0.0,
+      "sha256": "ec9f4a94b2e045bf9825d82104095f6c7ab0e7dcfddc97b1c310d0ceb979a641",
+      "type": "Binary/Data (.log)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/render_closeup.png",
+      "filename": "render_closeup.png",
+      "size_bytes": 122129,
+      "size_mb": 0.116,
+      "sha256": "7a707ed6d877b75d7c53a91b91ca7c1d08076af08107bfd0906d692d4c140fdb",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 55191,
+      "size_mb": 0.053,
+      "sha256": "b50e1e4114ec57a0f0d40abcace2082e585774b27dca6e9a8fed87f9d8d82b29",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/render_top.png",
+      "filename": "render_top.png",
+      "size_bytes": 49716,
+      "size_mb": 0.047,
+      "sha256": "a1bde4ffd98264883e2e8a2378512aaf43fdbb9007d1be815f8ec780a2eb94c5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/scene_diagnostics.json",
+      "filename": "scene_diagnostics.json",
+      "size_bytes": 430,
+      "size_mb": 0.0,
+      "sha256": "255f2d1e252dae81c071f65e33dce323366891ae00be64df1f4a13f94b957f7d",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/source_frames_contact_sheet.png",
+      "filename": "source_frames_contact_sheet.png",
+      "size_bytes": 488557,
+      "size_mb": 0.466,
+      "sha256": "f1420d50567be3421c176e096a9b892a24aee23ce15a0022a37f0e5167751855",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/surface_mesh_photographic.ply",
+      "filename": "surface_mesh_photographic.ply",
+      "size_bytes": 4077915,
+      "size_mb": 3.889,
+      "sha256": "5625a5a2436abd6bca780b86efde8687246675f0e47b270f37440b006099ae44",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/surface_mesh_repaired.ply",
+      "filename": "surface_mesh_repaired.ply",
+      "size_bytes": 4077915,
+      "size_mb": 3.889,
+      "sha256": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/surface_mesh_static_clean.ply",
+      "filename": "surface_mesh_static_clean.ply",
+      "size_bytes": 4077915,
+      "size_mb": 3.889,
+      "sha256": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 8765408,
+      "size_mb": 8.359,
+      "sha256": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/textured_mesh.mtl",
+      "filename": "textured_mesh.mtl",
+      "size_bytes": 175,
+      "size_mb": 0.0,
+      "sha256": "9768a160330c54d7a314081360d0c164902303a256327653c3c8fd6049edcc33",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_a/textured_mesh.obj",
+      "filename": "textured_mesh.obj",
+      "size_bytes": 14301214,
+      "size_mb": 13.639,
+      "sha256": "6d91b36b94afbda4fef3aa7e25ae1ac55b0ad5fc1807e061e8693468bb24d433",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/baseline_vs_new.png",
+      "filename": "baseline_vs_new.png",
+      "size_bytes": 141430,
+      "size_mb": 0.135,
+      "sha256": "9e9cdd8f14c0fe73261544bab05664451e56e156c3e6571d311b8b24c0ac46e2",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/candidate_b_oblique_verified.png",
+      "filename": "candidate_b_oblique_verified.png",
+      "size_bytes": 55760,
+      "size_mb": 0.053,
+      "sha256": "0737a7b2af8327c4fa589d2f23988c332fa9716db860a416b4af973a75ba94af",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/candidate_b_top_verified.png",
+      "filename": "candidate_b_top_verified.png",
+      "size_bytes": 50138,
+      "size_mb": 0.048,
+      "sha256": "79db5236ac92a6dca9e6efe19ed0f24db57c90dca293a5e9ca4962fc5d01c426",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/candidate_b_vehicle_closeup_verified.png",
+      "filename": "candidate_b_vehicle_closeup_verified.png",
+      "size_bytes": 105753,
+      "size_mb": 0.101,
+      "sha256": "2a0314ad88390329179e88a22dbca10b3d03dfc77aa5f127768e736ad98120c5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/candidate_metadata.json",
+      "filename": "candidate_metadata.json",
+      "size_bytes": 2951,
+      "size_mb": 0.003,
+      "sha256": "988ce513a31ba748e1de3a786c038d7613b024a8e14a184205722838a04257ae",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/depth_confidence_preview.png",
+      "filename": "depth_confidence_preview.png",
+      "size_bytes": 445226,
+      "size_mb": 0.425,
+      "sha256": "9de2c03d8e28a382824ddc9f9be8effbf1b3690d792642c0219104b1741653dc",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/point_cloud_fused.ply",
+      "filename": "point_cloud_fused.ply",
+      "size_bytes": 1846035,
+      "size_mb": 1.761,
+      "sha256": "de6f00e52beb5701ad0156d50e3aff288d2202bb12bf8c22fc1d8554b653c982",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/point_cloud_unfused.ply",
+      "filename": "point_cloud_unfused.ply",
+      "size_bytes": 30058014,
+      "size_mb": 28.666,
+      "sha256": "fc63fb65cbdf6c9d82aad1db32d86e3fb32c3eefe215126d6455e5826bf941eb",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/point_cloud_vehicle_stabilized.ply",
+      "filename": "point_cloud_vehicle_stabilized.ply",
+      "size_bytes": 1846035,
+      "size_mb": 1.761,
+      "sha256": "de6f00e52beb5701ad0156d50e3aff288d2202bb12bf8c22fc1d8554b653c982",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/processing.log",
+      "filename": "processing.log",
+      "size_bytes": 35,
+      "size_mb": 0.0,
+      "sha256": "7616f57e902c3bb971587db115abd2f069c98a5d34c2a1b478527acf5fe087b2",
+      "type": "Binary/Data (.log)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/render_closeup.png",
+      "filename": "render_closeup.png",
+      "size_bytes": 105753,
+      "size_mb": 0.101,
+      "sha256": "2a0314ad88390329179e88a22dbca10b3d03dfc77aa5f127768e736ad98120c5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 55760,
+      "size_mb": 0.053,
+      "sha256": "0737a7b2af8327c4fa589d2f23988c332fa9716db860a416b4af973a75ba94af",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/render_top.png",
+      "filename": "render_top.png",
+      "size_bytes": 50138,
+      "size_mb": 0.048,
+      "sha256": "79db5236ac92a6dca9e6efe19ed0f24db57c90dca293a5e9ca4962fc5d01c426",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/scene_diagnostics.json",
+      "filename": "scene_diagnostics.json",
+      "size_bytes": 466,
+      "size_mb": 0.0,
+      "sha256": "7f0acdcc382376033901ee3efbfe583b7e3753be7df6c44383ab8138540bb68d",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/source_frames_contact_sheet.png",
+      "filename": "source_frames_contact_sheet.png",
+      "size_bytes": 488557,
+      "size_mb": 0.466,
+      "sha256": "f1420d50567be3421c176e096a9b892a24aee23ce15a0022a37f0e5167751855",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/surface_mesh_photographic.ply",
+      "filename": "surface_mesh_photographic.ply",
+      "size_bytes": 4080210,
+      "size_mb": 3.891,
+      "sha256": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/surface_mesh_repaired.ply",
+      "filename": "surface_mesh_repaired.ply",
+      "size_bytes": 4080210,
+      "size_mb": 3.891,
+      "sha256": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/surface_mesh_vehicle_stabilized.ply",
+      "filename": "surface_mesh_vehicle_stabilized.ply",
+      "size_bytes": 4080210,
+      "size_mb": 3.891,
+      "sha256": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/surface_mesh_vehicle_stabilized_photographic.ply",
+      "filename": "surface_mesh_vehicle_stabilized_photographic.ply",
+      "size_bytes": 4080210,
+      "size_mb": 3.891,
+      "sha256": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 8765408,
+      "size_mb": 8.359,
+      "sha256": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/textured_mesh.mtl",
+      "filename": "textured_mesh.mtl",
+      "size_bytes": 175,
+      "size_mb": 0.0,
+      "sha256": "9768a160330c54d7a314081360d0c164902303a256327653c3c8fd6049edcc33",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/textured_mesh.obj",
+      "filename": "textured_mesh.obj",
+      "size_bytes": 14308562,
+      "size_mb": 13.646,
+      "sha256": "ee0fdd35524fff4357c048c29a4454fb982a7283ac1183f8d6ad863822f3a0f4",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/baseline_vs_new.png",
+      "filename": "baseline_vs_new.png",
+      "size_bytes": 651580,
+      "size_mb": 0.621,
+      "sha256": "c2eb9064ea8536700c34c0968c916a86f5c0e3332c7bda6b9a12dc1565509fdd",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/candidate_metadata.json",
+      "filename": "candidate_metadata.json",
+      "size_bytes": 2715,
+      "size_mb": 0.003,
+      "sha256": "f42e68cc6973e6a6270a7342fa316fe01093a970f1a7dd322ceb265eaf135b8d",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/depth_confidence_preview.png",
+      "filename": "depth_confidence_preview.png",
+      "size_bytes": 1094857,
+      "size_mb": 1.044,
+      "sha256": "55962fab3b19f941a5d52f6c4a3f98b0f6c29cec77e2fcbde4a2eff8a554574f",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/point_cloud_fused.ply",
+      "filename": "point_cloud_fused.ply",
+      "size_bytes": 7191956,
+      "size_mb": 6.859,
+      "sha256": "2a8a8c67c06236bf87cf3a2f3f8f547a3d60c3c3ec488c33864121dfc761249d",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/point_cloud_unfused.ply",
+      "filename": "point_cloud_unfused.ply",
+      "size_bytes": 71332050,
+      "size_mb": 68.028,
+      "sha256": "90e87c5f56d12cb1588bbcb47faf8a72408b3872e7854c0eeb1ff883f08b5e1c",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/processing.log",
+      "filename": "processing.log",
+      "size_bytes": 410,
+      "size_mb": 0.0,
+      "sha256": "162c314a4ed3601fb8595aa32eff43927a541ade73adc6e032a62b1264e509a9",
+      "type": "Binary/Data (.log)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/render_closeup.png",
+      "filename": "render_closeup.png",
+      "size_bytes": 468046,
+      "size_mb": 0.446,
+      "sha256": "5eb2fc2a09ce80b281a5fa1c72651a1a1f35427576e028d893e39fa06e629342",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 169695,
+      "size_mb": 0.162,
+      "sha256": "283686c867a3aaa654943780019d56da1ede253a9df6e17390d13b487b6d0027",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/render_top.png",
+      "filename": "render_top.png",
+      "size_bytes": 153745,
+      "size_mb": 0.147,
+      "sha256": "abb176879927e70eb9a2754b4ce4987695163511ae95798ff5cc320b5a91319c",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/render_view_oblique_verified.png",
+      "filename": "render_view_oblique_verified.png",
+      "size_bytes": 169695,
+      "size_mb": 0.162,
+      "sha256": "283686c867a3aaa654943780019d56da1ede253a9df6e17390d13b487b6d0027",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/render_view_road_focused_verified.png",
+      "filename": "render_view_road_focused_verified.png",
+      "size_bytes": 468046,
+      "size_mb": 0.446,
+      "sha256": "5eb2fc2a09ce80b281a5fa1c72651a1a1f35427576e028d893e39fa06e629342",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/render_view_top_verified.png",
+      "filename": "render_view_top_verified.png",
+      "size_bytes": 153745,
+      "size_mb": 0.147,
+      "sha256": "abb176879927e70eb9a2754b4ce4987695163511ae95798ff5cc320b5a91319c",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/scene_diagnostics.json",
+      "filename": "scene_diagnostics.json",
+      "size_bytes": 359,
+      "size_mb": 0.0,
+      "sha256": "b1e87a6386455efc8fbcfc78736a8c748bd1f85fddb389ab2994bb0a90d0faab",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/source_frames_contact_sheet.png",
+      "filename": "source_frames_contact_sheet.png",
+      "size_bytes": 1272029,
+      "size_mb": 1.213,
+      "sha256": "d6dfbb3fd035efa9b1a54ecccf3a13eaba93c9237ddb1a9b2306ead078df3e44",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/surface_mesh_photographic.ply",
+      "filename": "surface_mesh_photographic.ply",
+      "size_bytes": 35558818,
+      "size_mb": 33.912,
+      "sha256": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/surface_mesh_repaired.ply",
+      "filename": "surface_mesh_repaired.ply",
+      "size_bytes": 35558818,
+      "size_mb": 33.912,
+      "sha256": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 25149397,
+      "size_mb": 23.984,
+      "sha256": "c7cc73c3cc954045729402eaf785fbacd4d34e249efb9b019aba01f3fa28dea9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/textured_mesh.mtl",
+      "filename": "textured_mesh.mtl",
+      "size_bytes": 176,
+      "size_mb": 0.0,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/textured_mesh.obj",
+      "filename": "textured_mesh.obj",
+      "size_bytes": 117409995,
+      "size_mb": 111.971,
+      "sha256": "f05f497181361cf4ecb98926d843f8a178c4b48d8c662ab8604e2f779fa2d86b",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/baseline_vs_new.png",
+      "filename": "baseline_vs_new.png",
+      "size_bytes": 886925,
+      "size_mb": 0.846,
+      "sha256": "8e7be1666a6fde900eacbc735c4338a7fb1457f104c251d79930ed5c6b493ad1",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/candidate_metadata.json",
+      "filename": "candidate_metadata.json",
+      "size_bytes": 2693,
+      "size_mb": 0.003,
+      "sha256": "8a4ddd407fbec73d60c08a270f081a030c8fe945a964b883554b2186bfcfce3c",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/depth_confidence_preview.png",
+      "filename": "depth_confidence_preview.png",
+      "size_bytes": 544987,
+      "size_mb": 0.52,
+      "sha256": "7bb4ebff290b4034e9ccda6ecd73d82a2a6756de66b86cb264617cfc52118184",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/point_cloud_fused.ply",
+      "filename": "point_cloud_fused.ply",
+      "size_bytes": 6930110,
+      "size_mb": 6.609,
+      "sha256": "57db731da2b53f5e968a4e998ea628eed6fabe4497ac3d632d98b55feb76aa08",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/point_cloud_unfused.ply",
+      "filename": "point_cloud_unfused.ply",
+      "size_bytes": 39614745,
+      "size_mb": 37.78,
+      "sha256": "7aab31c46f9b9a5b3f588eb877c553f46baf3c150678d9a3dc61700ca587b7d3",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/processing.log",
+      "filename": "processing.log",
+      "size_bytes": 406,
+      "size_mb": 0.0,
+      "sha256": "f71f1003cdf4e6139bb64b79d261da5592e7578e910ac2739195dff0e9778e6e",
+      "type": "Binary/Data (.log)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/render_closeup.png",
+      "filename": "render_closeup.png",
+      "size_bytes": 481778,
+      "size_mb": 0.459,
+      "sha256": "b5c5d4b3694c58bbfea15d72155d036bba13f76e83bbe2af91c0c979a52dd2b9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 171057,
+      "size_mb": 0.163,
+      "sha256": "ac6a1500df907151e6aee127ed3a52aad32709f45134877b598064471cef9739",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/render_top.png",
+      "filename": "render_top.png",
+      "size_bytes": 150324,
+      "size_mb": 0.143,
+      "sha256": "9aa8fbcd727924fe884ddac5f4f8780c42e819854f52fa229597aef39656eb81",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/render_view_bridge_focused_verified.png",
+      "filename": "render_view_bridge_focused_verified.png",
+      "size_bytes": 481778,
+      "size_mb": 0.459,
+      "sha256": "b5c5d4b3694c58bbfea15d72155d036bba13f76e83bbe2af91c0c979a52dd2b9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/render_view_oblique_verified.png",
+      "filename": "render_view_oblique_verified.png",
+      "size_bytes": 171057,
+      "size_mb": 0.163,
+      "sha256": "ac6a1500df907151e6aee127ed3a52aad32709f45134877b598064471cef9739",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/render_view_top_verified.png",
+      "filename": "render_view_top_verified.png",
+      "size_bytes": 150324,
+      "size_mb": 0.143,
+      "sha256": "9aa8fbcd727924fe884ddac5f4f8780c42e819854f52fa229597aef39656eb81",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/scene_diagnostics.json",
+      "filename": "scene_diagnostics.json",
+      "size_bytes": 364,
+      "size_mb": 0.0,
+      "sha256": "d66d4bedcaf2719706a0b74b65ae29568ed6695d39deee99e4ef9b1f17a7ee8c",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/source_frames_contact_sheet.png",
+      "filename": "source_frames_contact_sheet.png",
+      "size_bytes": 768911,
+      "size_mb": 0.733,
+      "sha256": "5c3e6a45f2f83940e1b9aefc65235d491512ce682ab84320a4f44a08c67f0520",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/surface_mesh_photographic.ply",
+      "filename": "surface_mesh_photographic.ply",
+      "size_bytes": 10142855,
+      "size_mb": 9.673,
+      "sha256": "4be4958e3b81a0a8ea2ca0ad3c7cb18c39e196884065920c5c11abaad9d7758c",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/surface_mesh_repaired.ply",
+      "filename": "surface_mesh_repaired.ply",
+      "size_bytes": 10142855,
+      "size_mb": 9.673,
+      "sha256": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 20836942,
+      "size_mb": 19.872,
+      "sha256": "ad35dd6447f098b57192b622c9a32af1c7a5f22dd2bab53da0bad54c23ab57c3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/textured_mesh.mtl",
+      "filename": "textured_mesh.mtl",
+      "size_bytes": 176,
+      "size_mb": 0.0,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/textured_mesh.obj",
+      "filename": "textured_mesh.obj",
+      "size_bytes": 32270618,
+      "size_mb": 30.776,
+      "sha256": "fb28f5522dbae5d28ee9358d8e8056a1252ef8f56db39ccf2984b3c7c28808a9",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/run_manifest.json",
+      "filename": "run_manifest.json",
+      "size_bytes": 33562,
+      "size_mb": 0.032,
+      "sha256": "8e752d0b144b0d26c599541d0c655a25569fa6ea3433bdf2b9487f52067f2980",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/source_inventory.json",
+      "filename": "source_inventory.json",
+      "size_bytes": 2966,
+      "size_mb": 0.003,
+      "sha256": "51e92f376631cd3df101962fae135ae788a4e92d6c9cc9e75e32fc7fed10f4cf",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/sprint9_reconstruction_report.json",
+      "filename": "sprint9_reconstruction_report.json",
+      "size_bytes": 5594,
+      "size_mb": 0.005,
+      "sha256": "b7c5098fef9603daeeceebcde4b82374b624b5656cca5ff854c90709251e487b",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_screenshots/screenshot_campus_0049.png",
+      "filename": "screenshot_campus_0049.png",
+      "size_bytes": 393345,
+      "size_mb": 0.375,
+      "sha256": "bd4ddc99c5a2323ad7ef5e8f88d6d2d88149f6c9073fd8170e4ac3d8d32ad0d5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_screenshots/screenshot_desert_road_candidate_a.png",
+      "filename": "screenshot_desert_road_candidate_a.png",
+      "size_bytes": 295963,
+      "size_mb": 0.282,
+      "sha256": "f0d26e490a11952291a23b65327de619f19b44549a64a1339ed24148f44e6468",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_screenshots/screenshot_desert_road_candidate_b.png",
+      "filename": "screenshot_desert_road_candidate_b.png",
+      "size_bytes": 298137,
+      "size_mb": 0.284,
+      "sha256": "f59b750e5c81304a4c1025a65095e73b316ca37d96de57717953b96be73e5f32",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_screenshots/screenshot_desert_road_comparison.png",
+      "filename": "screenshot_desert_road_comparison.png",
+      "size_bytes": 355768,
+      "size_mb": 0.339,
+      "sha256": "441760ff343858d1fa9f42b0fa286ef46145e0650e057d67163bf815f893ada9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_screenshots/screenshot_forest_road.png",
+      "filename": "screenshot_forest_road.png",
+      "size_bytes": 417520,
+      "size_mb": 0.398,
+      "sha256": "3aaebc15d813030c66f19de0428dd77cab596b824a708b48a541f749d6d4eadb",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_screenshots/screenshot_river_bridge.png",
+      "filename": "screenshot_river_bridge.png",
+      "size_bytes": 376506,
+      "size_mb": 0.359,
+      "sha256": "30e8b2e703ed71889283ace9d121ca6546e8deb7d544c69f6e6701cc57f316e7",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/viewer_validation_report.json",
+      "filename": "viewer_validation_report.json",
+      "size_bytes": 2320,
+      "size_mb": 0.002,
+      "sha256": "622ffada2a82d43e37f945d813380488b266f8216f1f044458e82295cd2039b6",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0000_0.000s.png",
+      "filename": "frame_0000_0.000s.png",
+      "size_bytes": 11662630,
+      "size_mb": 11.122,
+      "sha256": "c5d268e045ea1bd5933a1a699081b7cb17e531a620acda5679c4c548880e8036",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0001_1.001s.png",
+      "filename": "frame_0001_1.001s.png",
+      "size_bytes": 11547792,
+      "size_mb": 11.013,
+      "sha256": "2b80d1fd5f0fffc705d68bcc70aab77d4e6f01f05d78209330c0b8b7734dc4cb",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0002_2.002s.png",
+      "filename": "frame_0002_2.002s.png",
+      "size_bytes": 11843259,
+      "size_mb": 11.295,
+      "sha256": "f5be8b5d52a168821687015b16b448d3d30b064cfafba579e665b9f4dabc6a19",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0003_3.003s.png",
+      "filename": "frame_0003_3.003s.png",
+      "size_bytes": 11819315,
+      "size_mb": 11.272,
+      "sha256": "f65e19442a050b9ff1f0bc1c77964e30a6cd5fb94bd779bf456993707bb6b7fa",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0004_4.004s.png",
+      "filename": "frame_0004_4.004s.png",
+      "size_bytes": 13730306,
+      "size_mb": 13.094,
+      "sha256": "c28d26bb3ef7dfa1cb63fd8ba21fef1cdb80805184abae2e1074f82d7bb6d9d5",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0005_5.005s.png",
+      "filename": "frame_0005_5.005s.png",
+      "size_bytes": 13555895,
+      "size_mb": 12.928,
+      "sha256": "ccaec5adf8daadfc1f54e4149376d57b9d045ad659cdcabafd0dcc35b8989794",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0006_6.006s.png",
+      "filename": "frame_0006_6.006s.png",
+      "size_bytes": 13746587,
+      "size_mb": 13.11,
+      "sha256": "1c1adec17e3c9ffb1c66376525995535a2d9edce571029bb2953415d612098e9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0007_7.007s.png",
+      "filename": "frame_0007_7.007s.png",
+      "size_bytes": 12796019,
+      "size_mb": 12.203,
+      "sha256": "34546773c1da17e49f7d9b8a95e6406fa2d6079415aa9fecf5584afa5975230f",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0008_8.008s.png",
+      "filename": "frame_0008_8.008s.png",
+      "size_bytes": 12057533,
+      "size_mb": 11.499,
+      "sha256": "cd8e0c7d30fac11bae0a7e957a87e40de8c7c9294dbe2a71aa53b9c2960af81e",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/frames/frame_0009_9.009s.png",
+      "filename": "frame_0009_9.009s.png",
+      "size_bytes": 12017977,
+      "size_mb": 11.461,
+      "sha256": "a34f4891a56caa17c3fcb97002cbef60af538f9921e1a155ddd558532800dde6",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 3137,
+      "size_mb": 0.003,
+      "sha256": "d7be4bd9a2f2fb82dd4f5e5e6f2b506c64eff3fafbcaa4ed7f04fcc75f11896e",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/predictions/camera_poses.npz",
+      "filename": "camera_poses.npz",
+      "size_bytes": 1010,
+      "size_mb": 0.001,
+      "sha256": "f34bdb269a63128a7f1001e824648fa4790865e1377d27b7639a67f8ccd942d4",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/predictions/depth_predictions.npz",
+      "filename": "depth_predictions.npz",
+      "size_bytes": 17342856,
+      "size_mb": 16.539,
+      "sha256": "9aef4412469415b75c4e3b5d46dec47be56274812df87a643ec3825982af8b61",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/predictions/predictions_raw.pt",
+      "filename": "predictions_raw.pt",
+      "size_bytes": 21139505,
+      "size_mb": 20.16,
+      "sha256": "8ac0e57a80abb42de632c175a38a95557c3273638acbc23ac78ba2d5eeaca4dd",
+      "type": "PyTorch Tensor / Model Weights"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/bpa_mesh.ply",
+      "filename": "bpa_mesh.ply",
+      "size_bytes": 2535862,
+      "size_mb": 2.418,
+      "sha256": "8f9fd667ecd25a11b298def152c90be872feae3fd9558709c152848f8b2cec38",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/display_base.ply",
+      "filename": "display_base.ply",
+      "size_bytes": 881,
+      "size_mb": 0.001,
+      "sha256": "130c46735b10cebe5fb3da7a268736e9aed3a8d01f10d9254ef61d92bf607f27",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/mesh_metadata.json",
+      "filename": "mesh_metadata.json",
+      "size_bytes": 4242,
+      "size_mb": 0.004,
+      "sha256": "711a0b78917e4e9ec0541514ad922ba29c8c0feac593aade0f9a3f1a41e65550",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/mesh_preview.png",
+      "filename": "mesh_preview.png",
+      "size_bytes": 514571,
+      "size_mb": 0.491,
+      "sha256": "9063d390e838d7fc8aee6bd94ecd8c083ed887356fe440af56fdedab68c81491",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/point_cloud.ply",
+      "filename": "point_cloud.ply",
+      "size_bytes": 39628981,
+      "size_mb": 37.793,
+      "sha256": "41e78f862fee4ac0894df00156887cadc031ea27ef9f3db1d05afc71ec49ef2f",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/poisson_strict_mesh.ply",
+      "filename": "poisson_strict_mesh.ply",
+      "size_bytes": 10945579,
+      "size_mb": 10.439,
+      "sha256": "9b0b99a7ec0729037babf8386f8ed03a62961f4da3fa502fccf584c1a17eb7aa",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/reconstruction_metadata.json",
+      "filename": "reconstruction_metadata.json",
+      "size_bytes": 1501,
+      "size_mb": 0.001,
+      "sha256": "e990aa9210aa33013dc01a2b39baf97ba5f1bd83c6869e57a276024a51d47bf8",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/surface_mesh.obj",
+      "filename": "surface_mesh.obj",
+      "size_bytes": 24434947,
+      "size_mb": 23.303,
+      "sha256": "f6604eac372b1b5c8e82e6b2ac5b9af69b2f75f0fed3d877b6b323bcba3fdff9",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/surface_mesh.ply",
+      "filename": "surface_mesh.ply",
+      "size_bytes": 10945579,
+      "size_mb": 10.439,
+      "sha256": "9b0b99a7ec0729037babf8386f8ed03a62961f4da3fa502fccf584c1a17eb7aa",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/surface_mesh_presentation.obj",
+      "filename": "surface_mesh_presentation.obj",
+      "size_bytes": 24436132,
+      "size_mb": 23.304,
+      "sha256": "9a254b77c5da24794892932e99a6e634b866be73015a4db9d7eface434e608cf",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/surface_mesh_presentation.ply",
+      "filename": "surface_mesh_presentation.ply",
+      "size_bytes": 10946143,
+      "size_mb": 10.439,
+      "sha256": "8fc90c3bfe51e9916054ea5744b25e617cff8e8f1d704fa12e9cc3002dfc800b",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/display_base.ply",
+      "filename": "display_base.ply",
+      "size_bytes": 881,
+      "size_mb": 0.001,
+      "sha256": "130c46735b10cebe5fb3da7a268736e9aed3a8d01f10d9254ef61d92bf607f27",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_00_0.000s.png",
+      "filename": "frame_4k_00_0.000s.png",
+      "size_bytes": 14340373,
+      "size_mb": 13.676,
+      "sha256": "8543f9defa11bb58edeb0d8b96f7f01859036c9c1de4613d97579f710ee63a38",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_01_1.001s.png",
+      "filename": "frame_4k_01_1.001s.png",
+      "size_bytes": 14567216,
+      "size_mb": 13.892,
+      "sha256": "92176541c3f3f8537e5f642705e3f01a13f9b6f98291a4d2000732dfad3b2598",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_02_2.002s.png",
+      "filename": "frame_4k_02_2.002s.png",
+      "size_bytes": 14588102,
+      "size_mb": 13.912,
+      "sha256": "bfc12732bde0c3cfc6be60602db1b2ad5f12149306b383460fa65c1cec0f125a",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_03_3.003s.png",
+      "filename": "frame_4k_03_3.003s.png",
+      "size_bytes": 14527670,
+      "size_mb": 13.855,
+      "sha256": "96a1c67f0fc45caf69646970b7d5d0c0717a094dff24ba2ef0e9b0584a9a0bdd",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_04_4.004s.png",
+      "filename": "frame_4k_04_4.004s.png",
+      "size_bytes": 16523057,
+      "size_mb": 15.758,
+      "sha256": "e420cc65f049c3e979e848662aaaf98f20128cfdc64d08d4f9c04cbb14170ad2",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_05_5.005s.png",
+      "filename": "frame_4k_05_5.005s.png",
+      "size_bytes": 16440556,
+      "size_mb": 15.679,
+      "sha256": "7c59891913e07b3637e0b1a076343cecbeb6e71fb79d8737712a56dc7526d773",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_06_6.006s.png",
+      "filename": "frame_4k_06_6.006s.png",
+      "size_bytes": 16571417,
+      "size_mb": 15.804,
+      "sha256": "a9ad051802f0196d08ee6118d9149d9e06828f039dd921c2a46a96e991f7af96",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_07_7.007s.png",
+      "filename": "frame_4k_07_7.007s.png",
+      "size_bytes": 15834550,
+      "size_mb": 15.101,
+      "sha256": "6d565cb95d62ebf04d6949f6b507368e48c0521cbf7b7f4d8884d1f5fc13ccee",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_08_8.008s.png",
+      "filename": "frame_4k_08_8.008s.png",
+      "size_bytes": 15128170,
+      "size_mb": 14.427,
+      "sha256": "42fa73b1c9ea1d1019410d479ff7debed7a7d2eba724e26dd4262c614076f957",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/frames_4k/frame_4k_09_9.009s.png",
+      "filename": "frame_4k_09_9.009s.png",
+      "size_bytes": 15240428,
+      "size_mb": 14.534,
+      "sha256": "b3d940db5615970f56ddcae0785eb8a5db70dbc75b0643691ab987a6b07d5447",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/test_texture.png",
+      "filename": "test_texture.png",
+      "size_bytes": 12841971,
+      "size_mb": 12.247,
+      "sha256": "0da99ccadc8d888e409cb5cd8d9d4b73620dc128a73d5b39e17f7f478727bf28",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/texture.png",
+      "filename": "texture.png",
+      "size_bytes": 12841971,
+      "size_mb": 12.247,
+      "sha256": "0da99ccadc8d888e409cb5cd8d9d4b73620dc128a73d5b39e17f7f478727bf28",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/texture_metadata.json",
+      "filename": "texture_metadata.json",
+      "size_bytes": 4470,
+      "size_mb": 0.004,
+      "sha256": "7474271b1d140bcc3513f5f693a610431bd5401b20c29c42e8ae7aa24a22d293",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/texture_preview.png",
+      "filename": "texture_preview.png",
+      "size_bytes": 3542471,
+      "size_mb": 3.378,
+      "sha256": "c6ab48cc90ae525fb8110400db8f8620a73e7dc1d8c6f60e93c712b799744af4",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/textured_mesh.mtl",
+      "filename": "textured_mesh.mtl",
+      "size_bytes": 170,
+      "size_mb": 0.0,
+      "sha256": "c85e4e94727b8774c60b7813ff61c78379d0a94da52dabd39ac42efaa69992ac",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/textured_mesh.obj",
+      "filename": "textured_mesh.obj",
+      "size_bytes": 45917379,
+      "size_mb": 43.79,
+      "sha256": "0becb903d80c23a70decb11e39d9e0ce85763332504c90395d1a61d24a1382f0",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/dji_0049_validation/reconstruction/texture_experiment/textured_mesh_0.png",
+      "filename": "textured_mesh_0.png",
+      "size_bytes": 11638067,
+      "size_mb": 11.099,
+      "sha256": "61767d63fe4eb338e1a1f84172b09b09ca22fe81b83e50017a8e190975e2f495",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/frames/frame_0000_0.000s.png",
+      "filename": "frame_0000_0.000s.png",
+      "size_bytes": 3985018,
+      "size_mb": 3.8,
+      "sha256": "27d4aa0c1f35ef3d202cbcf36dc15baccffaedaedd6423d0025b5e39c2e3890f",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/frames/frame_0001_2.002s.png",
+      "filename": "frame_0001_2.002s.png",
+      "size_bytes": 5673095,
+      "size_mb": 5.41,
+      "sha256": "4507748f4f243d00e04055bc4c09a6c9aa582e798a1cde6c211bda2d90b5a216",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/frames/frame_0002_4.004s.png",
+      "filename": "frame_0002_4.004s.png",
+      "size_bytes": 4671686,
+      "size_mb": 4.455,
+      "sha256": "0af8a4c08445027900edd4200b8727c2018a5ae21ce96ef8d37acf951bc48bdc",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/frames/frame_0003_6.006s.png",
+      "filename": "frame_0003_6.006s.png",
+      "size_bytes": 4614142,
+      "size_mb": 4.4,
+      "sha256": "f6c340dc33e4d3cf7ab4548206b78edc6671ac062237b1e4b444c065fb9f371e",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/frames/frame_0004_8.008s.png",
+      "filename": "frame_0004_8.008s.png",
+      "size_bytes": 3691502,
+      "size_mb": 3.52,
+      "sha256": "3f5aa9940ef089cedff37bbbe2627c76fdb4dc5029ad49828ccd27e5f584201d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/frames/frame_0005_10.010s.png",
+      "filename": "frame_0005_10.010s.png",
+      "size_bytes": 1380682,
+      "size_mb": 1.317,
+      "sha256": "14da614f6d84340cc21caca5ee4c13e50994509be4698205d28a7f62c29ef217",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 2525,
+      "size_mb": 0.002,
+      "sha256": "38e2c69465e99cb6e14a3030b4ac8da5fa97ecd62b83c6ab6392a2e1c01b7712",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/predictions/camera_poses.npz",
+      "filename": "camera_poses.npz",
+      "size_bytes": 783,
+      "size_mb": 0.001,
+      "sha256": "daa18e440ba2712bdcc37078324e3393b1a1440f3c2adbfbed9151946bca7c62",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/predictions/depth_predictions.npz",
+      "filename": "depth_predictions.npz",
+      "size_bytes": 10307861,
+      "size_mb": 9.83,
+      "sha256": "35f0aefbaaf6756308b8acde08dbe6aa65724eb5385855a3c855440c64df5b50",
+      "type": "Camera Poses / Depth Tensors (NumPy)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/predictions/predictions_raw.pt",
+      "filename": "predictions_raw.pt",
+      "size_bytes": 12684913,
+      "size_mb": 12.097,
+      "sha256": "34b599d070123df5f164e8496fe67a3644aea67d007398c3f4366901c322903d",
+      "type": "PyTorch Tensor / Model Weights"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment/mesh_metadata.json",
+      "filename": "mesh_metadata.json",
+      "size_bytes": 2824,
+      "size_mb": 0.003,
+      "sha256": "72b707615983106005bad2bbbafb4f68e3c7d33425e6b7285bf5de243f551b42",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment/mesh_preview.png",
+      "filename": "mesh_preview.png",
+      "size_bytes": 317442,
+      "size_mb": 0.303,
+      "sha256": "4dc6bba9fdf8ea547f02805503357af882b2d8828f4f48678d4c6dd16fbefd94",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment/surface_mesh.obj",
+      "filename": "surface_mesh.obj",
+      "size_bytes": 32145501,
+      "size_mb": 30.656,
+      "sha256": "2d8347886a2cb3927fe12edfadaedb8f37d1f58fd13792a88d4e72d59b788a19",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment/surface_mesh.ply",
+      "filename": "surface_mesh.ply",
+      "size_bytes": 14283908,
+      "size_mb": 13.622,
+      "sha256": "ddfca068e7a88fc5df24f67ba2043dff620be30cce6c54a3a74102825d990c8b",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment_v2/bpa_mesh.ply",
+      "filename": "bpa_mesh.ply",
+      "size_bytes": 6296960,
+      "size_mb": 6.005,
+      "sha256": "f8fa8fadfc36049f5e6fe63306b1ba59c462d08aa5c9c15b018b1412a48efce9",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment_v2/mesh_metadata.json",
+      "filename": "mesh_metadata.json",
+      "size_bytes": 4662,
+      "size_mb": 0.004,
+      "sha256": "4de42788875d33f7e33c338728c4a0ce4b14d184ffd5824cebadbc6a87d09b67",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment_v2/mesh_preview.png",
+      "filename": "mesh_preview.png",
+      "size_bytes": 227467,
+      "size_mb": 0.217,
+      "sha256": "dcc2f0cdad8a0233445a9d9d25bde73497f342e035386e9ae34415a367fce44b",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment_v2/poisson_strict_mesh.ply",
+      "filename": "poisson_strict_mesh.ply",
+      "size_bytes": 13574525,
+      "size_mb": 12.946,
+      "sha256": "97e45204f38948e13a31aadaea3dc748ff77edc80878dbca650d1a85eb73bfb8",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment_v2/surface_mesh.obj",
+      "filename": "surface_mesh.obj",
+      "size_bytes": 30255991,
+      "size_mb": 28.854,
+      "sha256": "c5ffe047587b35e8fb40a38c043b3230a0b7db446c3e0dd54bda6e41d6a4a5fd",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/mesh_experiment_v2/surface_mesh.ply",
+      "filename": "surface_mesh.ply",
+      "size_bytes": 13574525,
+      "size_mb": 12.946,
+      "sha256": "97e45204f38948e13a31aadaea3dc748ff77edc80878dbca650d1a85eb73bfb8",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/point_cloud.ply",
+      "filename": "point_cloud.ply",
+      "size_bytes": 23777461,
+      "size_mb": 22.676,
+      "sha256": "4d2faa2dc4b26ee0c737b8c5d63378eac3e09252160a449e46a116e6cad828a1",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/point_cloud_preview.png",
+      "filename": "point_cloud_preview.png",
+      "size_bytes": 217579,
+      "size_mb": 0.207,
+      "sha256": "652f14d9228442f4d5471d70fdfaae840a1fa591c1b4f5db19e057d6601466be",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/reconstruction/reconstruction_metadata.json",
+      "filename": "reconstruction_metadata.json",
+      "size_bytes": 1530,
+      "size_mb": 0.001,
+      "sha256": "b62d78256d151ecc768d4327a6e88956475b50956e5427b0f894a8a6110c7b28",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/dji_river_bridge_validation/segment_52s_64s.mp4",
+      "filename": "segment_52s_64s.mp4",
+      "size_bytes": 70005949,
+      "size_mb": 66.763,
+      "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+      "type": "Source Video (MP4)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/MANUAL_MODEL_REVIEW_REPORT.md",
+      "filename": "MANUAL_MODEL_REVIEW_REPORT.md",
+      "size_bytes": 22223,
+      "size_mb": 0.021,
+      "sha256": "5df22426368e1e8276404981a3d1b50ba611876fb4894b27c8dce20041f8c02e",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/MODEL_CATALOG.md",
+      "filename": "MODEL_CATALOG.md",
+      "size_bytes": 22027,
+      "size_mb": 0.021,
+      "sha256": "d8a9fd3f241d539fb1e642cd7b22d4a6c982a8d63195c04fc9048e6c0e84f6e1",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/README.txt",
+      "filename": "README.txt",
+      "size_bytes": 1764,
+      "size_mb": 0.002,
+      "sha256": "058cfad0ee54ed527707f1a02d938f0666ef60effda580b07e437efaba907048",
+      "type": "Text Configuration"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/SOURCE_VIDEO_LOCATIONS.md",
+      "filename": "SOURCE_VIDEO_LOCATIONS.md",
+      "size_bytes": 12471,
+      "size_mb": 0.012,
+      "sha256": "672404b773949c4b1d4b8063c2de8b9d0037e457611c053c9a183bb6416df9c2",
+      "type": "Markdown Technical Report / Document"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049.zip",
+      "filename": "campus_0049.zip",
+      "size_bytes": 86474572,
+      "size_mb": 82.469,
+      "sha256": "57b7e7996177678b6497f06d4d059e33895853ba435de9c039d9a59125461940",
+      "type": "Deliverable Archive (ZIP)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 6339,
+      "size_mb": 0.006,
+      "sha256": "41dc0d480ab4759e270fbbd319fa04f0f1d074498f9106eb74b30ee69a23a66c",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/model_geometry.obj",
+      "filename": "model_geometry.obj",
+      "size_bytes": 18328044,
+      "size_mb": 17.479,
+      "sha256": "1daef6e7f552a580be47a55cdea00b968bb056138384f283f96c163b6fcde92f",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/model_geometry.ply",
+      "filename": "model_geometry.ply",
+      "size_bytes": 9840793,
+      "size_mb": 9.385,
+      "sha256": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/model_photographic.ply",
+      "filename": "model_photographic.ply",
+      "size_bytes": 9840793,
+      "size_mb": 9.385,
+      "sha256": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/model_preview.glb",
+      "filename": "model_preview.glb",
+      "size_bytes": 48372492,
+      "size_mb": 46.132,
+      "sha256": "33cc62d81833c5f74a88cb6436a18e5e2434193c82ffa76b2480da68b254827e",
+      "type": "Self-Contained 3D Model (glTF 2.0)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/model_textured.mtl",
+      "filename": "model_textured.mtl",
+      "size_bytes": 176,
+      "size_mb": 0.0,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/model_textured.obj",
+      "filename": "model_textured.obj",
+      "size_bytes": 31281377,
+      "size_mb": 29.832,
+      "sha256": "d34f2b01280942da8741c93a3f9952d7ac498021b1cb436bb4d3e78730d649fc",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 179041,
+      "size_mb": 0.171,
+      "sha256": "3d91dac9bf5ba4ac2b9d31bbf0065e41085b59748e2f2a3d1e0333b59b62db72",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/render_overview.png",
+      "filename": "render_overview.png",
+      "size_bytes": 214768,
+      "size_mb": 0.205,
+      "sha256": "aeafa272011f99f2b00154bdea247c5b1fd6b3f76eaf4c0b014915e895db7e3d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/campus_0049/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 29301787,
+      "size_mb": 27.944,
+      "sha256": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a.zip",
+      "filename": "desert_road_candidate_a.zip",
+      "size_bytes": 31316409,
+      "size_mb": 29.866,
+      "sha256": "e625945de1289e8b6f10a0ee588d4adc74b4aaf234391c491ff6672ebdaeb2a9",
+      "type": "Deliverable Archive (ZIP)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 6543,
+      "size_mb": 0.006,
+      "sha256": "2f9f3034cb0deeddbbb77e79200d458833558f98f2403ce1963f5f118286734c",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/model_geometry.obj",
+      "filename": "model_geometry.obj",
+      "size_bytes": 7631490,
+      "size_mb": 7.278,
+      "sha256": "0b197d6a16d35ef72d626f869cde15d2bab9079a2cac34aabc418a551fea49e9",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/model_geometry.ply",
+      "filename": "model_geometry.ply",
+      "size_bytes": 4077915,
+      "size_mb": 3.889,
+      "sha256": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/model_photographic.ply",
+      "filename": "model_photographic.ply",
+      "size_bytes": 4077915,
+      "size_mb": 3.889,
+      "sha256": "5625a5a2436abd6bca780b86efde8687246675f0e47b270f37440b006099ae44",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/model_preview.glb",
+      "filename": "model_preview.glb",
+      "size_bytes": 20157424,
+      "size_mb": 19.224,
+      "sha256": "dd7c799df2f227b4eb4f302c867e8b148e8340208e3325e56913f8b42fe2a80f",
+      "type": "Self-Contained 3D Model (glTF 2.0)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/model_textured.mtl",
+      "filename": "model_textured.mtl",
+      "size_bytes": 175,
+      "size_mb": 0.0,
+      "sha256": "9768a160330c54d7a314081360d0c164902303a256327653c3c8fd6049edcc33",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/model_textured.obj",
+      "filename": "model_textured.obj",
+      "size_bytes": 14301215,
+      "size_mb": 13.639,
+      "sha256": "fdc5d57a65f7113191f21f2ba7084e540a6bd9b5b7dde0755ec366cbe64ecff2",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 61430,
+      "size_mb": 0.059,
+      "sha256": "afaff77a0c110ebdcc87da9fd349a5959cebb4aa2fca7c54e292a3a640b49542",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/render_overview.png",
+      "filename": "render_overview.png",
+      "size_bytes": 67561,
+      "size_mb": 0.064,
+      "sha256": "578a5ce742efa8edd62039a3ea564e4d06c3454e7ca80c15a47a6cba7f5a1e13",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_a/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 8765408,
+      "size_mb": 8.359,
+      "sha256": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b.zip",
+      "filename": "desert_road_candidate_b.zip",
+      "size_bytes": 31326179,
+      "size_mb": 29.875,
+      "sha256": "7d6613f4943d3d968b011fd859620191fda6d735a57d57e0d2f1098237982a87",
+      "type": "Deliverable Archive (ZIP)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 6557,
+      "size_mb": 0.006,
+      "sha256": "3aa6d58a1eb347c934761809abdc9f59e081a1f92bdbed51ca7455fff63f0b31",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_geometry.obj",
+      "filename": "model_geometry.obj",
+      "size_bytes": 7635396,
+      "size_mb": 7.282,
+      "sha256": "d4e936326204f2773fe40fa19fdba496a36ac03828ebf26edae008657ac5dba0",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_geometry.ply",
+      "filename": "model_geometry.ply",
+      "size_bytes": 4080210,
+      "size_mb": 3.891,
+      "sha256": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_photographic.ply",
+      "filename": "model_photographic.ply",
+      "size_bytes": 4080210,
+      "size_mb": 3.891,
+      "sha256": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_preview.glb",
+      "filename": "model_preview.glb",
+      "size_bytes": 20162884,
+      "size_mb": 19.229,
+      "sha256": "750a30ae96ae09a08272f29d46a9daa882714b62d2e41e48e9413969e0eb5fa5",
+      "type": "Self-Contained 3D Model (glTF 2.0)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_textured.mtl",
+      "filename": "model_textured.mtl",
+      "size_bytes": 175,
+      "size_mb": 0.0,
+      "sha256": "9768a160330c54d7a314081360d0c164902303a256327653c3c8fd6049edcc33",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_textured.obj",
+      "filename": "model_textured.obj",
+      "size_bytes": 14308563,
+      "size_mb": 13.646,
+      "sha256": "dc3607d35cb3469debff597cfc1ea3f9d5ac62d3a90e982940d6f8c17c32fe1a",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 61635,
+      "size_mb": 0.059,
+      "sha256": "b34df575517024d17bf04495b704db37bbb82422b2added9c8ed85faaed99239",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/render_overview.png",
+      "filename": "render_overview.png",
+      "size_bytes": 68739,
+      "size_mb": 0.066,
+      "sha256": "e429660d4961b8385c1c38b7fd1df70dd0abcd5cc72e060bda7d5aa3330d09ed",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 8765408,
+      "size_mb": 8.359,
+      "sha256": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road.zip",
+      "filename": "forest_road.zip",
+      "size_bytes": 152557124,
+      "size_mb": 145.49,
+      "sha256": "28a6b7972f6c28977282dd522a61d127c88b4e54e295963a37ff9f36b76eb706",
+      "type": "Deliverable Archive (ZIP)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 6215,
+      "size_mb": 0.006,
+      "sha256": "38201d2d50d2c72efd0cf35818feb7534e3db3e3f5a0fdef5d1042d1bbcce69e",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/model_geometry.obj",
+      "filename": "model_geometry.obj",
+      "size_bytes": 70107867,
+      "size_mb": 66.86,
+      "sha256": "51d28d50ff566f44d6583a26c44957a77636211f45a101854f9d47d7c1768aa2",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/model_geometry.ply",
+      "filename": "model_geometry.ply",
+      "size_bytes": 35558818,
+      "size_mb": 33.912,
+      "sha256": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/model_photographic.ply",
+      "filename": "model_photographic.ply",
+      "size_bytes": 35558818,
+      "size_mb": 33.912,
+      "sha256": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/model_preview.glb",
+      "filename": "model_preview.glb",
+      "size_bytes": 92249276,
+      "size_mb": 87.976,
+      "sha256": "125d6a5a20e8abab600fd49b478cc4063f47d95e4aefdcd6d55adc8e036d8faf",
+      "type": "Self-Contained 3D Model (glTF 2.0)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/model_textured.mtl",
+      "filename": "model_textured.mtl",
+      "size_bytes": 176,
+      "size_mb": 0.0,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/model_textured.obj",
+      "filename": "model_textured.obj",
+      "size_bytes": 117409996,
+      "size_mb": 111.971,
+      "sha256": "c36661af14d0a3d164370a436e1cbc8d0f6c1756ec367b20fc2b85ff44bb7628",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 231078,
+      "size_mb": 0.22,
+      "sha256": "0baa9424a8aad0b8a2a3676a28248206ac5650a5ba7db2af3db6c17d2cdd5eb4",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/render_overview.png",
+      "filename": "render_overview.png",
+      "size_bytes": 242504,
+      "size_mb": 0.231,
+      "sha256": "68e316d1a643bf7113a57173dcaa33c5458cc95075a1043970b7f9a004b12418",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forest_road/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 25149397,
+      "size_mb": 23.984,
+      "sha256": "c7cc73c3cc954045729402eaf785fbacd4d34e249efb9b019aba01f3fa28dea9",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/forge_models_for_manual_inspection.zip",
+      "filename": "forge_models_for_manual_inspection.zip",
+      "size_bytes": 371407846,
+      "size_mb": 354.202,
+      "sha256": "65f84bfe2950e1ae535b5c60478863d7174229310362357fdd120a96511404f0",
+      "type": "Deliverable Archive (ZIP)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/model_integrity_report.json",
+      "filename": "model_integrity_report.json",
+      "size_bytes": 35518,
+      "size_mb": 0.034,
+      "sha256": "4008c47c52c178955d25a43d15dcd615d154918de6bb7af66cb012d9910d721a",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge.zip",
+      "filename": "river_bridge.zip",
+      "size_bytes": 69606603,
+      "size_mb": 66.382,
+      "sha256": "ffeae323bf2e850473b3ca23696315193eb0507669c08768ca0643f3dad5a51b",
+      "type": "Deliverable Archive (ZIP)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/metadata.json",
+      "filename": "metadata.json",
+      "size_bytes": 6340,
+      "size_mb": 0.006,
+      "sha256": "7cbc70d3ea30eee5536c41a3fc8fb71bd491921cf636ef35ea5ae816a999348c",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/model_geometry.obj",
+      "filename": "model_geometry.obj",
+      "size_bytes": 19138823,
+      "size_mb": 18.252,
+      "sha256": "0e75db13f508bafcff0f2adebfe903bb081a2a1acdc31ee88645874c73e3fe6a",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/model_geometry.ply",
+      "filename": "model_geometry.ply",
+      "size_bytes": 10142855,
+      "size_mb": 9.673,
+      "sha256": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/model_photographic.ply",
+      "filename": "model_photographic.ply",
+      "size_bytes": 10142855,
+      "size_mb": 9.673,
+      "sha256": "4be4958e3b81a0a8ea2ca0ad3c7cb18c39e196884065920c5c11abaad9d7758c",
+      "type": "3D Point Cloud / Mesh (Polygon PLY)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/model_preview.glb",
+      "filename": "model_preview.glb",
+      "size_bytes": 40262068,
+      "size_mb": 38.397,
+      "sha256": "13db2cfb85f1c69ab7af954a06092dbf7ad606b6e731614793af43f131da1ec2",
+      "type": "Self-Contained 3D Model (glTF 2.0)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/model_textured.mtl",
+      "filename": "model_textured.mtl",
+      "size_bytes": 176,
+      "size_mb": 0.0,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "type": "Material Library (Wavefront MTL)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/model_textured.obj",
+      "filename": "model_textured.obj",
+      "size_bytes": 32270619,
+      "size_mb": 30.776,
+      "sha256": "fdde2c03c09bd55db5777bde0bc32392b115326b68ee543c8a5f13ea2d7f4ff6",
+      "type": "3D Geometry Mesh (Wavefront OBJ)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/render_oblique.png",
+      "filename": "render_oblique.png",
+      "size_bytes": 176360,
+      "size_mb": 0.168,
+      "sha256": "69d8469759107d3bb663b7e3d92b11629f0bd8cdd7e44e64f143806bcdc1ca0e",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/render_overview.png",
+      "filename": "render_overview.png",
+      "size_bytes": 69938,
+      "size_mb": 0.067,
+      "sha256": "4f49bfa9a51c1428d7de7e41f6c5004d79b1574478e4a0d8ee2df26df2988845",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/river_bridge/texture_atlas.png",
+      "filename": "texture_atlas.png",
+      "size_bytes": 20836942,
+      "size_mb": 19.872,
+      "sha256": "ad35dd6447f098b57192b622c9a32af1c7a5f22dd2bab53da0bad54c23ab57c3",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "outputs/manual_model_review/source_video_inventory.json",
+      "filename": "source_video_inventory.json",
+      "size_bytes": 26449,
+      "size_mb": 0.025,
+      "sha256": "6b7f62959f141a6918a5acb651f44bb1b749cfde49deff35d668bd21624b2c66",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "requirements-viewer.txt",
+      "filename": "requirements-viewer.txt",
+      "size_bytes": 128,
+      "size_mb": 0.0,
+      "sha256": "bc59a6d3a0f0f450ce612b7f7d8ab4150f61389f8689b9a359e92f17cafb4b5f",
+      "type": "Text Configuration"
+    },
+    {
+      "relative_path": "requirements.txt",
+      "filename": "requirements.txt",
+      "size_bytes": 575,
+      "size_mb": 0.001,
+      "sha256": "fc6fe4f602ad836c6d3020f2955396c824dda0551450e0c743495c111bb54449",
+      "type": "Text Configuration"
+    },
+    {
+      "relative_path": "run_pipeline.py",
+      "filename": "run_pipeline.py",
+      "size_bytes": 6258,
+      "size_mb": 0.006,
+      "sha256": "3f0cbd3fc415bef1957591c56bcb354d0e5587a7fcde048dc5f3cb4646963658",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/align_reconstruction_gps.py",
+      "filename": "align_reconstruction_gps.py",
+      "size_bytes": 19528,
+      "size_mb": 0.019,
+      "sha256": "beb105967cbac2fb69f71966e295069795279024b28df07e66b086a54fecb147",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/analyze_rb_road.py",
+      "filename": "analyze_rb_road.py",
+      "size_bytes": 1448,
+      "size_mb": 0.001,
+      "sha256": "7afa32ef5b68843149bea98c8be2361899af03ebaa1a97f92eb1d0d1289cdc31",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/analyze_trajectory_quality.py",
+      "filename": "analyze_trajectory_quality.py",
+      "size_bytes": 10395,
+      "size_mb": 0.01,
+      "sha256": "532db8d9926e0006949d32342007db08f95a3779bfe820a8a1f77b7dbd579cb6",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/audit_accuracy.py",
+      "filename": "audit_accuracy.py",
+      "size_bytes": 38494,
+      "size_mb": 0.037,
+      "sha256": "17f37fe38704875eadc49a14242209dfc6017f20a631a6048549137c49144431",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/build_manual_model_review.py",
+      "filename": "build_manual_model_review.py",
+      "size_bytes": 50404,
+      "size_mb": 0.048,
+      "sha256": "caee1f271ffd8f1dc79016f08cd37012f5d01fb1504a03c3aacb85e3229dc8f7",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/capture_sprint10_1_screenshots.cjs",
+      "filename": "capture_sprint10_1_screenshots.cjs",
+      "size_bytes": 6369,
+      "size_mb": 0.006,
+      "sha256": "80b16b13fdf3e091d452dac460b94fd992f22bd872b9414f170e80d13df2a0f4",
+      "type": "CommonJS Script"
+    },
+    {
+      "relative_path": "scripts/capture_sprint10_demo_screenshots.cjs",
+      "filename": "capture_sprint10_demo_screenshots.cjs",
+      "size_bytes": 4477,
+      "size_mb": 0.004,
+      "sha256": "048b3d14cf7c9b595715c439715a5b85907efec90d682dabd898ac3b2f786d04",
+      "type": "CommonJS Script"
+    },
+    {
+      "relative_path": "scripts/capture_sprint9_viewer_screenshots.cjs",
+      "filename": "capture_sprint9_viewer_screenshots.cjs",
+      "size_bytes": 4618,
+      "size_mb": 0.004,
+      "sha256": "585d8e7f96e2c844a34104a10788bb6c8f1e6b2fd800532d6f01d9f26c36cfec",
+      "type": "CommonJS Script"
+    },
+    {
+      "relative_path": "scripts/capture_viewer_screenshots.cjs",
+      "filename": "capture_viewer_screenshots.cjs",
+      "size_bytes": 3573,
+      "size_mb": 0.003,
+      "sha256": "4a3eb2af7d486d4260c60a553eb41ccb4fd565f772187835f6bd389680afd861",
+      "type": "CommonJS Script"
+    },
+    {
+      "relative_path": "scripts/check_img_bands.py",
+      "filename": "check_img_bands.py",
+      "size_bytes": 549,
+      "size_mb": 0.001,
+      "sha256": "562977b6ebc1221411f6dd12b15174f7b3e9617e4bae6d474acdbb8375b0fcf3",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/crop_road_patches.py",
+      "filename": "crop_road_patches.py",
+      "size_bytes": 1388,
+      "size_mb": 0.001,
+      "sha256": "bc784e27d6eb3e5b20dfdf47a5acb5572504a5152fdfd90a15f94819774faa92",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/diagnose_pipeline_regression.py",
+      "filename": "diagnose_pipeline_regression.py",
+      "size_bytes": 20471,
+      "size_mb": 0.02,
+      "sha256": "4416478e5f20c013e306332b5745439ab6acdf1e540908823181893db1b675a7",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/diagnose_sprint7_single_window.py",
+      "filename": "diagnose_sprint7_single_window.py",
+      "size_bytes": 25030,
+      "size_mb": 0.024,
+      "sha256": "eb24c4178bc2a822316c896cebd29dae1f9d3e8548fbc31ab86f71e4ba65f5f7",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/diagnose_sprint7h_desert_road.py",
+      "filename": "diagnose_sprint7h_desert_road.py",
+      "size_bytes": 3061,
+      "size_mb": 0.003,
+      "sha256": "1aa78e2c36e214c1c110ac321ca690f17c0fbcf52dfc21057b3619a8b559b539",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/diagnose_window_stitching_failure.py",
+      "filename": "diagnose_window_stitching_failure.py",
+      "size_bytes": 8581,
+      "size_mb": 0.008,
+      "sha256": "b0dbfd07df4ca84a4379352df73d55cfdc074d978518673d14b1db2ab041d181",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/experiment_quality_improvements.py",
+      "filename": "experiment_quality_improvements.py",
+      "size_bytes": 27267,
+      "size_mb": 0.026,
+      "sha256": "f49b2f5cefb0cc7a6af3372ab26b826aac8a49f278bb8b8855975e6ebea45dad",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/find_bridge_coords.py",
+      "filename": "find_bridge_coords.py",
+      "size_bytes": 1047,
+      "size_mb": 0.001,
+      "sha256": "1b7316a4d7714d8755f59d4a3008639ea6bcdef5165d955b4842cda240e84600",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/find_river_bridge_point.py",
+      "filename": "find_river_bridge_point.py",
+      "size_bytes": 2045,
+      "size_mb": 0.002,
+      "sha256": "b003f8f0e4de534ef905ff0e84baff5c9d807f10a8d24f0fb98d7105c3341f24",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/forensic_defect_tracer.py",
+      "filename": "forensic_defect_tracer.py",
+      "size_bytes": 11834,
+      "size_mb": 0.011,
+      "sha256": "09151d1b2aa71bf75c8c60ec26eafe48136bf3cb674ef902415fa8740d9c3e1a",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/generate_contact_sheets.py",
+      "filename": "generate_contact_sheets.py",
+      "size_bytes": 12117,
+      "size_mb": 0.012,
+      "sha256": "965fe381283bc4763af9dc549df844782f583ba3010b7c0e690f3d4334cfc953",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/generate_model_manifest.py",
+      "filename": "generate_model_manifest.py",
+      "size_bytes": 21594,
+      "size_mb": 0.021,
+      "sha256": "d5a10434545b2714edc47bf15b817aa9bffa7933e2a893c8caebc505604fb488",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/generate_point_cloud.py",
+      "filename": "generate_point_cloud.py",
+      "size_bytes": 5017,
+      "size_mb": 0.005,
+      "sha256": "225abdbc525450901b0361384da15042d3be5edcf67272a08106f8b3b1fb30d3",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/generate_sprint10_1_deliverables.py",
+      "filename": "generate_sprint10_1_deliverables.py",
+      "size_bytes": 32004,
+      "size_mb": 0.031,
+      "sha256": "79d98a417474a047c0b8a7ccf39226cb47179b043964e25a6bf61b5dd420cece",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/generate_sprint10_demo_deliverables.py",
+      "filename": "generate_sprint10_demo_deliverables.py",
+      "size_bytes": 16329,
+      "size_mb": 0.016,
+      "sha256": "71656cc652f7629b6478f009e1be8e1d0d2553d4b6244b92dae51ca989f97afb",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/generate_sprint1_candidates.py",
+      "filename": "generate_sprint1_candidates.py",
+      "size_bytes": 16839,
+      "size_mb": 0.016,
+      "sha256": "b1816c33d6cebbfaffcaeb0c68d068197957d9bad6b24819f96af50721eddc06",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_crossing.py",
+      "filename": "inspect_crossing.py",
+      "size_bytes": 820,
+      "size_mb": 0.001,
+      "sha256": "0a15160e5fd567b914ee220af75e7c3a8aa90a9576a4766d3931d26f6bb04cc6",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_disaster_metrics.py",
+      "filename": "inspect_disaster_metrics.py",
+      "size_bytes": 1337,
+      "size_mb": 0.001,
+      "sha256": "6420be382e9018e69bc4a9b647a5bdcf54c05927f4a532a33d1b7066adf91ff6",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_fr_coords.py",
+      "filename": "inspect_fr_coords.py",
+      "size_bytes": 1369,
+      "size_mb": 0.001,
+      "sha256": "572b2f33f740683a24707c857d4bc6b1ebe53f8bea4487bde1779d6692ee48c9",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_frame0_vehicle.py",
+      "filename": "inspect_frame0_vehicle.py",
+      "size_bytes": 1156,
+      "size_mb": 0.001,
+      "sha256": "0afec9a0594373f69199eb6e5c0b609e550c41decb9d934ebaba294407632b6c",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_frame_selection.py",
+      "filename": "inspect_frame_selection.py",
+      "size_bytes": 837,
+      "size_mb": 0.001,
+      "sha256": "d8563d976a283fd175a98b56efc876bd32766eb45efb1fd20619b2c58de6ee0a",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_rb_fr_coords.py",
+      "filename": "inspect_rb_fr_coords.py",
+      "size_bytes": 1141,
+      "size_mb": 0.001,
+      "sha256": "4be5a6334b59a668599c679a89be907d3d358d53cfcc84ac51da4c7c2cb9797e",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_sand_profile.py",
+      "filename": "inspect_sand_profile.py",
+      "size_bytes": 1121,
+      "size_mb": 0.001,
+      "sha256": "2e22933861ac9743cb1bd5fcfbe237046d1bbae3c4bbc8d11d52e057a2433469",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/inspect_sprint9_sources.py",
+      "filename": "inspect_sprint9_sources.py",
+      "size_bytes": 2550,
+      "size_mb": 0.002,
+      "sha256": "60533112c10a0164c07917d18d15ab9b3f9761124dbad5ef2d90e08c0c078578",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/map_rb_coords.py",
+      "filename": "map_rb_coords.py",
+      "size_bytes": 1510,
+      "size_mb": 0.001,
+      "sha256": "5941522c38c70c18bb573a8b964b7b1d4d39b9f9aa74877a5ca6a7616b379169",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/preview_point_cloud.py",
+      "filename": "preview_point_cloud.py",
+      "size_bytes": 10779,
+      "size_mb": 0.01,
+      "sha256": "1fc525e346dea2ffe9b7df845daad8fe007d641b86e03c03b5194875bea3a494",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/reconstruct_desert_road_corrected.py",
+      "filename": "reconstruct_desert_road_corrected.py",
+      "size_bytes": 16266,
+      "size_mb": 0.016,
+      "sha256": "9188cd54134d7fb5e111a893be821a8e56ff9b750f6b76fded81a976b05eeb3f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/reconstruct_mesh.py",
+      "filename": "reconstruct_mesh.py",
+      "size_bytes": 28513,
+      "size_mb": 0.027,
+      "sha256": "6c055ee53b111622144345a17b8316ff73d236cd753481b12bebe2c376061a6e",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/reconstruct_repaired_and_extended.py",
+      "filename": "reconstruct_repaired_and_extended.py",
+      "size_bytes": 6129,
+      "size_mb": 0.006,
+      "sha256": "4c375c16ae0ecd82eb7915d4b89ee169b59b33a53b05e156269267fc7cca3b8a",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_bridge_actual.py",
+      "filename": "render_bridge_actual.py",
+      "size_bytes": 837,
+      "size_mb": 0.001,
+      "sha256": "4b93b364ad6785e6480781116db3abac0ffde11d57adf9625f9c47abcaddbc11",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_bridge_cam7.py",
+      "filename": "render_bridge_cam7.py",
+      "size_bytes": 928,
+      "size_mb": 0.001,
+      "sha256": "beec7d71ebd5a8120c9003e7f7fbc45fa917ae4a93cb7f427c2db416557403ef",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_bridge_crossing.py",
+      "filename": "render_bridge_crossing.py",
+      "size_bytes": 834,
+      "size_mb": 0.001,
+      "sha256": "a2543d9fc26d632abf8ed07c4bbc641766c406d759d96fa0d17bab29b3a8737a",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_bridge_exact.py",
+      "filename": "render_bridge_exact.py",
+      "size_bytes": 1264,
+      "size_mb": 0.001,
+      "sha256": "f4e8391274b1949eb4c3ce91a79cabced929afc76200848c1e74aa9d9933ae5e",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_bridge_perfect.py",
+      "filename": "render_bridge_perfect.py",
+      "size_bytes": 884,
+      "size_mb": 0.001,
+      "sha256": "83f9677d2432d2b091924d3169e1106ebaa05a122809100a2480f9bcb4e397d8",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_candidate_a_stages.py",
+      "filename": "render_candidate_a_stages.py",
+      "size_bytes": 3333,
+      "size_mb": 0.003,
+      "sha256": "6a1cffb62418fe7c8bc7fd9fbad84ead9a1ff16d387e45b016a32fcfdc15564f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_model_comparisons.py",
+      "filename": "render_model_comparisons.py",
+      "size_bytes": 6005,
+      "size_mb": 0.006,
+      "sha256": "adc29e89baacfa8859e40bdfb40eece802e677cbc5a3641eccc13c993ba1ceb0",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/render_production_validation.py",
+      "filename": "render_production_validation.py",
+      "size_bytes": 11769,
+      "size_mb": 0.011,
+      "sha256": "e788c81115b4e45239060f5e6f71df97a66cb274fc1df4b28d0dca088eaec41c",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_all_scenes_quality_v1.py",
+      "filename": "run_all_scenes_quality_v1.py",
+      "size_bytes": 25361,
+      "size_mb": 0.024,
+      "sha256": "18ea11f585ea9faff0e4f3b057a218d71019c33b582d13e26a778236549711c0",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_clean_candidate_b.py",
+      "filename": "run_clean_candidate_b.py",
+      "size_bytes": 7783,
+      "size_mb": 0.007,
+      "sha256": "5598a4daaae98a9141ae09d3f0b02351110b8f78a278bb260b23d8b75643c00a",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_clean_candidate_b_v3.py",
+      "filename": "run_clean_candidate_b_v3.py",
+      "size_bytes": 8068,
+      "size_mb": 0.008,
+      "sha256": "c54343ca078cbccaf22a6f1948f94df01245155dba6256183668bce52a00cda2",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_clean_candidate_b_v4.py",
+      "filename": "run_clean_candidate_b_v4.py",
+      "size_bytes": 7891,
+      "size_mb": 0.008,
+      "sha256": "239231c97f3c0dd192b126b07c5b26e2b056352bc4e8cb250047d83d4c178647",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_forest_inference.py",
+      "filename": "run_forest_inference.py",
+      "size_bytes": 2488,
+      "size_mb": 0.002,
+      "sha256": "0a4add9d324c220b514ffd05ae4f549dc87748680b491cbbe2261ec121a85b5d",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_general_pipeline_experiments.py",
+      "filename": "run_general_pipeline_experiments.py",
+      "size_bytes": 12721,
+      "size_mb": 0.012,
+      "sha256": "08ad755429e0fc57952947277a31fc57beb543b359199cc48f2d70d8192cbe76",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_generalization_validation.py",
+      "filename": "run_generalization_validation.py",
+      "size_bytes": 21183,
+      "size_mb": 0.02,
+      "sha256": "33a723194f38d0950b432e1353586bb8cebb74cd3cf167673a99091f803538e1",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_high_quality_multiframe.py",
+      "filename": "run_high_quality_multiframe.py",
+      "size_bytes": 22800,
+      "size_mb": 0.022,
+      "sha256": "e0b7cf943383ddc9fd3f92e6f8959beef70f3b0d5a1c56ee0cf5163c9635a3a7",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_photographic_texturing_v1.py",
+      "filename": "run_photographic_texturing_v1.py",
+      "size_bytes": 18396,
+      "size_mb": 0.018,
+      "sha256": "56e61f5a9229434458775145a7ff4ab23ec0192d38fbcd929d0a4a29c562f02c",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_quality_recovery_v2.py",
+      "filename": "run_quality_recovery_v2.py",
+      "size_bytes": 35768,
+      "size_mb": 0.034,
+      "sha256": "b7acf55162c27e4aee2d827ef0d20499d9336371f75f833277334bcb3ed3beab",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_recovery_experiments.py",
+      "filename": "run_recovery_experiments.py",
+      "size_bytes": 19331,
+      "size_mb": 0.018,
+      "sha256": "089dbcc64369d9c6e7ac02c259441e05f6f0b7028e1412e1b2cc6c5c2cf95ac0",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7_single_window_reconstruction.py",
+      "filename": "run_sprint7_single_window_reconstruction.py",
+      "size_bytes": 34566,
+      "size_mb": 0.033,
+      "sha256": "59af41678c3f27ae9b89f6db43da17dd0e9a0ce9c223f183597c9277d600e8fc",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7c_remaining_scenes.py",
+      "filename": "run_sprint7c_remaining_scenes.py",
+      "size_bytes": 42796,
+      "size_mb": 0.041,
+      "sha256": "020fec36bfbec46b54759fb45b8ebcfa9bc990c638a7b05d48f4c277d63c1308",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7d_all_scene_stabilization.py",
+      "filename": "run_sprint7d_all_scene_stabilization.py",
+      "size_bytes": 52337,
+      "size_mb": 0.05,
+      "sha256": "aa953642b1cf81dc7123846ddbe839be01ba1f549916a0973d2b0ea69a13c243",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7e_visual_acceptance_audit.py",
+      "filename": "run_sprint7e_visual_acceptance_audit.py",
+      "size_bytes": 55476,
+      "size_mb": 0.053,
+      "sha256": "a59087e29da0ee8342e474099044d8d31a7fb231d0d66c536191b25380df2e8f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7f_final_acceptance.py",
+      "filename": "run_sprint7f_final_acceptance.py",
+      "size_bytes": 35968,
+      "size_mb": 0.034,
+      "sha256": "6c02f10410a58c78acf7af11bc0be037bf9c5f55de51972b0ea12be75b6e63ee",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7g_four_scene_recovery.py",
+      "filename": "run_sprint7g_four_scene_recovery.py",
+      "size_bytes": 64327,
+      "size_mb": 0.061,
+      "sha256": "2920053c06c7a1000a76ec89f683939c7104946a8c3bf1a592903a07519a0fc3",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint7h_final_defect_recovery.py",
+      "filename": "run_sprint7h_final_defect_recovery.py",
+      "size_bytes": 67135,
+      "size_mb": 0.064,
+      "sha256": "be9a105c0cd7971d27d11bb43bb85fdafaf8b78d11b7740c0a909c72dccdbd25",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/run_sprint9_video_to_viewer.py",
+      "filename": "run_sprint9_video_to_viewer.py",
+      "size_bytes": 71945,
+      "size_mb": 0.069,
+      "sha256": "753c71c1bf040ccb29885aeeeffe0a768b6eece06f53be2037276a6e472ae1bf",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/screen_candidate_videos.py",
+      "filename": "screen_candidate_videos.py",
+      "size_bytes": 10482,
+      "size_mb": 0.01,
+      "sha256": "505b122c5e03654c32ca7a393ba8005317daf405036b3b7e580d31d22e7ba107",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/serve_viewer.py",
+      "filename": "serve_viewer.py",
+      "size_bytes": 3095,
+      "size_mb": 0.003,
+      "sha256": "969304cc4d57467b7bec9c9f4e4ce05e847800d8a90b6510f4c31c7d38f2d51e",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_bridge_framing.py",
+      "filename": "test_bridge_framing.py",
+      "size_bytes": 1423,
+      "size_mb": 0.001,
+      "sha256": "9d037af109b74b25cd0698598779c51daa26a9a9c412df52aa60430f54a947ec",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_bridge_framing_v2.py",
+      "filename": "test_bridge_framing_v2.py",
+      "size_bytes": 1707,
+      "size_mb": 0.002,
+      "sha256": "db67aacb8b71a26c6b39bb2bfe14b6105e0813d7fa8463f1d4ea4dd11721a899",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_bridge_lookats.py",
+      "filename": "test_bridge_lookats.py",
+      "size_bytes": 1062,
+      "size_mb": 0.001,
+      "sha256": "a972b4a48aa2dafb96bbf1a1457302bf0fe4a30a7a9806b51ff1201dc118cfff",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_bridge_pinhole.py",
+      "filename": "test_bridge_pinhole.py",
+      "size_bytes": 1518,
+      "size_mb": 0.001,
+      "sha256": "13bbed887bff21c43f6e97cc6f76f80664bb19f5dd8d3d932b9acab9ee7431c4",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_bridge_zoom.py",
+      "filename": "test_bridge_zoom.py",
+      "size_bytes": 954,
+      "size_mb": 0.001,
+      "sha256": "24ac35bcca30403fcbd58bd4acf6302746823ea8a8b0f4f83afb5de8e70d27ec",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_candidate_b_recovery.py",
+      "filename": "test_candidate_b_recovery.py",
+      "size_bytes": 7578,
+      "size_mb": 0.007,
+      "sha256": "663ac2ee7e9f02c020d8f509f9f5d1a31418128b02b6c2b5ce561f76ed685252",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_car_elevation.py",
+      "filename": "test_car_elevation.py",
+      "size_bytes": 1048,
+      "size_mb": 0.001,
+      "sha256": "4ebfdda997518a78bdcdb6bf51c003fadb893e4c4da5b852eb43246682de98db",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_face_cams.py",
+      "filename": "test_face_cams.py",
+      "size_bytes": 3011,
+      "size_mb": 0.003,
+      "sha256": "cefaa10b1509dbd96ac20a5449f3e53ec0ba4a5d50b6173cfb7eed1a6a9287df",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_fr_road_closeup.py",
+      "filename": "test_fr_road_closeup.py",
+      "size_bytes": 824,
+      "size_mb": 0.001,
+      "sha256": "41b18047405a17c14654e71f73e1a7c86eb4085a525dcba2416d9e0c2f120e56",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_fr_road_view.py",
+      "filename": "test_fr_road_view.py",
+      "size_bytes": 870,
+      "size_mb": 0.001,
+      "sha256": "bf8630fe075f620f3a9f351ca296d98243ef6911c132f2797fcf53c762b9e6c4",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/test_inpaint_car.py",
+      "filename": "test_inpaint_car.py",
+      "size_bytes": 1055,
+      "size_mb": 0.001,
+      "sha256": "22fbc61b966dec455e094c3f4d55ee4ce458ddb1118d33e18a025009be411131",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/texture_mesh.py",
+      "filename": "texture_mesh.py",
+      "size_bytes": 27315,
+      "size_mb": 0.026,
+      "sha256": "04a6c4f74a46efd9f58d50ed87a9dcfeb2286d51cf9a2693436348a36439d46f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/trace_desert_projections.py",
+      "filename": "trace_desert_projections.py",
+      "size_bytes": 2149,
+      "size_mb": 0.002,
+      "sha256": "ffb141d752a946d8d2901fee0a781d35430f3cddadb94b2fb47a588fdba9e8d0",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/unproject_bridge.py",
+      "filename": "unproject_bridge.py",
+      "size_bytes": 1207,
+      "size_mb": 0.001,
+      "sha256": "9354b086b303107aa23b53d9e953752473d81ae8565bf84cca79115884158239",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/validate_sprint1_geometry_and_filtering.py",
+      "filename": "validate_sprint1_geometry_and_filtering.py",
+      "size_bytes": 19683,
+      "size_mb": 0.019,
+      "sha256": "6c172e6e7e89f57352a40a94f1b8a65efcc1fc7bb0311fb53db7e5053411d5a5",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/view_point_cloud.py",
+      "filename": "view_point_cloud.py",
+      "size_bytes": 6302,
+      "size_mb": 0.006,
+      "sha256": "89341e760e9c6135db6e6e7930d30e9c1733933d81a91ae741be6221a3c0fb26",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "scripts/zoom_bridge.py",
+      "filename": "zoom_bridge.py",
+      "size_bytes": 1864,
+      "size_mb": 0.002,
+      "sha256": "c70632dee98199d0801a541b30cf684bc17ad9d793be321aac3a1379158812e0",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/__init__.py",
+      "filename": "__init__.py",
+      "size_bytes": 31,
+      "size_mb": 0.0,
+      "sha256": "255a480f8f7280e57cf6485320390559cb26e1fc84ce9c3bd4998db7c23d1da3",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/geo/__init__.py",
+      "filename": "__init__.py",
+      "size_bytes": 952,
+      "size_mb": 0.001,
+      "sha256": "f98bf726679a418628b6a23e59be72929a2d34e29f7dcb3fa40d382e240a7596",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/geo/batch_alignment.py",
+      "filename": "batch_alignment.py",
+      "size_bytes": 32636,
+      "size_mb": 0.031,
+      "sha256": "1c800d24803660621f14f372c441e6196245599f8883e08098348a8b3d4403dd",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/geo/quality_gates.py",
+      "filename": "quality_gates.py",
+      "size_bytes": 18823,
+      "size_mb": 0.018,
+      "sha256": "22d1c55d50d4099ec838f9b99bc9dc21b9112bec63fde1c461c4dfc66b0c08cb",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/geo/telemetry.py",
+      "filename": "telemetry.py",
+      "size_bytes": 17367,
+      "size_mb": 0.017,
+      "sha256": "d6c1189be02c1561fea8b01d03ef8a8b1464787df4783a2305968c7796bd3a9c",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/geo/umeyama_ransac.py",
+      "filename": "umeyama_ransac.py",
+      "size_bytes": 15340,
+      "size_mb": 0.015,
+      "sha256": "527f7bd2bba3d6dfe0887d7ca030c8acc28c2db667d4afb7ac46ee706ac99c8f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/reconstruction/__init__.py",
+      "filename": "__init__.py",
+      "size_bytes": 223,
+      "size_mb": 0.0,
+      "sha256": "937069187443f8e2e457fb129513b79d37bf7f3cdd6535063e0e271da0eafdb8",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/reconstruction/multiframe_stitcher.py",
+      "filename": "multiframe_stitcher.py",
+      "size_bytes": 24851,
+      "size_mb": 0.024,
+      "sha256": "473b9374c1423b740cb1b0810e77680e4b8b5cd498e90b7719f43c275667457f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/reconstruction/photographic_texture.py",
+      "filename": "photographic_texture.py",
+      "size_bytes": 28276,
+      "size_mb": 0.027,
+      "sha256": "e066285575cdebc670047b12b41b57e7e8434b7f425526949ff32e58d907b86e",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/reconstruction/pipeline.py",
+      "filename": "pipeline.py",
+      "size_bytes": 32493,
+      "size_mb": 0.031,
+      "sha256": "aca98619dfac19290388fc26fe5f5d7f8614906291b01a3f3a5c0c95d3c75859",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/reconstruction/point_cloud.py",
+      "filename": "point_cloud.py",
+      "size_bytes": 20546,
+      "size_mb": 0.02,
+      "sha256": "c87c8a9934809dcbb94a7cc844d45025a0ddbfe166f46b695a1f478a44146820",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/vggt/__init__.py",
+      "filename": "__init__.py",
+      "size_bytes": 90,
+      "size_mb": 0.0,
+      "sha256": "8fd1ea10148629fb7a885e89e7e9b64929376c97f06e39b151397b1755438e08",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/vggt/inference.py",
+      "filename": "inference.py",
+      "size_bytes": 7218,
+      "size_mb": 0.007,
+      "sha256": "0e6dc47b402f84aa0921d51ddab1eb716331b7fbeccb55abfceda611c5a97d12",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/video/__init__.py",
+      "filename": "__init__.py",
+      "size_bytes": 93,
+      "size_mb": 0.0,
+      "sha256": "2ef6b29181e9c41cd67bd2ca910bcf95749eeafe6e852af75eab69b503bda85a",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/video/extract_frames.py",
+      "filename": "extract_frames.py",
+      "size_bytes": 4121,
+      "size_mb": 0.004,
+      "sha256": "b3f4ced02f136eb1a951c35edd78450f7867ec014af21f4293a90d16d1d8f1ab",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "src/video/frame_sampler.py",
+      "filename": "frame_sampler.py",
+      "size_bytes": 7699,
+      "size_mb": 0.007,
+      "sha256": "19b7b61aabcf686f735f927ebd4e742553fbf01e537cf2fa6373c46c05365320",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "start_forge_explorer.bat",
+      "filename": "start_forge_explorer.bat",
+      "size_bytes": 3612,
+      "size_mb": 0.003,
+      "sha256": "6ab866d8d9504d533cc16864432b2bb2ec3ffcd11dfbfff68cf45d83ee6a4966",
+      "type": "Windows Shell Script"
+    },
+    {
+      "relative_path": "tests/test_general_pipeline.py",
+      "filename": "test_general_pipeline.py",
+      "size_bytes": 4623,
+      "size_mb": 0.004,
+      "sha256": "ce820ad89a933e7f8ddcca3e6bd23c0aa0ee5e7a9900f32db408d2ae486c891f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_geo_alignment.py",
+      "filename": "test_geo_alignment.py",
+      "size_bytes": 19175,
+      "size_mb": 0.018,
+      "sha256": "c54bc025a554ad27ed1aabc8dfa9222df208596e0779b89c647420b7331ccd22",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_inputs/synth_view_01.png",
+      "filename": "synth_view_01.png",
+      "size_bytes": 3053,
+      "size_mb": 0.003,
+      "sha256": "315ed9ba575f1b59bebe17d8d6dd76ee7f8c407a9745b6188a3e79e4757e9285",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "tests/test_inputs/synth_view_02.png",
+      "filename": "synth_view_02.png",
+      "size_bytes": 3060,
+      "size_mb": 0.003,
+      "sha256": "4838a20b5212014097475db67227d8948200ef8df9d087d684ef13a3565c3bff",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "tests/test_multiframe_reconstruction.py",
+      "filename": "test_multiframe_reconstruction.py",
+      "size_bytes": 6008,
+      "size_mb": 0.006,
+      "sha256": "9f03c22d39cb0f5c875e70c8133ea1a8fae6573b61b2094d216a2dde0a6fa2d1",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_photographic_texture.py",
+      "filename": "test_photographic_texture.py",
+      "size_bytes": 9790,
+      "size_mb": 0.009,
+      "sha256": "d1351d9055ef2d8007ef91aac49b533865a8fdfcb2f26131f6d6ada667674cf2",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_point_cloud_accuracy.py",
+      "filename": "test_point_cloud_accuracy.py",
+      "size_bytes": 3183,
+      "size_mb": 0.003,
+      "sha256": "3a4fa4b16a9a820c9672b14a6c2a4e9bfb3ad99edfaf63969dd5484955fe8a54",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_quality_recovery_sprint3.py",
+      "filename": "test_quality_recovery_sprint3.py",
+      "size_bytes": 6167,
+      "size_mb": 0.006,
+      "sha256": "e4714943d64eba1f4f19d1208b9158c7223c2b310975ebf4cb64a30db8b0d356",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_source_audit_and_defect_correction.py",
+      "filename": "test_source_audit_and_defect_correction.py",
+      "size_bytes": 4730,
+      "size_mb": 0.005,
+      "sha256": "8ebc1524c8c70f28d771d9d532a09b604e8ba8334a20b70bb001f183124ab442",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint10_1_viewer_refinement.py",
+      "filename": "test_sprint10_1_viewer_refinement.py",
+      "size_bytes": 8212,
+      "size_mb": 0.008,
+      "sha256": "32883fbb4d0fdd6d70f7b26484fe4dcbc58d0710f0e9a8982ff8de0819290488",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint10_2_standalone_review.py",
+      "filename": "test_sprint10_2_standalone_review.py",
+      "size_bytes": 8630,
+      "size_mb": 0.008,
+      "sha256": "4c705d57321a8464f520dd243a5e9595e8f9ac7f373d75f9c6f9c0147a8aca1e",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint10_demo_hardening.py",
+      "filename": "test_sprint10_demo_hardening.py",
+      "size_bytes": 4202,
+      "size_mb": 0.004,
+      "sha256": "cfc9dd8a406624322cfa8a0d13a8a28ad49c3e39fb3aead4639480ea30ec9691",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint1_stabilization.py",
+      "filename": "test_sprint1_stabilization.py",
+      "size_bytes": 5546,
+      "size_mb": 0.005,
+      "sha256": "06cf484741a3f0388219d8d15a33797456302c1a3a9df8c86a981c4328d5806f",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint6_all_scenes_reconstruction.py",
+      "filename": "test_sprint6_all_scenes_reconstruction.py",
+      "size_bytes": 4011,
+      "size_mb": 0.004,
+      "sha256": "2468918797663558be04c3d976120f33d457c050f84dcabc45e07b08b56662fb",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7_single_window_stabilization.py",
+      "filename": "test_sprint7_single_window_stabilization.py",
+      "size_bytes": 12322,
+      "size_mb": 0.012,
+      "sha256": "77e5175385c78354548d9aecfe08737e0573f23d524d03ca74592c675b1a0b8c",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7c_remaining_scenes.py",
+      "filename": "test_sprint7c_remaining_scenes.py",
+      "size_bytes": 6436,
+      "size_mb": 0.006,
+      "sha256": "30604c4a8720e567fb1ada8ab6107a427ab825dc953e70b6ebc959c336d02057",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7d_all_scene_geometry_stabilization.py",
+      "filename": "test_sprint7d_all_scene_geometry_stabilization.py",
+      "size_bytes": 7760,
+      "size_mb": 0.007,
+      "sha256": "3e16ed105856acb4203d383d281eb2bd050039f42029418a5c2e6bc6f85f3503",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7e_visual_acceptance_audit.py",
+      "filename": "test_sprint7e_visual_acceptance_audit.py",
+      "size_bytes": 5316,
+      "size_mb": 0.005,
+      "sha256": "cca08678f38d87e8fde5d9b5b17405e90c803a7d1b3e9a1f2dfd29e42b79b832",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7f_final_acceptance.py",
+      "filename": "test_sprint7f_final_acceptance.py",
+      "size_bytes": 9864,
+      "size_mb": 0.009,
+      "sha256": "96678e3a6f88f86b3419647c1972c3038d01d1024aae461060b6e29527317e32",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7g_four_scene_recovery.py",
+      "filename": "test_sprint7g_four_scene_recovery.py",
+      "size_bytes": 7592,
+      "size_mb": 0.007,
+      "sha256": "96c99842c1c7b30acbdc0e89c9a6d59fa1aadc09e61ab784c3394f0769c21bcb",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint7h_final_defect_recovery.py",
+      "filename": "test_sprint7h_final_defect_recovery.py",
+      "size_bytes": 9893,
+      "size_mb": 0.009,
+      "sha256": "c5d605e537b5a193b8ab330d72d6073d1cff7ab4e868529789d01ac02bb71886",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint8_viewer_platform.py",
+      "filename": "test_sprint8_viewer_platform.py",
+      "size_bytes": 10508,
+      "size_mb": 0.01,
+      "sha256": "b3cca72c60540722de94622486d95fe2e97ad0e3b36f26b9d6ad2294ad9707ec",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_sprint9_video_to_viewer.py",
+      "filename": "test_sprint9_video_to_viewer.py",
+      "size_bytes": 6400,
+      "size_mb": 0.006,
+      "sha256": "62e5721f5314169140823deaf44bdd63d93d1a021bbe45c52fc9be7435cc9de7",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_vggt_loading.py",
+      "filename": "test_vggt_loading.py",
+      "size_bytes": 8334,
+      "size_mb": 0.008,
+      "sha256": "c91efb3b76c2617c650a99dc645e314fa36837cf5908cfebf719b60a826308f0",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "tests/test_window_alignment_forensics.py",
+      "filename": "test_window_alignment_forensics.py",
+      "size_bytes": 4511,
+      "size_mb": 0.004,
+      "sha256": "39c19b253e8087632f793712607772799025879f56e34cb24a828ca2d39c2f4d",
+      "type": "Python Source Script"
+    },
+    {
+      "relative_path": "viewer/dist/assets/index-C8Dtvc-7.css",
+      "filename": "index-C8Dtvc-7.css",
+      "size_bytes": 11710,
+      "size_mb": 0.011,
+      "sha256": "f697e40f53bb6b1d04023b948aa23eb89886a39d130f37e9da68dee9a213f377",
+      "type": "CSS Stylesheet"
+    },
+    {
+      "relative_path": "viewer/dist/assets/index-CAkkC1iq.js",
+      "filename": "index-CAkkC1iq.js",
+      "size_bytes": 985544,
+      "size_mb": 0.94,
+      "sha256": "dc15051d4356a02f73b5702fd99b293d7d2f7e907bf2e261e6dc3cfe1b2dc8bf",
+      "type": "JavaScript Source Code"
+    },
+    {
+      "relative_path": "viewer/dist/favicon.svg",
+      "filename": "favicon.svg",
+      "size_bytes": 470,
+      "size_mb": 0.0,
+      "sha256": "87471caf4d33fedf3732b4312d937aaef71d0903f159b3432ff576ce772de534",
+      "type": "Binary/Data (.svg)"
+    },
+    {
+      "relative_path": "viewer/dist/icons.svg",
+      "filename": "icons.svg",
+      "size_bytes": 5031,
+      "size_mb": 0.005,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "type": "Binary/Data (.svg)"
+    },
+    {
+      "relative_path": "viewer/dist/index.html",
+      "filename": "index.html",
+      "size_bytes": 1030,
+      "size_mb": 0.001,
+      "sha256": "a657162ee49b6b5dbbfb27b0573b7ab343967b477b509d483b4659e779078718",
+      "type": "HTML Web Document"
+    },
+    {
+      "relative_path": "viewer/dist/model-manifest.json",
+      "filename": "model-manifest.json",
+      "size_bytes": 19887,
+      "size_mb": 0.019,
+      "sha256": "53e51c893d3330f242e41a9bf7275e5091bfc2153f2616696644a21ea42e262f",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "viewer/public/favicon.svg",
+      "filename": "favicon.svg",
+      "size_bytes": 470,
+      "size_mb": 0.0,
+      "sha256": "87471caf4d33fedf3732b4312d937aaef71d0903f159b3432ff576ce772de534",
+      "type": "Binary/Data (.svg)"
+    },
+    {
+      "relative_path": "viewer/public/icons.svg",
+      "filename": "icons.svg",
+      "size_bytes": 5031,
+      "size_mb": 0.005,
+      "sha256": "b45fa506195cfcdef406ba9f0c77b36ddc1a7c224040926ec70abc2fdea7b93a",
+      "type": "Binary/Data (.svg)"
+    },
+    {
+      "relative_path": "viewer/public/model-manifest.json",
+      "filename": "model-manifest.json",
+      "size_bytes": 19877,
+      "size_mb": 0.019,
+      "sha256": "050e22922f8de6da130d0323850a6c4e029c057974b931d5f2f62964a8d4a1e1",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "viewer/src/App.css",
+      "filename": "App.css",
+      "size_bytes": 2891,
+      "size_mb": 0.003,
+      "sha256": "6e25a776d3e8102da5bacb3cb99f4a5fc662a2e01e6143140671a556d28c3d5c",
+      "type": "CSS Stylesheet"
+    },
+    {
+      "relative_path": "viewer/src/App.tsx",
+      "filename": "App.tsx",
+      "size_bytes": 8704,
+      "size_mb": 0.008,
+      "sha256": "280dd762f1b0719ee50a0a9c73f0fa90ece312b203fd5232a87d8780d3f8a03f",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/assets/hero.png",
+      "filename": "hero.png",
+      "size_bytes": 13057,
+      "size_mb": 0.012,
+      "sha256": "881ffbcaafc212e49addad08846a5b82761355fa20624253af3477ba33262c5c",
+      "type": "Texture Map / Preview Render (PNG)"
+    },
+    {
+      "relative_path": "viewer/src/assets/react.svg",
+      "filename": "react.svg",
+      "size_bytes": 4126,
+      "size_mb": 0.004,
+      "sha256": "35ef61ed53b323ae94a16a8ec659b3d0af3880698791133f23b084085ab1c2e5",
+      "type": "Binary/Data (.svg)"
+    },
+    {
+      "relative_path": "viewer/src/assets/vite.svg",
+      "filename": "vite.svg",
+      "size_bytes": 8709,
+      "size_mb": 0.008,
+      "sha256": "5be21acd42eb7b896e517f4e0f0f11eb5c5d9e54fbbcebe9453f033008fcca6f",
+      "type": "Binary/Data (.svg)"
+    },
+    {
+      "relative_path": "viewer/src/components/ComparisonView.tsx",
+      "filename": "ComparisonView.tsx",
+      "size_bytes": 8755,
+      "size_mb": 0.008,
+      "sha256": "81b3296d8c7493c5812ee349a58fbd37d1a369df3ad66b45a1c36c54e9de0991",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/GeometryStatsDisplay.tsx",
+      "filename": "GeometryStatsDisplay.tsx",
+      "size_bytes": 4678,
+      "size_mb": 0.004,
+      "sha256": "dc874cfb4584e36600ec9a294de5ce8edb3085e985e99e6b31a9f37f629e8373",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/Header.tsx",
+      "filename": "Header.tsx",
+      "size_bytes": 3654,
+      "size_mb": 0.003,
+      "sha256": "9b408ecfd51b12d0b760e3bdf3bdb255b0a7ada477c57ba5aba91dc8216a55b7",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/HelpModal.tsx",
+      "filename": "HelpModal.tsx",
+      "size_bytes": 4348,
+      "size_mb": 0.004,
+      "sha256": "f7446f73aa36b2e018e09a842f4093bccc0840caa2e6576dbf9ca429b3ba6a88",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/InspectionPanel.tsx",
+      "filename": "InspectionPanel.tsx",
+      "size_bytes": 12145,
+      "size_mb": 0.012,
+      "sha256": "9ff9746eef933294bf3193434c6acc28b15f51a0ed6a225ee739b8d02c613a6a",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/SceneLibrary.tsx",
+      "filename": "SceneLibrary.tsx",
+      "size_bytes": 2996,
+      "size_mb": 0.003,
+      "sha256": "0201b84436ffb1d12d840d111d84d4f8f9bb4995f89c98876203f9003e750968",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/Toolbar.tsx",
+      "filename": "Toolbar.tsx",
+      "size_bytes": 9105,
+      "size_mb": 0.009,
+      "sha256": "7475c8814495969c1f321947836a025426b6096956152b99ea778e04250bd5c0",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/Viewport3D.tsx",
+      "filename": "Viewport3D.tsx",
+      "size_bytes": 19505,
+      "size_mb": 0.019,
+      "sha256": "0383bc6727eea1143bff1fd638cb73d319a13e3fea846d7e0384d1b61ff1c79c",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/components/WorkflowModal.tsx",
+      "filename": "WorkflowModal.tsx",
+      "size_bytes": 18712,
+      "size_mb": 0.018,
+      "sha256": "d20c95d290cc258fc34518281e5eabd4804e670a2b82991036864d9160270b1b",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/data/model-manifest.json",
+      "filename": "model-manifest.json",
+      "size_bytes": 19887,
+      "size_mb": 0.019,
+      "sha256": "53e51c893d3330f242e41a9bf7275e5091bfc2153f2616696644a21ea42e262f",
+      "type": "Metadata / Manifest (JSON)"
+    },
+    {
+      "relative_path": "viewer/src/index.css",
+      "filename": "index.css",
+      "size_bytes": 14843,
+      "size_mb": 0.014,
+      "sha256": "98507e27a4a9530112f261ff26627a4dffbe3f8d3eec83edf8e1fe3baf8d3b99",
+      "type": "CSS Stylesheet"
+    },
+    {
+      "relative_path": "viewer/src/main.tsx",
+      "filename": "main.tsx",
+      "size_bytes": 230,
+      "size_mb": 0.0,
+      "sha256": "6e9e5807fcbd48b75a96db5cbef36c996262196be42e6d4760dc86babbe61ad2",
+      "type": "React TypeScript Component"
+    },
+    {
+      "relative_path": "viewer/src/types.ts",
+      "filename": "types.ts",
+      "size_bytes": 2497,
+      "size_mb": 0.002,
+      "sha256": "3c6a6eef112b68b91c44c5d788e2f3c4e0817f927a588e6526e8a9e85471828d",
+      "type": "TypeScript Source Code"
+    }
+  ]
+}

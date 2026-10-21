@@ -1,0 +1,227 @@
+{
+  "sprint": "Sprint 10.1",
+  "title": "Viewer Presentation, Camera Framing, and Metadata Consistency Validation",
+  "timestamp_utc": "2026-10-20T21:18:58.293547+00:00",
+  "release_baseline_dir": "outputs/accuracy_experiment/sprint9_video_to_viewer_release",
+  "all_passed": true,
+  "frontend_build": {
+    "builder": "Vite v8.3.4",
+    "status": "PASS",
+    "exit_code": 0,
+    "dist_html": "viewer/dist/index.html",
+    "dist_bundle_size_kb": 985.54
+  },
+  "test_suite": {
+    "runner": "pytest 7.4.4",
+    "test_file": "tests/test_sprint10_1_viewer_refinement.py",
+    "passed": 6,
+    "failed": 0,
+    "status": "PASS"
+  },
+  "camera_framing_presets": {
+    "campus_0049": {
+      "overview": {
+        "position": [
+          0.0,
+          4.2,
+          3.2
+        ],
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "facade": {
+        "position": [
+          0.55,
+          0.75,
+          0.95
+        ],
+        "target": [
+          0.013,
+          -0.079,
+          0.008
+        ]
+      }
+    },
+    "desert_road_candidate_a": {
+      "corridor": {
+        "position": [
+          0.0,
+          3.2,
+          1.8
+        ],
+        "target": [
+          0.0,
+          0.0,
+          -0.4
+        ]
+      }
+    },
+    "desert_road_candidate_b": {
+      "full_road": {
+        "position": [
+          0.0,
+          3.2,
+          1.8
+        ],
+        "target": [
+          0.0,
+          0.0,
+          -0.4
+        ]
+      },
+      "focus_vehicle": {
+        "position": [
+          0.33,
+          0.28,
+          0.98
+        ],
+        "target": [
+          0.084,
+          -0.053,
+          0.536
+        ]
+      }
+    },
+    "forest_road": {
+      "canopy_overview": {
+        "position": [
+          0.0,
+          2.5,
+          1.6
+        ],
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "roadway_corridor": {
+        "position": [
+          0.021,
+          0.92,
+          0.82
+        ],
+        "target": [
+          0.021,
+          0.089,
+          -0.035
+        ]
+      }
+    },
+    "river_bridge": {
+      "bridge_structure": {
+        "position": [
+          1.27,
+          1.13,
+          0.52
+        ],
+        "target": [
+          0.673,
+          0.232,
+          -0.681
+        ]
+      },
+      "valley_overview": {
+        "position": [
+          0.0,
+          4.0,
+          3.0
+        ],
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "screenshots_verified": [
+    {
+      "filename": "demo_campus_0049_overview.png",
+      "description": "Campus 0049 aerial overview showing grounds, walkways, roofs and reflecting pond",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_campus_0049_overview.png",
+      "size_bytes": 703545,
+      "verified_elements": [
+        "Viewport floating HUD",
+        "Unique Vertices: 128,336",
+        "Rendered Positions: 760,461",
+        "Triangles: 253,487"
+      ]
+    },
+    {
+      "filename": "demo_campus_0049_facade.png",
+      "description": "Campus 0049 dedicated facade-focused view observing true drone hovering telemetry limits without hallucinated details",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_campus_0049_facade.png",
+      "size_bytes": 1366062,
+      "verified_elements": [
+        "Facade View button active",
+        "Building facade framing",
+        "Grazing angle disclosure"
+      ]
+    },
+    {
+      "filename": "demo_desert_candidate_a.png",
+      "description": "Desert Road Candidate A clean static highway corridor with moving objects removed",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_desert_candidate_a.png",
+      "size_bytes": 488670,
+      "verified_elements": [
+        "Corridor View",
+        "Unique Vertices: 53,069",
+        "Rendered Positions: 316,401",
+        "Triangles: 105,467"
+      ]
+    },
+    {
+      "filename": "demo_desert_candidate_b_vehicle_focus.png",
+      "description": "Desert Road Candidate B Focus Vehicle camera preset directly framing the preserved Mini Cooper at reference coord [0.03, 0.04, 0.45]",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_desert_candidate_b_vehicle_focus.png",
+      "size_bytes": 907972,
+      "verified_elements": [
+        "Focus Vehicle active",
+        "Unique Vertices: 53,101",
+        "Rendered Positions: 316,554",
+        "Triangles: 105,518",
+        "Zero road box"
+      ]
+    },
+    {
+      "filename": "demo_desert_comparison.png",
+      "description": "Desert Road Candidate A/B side-by-side comparison with synchronized camera controls, persistent badges, and vehicle close-up inset",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_desert_comparison.png",
+      "size_bytes": 662479,
+      "verified_elements": [
+        "Candidate A badge",
+        "Candidate B badge",
+        "Vehicle Inset card",
+        "Cameras Linked button"
+      ]
+    },
+    {
+      "filename": "demo_forest_road_roadway.png",
+      "description": "Forest Road roadway corridor view showing continuous asphalt and double yellow lane markings",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_forest_road_roadway.png",
+      "size_bytes": 1097371,
+      "verified_elements": [
+        "Roadway View active",
+        "Unique Vertices: 462,896",
+        "Rendered Positions: 2,757,876",
+        "Triangles: 919,292"
+      ]
+    },
+    {
+      "filename": "demo_river_bridge_structure.png",
+      "description": "River/Bridge dedicated structural view framing bridge deck, concrete guard railings, vertical support piers, and riverbed channel",
+      "path": "outputs/accuracy_experiment/sprint10_1_viewer_refinement/screenshots/demo_river_bridge_structure.png",
+      "size_bytes": 862019,
+      "verified_elements": [
+        "Bridge Structure active",
+        "Bridge deck centered [0.673, 0.232, -0.681]",
+        "Unique Vertices: 132,424",
+        "Rendered Positions: 782,055"
+      ]
+    }
+  ]
+}

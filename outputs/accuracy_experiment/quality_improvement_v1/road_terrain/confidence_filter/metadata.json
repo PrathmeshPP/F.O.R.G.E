@@ -1,0 +1,73 @@
+{
+  "module": "F.O.R.G.E Spatial Reconstruction (Phase 2B - Controlled Accuracy)",
+  "timestamp_utc": "2026-10-18T09:19:57Z",
+  "coordinate_units_note": "Model coordinate units (nominally meters); not independently verified against ground truth survey/GCPs.",
+  "input": {
+    "depth_predictions_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\desert_road_validation\\predictions\\depth_predictions.npz",
+    "camera_poses_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\desert_road_validation\\predictions\\camera_poses.npz",
+    "frames_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\desert_road_validation\\frames",
+    "num_frames": 3,
+    "depth_resolution": {
+      "height": 384,
+      "width": 688
+    }
+  },
+  "filtering": {
+    "min_depth": 0.1,
+    "max_depth": 12.0,
+    "min_confidence": 1.5,
+    "subsample_step": 1,
+    "voxel_size": null
+  },
+  "reconstruction": {
+    "raw_filtered_points": 385481,
+    "total_points": 385481,
+    "fusion_reduction_ratio": 1.0,
+    "bounding_box": {
+      "min": [
+        -1.491,
+        -0.0512,
+        0.0509
+      ],
+      "max": [
+        1.5828,
+        0.1948,
+        4.0922
+      ],
+      "extents": [
+        3.0737,
+        0.246,
+        4.0412
+      ],
+      "centroid": [
+        0.0178,
+        0.1353,
+        0.8432
+      ]
+    },
+    "color_statistics": {
+      "mean_rgb": [
+        118.14,
+        103.48,
+        88.85
+      ],
+      "std_rgb": [
+        45.56,
+        30.96,
+        23.87
+      ]
+    },
+    "output_ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_improvement_v1\\road_terrain\\confidence_filter\\point_cloud_conf15.ply",
+    "output_ply_size_bytes": 5782395,
+    "output_ply_size_mb": 5.51,
+    "unfused_ply_path": null,
+    "unfused_ply_size_bytes": null
+  },
+  "performance": {
+    "backprojection_time_sec": 0.1119,
+    "fusion_time_sec": 0.0,
+    "ply_io_time_sec": 0.0132,
+    "total_reconstruction_time_sec": 0.3008
+  },
+  "status": "SUCCESS"
+}

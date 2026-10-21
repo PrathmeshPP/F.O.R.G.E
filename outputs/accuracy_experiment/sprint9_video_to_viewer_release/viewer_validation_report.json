@@ -1,0 +1,54 @@
+{
+  "timestamp_utc": "2026-10-20T20:40:05.506Z",
+  "sprint": "Sprint 9",
+  "viewer_status": "SUCCESS",
+  "url": "http://127.0.0.1:5173/",
+  "browser": "Microsoft Edge (Chromium Headless)",
+  "viewport": "1440x900",
+  "scenes_validated": [
+    {
+      "target": "Campus 0049",
+      "screenshot": "screenshot_campus_0049.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\viewer_screenshots\\screenshot_campus_0049.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Desert Road Cand A",
+      "screenshot": "screenshot_desert_road_candidate_a.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\viewer_screenshots\\screenshot_desert_road_candidate_a.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Desert Road Cand B",
+      "screenshot": "screenshot_desert_road_candidate_b.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\viewer_screenshots\\screenshot_desert_road_candidate_b.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Forest Road",
+      "screenshot": "screenshot_forest_road.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\viewer_screenshots\\screenshot_forest_road.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "River Bridge",
+      "screenshot": "screenshot_river_bridge.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\viewer_screenshots\\screenshot_river_bridge.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Desert Road Candidate A/B Comparison",
+      "screenshot": "screenshot_desert_road_comparison.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\viewer_screenshots\\screenshot_desert_road_comparison.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    }
+  ],
+  "console_errors_count": 0,
+  "errors": []
+}

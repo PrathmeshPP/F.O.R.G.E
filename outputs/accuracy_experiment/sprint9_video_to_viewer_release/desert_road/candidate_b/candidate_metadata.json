@@ -1,0 +1,46 @@
+{
+  "candidate": "Candidate B (Single-Vehicle Preserved - Shape-Aware Mask)",
+  "scene_name": "desert_road",
+  "candidate_key": "candidate_b",
+  "source_video_provenance": {
+    "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+    "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+    "size_bytes": 6539814,
+    "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+    "width": 1280,
+    "height": 720,
+    "fps": 23.976,
+    "frame_count": 477,
+    "duration_sec": 19.895,
+    "scene": "desert_road",
+    "verified": true,
+    "status": "AVAILABLE_AND_VERIFIED"
+  },
+  "reconstruction_run_id": "sprint9_video_to_viewer_release",
+  "mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\surface_mesh_repaired.ply",
+  "mesh_relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/desert_road/candidate_b/surface_mesh_repaired.ply",
+  "photographic_mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\surface_mesh_photographic.ply",
+  "textured_obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\textured_mesh.obj",
+  "sha256_geometry_hash": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+  "sha256_photographic_hash": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+  "sha256_obj_hash": "ee0fdd35524fff4357c048c29a4454fb982a7283ac1183f8d6ad863822f3a0f4",
+  "sha256_mtl_hash": "9768a160330c54d7a314081360d0c164902303a256327653c3c8fd6049edcc33",
+  "sha256_atlas_hash": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
+  "vertex_count": 53101,
+  "triangle_count": 105518,
+  "fused_points": 123057,
+  "boundary_statistics": {
+    "total_boundary_edges": 682,
+    "total_boundary_loops": 1,
+    "interior_holes_count": 0,
+    "max_boundary_jump_mm": 139.36,
+    "mean_boundary_jump_mm": 30.72,
+    "std_boundary_jump_mm": 38.59
+  },
+  "renders": {
+    "top": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\render_top.png",
+    "oblique": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\render_oblique.png",
+    "closeup": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\render_closeup.png",
+    "baseline_vs_new": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\baseline_vs_new.png"
+  }
+}

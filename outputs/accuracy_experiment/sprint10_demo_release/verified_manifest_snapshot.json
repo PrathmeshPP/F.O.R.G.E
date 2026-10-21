@@ -1,0 +1,145 @@
+{
+  "timestamp_utc": "2026-10-20T20:59:07Z",
+  "sprint": "Sprint 10",
+  "description": "Verified Asset Manifest Snapshot for National Hackathon Demonstration",
+  "manifest_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\viewer\\src\\data\\model-manifest.json",
+  "baseline_freeze": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release",
+  "total_scenes": 5,
+  "scenes": [
+    {
+      "id": "campus_0049",
+      "display_name": "Campus 0049",
+      "acceptance_status": "PARTIAL",
+      "vertex_count": 128336,
+      "triangle_count": 253487,
+      "representations_verified": {
+        "textured_obj": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\textured_mesh.obj",
+          "disk_size_bytes": 31281376,
+          "verified_sha256": "7278af1cbeb04ce8c31d83db50b09d59ea9516903f62f4561b3d05bbd62daf82",
+          "hash_matched": true
+        },
+        "photographic_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\surface_mesh_photographic.ply",
+          "disk_size_bytes": 9840793,
+          "verified_sha256": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+          "hash_matched": true
+        },
+        "untextured_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\surface_mesh_repaired.ply",
+          "disk_size_bytes": 9840793,
+          "verified_sha256": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+          "hash_matched": true
+        }
+      }
+    },
+    {
+      "id": "desert_road_candidate_a",
+      "display_name": "Desert Road \u2014 Candidate A",
+      "acceptance_status": "PASS",
+      "vertex_count": 53069,
+      "triangle_count": 105467,
+      "representations_verified": {
+        "textured_obj": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a\\textured_mesh.obj",
+          "disk_size_bytes": 14301214,
+          "verified_sha256": "6d91b36b94afbda4fef3aa7e25ae1ac55b0ad5fc1807e061e8693468bb24d433",
+          "hash_matched": true
+        },
+        "photographic_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a\\surface_mesh_photographic.ply",
+          "disk_size_bytes": 4077915,
+          "verified_sha256": "5625a5a2436abd6bca780b86efde8687246675f0e47b270f37440b006099ae44",
+          "hash_matched": true
+        },
+        "untextured_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_a\\surface_mesh_static_clean.ply",
+          "disk_size_bytes": 4077915,
+          "verified_sha256": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+          "hash_matched": true
+        }
+      }
+    },
+    {
+      "id": "desert_road_candidate_b",
+      "display_name": "Desert Road \u2014 Candidate B",
+      "acceptance_status": "PASS",
+      "vertex_count": 53101,
+      "triangle_count": 105518,
+      "representations_verified": {
+        "textured_obj": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\textured_mesh.obj",
+          "disk_size_bytes": 14308562,
+          "verified_sha256": "ee0fdd35524fff4357c048c29a4454fb982a7283ac1183f8d6ad863822f3a0f4",
+          "hash_matched": true
+        },
+        "photographic_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\surface_mesh_vehicle_stabilized_photographic.ply",
+          "disk_size_bytes": 4080210,
+          "verified_sha256": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+          "hash_matched": true
+        },
+        "untextured_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\desert_road\\candidate_b\\surface_mesh_vehicle_stabilized.ply",
+          "disk_size_bytes": 4080210,
+          "verified_sha256": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+          "hash_matched": true
+        }
+      }
+    },
+    {
+      "id": "forest_road",
+      "display_name": "Forest Road",
+      "acceptance_status": "PASS",
+      "vertex_count": 462896,
+      "triangle_count": 919292,
+      "representations_verified": {
+        "textured_obj": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\textured_mesh.obj",
+          "disk_size_bytes": 117409995,
+          "verified_sha256": "f05f497181361cf4ecb98926d843f8a178c4b48d8c662ab8604e2f779fa2d86b",
+          "hash_matched": true
+        },
+        "photographic_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\surface_mesh_photographic.ply",
+          "disk_size_bytes": 35558818,
+          "verified_sha256": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+          "hash_matched": true
+        },
+        "untextured_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\surface_mesh_repaired.ply",
+          "disk_size_bytes": 35558818,
+          "verified_sha256": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+          "hash_matched": true
+        }
+      }
+    },
+    {
+      "id": "river_bridge",
+      "display_name": "River/Bridge",
+      "acceptance_status": "PASS",
+      "vertex_count": 132424,
+      "triangle_count": 260685,
+      "representations_verified": {
+        "textured_obj": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\textured_mesh.obj",
+          "disk_size_bytes": 32270618,
+          "verified_sha256": "fb28f5522dbae5d28ee9358d8e8056a1252ef8f56db39ccf2984b3c7c28808a9",
+          "hash_matched": true
+        },
+        "photographic_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\surface_mesh_photographic.ply",
+          "disk_size_bytes": 10142855,
+          "verified_sha256": "4be4958e3b81a0a8ea2ca0ad3c7cb18c39e196884065920c5c11abaad9d7758c",
+          "hash_matched": true
+        },
+        "untextured_ply": {
+          "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\surface_mesh_repaired.ply",
+          "disk_size_bytes": 10142855,
+          "verified_sha256": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+          "hash_matched": true
+        }
+      }
+    }
+  ]
+}

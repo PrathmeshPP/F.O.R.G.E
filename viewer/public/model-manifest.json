@@ -1,0 +1,429 @@
+{
+  "app_title": "F.O.R.G.E Explorer",
+  "version": "1.0.0",
+  "sprint": "Sprint 9",
+  "description": "Integrated Video-to-3D Reconstruction and Interactive Viewer Release",
+  "baseline_freeze": "outputs/accuracy_experiment/sprint9_video_to_viewer_release",
+  "scenes": [
+    {
+      "id": "campus_0049",
+      "scene_name": "campus_0049",
+      "display_name": "Campus 0049",
+      "subtitle": "Architectural Complex & Grounds",
+      "category": "Architectural Survey",
+      "acceptance_status": "PARTIAL",
+      "acceptance_label": "Conditional Acceptance (Drone Hover Limitation)",
+      "description": "Aerial survey of institutional campus complex featuring multi-story building blocks, courtyard paths, reflecting pond, and surrounding trees. Drone hovering telemetry (< 0.10m translation) limits multi-angle facade observations.",
+      "known_limitations": "Roofs, courtyard walkways, terrain, and pond reconstruct with high fidelity. Vertical building facades exhibit grazing-angle smearing originating strictly from physical drone hovering parallax baseline limitation. Unseen facades are not synthesized.",
+      "coordinate_status": "Model-relative coordinate frame (arbitrary units). Metric scale uncalibrated. Not georeferenced.",
+      "vertex_count": 128336,
+      "triangle_count": 253487,
+      "default_representation": "textured_obj",
+      "representations": {
+        "textured_obj": {
+          "type": "obj",
+          "label": "Textured OBJ (Unified Atlas)",
+          "obj_url": "/models/campus_0049/textured_mesh.obj",
+          "mtl_url": "/models/campus_0049/textured_mesh.mtl",
+          "texture_urls": [
+            "/models/campus_0049/texture_atlas.png"
+          ],
+          "file_size_bytes": 31281376,
+          "sha256": "7278af1cbeb04ce8c31d83db50b09d59ea9516903f62f4561b3d05bbd62daf82",
+          "available": true
+        },
+        "photographic_ply": {
+          "type": "ply",
+          "label": "Photographic Vertex PLY",
+          "ply_url": "/models/campus_0049/surface_mesh_photographic.ply",
+          "file_size_bytes": 9840793,
+          "sha256": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+          "available": true
+        },
+        "untextured_ply": {
+          "type": "ply",
+          "label": "Untextured Geometric PLY",
+          "ply_url": "/models/campus_0049/surface_mesh_repaired.ply",
+          "file_size_bytes": 9840793,
+          "sha256": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+          "available": true
+        }
+      },
+      "thumbnail_url": "/models/campus_0049/render_view_top_verified.png",
+      "previews": {
+        "top": "/models/campus_0049/render_view_top_verified.png",
+        "oblique": "/models/campus_0049/render_view_oblique_verified.png",
+        "facade": "/models/campus_0049/render_view_facade_focused_verified.png",
+        "closeup": "/models/campus_0049/render_view_closeup_verified.png",
+        "untextured": "/models/campus_0049/render_view_untextured_verified.png"
+      },
+      "metadata_url": "/models/campus_0049/candidate_metadata.json",
+      "initial_camera": {
+        "position": [
+          0.0,
+          4.5,
+          3.5
+        ],
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "reconstruction_run_id": "sprint9_video_to_viewer_release",
+      "source_video_provenance": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+        "size_bytes": 162041214,
+        "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.94,
+        "frame_count": 966,
+        "duration_sec": 16.116,
+        "scene": "campus_0049",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      }
+    },
+    {
+      "id": "desert_road_candidate_a",
+      "scene_name": "desert_road",
+      "candidate_key": "candidate_a",
+      "display_name": "Desert Road \u2014 Candidate A",
+      "subtitle": "Static Clean Highway",
+      "category": "Highway Infrastructure",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Zero Artifacts)",
+      "description": "Continuous straight highway corridor across sandy desert dunes with moving vehicles, shadows, and balloons completely removed. Smooth regular shoulders and pristine asphalt roadway.",
+      "known_limitations": "None. Diagonal shoulder banding resolved via separable raised-cosine windowing and camera gain harmonization. Corridor geometry smoothed with 30 Taubin iterations (0 interior holes).",
+      "coordinate_status": "Camera/model-relative coordinates. Road plane fitted at Y = -0.019475*X - 0.057574*Z + 0.088181. Metric scale uncalibrated.",
+      "vertex_count": 53069,
+      "triangle_count": 105467,
+      "default_representation": "textured_obj",
+      "representations": {
+        "textured_obj": {
+          "type": "obj",
+          "label": "Textured OBJ (Unified Atlas)",
+          "obj_url": "/models/desert_road/candidate_a/textured_mesh.obj",
+          "mtl_url": "/models/desert_road/candidate_a/textured_mesh.mtl",
+          "texture_urls": [
+            "/models/desert_road/candidate_a/texture_atlas.png"
+          ],
+          "file_size_bytes": 14301214,
+          "sha256": "6d91b36b94afbda4fef3aa7e25ae1ac55b0ad5fc1807e061e8693468bb24d433",
+          "available": true
+        },
+        "photographic_ply": {
+          "type": "ply",
+          "label": "Photographic Vertex PLY",
+          "ply_url": "/models/desert_road/candidate_a/surface_mesh_photographic.ply",
+          "file_size_bytes": 4077915,
+          "sha256": "5625a5a2436abd6bca780b86efde8687246675f0e47b270f37440b006099ae44",
+          "available": true
+        },
+        "untextured_ply": {
+          "type": "ply",
+          "label": "Untextured Geometric PLY",
+          "ply_url": "/models/desert_road/candidate_a/surface_mesh_static_clean.ply",
+          "file_size_bytes": 4077915,
+          "sha256": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+          "available": true
+        }
+      },
+      "thumbnail_url": "/models/desert_road/candidate_a/candidate_a_top_verified.png",
+      "previews": {
+        "top": "/models/desert_road/candidate_a/candidate_a_top_verified.png",
+        "oblique": "/models/desert_road/candidate_a/candidate_a_oblique_verified.png",
+        "shoulder": "/models/desert_road/candidate_a/candidate_a_shoulder_closeup_verified.png",
+        "road": "/models/desert_road/candidate_a/candidate_a_road_surface_closeup_verified.png",
+        "untextured": "/models/desert_road/candidate_a/candidate_a_untextured_verified.png"
+      },
+      "metadata_url": "/models/desert_road/candidate_a/candidate_metadata.json",
+      "initial_camera": {
+        "position": [
+          0.0,
+          3.8,
+          1.2
+        ],
+        "target": [
+          0.0,
+          0.0,
+          -0.8
+        ]
+      },
+      "reconstruction_run_id": "sprint9_video_to_viewer_release",
+      "source_video_provenance": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+        "size_bytes": 6539814,
+        "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+        "width": 1280,
+        "height": 720,
+        "fps": 23.976,
+        "frame_count": 477,
+        "duration_sec": 19.895,
+        "scene": "desert_road",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      }
+    },
+    {
+      "id": "desert_road_candidate_b",
+      "scene_name": "desert_road",
+      "candidate_key": "candidate_b",
+      "display_name": "Desert Road \u2014 Candidate B",
+      "subtitle": "Vehicle Preserved",
+      "category": "Highway Infrastructure",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Zero Road Box)",
+      "description": "Highway corridor preserving a single reference vehicle (Mini Cooper with rooftop balloons) from Frame 0. Uses shape-aware instance segmentation with zero rectangular road box and seamless multi-view road continuity.",
+      "known_limitations": "None. Artificial rectangular patch eliminated. Preserved vehicle volume sits naturally on planar asphalt.",
+      "coordinate_status": "Camera/model-relative coordinates. Vehicle elevated at reference coordinate [0.03, 0.04, 0.45]. Metric scale uncalibrated.",
+      "vertex_count": 53101,
+      "triangle_count": 105518,
+      "default_representation": "textured_obj",
+      "representations": {
+        "textured_obj": {
+          "type": "obj",
+          "label": "Textured OBJ (Unified Atlas)",
+          "obj_url": "/models/desert_road/candidate_b/textured_mesh.obj",
+          "mtl_url": "/models/desert_road/candidate_b/textured_mesh.mtl",
+          "texture_urls": [
+            "/models/desert_road/candidate_b/texture_atlas.png"
+          ],
+          "file_size_bytes": 14308562,
+          "sha256": "ee0fdd35524fff4357c048c29a4454fb982a7283ac1183f8d6ad863822f3a0f4",
+          "available": true
+        },
+        "photographic_ply": {
+          "type": "ply",
+          "label": "Photographic Vertex PLY",
+          "ply_url": "/models/desert_road/candidate_b/surface_mesh_vehicle_stabilized_photographic.ply",
+          "file_size_bytes": 4080210,
+          "sha256": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+          "available": true
+        },
+        "untextured_ply": {
+          "type": "ply",
+          "label": "Untextured Geometric PLY",
+          "ply_url": "/models/desert_road/candidate_b/surface_mesh_vehicle_stabilized.ply",
+          "file_size_bytes": 4080210,
+          "sha256": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+          "available": true
+        }
+      },
+      "thumbnail_url": "/models/desert_road/candidate_b/candidate_b_top_verified.png",
+      "previews": {
+        "top": "/models/desert_road/candidate_b/candidate_b_top_verified.png",
+        "oblique": "/models/desert_road/candidate_b/candidate_b_oblique_verified.png",
+        "vehicle": "/models/desert_road/candidate_b/candidate_b_vehicle_closeup_verified.png",
+        "shoulder": "/models/desert_road/candidate_b/candidate_b_shoulder_closeup_verified.png",
+        "road": "/models/desert_road/candidate_b/candidate_b_road_surface_closeup_verified.png",
+        "untextured": "/models/desert_road/candidate_b/candidate_b_untextured_verified.png"
+      },
+      "metadata_url": "/models/desert_road/candidate_b/candidate_metadata.json",
+      "initial_camera": {
+        "position": [
+          0.0,
+          3.8,
+          1.2
+        ],
+        "target": [
+          0.0,
+          0.0,
+          -0.8
+        ]
+      },
+      "reconstruction_run_id": "sprint9_video_to_viewer_release",
+      "source_video_provenance": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+        "size_bytes": 6539814,
+        "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+        "width": 1280,
+        "height": 720,
+        "fps": 23.976,
+        "frame_count": 477,
+        "duration_sec": 19.895,
+        "scene": "desert_road",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      }
+    },
+    {
+      "id": "forest_road",
+      "scene_name": "forest_road",
+      "display_name": "Forest Road",
+      "subtitle": "Canopy & Winding Roadway",
+      "category": "Terrain & Vegetation",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Canopy Voids Validated)",
+      "description": "Dense mountain forest canopy with winding two-lane paved roadway and double yellow lane markings. Closed tree-crown manifold structures with natural open-air voids.",
+      "known_limitations": "None. Canopy open-air spaces validated against multi-view video evidence without artificial webbing or blanket hole filling.",
+      "coordinate_status": "Model-relative coordinates. Metric scale uncalibrated.",
+      "vertex_count": 462896,
+      "triangle_count": 919292,
+      "default_representation": "textured_obj",
+      "representations": {
+        "textured_obj": {
+          "type": "obj",
+          "label": "Textured OBJ (Unified Atlas)",
+          "obj_url": "/models/forest_road/textured_mesh.obj",
+          "mtl_url": "/models/forest_road/textured_mesh.mtl",
+          "texture_urls": [
+            "/models/forest_road/texture_atlas.png"
+          ],
+          "file_size_bytes": 117409995,
+          "sha256": "f05f497181361cf4ecb98926d843f8a178c4b48d8c662ab8604e2f779fa2d86b",
+          "available": true
+        },
+        "photographic_ply": {
+          "type": "ply",
+          "label": "Photographic Vertex PLY",
+          "ply_url": "/models/forest_road/surface_mesh_photographic.ply",
+          "file_size_bytes": 35558818,
+          "sha256": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+          "available": true
+        },
+        "untextured_ply": {
+          "type": "ply",
+          "label": "Untextured Geometric PLY",
+          "ply_url": "/models/forest_road/surface_mesh_repaired.ply",
+          "file_size_bytes": 35558818,
+          "sha256": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+          "available": true
+        }
+      },
+      "thumbnail_url": "/models/forest_road/render_view_road_focused_verified.png",
+      "previews": {
+        "road": "/models/forest_road/render_view_road_focused_verified.png",
+        "canopy": "/models/forest_road/render_view_canopy_focused_verified.png",
+        "top": "/models/forest_road/render_view_top_verified.png",
+        "oblique": "/models/forest_road/render_view_oblique_verified.png",
+        "closeup": "/models/forest_road/render_view_closeup_verified.png",
+        "untextured": "/models/forest_road/render_view_untextured_verified.png"
+      },
+      "metadata_url": "/models/forest_road/candidate_metadata.json",
+      "initial_camera": {
+        "position": [
+          0.0,
+          4.0,
+          2.5
+        ],
+        "target": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      "reconstruction_run_id": "sprint9_video_to_viewer_release",
+      "source_video_provenance": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+        "size_bytes": 10681415,
+        "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+        "width": 1280,
+        "height": 720,
+        "fps": 23.976,
+        "frame_count": 730,
+        "duration_sec": 30.447,
+        "scene": "forest_road",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      }
+    },
+    {
+      "id": "river_bridge",
+      "scene_name": "river_bridge",
+      "display_name": "River/Bridge",
+      "subtitle": "Deck, Railings, Piers & Channel",
+      "category": "Civil Infrastructure",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Bridge Structure Verified)",
+      "description": "Concrete highway bridge deck with guard railings and vertical support piers crossing a riverbed channel with approach roadway and riparian banks.",
+      "known_limitations": "Reflective river water surface observations attenuated during fusion; bridge deck, railings, piers, and riverbanks pass with solid geometric continuity.",
+      "coordinate_status": "Model-relative coordinate frame. Bridge deck centered at coordinates [1.131, 0.166, 0.526]. Metric scale uncalibrated.",
+      "vertex_count": 132424,
+      "triangle_count": 260685,
+      "default_representation": "textured_obj",
+      "representations": {
+        "textured_obj": {
+          "type": "obj",
+          "label": "Textured OBJ (Unified Atlas)",
+          "obj_url": "/models/river_bridge/textured_mesh.obj",
+          "mtl_url": "/models/river_bridge/textured_mesh.mtl",
+          "texture_urls": [
+            "/models/river_bridge/texture_atlas.png"
+          ],
+          "file_size_bytes": 32270618,
+          "sha256": "fb28f5522dbae5d28ee9358d8e8056a1252ef8f56db39ccf2984b3c7c28808a9",
+          "available": true
+        },
+        "photographic_ply": {
+          "type": "ply",
+          "label": "Photographic Vertex PLY",
+          "ply_url": "/models/river_bridge/surface_mesh_photographic.ply",
+          "file_size_bytes": 10142855,
+          "sha256": "4be4958e3b81a0a8ea2ca0ad3c7cb18c39e196884065920c5c11abaad9d7758c",
+          "available": true
+        },
+        "untextured_ply": {
+          "type": "ply",
+          "label": "Untextured Geometric PLY",
+          "ply_url": "/models/river_bridge/surface_mesh_repaired.ply",
+          "file_size_bytes": 10142855,
+          "sha256": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+          "available": true
+        }
+      },
+      "thumbnail_url": "/models/river_bridge/render_view_bridge_focused_verified.png",
+      "previews": {
+        "bridge": "/models/river_bridge/render_view_bridge_focused_verified.png",
+        "terrain": "/models/river_bridge/render_view_terrain_focused_verified.png",
+        "top": "/models/river_bridge/render_view_top_verified.png",
+        "oblique": "/models/river_bridge/render_view_oblique_verified.png",
+        "closeup": "/models/river_bridge/render_view_closeup_verified.png",
+        "untextured": "/models/river_bridge/render_view_untextured_verified.png"
+      },
+      "metadata_url": "/models/river_bridge/candidate_metadata.json",
+      "initial_camera": {
+        "position": [
+          1.13,
+          3.2,
+          2.2
+        ],
+        "target": [
+          1.131,
+          0.166,
+          0.526
+        ]
+      },
+      "reconstruction_run_id": "sprint9_video_to_viewer_release",
+      "source_video_provenance": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+        "relative_path": "outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+        "size_bytes": 70005949,
+        "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.94,
+        "frame_count": 750,
+        "duration_sec": 12.513,
+        "scene": "river_bridge",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      }
+    }
+  ],
+  "comparison_pairs": [
+    {
+      "id": "desert_road_cand_a_vs_b",
+      "label": "Desert Road: Candidate A vs Candidate B",
+      "left_id": "desert_road_candidate_a",
+      "right_id": "desert_road_candidate_b",
+      "focus_feature": "Vehicle Preservation vs Complete Removal & Shoulder Seam Elimination",
+      "comparison_notes": "Left viewport displays Candidate A with zero moving vehicles and clean corridor. Right viewport displays Candidate B with preserved single reference vehicle and seamless asphalt integration."
+    }
+  ]
+}

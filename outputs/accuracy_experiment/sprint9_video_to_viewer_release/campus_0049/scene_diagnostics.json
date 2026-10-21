@@ -1,0 +1,17 @@
+{
+  "scene": "campus_0049",
+  "status": "PARTIAL",
+  "acceptance_label": "Conditional Acceptance (Drone Hover Limitation)",
+  "interior_holes": 32,
+  "total_boundary_edges": 3267,
+  "bounding_box_min": [
+    -2.519359827041626,
+    -0.5722570419311523,
+    0.5681273937225342
+  ],
+  "bounding_box_max": [
+    2.7941834926605225,
+    3.2296745777130127,
+    0.9166357517242432
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "sprint": "Sprint 10",
+  "title": "F.O.R.G.E \u2014 National Hackathon Demonstration and Release Hardening",
+  "status": "DEMO_READY",
+  "timestamp_utc": "2026-10-20T20:59:07Z",
+  "one_command_launcher": "start_forge_explorer.bat",
+  "live_demo_url": "http://localhost:5173/",
+  "active_models_baseline": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/",
+  "demo_guide_path": "docs/SPRINT10_LIVE_DEMO_GUIDE.md",
+  "benchmark_targets": [
+    {
+      "id": "campus_0049",
+      "status": "Conditional PARTIAL",
+      "note": "Hover parallax baseline limit"
+    },
+    {
+      "id": "desert_road_candidate_a",
+      "status": "PASS",
+      "note": "Static corridor, zero vehicles"
+    },
+    {
+      "id": "desert_road_candidate_b",
+      "status": "PASS",
+      "note": "GrabCut instance mask, zero road box"
+    },
+    {
+      "id": "forest_road",
+      "status": "PASS",
+      "note": "Natural canopy voids & double yellow lines"
+    },
+    {
+      "id": "river_bridge",
+      "status": "PASS",
+      "note": "Concrete deck, railings, piers & channel"
+    }
+  ],
+  "screenshots_captured": [
+    "demo_campus_0049.png",
+    "demo_desert_candidate_a.png",
+    "demo_desert_candidate_b.png",
+    "demo_desert_comparison.png",
+    "demo_forest_road.png",
+    "demo_river_bridge.png"
+  ],
+  "test_suite_status": "18/18 PASS (100%)",
+  "production_build_status": "SUCCESS"
+}

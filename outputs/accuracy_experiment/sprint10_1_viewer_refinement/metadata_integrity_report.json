@@ -1,0 +1,328 @@
+{
+  "report_name": "F.O.R.G.E Sprint 10.1 Metadata and Representation Integrity Report",
+  "timestamp_utc": "2026-10-20T21:18:58.283000+00:00",
+  "release_baseline_dir": "outputs/accuracy_experiment/sprint9_video_to_viewer_release",
+  "manifest_version": "1.1.0",
+  "sprint": "Sprint 10.1",
+  "all_passed": true,
+  "total_scenes_audited": 5,
+  "total_representations_audited": 15,
+  "count_labeling_standard": {
+    "unique_geometry_vertices": "Count of unique topological vertices in source mesh (v in OBJ, element vertex in PLY)",
+    "rendered_position_entries": "Count of actual position-buffer elements allocated in WebGL GPU memory (3x triangles for unindexed OBJ; V for indexed PLY)",
+    "triangle_count": "Verified count of rendered planar triangle primitives",
+    "source_asset_statistics": "Asset filename directly associated with active representation"
+  },
+  "scenes": [
+    {
+      "scene_id": "campus_0049",
+      "display_name": "Campus 0049",
+      "category": "Architectural Survey",
+      "acceptance_status": "PARTIAL",
+      "unique_geometry_vertices": 128336,
+      "triangle_count": 253487,
+      "representations": {
+        "textured_obj": {
+          "type": "OBJ",
+          "source_filename": "textured_mesh.obj",
+          "file_size_bytes": 31281376,
+          "manifest_size_match": true,
+          "sha256_hash": "7278af1cbeb04ce8c31d83db50b09d59ea9516903f62f4561b3d05bbd62daf82",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 128336,
+          "rendered_position_entries": 760461,
+          "triangle_count": 253487,
+          "buffer_architecture": "Non-Indexed Buffer (3 position entries per triangle)",
+          "texture_and_materials": {
+            "mtl_valid": true,
+            "textures": [
+              {
+                "filename": "texture_atlas.png",
+                "size_bytes": 29301787,
+                "dimensions": "4096x4096",
+                "status": "VALID_IMAGE"
+              }
+            ]
+          },
+          "verification_status": "PASS"
+        },
+        "photographic_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_photographic.ply",
+          "file_size_bytes": 9840793,
+          "manifest_size_match": true,
+          "sha256_hash": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 128336,
+          "rendered_position_entries": 128336,
+          "triangle_count": 253487,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        },
+        "untextured_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_repaired.ply",
+          "file_size_bytes": 9840793,
+          "manifest_size_match": true,
+          "sha256_hash": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 128336,
+          "rendered_position_entries": 128336,
+          "triangle_count": 253487,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        }
+      }
+    },
+    {
+      "scene_id": "desert_road_candidate_a",
+      "display_name": "Desert Road \u2014 Candidate A",
+      "category": "Highway Infrastructure",
+      "acceptance_status": "PASS",
+      "unique_geometry_vertices": 53069,
+      "triangle_count": 105467,
+      "representations": {
+        "textured_obj": {
+          "type": "OBJ",
+          "source_filename": "textured_mesh.obj",
+          "file_size_bytes": 14301214,
+          "manifest_size_match": true,
+          "sha256_hash": "6d91b36b94afbda4fef3aa7e25ae1ac55b0ad5fc1807e061e8693468bb24d433",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 53069,
+          "rendered_position_entries": 316401,
+          "triangle_count": 105467,
+          "buffer_architecture": "Non-Indexed Buffer (3 position entries per triangle)",
+          "texture_and_materials": {
+            "mtl_valid": true,
+            "textures": [
+              {
+                "filename": "texture_atlas.png",
+                "size_bytes": 8765408,
+                "dimensions": "4096x4096",
+                "status": "VALID_IMAGE"
+              }
+            ]
+          },
+          "verification_status": "PASS"
+        },
+        "photographic_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_photographic.ply",
+          "file_size_bytes": 4077915,
+          "manifest_size_match": true,
+          "sha256_hash": "5625a5a2436abd6bca780b86efde8687246675f0e47b270f37440b006099ae44",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 53069,
+          "rendered_position_entries": 53069,
+          "triangle_count": 105467,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        },
+        "untextured_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_static_clean.ply",
+          "file_size_bytes": 4077915,
+          "manifest_size_match": true,
+          "sha256_hash": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 53069,
+          "rendered_position_entries": 53069,
+          "triangle_count": 105467,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        }
+      }
+    },
+    {
+      "scene_id": "desert_road_candidate_b",
+      "display_name": "Desert Road \u2014 Candidate B",
+      "category": "Highway Infrastructure",
+      "acceptance_status": "PASS",
+      "unique_geometry_vertices": 53101,
+      "triangle_count": 105518,
+      "representations": {
+        "textured_obj": {
+          "type": "OBJ",
+          "source_filename": "textured_mesh.obj",
+          "file_size_bytes": 14308562,
+          "manifest_size_match": true,
+          "sha256_hash": "ee0fdd35524fff4357c048c29a4454fb982a7283ac1183f8d6ad863822f3a0f4",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 53101,
+          "rendered_position_entries": 316554,
+          "triangle_count": 105518,
+          "buffer_architecture": "Non-Indexed Buffer (3 position entries per triangle)",
+          "texture_and_materials": {
+            "mtl_valid": true,
+            "textures": [
+              {
+                "filename": "texture_atlas.png",
+                "size_bytes": 8765408,
+                "dimensions": "4096x4096",
+                "status": "VALID_IMAGE"
+              }
+            ]
+          },
+          "verification_status": "PASS"
+        },
+        "photographic_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_vehicle_stabilized_photographic.ply",
+          "file_size_bytes": 4080210,
+          "manifest_size_match": true,
+          "sha256_hash": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 53101,
+          "rendered_position_entries": 53101,
+          "triangle_count": 105518,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        },
+        "untextured_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_vehicle_stabilized.ply",
+          "file_size_bytes": 4080210,
+          "manifest_size_match": true,
+          "sha256_hash": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 53101,
+          "rendered_position_entries": 53101,
+          "triangle_count": 105518,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        }
+      }
+    },
+    {
+      "scene_id": "forest_road",
+      "display_name": "Forest Road",
+      "category": "Terrain & Vegetation",
+      "acceptance_status": "PASS",
+      "unique_geometry_vertices": 462896,
+      "triangle_count": 919292,
+      "representations": {
+        "textured_obj": {
+          "type": "OBJ",
+          "source_filename": "textured_mesh.obj",
+          "file_size_bytes": 117409995,
+          "manifest_size_match": true,
+          "sha256_hash": "f05f497181361cf4ecb98926d843f8a178c4b48d8c662ab8604e2f779fa2d86b",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 462896,
+          "rendered_position_entries": 2757876,
+          "triangle_count": 919292,
+          "buffer_architecture": "Non-Indexed Buffer (3 position entries per triangle)",
+          "texture_and_materials": {
+            "mtl_valid": true,
+            "textures": [
+              {
+                "filename": "texture_atlas.png",
+                "size_bytes": 25149397,
+                "dimensions": "4096x4096",
+                "status": "VALID_IMAGE"
+              }
+            ]
+          },
+          "verification_status": "PASS"
+        },
+        "photographic_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_photographic.ply",
+          "file_size_bytes": 35558818,
+          "manifest_size_match": true,
+          "sha256_hash": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 462896,
+          "rendered_position_entries": 462896,
+          "triangle_count": 919292,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        },
+        "untextured_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_repaired.ply",
+          "file_size_bytes": 35558818,
+          "manifest_size_match": true,
+          "sha256_hash": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 462896,
+          "rendered_position_entries": 462896,
+          "triangle_count": 919292,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        }
+      }
+    },
+    {
+      "scene_id": "river_bridge",
+      "display_name": "River/Bridge",
+      "category": "Civil Infrastructure",
+      "acceptance_status": "PASS",
+      "unique_geometry_vertices": 132424,
+      "triangle_count": 260685,
+      "representations": {
+        "textured_obj": {
+          "type": "OBJ",
+          "source_filename": "textured_mesh.obj",
+          "file_size_bytes": 32270618,
+          "manifest_size_match": true,
+          "sha256_hash": "fb28f5522dbae5d28ee9358d8e8056a1252ef8f56db39ccf2984b3c7c28808a9",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 132424,
+          "rendered_position_entries": 782055,
+          "triangle_count": 260685,
+          "buffer_architecture": "Non-Indexed Buffer (3 position entries per triangle)",
+          "texture_and_materials": {
+            "mtl_valid": true,
+            "textures": [
+              {
+                "filename": "texture_atlas.png",
+                "size_bytes": 20836942,
+                "dimensions": "4096x4096",
+                "status": "VALID_IMAGE"
+              }
+            ]
+          },
+          "verification_status": "PASS"
+        },
+        "photographic_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_photographic.ply",
+          "file_size_bytes": 10142855,
+          "manifest_size_match": true,
+          "sha256_hash": "4be4958e3b81a0a8ea2ca0ad3c7cb18c39e196884065920c5c11abaad9d7758c",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 132424,
+          "rendered_position_entries": 132424,
+          "triangle_count": 260685,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        },
+        "untextured_ply": {
+          "type": "PLY",
+          "source_filename": "surface_mesh_repaired.ply",
+          "file_size_bytes": 10142855,
+          "manifest_size_match": true,
+          "sha256_hash": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+          "manifest_hash_match": true,
+          "unique_geometry_vertices": 132424,
+          "rendered_position_entries": 132424,
+          "triangle_count": 260685,
+          "buffer_architecture": "Indexed Unique Vertex Array Buffer",
+          "texture_and_materials": null,
+          "verification_status": "PASS"
+        }
+      }
+    }
+  ]
+}

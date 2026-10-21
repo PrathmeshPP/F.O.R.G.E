@@ -1,0 +1,43 @@
+{
+  "scene_name": "river_bridge",
+  "source_video_provenance": {
+    "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+    "relative_path": "outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+    "size_bytes": 70005949,
+    "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+    "width": 3840,
+    "height": 2160,
+    "fps": 59.94,
+    "frame_count": 750,
+    "duration_sec": 12.513,
+    "scene": "river_bridge",
+    "verified": true,
+    "status": "AVAILABLE_AND_VERIFIED"
+  },
+  "reconstruction_run_id": "sprint9_video_to_viewer_release",
+  "mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\surface_mesh_repaired.ply",
+  "mesh_relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/river_bridge/surface_mesh_repaired.ply",
+  "photographic_mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\surface_mesh_photographic.ply",
+  "textured_obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\textured_mesh.obj",
+  "sha256_geometry_hash": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+  "sha256_photographic_hash": "4be4958e3b81a0a8ea2ca0ad3c7cb18c39e196884065920c5c11abaad9d7758c",
+  "sha256_obj_hash": "fb28f5522dbae5d28ee9358d8e8056a1252ef8f56db39ccf2984b3c7c28808a9",
+  "sha256_mtl_hash": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+  "sha256_atlas_hash": "ad35dd6447f098b57192b622c9a32af1c7a5f22dd2bab53da0bad54c23ab57c3",
+  "vertex_count": 132424,
+  "triangle_count": 260685,
+  "boundary_statistics": {
+    "total_boundary_edges": 4227,
+    "total_boundary_loops": 85,
+    "interior_holes_count": 84,
+    "max_boundary_jump_mm": 1066.71,
+    "mean_boundary_jump_mm": 155.1,
+    "std_boundary_jump_mm": 191.92
+  },
+  "renders": {
+    "top": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\render_top.png",
+    "oblique": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\render_oblique.png",
+    "closeup": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\render_closeup.png",
+    "baseline_vs_new": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\river_bridge\\baseline_vs_new.png"
+  }
+}

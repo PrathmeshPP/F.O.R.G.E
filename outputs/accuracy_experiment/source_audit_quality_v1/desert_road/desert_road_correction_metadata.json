@@ -1,0 +1,30 @@
+{
+  "pipeline": "F.O.R.G.E Sprint 5: Source Audit & Defect Correction",
+  "scene_name": "desert_road",
+  "timestamp_utc": "2026-10-20T10:31:51Z",
+  "source_video": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt_omega\\examples\\desert_road.mp4",
+  "diagnosed_fault": "Multi-frame point cloud fusion combined 8 temporal vehicle positions into 3D geometry; camera pitch drift produced stepped road segments.",
+  "corrections_applied": [
+    "Dynamic vehicle masking across frames 1..7",
+    "Continuous highway reconstruction revealing occluded road",
+    "Candidate A: Zero vehicle artifacts static highway corridor",
+    "Candidate B: Stabilized vehicle from reference Frame 0"
+  ],
+  "candidates": {
+    "static_clean": {
+      "ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\source_audit_quality_v1\\desert_road\\surface_mesh_static_clean.ply",
+      "obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\source_audit_quality_v1\\desert_road\\surface_mesh_static_clean.obj",
+      "vertex_count": 71552,
+      "triangle_count": 127823,
+      "sha256": "d3fa3856012d957c65f0f93082d17372c7945c7c5065bc59b73e64118ede4b29"
+    },
+    "vehicle_stabilized": {
+      "ply_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\source_audit_quality_v1\\desert_road\\surface_mesh_vehicle_stabilized.ply",
+      "obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\source_audit_quality_v1\\desert_road\\surface_mesh_vehicle_stabilized.obj",
+      "vertex_count": 71517,
+      "triangle_count": 127752,
+      "sha256": "0ac559b8e6c6f6fe0a78df6d1653c8bdda1646d1506813acb8d3a86ecb2a46a0"
+    }
+  },
+  "comparison_contact_sheet": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\source_audit_quality_v1\\desert_road\\desert_road_defect_correction_comparison.png"
+}

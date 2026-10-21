@@ -1,0 +1,145 @@
+{
+  "scene_id": "campus_0049",
+  "display_name": "Campus 0049",
+  "category": "Architectural Survey",
+  "source_video_provenance": {
+    "name": "dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+    "resolution": "3840x2160",
+    "fps": 59.94,
+    "frame_count": 966,
+    "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a"
+  },
+  "mesh_statistics": {
+    "unique_vertices": 128336,
+    "faces": 253487,
+    "triangles": 253487,
+    "rendered_positions_obj": 760461,
+    "is_finite": true,
+    "is_non_empty": true,
+    "bounding_box": {
+      "min": [
+        -2.519359827041626,
+        -0.5722570419311523,
+        0.5681273937225342
+      ],
+      "max": [
+        2.7941834926605225,
+        3.2296745777130127,
+        0.9166357517242432
+      ],
+      "extents": [
+        5.313543319702148,
+        3.801931619644165,
+        0.348508358001709
+      ],
+      "center": [
+        0.13741183280944824,
+        1.3287087678909302,
+        0.7423815727233887
+      ]
+    }
+  },
+  "independent_library_validation": {
+    "trimesh_ply_load": true,
+    "trimesh_glb_reload": true,
+    "open3d_obj_reload": true,
+    "open3d_ply_render": true,
+    "all_coordinates_finite": true,
+    "texture_references_valid": true,
+    "status": "PASS"
+  },
+  "coordinate_notice": "Model-relative coordinate frame (arbitrary units). Metric scale uncalibrated. Not georeferenced.",
+  "known_limitations": "Aerial institutional campus survey with buildings, courtyard walkways, reflecting pond, and landscaping. Preserves physical drone hovering telemetry baseline (< 0.10m translation); unseen building facades are honestly not synthesized.",
+  "artifacts": [
+    {
+      "filename": "model_geometry.ply",
+      "description": "Untextured 3D Mesh (Polygon File Format, binary LE)",
+      "relative_path": "outputs/manual_model_review/campus_0049/model_geometry.ply",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\model_geometry.ply",
+      "file_size_bytes": 9840793,
+      "sha256": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_geometry.obj",
+      "description": "Untextured 3D Mesh (Wavefront OBJ, pure geometry)",
+      "relative_path": "outputs/manual_model_review/campus_0049/model_geometry.obj",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\model_geometry.obj",
+      "file_size_bytes": 18328044,
+      "sha256": "1daef6e7f552a580be47a55cdea00b968bb056138384f283f96c163b6fcde92f",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_photographic.ply",
+      "description": "Photographic 3D Mesh (Vertex Colors RGB, binary LE)",
+      "relative_path": "outputs/manual_model_review/campus_0049/model_photographic.ply",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\model_photographic.ply",
+      "file_size_bytes": 9840793,
+      "sha256": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_textured.obj",
+      "description": "Textured 3D Model (Wavefront OBJ, UV mapped)",
+      "relative_path": "outputs/manual_model_review/campus_0049/model_textured.obj",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\model_textured.obj",
+      "file_size_bytes": 31281377,
+      "sha256": "d34f2b01280942da8741c93a3f9952d7ac498021b1cb436bb4d3e78730d649fc",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_textured.mtl",
+      "description": "Material Library Definition (MTL)",
+      "relative_path": "outputs/manual_model_review/campus_0049/model_textured.mtl",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\model_textured.mtl",
+      "file_size_bytes": 176,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "texture_atlas.png",
+      "description": "Texture Atlas Map (4096x4096 PNG)",
+      "relative_path": "outputs/manual_model_review/campus_0049/texture_atlas.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\texture_atlas.png",
+      "file_size_bytes": 29301787,
+      "sha256": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_preview.glb",
+      "description": "Self-Contained 3D Model (glTF 2.0 Binary with embedded PBR textures)",
+      "relative_path": "outputs/manual_model_review/campus_0049/model_preview.glb",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\model_preview.glb",
+      "file_size_bytes": 48372492,
+      "sha256": "33cc62d81833c5f74a88cb6436a18e5e2434193c82ffa76b2480da68b254827e",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "render_overview.png",
+      "description": "Offscreen Render \u2014 Overhead Overview",
+      "relative_path": "outputs/manual_model_review/campus_0049/render_overview.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\render_overview.png",
+      "file_size_bytes": 214768,
+      "sha256": "aeafa272011f99f2b00154bdea247c5b1fd6b3f76eaf4c0b014915e895db7e3d",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "render_oblique.png",
+      "description": "Offscreen Render \u2014 Oblique Perspective",
+      "relative_path": "outputs/manual_model_review/campus_0049/render_oblique.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\campus_0049\\render_oblique.png",
+      "file_size_bytes": 179041,
+      "sha256": "3d91dac9bf5ba4ac2b9d31bbf0065e41085b59748e2f2a3d1e0333b59b62db72",
+      "exists": true,
+      "non_empty": true
+    }
+  ]
+}

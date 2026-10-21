@@ -1,0 +1,129 @@
+{
+  "pipeline": "GeneralReconstructionPipeline",
+  "timestamp_utc": "2026-10-18T10:00:43Z",
+  "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+  "trajectory_diagnostics": {
+    "num_frames": 6,
+    "camera_centers": [
+      [
+        -0.0,
+        -0.0,
+        -0.0001
+      ],
+      [
+        -0.0001,
+        0.0005,
+        -0.0005
+      ],
+      [
+        0.0005,
+        0.0002,
+        0.0015
+      ],
+      [
+        -0.0002,
+        -0.0003,
+        0.0014
+      ],
+      [
+        0.0014,
+        -0.0012,
+        0.0056
+      ],
+      [
+        0.0007,
+        -0.0017,
+        0.0076
+      ]
+    ],
+    "mean_camera_center": [
+      0.0004,
+      -0.0004,
+      0.0026
+    ],
+    "total_path_length": 0.0101,
+    "net_translation": 0.0079,
+    "trajectory_extent": 0.008,
+    "mean_frame_rotation_deg": 3.699,
+    "motion_type": "low_baseline_hover",
+    "warnings": [
+      "Low camera baseline (0.008 units). Multi-view parallax on vertical facades is physically constrained; depth predictions rely heavily on single-view priors."
+    ]
+  },
+  "adaptive_parameters": {
+    "resolved_min_depth": 0.1,
+    "resolved_max_depth": 6.3868,
+    "resolved_min_confidence": 1.2,
+    "resolved_voxel_size": 0.0149,
+    "scene_max_extent": 5.9465,
+    "median_depth_z": 1.022,
+    "mean_focal_length_px": 1152.46
+  },
+  "point_cloud": {
+    "raw_filtered_points": 1358934,
+    "active_points": 28173,
+    "is_voxel_fused": true,
+    "voxel_size": 0.0149,
+    "surface_roughness_residual": 0.002303,
+    "bounds_min": [
+      -1.1633000373840332,
+      -0.7038999795913696,
+      0.43369999527931213
+    ],
+    "bounds_max": [
+      1.2589999437332153,
+      0.10580000281333923,
+      3.571899890899658
+    ],
+    "extents": [
+      2.422300100326538,
+      0.8097000122070312,
+      3.138200044631958
+    ]
+  },
+  "surface_mesh": {
+    "vertex_count": 44460,
+    "triangle_count": 88200,
+    "has_vertex_colors": true,
+    "has_vertex_normals": true,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": true,
+    "mesh_bounds_min": [
+      -1.1927,
+      -0.7022,
+      0.4056
+    ],
+    "mesh_bounds_max": [
+      1.2884,
+      0.1104,
+      3.6209
+    ],
+    "mesh_extents": [
+      2.4811,
+      0.8126,
+      3.2153
+    ],
+    "color_stats": {
+      "mean_rgb": [
+        0.4411,
+        0.4935,
+        0.5234
+      ],
+      "std_rgb": [
+        0.0898,
+        0.0815,
+        0.0965
+      ]
+    },
+    "meshing_time_sec": 2.968
+  },
+  "performance": {
+    "total_pipeline_time_sec": 6.577
+  },
+  "artifacts": {
+    "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_improvement_v2\\river_bridge\\point_cloud_filtered.ply",
+    "fused_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_improvement_v2\\river_bridge\\point_cloud_fused.ply",
+    "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_improvement_v2\\river_bridge\\surface_mesh.ply",
+    "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\quality_improvement_v2\\river_bridge\\surface_mesh.obj"
+  }
+}

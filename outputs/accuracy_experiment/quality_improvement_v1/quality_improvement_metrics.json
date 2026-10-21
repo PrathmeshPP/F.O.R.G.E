@@ -1,0 +1,214 @@
+{
+  "title": "F.O.R.G.E Evidence-Based 3D Reconstruction Quality Improvement Experiment",
+  "timestamp_utc": "2026-10-18T09:18:38Z",
+  "scenes": {
+    "campus_0049": {
+      "source_dataset": "outputs/dji_0049_validation/",
+      "source_video": "C:/Users/25beevdt025/Desktop/dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "baseline": {
+        "pcd_points": 2641920,
+        "mesh_vertices": 142928,
+        "mesh_triangles": 281225,
+        "mesh_bounds_min": [
+          -1.1299,
+          -0.6726,
+          0.8024
+        ],
+        "mesh_bounds_max": [
+          0.7029,
+          1.2571,
+          0.9779
+        ],
+        "mesh_extents": [
+          1.8328,
+          1.9297,
+          0.1756
+        ],
+        "surface_roughness_m": 0.00038
+      },
+      "candidate_c1": {
+        "is_valid": true,
+        "vertex_count": 280854,
+        "triangle_count": 560356,
+        "finite_coordinates": true,
+        "valid_triangle_indices": true,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": false,
+        "bounding_box_min": [
+          -1.1851,
+          -0.7976,
+          0.6751
+        ],
+        "bounding_box_max": [
+          0.7475,
+          1.2699,
+          0.9796
+        ],
+        "extents": [
+          1.9327,
+          2.0675,
+          0.3045
+        ],
+        "color_stats": {
+          "count": 280854,
+          "mean_rgb": [
+            0.4351,
+            0.4621,
+            0.3591
+          ],
+          "std_rgb": [
+            0.1861,
+            0.1537,
+            0.1878
+          ],
+          "min_rgb": [
+            0.042,
+            0.0675,
+            0.0638
+          ],
+          "max_rgb": [
+            0.9994,
+            0.9917,
+            0.9989
+          ]
+        },
+        "reconstruction_time_sec": 13.481
+      },
+      "candidate_c2_best": {
+        "is_valid": true,
+        "vertex_count": 631501,
+        "triangle_count": 1258671,
+        "finite_coordinates": true,
+        "valid_triangle_indices": true,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": false,
+        "bounding_box_min": [
+          -1.1807,
+          -0.794,
+          0.6777
+        ],
+        "bounding_box_max": [
+          0.7361,
+          1.2636,
+          0.9797
+        ],
+        "extents": [
+          1.9168,
+          2.0576,
+          0.302
+        ],
+        "color_stats": {
+          "count": 631501,
+          "mean_rgb": [
+            0.4153,
+            0.4491,
+            0.34
+          ],
+          "std_rgb": [
+            0.1973,
+            0.162,
+            0.1997
+          ],
+          "min_rgb": [
+            0.0419,
+            0.0673,
+            0.0636
+          ],
+          "max_rgb": [
+            0.9993,
+            0.993,
+            0.9989
+          ]
+        },
+        "reconstruction_time_sec": 29.324
+      }
+    },
+    "desert_road": {
+      "source_dataset": "outputs/desert_road_validation/",
+      "source_video": "C:/Users/25beevdt025/Desktop/coding/third_party/vggt_omega/examples/desert_road.mp4",
+      "reference_camera_file": "ScreenCamera_2026-10-11-19-34-09.json",
+      "baseline": {
+        "pcd_points": 792576,
+        "bounds_min": [
+          -12.2116,
+          -1.8728,
+          0.0509
+        ],
+        "bounds_max": [
+          11.2955,
+          0.1948,
+          21.4639
+        ],
+        "extents": [
+          23.5072,
+          2.0677,
+          21.413
+        ],
+        "surface_roughness_m": 0.00277
+      },
+      "confidence_filtered": {
+        "points": 385481,
+        "surface_roughness_m": 0.00021
+      },
+      "fused": {
+        "points": 7737,
+        "surface_roughness_m": 0.00072,
+        "roughness_reduction_pct": 73.87
+      },
+      "mesh_best": {
+        "is_valid": true,
+        "vertex_count": 12619,
+        "triangle_count": 24690,
+        "finite_coordinates": true,
+        "valid_triangle_indices": true,
+        "has_vertex_colors": true,
+        "has_vertex_normals": true,
+        "is_edge_manifold": false,
+        "is_vertex_manifold": false,
+        "bounding_box_min": [
+          -1.4778,
+          -0.1112,
+          -0.0049
+        ],
+        "bounding_box_max": [
+          1.6389,
+          0.21,
+          3.7934
+        ],
+        "extents": [
+          3.1167,
+          0.3213,
+          3.7983
+        ],
+        "color_stats": {
+          "count": 12619,
+          "mean_rgb": [
+            0.5805,
+            0.4944,
+            0.417
+          ],
+          "std_rgb": [
+            0.1596,
+            0.1015,
+            0.076
+          ],
+          "min_rgb": [
+            0.1416,
+            0.1913,
+            0.223
+          ],
+          "max_rgb": [
+            0.7846,
+            0.6767,
+            0.7442
+          ]
+        },
+        "reconstruction_time_sec": 1.042
+      }
+    }
+  }
+}

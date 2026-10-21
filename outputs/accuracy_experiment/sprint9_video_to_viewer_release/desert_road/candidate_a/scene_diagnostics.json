@@ -1,0 +1,19 @@
+{
+  "scene": "desert_road_candidate_a",
+  "status": "PASS",
+  "moving_vehicle_removed": true,
+  "taubin_iterations": 30,
+  "interior_holes": 0,
+  "total_boundary_edges": 669,
+  "max_boundary_jump_mm": 136.8,
+  "bounding_box_min": [
+    -0.6553016372417511,
+    -0.04716798942544524,
+    -2.411248686750224
+  ],
+  "bounding_box_max": [
+    0.5500746201643828,
+    0.23341680522184594,
+    2.2353537252179767
+  ]
+}

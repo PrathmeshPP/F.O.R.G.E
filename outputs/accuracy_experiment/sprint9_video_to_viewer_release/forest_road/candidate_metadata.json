@@ -1,0 +1,43 @@
+{
+  "scene_name": "forest_road",
+  "source_video_provenance": {
+    "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+    "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+    "size_bytes": 10681415,
+    "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+    "width": 1280,
+    "height": 720,
+    "fps": 23.976,
+    "frame_count": 730,
+    "duration_sec": 30.447,
+    "scene": "forest_road",
+    "verified": true,
+    "status": "AVAILABLE_AND_VERIFIED"
+  },
+  "reconstruction_run_id": "sprint9_video_to_viewer_release",
+  "mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\surface_mesh_repaired.ply",
+  "mesh_relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/forest_road/surface_mesh_repaired.ply",
+  "photographic_mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\surface_mesh_photographic.ply",
+  "textured_obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\textured_mesh.obj",
+  "sha256_geometry_hash": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+  "sha256_photographic_hash": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+  "sha256_obj_hash": "f05f497181361cf4ecb98926d843f8a178c4b48d8c662ab8604e2f779fa2d86b",
+  "sha256_mtl_hash": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+  "sha256_atlas_hash": "c7cc73c3cc954045729402eaf785fbacd4d34e249efb9b019aba01f3fa28dea9",
+  "vertex_count": 462896,
+  "triangle_count": 919292,
+  "boundary_statistics": {
+    "total_boundary_edges": 9166,
+    "total_boundary_loops": 88,
+    "interior_holes_count": 87,
+    "max_boundary_jump_mm": 426.28,
+    "mean_boundary_jump_mm": 66.04,
+    "std_boundary_jump_mm": 101.71
+  },
+  "renders": {
+    "top": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\render_top.png",
+    "oblique": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\render_oblique.png",
+    "closeup": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\render_closeup.png",
+    "baseline_vs_new": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\forest_road\\baseline_vs_new.png"
+  }
+}

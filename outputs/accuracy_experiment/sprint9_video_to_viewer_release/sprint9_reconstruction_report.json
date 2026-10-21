@@ -1,0 +1,127 @@
+{
+  "sprint": "Sprint 9",
+  "status": "SUCCESS",
+  "release_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release",
+  "source_inventory": {
+    "timestamp_utc": "2026-10-20T20:36:24Z",
+    "sprint": "Sprint 9",
+    "benchmark_scenes": {
+      "campus_0049": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+        "size_bytes": 162041214,
+        "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.94,
+        "frame_count": 966,
+        "duration_sec": 16.116,
+        "scene": "campus_0049",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      },
+      "desert_road": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+        "size_bytes": 6539814,
+        "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+        "width": 1280,
+        "height": 720,
+        "fps": 23.976,
+        "frame_count": 477,
+        "duration_sec": 19.895,
+        "scene": "desert_road",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      },
+      "forest_road": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+        "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+        "size_bytes": 10681415,
+        "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+        "width": 1280,
+        "height": 720,
+        "fps": 23.976,
+        "frame_count": 730,
+        "duration_sec": 30.447,
+        "scene": "forest_road",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      },
+      "river_bridge": {
+        "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+        "relative_path": "outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+        "size_bytes": 70005949,
+        "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+        "width": 3840,
+        "height": 2160,
+        "fps": 59.94,
+        "frame_count": 750,
+        "duration_sec": 12.513,
+        "scene": "river_bridge",
+        "verified": true,
+        "status": "AVAILABLE_AND_VERIFIED"
+      }
+    },
+    "hardware_environment": {
+      "gpu_device": "NVIDIA GeForce RTX 2070 SUPER",
+      "vram_gb": 8.59,
+      "inference_resolution": "688x384 (single-window inference)",
+      "native_resolutions": {
+        "campus_0049": "3840x2160 (4K UHD)",
+        "desert_road": "1280x720 (HD)",
+        "forest_road": "1280x720 (HD)",
+        "river_bridge": "3840x2160 (4K UHD)"
+      },
+      "model_architecture": "VGGT-Omega 1B Feed-Forward Foundation Model",
+      "inference_checkpoint": "vggt_omega_1b_512.pt"
+    }
+  },
+  "scenes_summary": {
+    "campus_0049": {
+      "display_name": "Campus 0049",
+      "acceptance_status": "PARTIAL",
+      "acceptance_label": "Conditional Acceptance (Drone Hover Limitation)",
+      "vertex_count": 128336,
+      "triangle_count": 253487,
+      "sha256_geometry": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+      "sha256_obj": "7278af1cbeb04ce8c31d83db50b09d59ea9516903f62f4561b3d05bbd62daf82"
+    },
+    "desert_road_candidate_a": {
+      "display_name": "Desert Road \u2014 Candidate A (Static Clean)",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Zero Vehicles, Seamless Shoulders)",
+      "vertex_count": 53069,
+      "triangle_count": 105467,
+      "sha256_geometry": "b442150ca2d5a4b1d196c8f83d9f36b2aa330a7b815b708c9a1a17f177259a11",
+      "sha256_obj": "6d91b36b94afbda4fef3aa7e25ae1ac55b0ad5fc1807e061e8693468bb24d433"
+    },
+    "desert_road_candidate_b": {
+      "display_name": "Desert Road \u2014 Candidate B (Vehicle Preserved)",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Shape-Aware Mask, Zero Road Box)",
+      "vertex_count": 53101,
+      "triangle_count": 105518,
+      "sha256_geometry": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+      "sha256_obj": "ee0fdd35524fff4357c048c29a4454fb982a7283ac1183f8d6ad863822f3a0f4"
+    },
+    "forest_road": {
+      "display_name": "Forest Road",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Canopy Voids Validated)",
+      "vertex_count": 462896,
+      "triangle_count": 919292,
+      "sha256_geometry": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+      "sha256_obj": "f05f497181361cf4ecb98926d843f8a178c4b48d8c662ab8604e2f779fa2d86b"
+    },
+    "river_bridge": {
+      "display_name": "River/Bridge",
+      "acceptance_status": "PASS",
+      "acceptance_label": "Fully Accepted (Deck, Railings, Piers & Channel Verified)",
+      "vertex_count": 132424,
+      "triangle_count": 260685,
+      "sha256_geometry": "7d049e9e2e680a6c002b362d4f6e7a501fa01896aedfd3cd82922d0a7f7f9be7",
+      "sha256_obj": "fb28f5522dbae5d28ee9358d8e8056a1252ef8f56db39ccf2984b3c7c28808a9"
+    }
+  }
+}

@@ -1,0 +1,145 @@
+{
+  "scene_id": "forest_road",
+  "display_name": "Forest Road",
+  "category": "Terrain & Vegetation",
+  "source_video_provenance": {
+    "name": "forest_road.mp4",
+    "resolution": "1280x720",
+    "fps": 23.976,
+    "frame_count": 730,
+    "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a"
+  },
+  "mesh_statistics": {
+    "unique_vertices": 462896,
+    "faces": 919292,
+    "triangles": 919292,
+    "rendered_positions_obj": 2757876,
+    "is_finite": true,
+    "is_non_empty": true,
+    "bounding_box": {
+      "min": [
+        -0.8832963705062866,
+        -0.5073967576026917,
+        0.75914466381073
+      ],
+      "max": [
+        0.8014446496963501,
+        0.4298086166381836,
+        1.230013370513916
+      ],
+      "extents": [
+        1.6847410202026367,
+        0.9372053742408752,
+        0.47086870670318604
+      ],
+      "center": [
+        -0.04092586040496826,
+        -0.03879407048225403,
+        0.994579017162323
+      ]
+    }
+  },
+  "independent_library_validation": {
+    "trimesh_ply_load": true,
+    "trimesh_glb_reload": true,
+    "open3d_obj_reload": true,
+    "open3d_ply_render": true,
+    "all_coordinates_finite": true,
+    "texture_references_valid": true,
+    "status": "PASS"
+  },
+  "coordinate_notice": "Model-relative coordinates. Metric scale uncalibrated.",
+  "known_limitations": "Dense mountain forest canopy with winding two-lane paved roadway and double yellow lane markings. Validated closed tree-crown manifold structures with natural open-air canopy voids.",
+  "artifacts": [
+    {
+      "filename": "model_geometry.ply",
+      "description": "Untextured 3D Mesh (Polygon File Format, binary LE)",
+      "relative_path": "outputs/manual_model_review/forest_road/model_geometry.ply",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\model_geometry.ply",
+      "file_size_bytes": 35558818,
+      "sha256": "1d635dce8c9d023093d4b43fdeb420be4f366fc6d08aa6c4a391121cf03f875c",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_geometry.obj",
+      "description": "Untextured 3D Mesh (Wavefront OBJ, pure geometry)",
+      "relative_path": "outputs/manual_model_review/forest_road/model_geometry.obj",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\model_geometry.obj",
+      "file_size_bytes": 70107867,
+      "sha256": "51d28d50ff566f44d6583a26c44957a77636211f45a101854f9d47d7c1768aa2",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_photographic.ply",
+      "description": "Photographic 3D Mesh (Vertex Colors RGB, binary LE)",
+      "relative_path": "outputs/manual_model_review/forest_road/model_photographic.ply",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\model_photographic.ply",
+      "file_size_bytes": 35558818,
+      "sha256": "1cb5896612a8b1d040b35553ea2000df97d7a3311c59e4e2f42afcdd6c63bfc0",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_textured.obj",
+      "description": "Textured 3D Model (Wavefront OBJ, UV mapped)",
+      "relative_path": "outputs/manual_model_review/forest_road/model_textured.obj",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\model_textured.obj",
+      "file_size_bytes": 117409996,
+      "sha256": "c36661af14d0a3d164370a436e1cbc8d0f6c1756ec367b20fc2b85ff44bb7628",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_textured.mtl",
+      "description": "Material Library Definition (MTL)",
+      "relative_path": "outputs/manual_model_review/forest_road/model_textured.mtl",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\model_textured.mtl",
+      "file_size_bytes": 176,
+      "sha256": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "texture_atlas.png",
+      "description": "Texture Atlas Map (4096x4096 PNG)",
+      "relative_path": "outputs/manual_model_review/forest_road/texture_atlas.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\texture_atlas.png",
+      "file_size_bytes": 25149397,
+      "sha256": "c7cc73c3cc954045729402eaf785fbacd4d34e249efb9b019aba01f3fa28dea9",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_preview.glb",
+      "description": "Self-Contained 3D Model (glTF 2.0 Binary with embedded PBR textures)",
+      "relative_path": "outputs/manual_model_review/forest_road/model_preview.glb",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\model_preview.glb",
+      "file_size_bytes": 92249276,
+      "sha256": "125d6a5a20e8abab600fd49b478cc4063f47d95e4aefdcd6d55adc8e036d8faf",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "render_overview.png",
+      "description": "Offscreen Render \u2014 Overhead Overview",
+      "relative_path": "outputs/manual_model_review/forest_road/render_overview.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\render_overview.png",
+      "file_size_bytes": 242504,
+      "sha256": "68e316d1a643bf7113a57173dcaa33c5458cc95075a1043970b7f9a004b12418",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "render_oblique.png",
+      "description": "Offscreen Render \u2014 Oblique Perspective",
+      "relative_path": "outputs/manual_model_review/forest_road/render_oblique.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\forest_road\\render_oblique.png",
+      "file_size_bytes": 231078,
+      "sha256": "0baa9424a8aad0b8a2a3676a28248206ac5650a5ba7db2af3db6c17d2cdd5eb4",
+      "exists": true,
+      "non_empty": true
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "captured_at": "2026-10-20T21:16:44.506Z",
+  "sprint": "Sprint 10.1",
+  "url": "http://127.0.0.1:5173/",
+  "browser": "Microsoft Edge (Chromium Headless)",
+  "viewport": "1440x900",
+  "screenshots": [
+    {
+      "name": "demo_campus_0049_overview.png",
+      "desc": "Campus 0049 Overview",
+      "size": 703545
+    },
+    {
+      "name": "demo_campus_0049_facade.png",
+      "desc": "Campus 0049 Facade View",
+      "size": 1366062
+    },
+    {
+      "name": "demo_desert_candidate_a.png",
+      "desc": "Desert Road Candidate A",
+      "size": 488670
+    },
+    {
+      "name": "demo_desert_candidate_b_vehicle_focus.png",
+      "desc": "Desert Road Candidate B Vehicle Focus",
+      "size": 907972
+    },
+    {
+      "name": "demo_desert_comparison.png",
+      "desc": "Desert Road Comparison Mode",
+      "size": 662479
+    },
+    {
+      "name": "demo_forest_road_roadway.png",
+      "desc": "Forest Road Roadway View",
+      "size": 1097371
+    },
+    {
+      "name": "demo_river_bridge_structure.png",
+      "desc": "River Bridge Structure View",
+      "size": 862019
+    }
+  ],
+  "all_passed": true
+}

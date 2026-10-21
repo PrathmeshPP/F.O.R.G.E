@@ -1,0 +1,53 @@
+{
+  "timestamp_utc": "2026-10-20T20:58:14.832Z",
+  "sprint": "Sprint 10",
+  "url": "http://127.0.0.1:5173/",
+  "browser": "Microsoft Edge (Chromium Headless)",
+  "viewport": "1440x900",
+  "scenes_validated": [
+    {
+      "target": "Campus 0049",
+      "screenshot": "demo_campus_0049.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint10_demo_release\\screenshots\\demo_campus_0049.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Desert Road Cand A",
+      "screenshot": "demo_desert_candidate_a.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint10_demo_release\\screenshots\\demo_desert_candidate_a.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Desert Road Cand B",
+      "screenshot": "demo_desert_candidate_b.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint10_demo_release\\screenshots\\demo_desert_candidate_b.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Forest Road",
+      "screenshot": "demo_forest_road.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint10_demo_release\\screenshots\\demo_forest_road.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "River Bridge",
+      "screenshot": "demo_river_bridge.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint10_demo_release\\screenshots\\demo_river_bridge.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    },
+    {
+      "target": "Desert Road Candidate A/B Comparison",
+      "screenshot": "demo_desert_comparison.png",
+      "file_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint10_demo_release\\screenshots\\demo_desert_comparison.png",
+      "canvas_rendered": true,
+      "status": "PASS"
+    }
+  ],
+  "console_errors_count": 0,
+  "errors": []
+}

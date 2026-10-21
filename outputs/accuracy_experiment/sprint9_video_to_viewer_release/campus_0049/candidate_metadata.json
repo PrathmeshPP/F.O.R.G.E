@@ -1,0 +1,43 @@
+{
+  "scene_name": "campus_0049",
+  "source_video_provenance": {
+    "path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+    "relative_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+    "size_bytes": 162041214,
+    "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+    "width": 3840,
+    "height": 2160,
+    "fps": 59.94,
+    "frame_count": 966,
+    "duration_sec": 16.116,
+    "scene": "campus_0049",
+    "verified": true,
+    "status": "AVAILABLE_AND_VERIFIED"
+  },
+  "reconstruction_run_id": "sprint9_video_to_viewer_release",
+  "mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\surface_mesh_repaired.ply",
+  "mesh_relative_path": "outputs/accuracy_experiment/sprint9_video_to_viewer_release/campus_0049/surface_mesh_repaired.ply",
+  "photographic_mesh_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\surface_mesh_photographic.ply",
+  "textured_obj_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\textured_mesh.obj",
+  "sha256_geometry_hash": "adb753a0a5d7201504ed9ff493a5174cb879cc230182b8a13b3905563985fceb",
+  "sha256_photographic_hash": "143a0e9d21b543ec9863dfcede67b0818b277f70d2c2d3d0387014d01533308f",
+  "sha256_obj_hash": "7278af1cbeb04ce8c31d83db50b09d59ea9516903f62f4561b3d05bbd62daf82",
+  "sha256_mtl_hash": "c32e0bf6cdd60037a49ec7c3075e930e3b748657266802e7512363c14f6993cf",
+  "sha256_atlas_hash": "35b3ebe60fdcc893162d5e68c6c147afe5498a3dda5df9bd9dc9c55fdd7c3fd3",
+  "vertex_count": 128336,
+  "triangle_count": 253487,
+  "boundary_statistics": {
+    "total_boundary_edges": 3267,
+    "total_boundary_loops": 33,
+    "interior_holes_count": 32,
+    "max_boundary_jump_mm": 1752.1,
+    "mean_boundary_jump_mm": 257.36,
+    "std_boundary_jump_mm": 415.52
+  },
+  "renders": {
+    "top": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\render_top.png",
+    "oblique": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\render_oblique.png",
+    "closeup": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\render_closeup.png",
+    "baseline_vs_new": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\sprint9_video_to_viewer_release\\campus_0049\\baseline_vs_new.png"
+  }
+}

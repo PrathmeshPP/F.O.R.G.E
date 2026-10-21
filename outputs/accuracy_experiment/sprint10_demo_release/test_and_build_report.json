@@ -1,0 +1,29 @@
+{
+  "timestamp_utc": "2026-10-20T20:59:07Z",
+  "sprint": "Sprint 10",
+  "frontend_production_build": {
+    "status": "SUCCESS",
+    "build_tool": "Vite 8.3.4 (Rolldown Client Environment)",
+    "output_directory": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\viewer\\dist",
+    "index_html_bytes": 1030,
+    "manifest_dist_bytes": 19877,
+    "js_bundle": "index-DUnU3Fdu.js",
+    "js_bundle_bytes": 972989,
+    "css_bundle": "index-Bia4THrk.css",
+    "css_bundle_bytes": 11263,
+    "workflow_modal_bundled": true
+  },
+  "regression_test_suite": {
+    "framework": "pytest 7.4.4 (Python 3.12)",
+    "suites_executed": [
+      "tests/test_sprint9_video_to_viewer.py",
+      "tests/test_sprint8_viewer_platform.py",
+      "tests/test_sprint7h_final_defect_recovery.py"
+    ],
+    "total_tests_collected": 18,
+    "total_passed": 18,
+    "total_failed": 0,
+    "pass_rate_pct": 100.0,
+    "execution_time_sec": 2.3
+  }
+}

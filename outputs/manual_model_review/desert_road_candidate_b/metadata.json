@@ -1,0 +1,145 @@
+{
+  "scene_id": "desert_road_candidate_b",
+  "display_name": "Desert Road \u2014 Candidate B",
+  "category": "Highway Infrastructure",
+  "source_video_provenance": {
+    "name": "desert_road.mp4",
+    "resolution": "1280x720",
+    "fps": 23.976,
+    "frame_count": 477,
+    "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18"
+  },
+  "mesh_statistics": {
+    "unique_vertices": 53101,
+    "faces": 105518,
+    "triangles": 105518,
+    "rendered_positions_obj": 316554,
+    "is_finite": true,
+    "is_non_empty": true,
+    "bounding_box": {
+      "min": [
+        -0.6558319638816589,
+        -0.04672108625502866,
+        -2.4083720359690752
+      ],
+      "max": [
+        0.5475759577950647,
+        0.2334004927330087,
+        2.235515543594848
+      ],
+      "extents": [
+        1.2034079216767237,
+        0.28012157898803736,
+        4.643887579563923
+      ],
+      "center": [
+        -0.05412800304329707,
+        0.09333970323899002,
+        -0.08642824618711353
+      ]
+    }
+  },
+  "independent_library_validation": {
+    "trimesh_ply_load": true,
+    "trimesh_glb_reload": true,
+    "open3d_obj_reload": true,
+    "open3d_ply_render": true,
+    "all_coordinates_finite": true,
+    "texture_references_valid": true,
+    "status": "PASS"
+  },
+  "coordinate_notice": "Camera/model-relative coordinates. Vehicle elevated at reference coordinate [0.03, 0.04, 0.45]. Metric scale uncalibrated.",
+  "known_limitations": "Highway corridor preserving a single reference vehicle (Mini Cooper with rooftop balloons) from Frame 0. Shape-aware instance mask integration with zero rectangular road box and seamless planar road continuity.",
+  "artifacts": [
+    {
+      "filename": "model_geometry.ply",
+      "description": "Untextured 3D Mesh (Polygon File Format, binary LE)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_geometry.ply",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\model_geometry.ply",
+      "file_size_bytes": 4080210,
+      "sha256": "3088a560227c9b821b289ac7c4ec3a23ccacda3d6d056c84d7b56a955828f185",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_geometry.obj",
+      "description": "Untextured 3D Mesh (Wavefront OBJ, pure geometry)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_geometry.obj",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\model_geometry.obj",
+      "file_size_bytes": 7635396,
+      "sha256": "d4e936326204f2773fe40fa19fdba496a36ac03828ebf26edae008657ac5dba0",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_photographic.ply",
+      "description": "Photographic 3D Mesh (Vertex Colors RGB, binary LE)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_photographic.ply",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\model_photographic.ply",
+      "file_size_bytes": 4080210,
+      "sha256": "674ad0ec3d0b40a8fdb9f0680301912a0d7e3a0552c4ef3526740e285f053edf",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_textured.obj",
+      "description": "Textured 3D Model (Wavefront OBJ, UV mapped)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_textured.obj",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\model_textured.obj",
+      "file_size_bytes": 14308563,
+      "sha256": "dc3607d35cb3469debff597cfc1ea3f9d5ac62d3a90e982940d6f8c17c32fe1a",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_textured.mtl",
+      "description": "Material Library Definition (MTL)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_textured.mtl",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\model_textured.mtl",
+      "file_size_bytes": 175,
+      "sha256": "9768a160330c54d7a314081360d0c164902303a256327653c3c8fd6049edcc33",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "texture_atlas.png",
+      "description": "Texture Atlas Map (4096x4096 PNG)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/texture_atlas.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\texture_atlas.png",
+      "file_size_bytes": 8765408,
+      "sha256": "8c4b67a346cb80d7ac3be8af2a2724f31334538509fd6b08b9f7f89484ca803d",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "model_preview.glb",
+      "description": "Self-Contained 3D Model (glTF 2.0 Binary with embedded PBR textures)",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/model_preview.glb",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\model_preview.glb",
+      "file_size_bytes": 20162884,
+      "sha256": "750a30ae96ae09a08272f29d46a9daa882714b62d2e41e48e9413969e0eb5fa5",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "render_overview.png",
+      "description": "Offscreen Render \u2014 Overhead Overview",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/render_overview.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\render_overview.png",
+      "file_size_bytes": 68739,
+      "sha256": "e429660d4961b8385c1c38b7fd1df70dd0abcd5cc72e060bda7d5aa3330d09ed",
+      "exists": true,
+      "non_empty": true
+    },
+    {
+      "filename": "render_oblique.png",
+      "description": "Offscreen Render \u2014 Oblique Perspective",
+      "relative_path": "outputs/manual_model_review/desert_road_candidate_b/render_oblique.png",
+      "absolute_path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\manual_model_review\\desert_road_candidate_b\\render_oblique.png",
+      "file_size_bytes": 61635,
+      "sha256": "b34df575517024d17bf04495b704db37bbb82422b2added9c8ed85faaed99239",
+      "exists": true,
+      "non_empty": true
+    }
+  ]
+}

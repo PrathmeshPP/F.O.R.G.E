@@ -1,0 +1,75 @@
+{
+  "timestamp_utc": "2026-10-20T20:36:24Z",
+  "sprint": "Sprint 9",
+  "benchmark_scenes": {
+    "campus_0049": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "relative_path": "C:\\Users\\25beevdt025\\Desktop\\dji_fly_20260727_172754_0049_1785175051818_video.mp4",
+      "size_bytes": 162041214,
+      "sha256": "7cf250cfb4dd90e6388b5dd2d3d146209cb0c3bbff8ba1dc2d123b7e5d9c3c6a",
+      "width": 3840,
+      "height": 2160,
+      "fps": 59.94,
+      "frame_count": 966,
+      "duration_sec": 16.116,
+      "scene": "campus_0049",
+      "verified": true,
+      "status": "AVAILABLE_AND_VERIFIED"
+    },
+    "desert_road": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+      "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\desert_road.mp4",
+      "size_bytes": 6539814,
+      "sha256": "49b52f8a127db51724df71a0808e0308c09c293946e24fd26cb2d1066069de18",
+      "width": 1280,
+      "height": 720,
+      "fps": 23.976,
+      "frame_count": 477,
+      "duration_sec": 19.895,
+      "scene": "desert_road",
+      "verified": true,
+      "status": "AVAILABLE_AND_VERIFIED"
+    },
+    "forest_road": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\SIH\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+      "relative_path": "C:\\Users\\25beevdt025\\Desktop\\sih1\\third_party\\vggt-omega-main\\examples\\forest_road.mp4",
+      "size_bytes": 10681415,
+      "sha256": "e5e847d9b3863d29c12501347074c58c6cc4e68fb91f4c963bbe3f91294a169a",
+      "width": 1280,
+      "height": 720,
+      "fps": 23.976,
+      "frame_count": 730,
+      "duration_sec": 30.447,
+      "scene": "forest_road",
+      "verified": true,
+      "status": "AVAILABLE_AND_VERIFIED"
+    },
+    "river_bridge": {
+      "path": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+      "relative_path": "outputs\\dji_river_bridge_validation\\segment_52s_64s.mp4",
+      "size_bytes": 70005949,
+      "sha256": "0d1a647a0a0363bed400317a2b3495ad5926d469a5dd7a8b127fee037e7409cb",
+      "width": 3840,
+      "height": 2160,
+      "fps": 59.94,
+      "frame_count": 750,
+      "duration_sec": 12.513,
+      "scene": "river_bridge",
+      "verified": true,
+      "status": "AVAILABLE_AND_VERIFIED"
+    }
+  },
+  "hardware_environment": {
+    "gpu_device": "NVIDIA GeForce RTX 2070 SUPER",
+    "vram_gb": 8.59,
+    "inference_resolution": "688x384 (single-window inference)",
+    "native_resolutions": {
+      "campus_0049": "3840x2160 (4K UHD)",
+      "desert_road": "1280x720 (HD)",
+      "forest_road": "1280x720 (HD)",
+      "river_bridge": "3840x2160 (4K UHD)"
+    },
+    "model_architecture": "VGGT-Omega 1B Feed-Forward Foundation Model",
+    "inference_checkpoint": "vggt_omega_1b_512.pt"
+  }
+}

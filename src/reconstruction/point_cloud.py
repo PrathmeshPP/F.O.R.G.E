@@ -64,14 +64,17 @@ def depth_to_points(
     # X_cam = (u - cx) * depth / fx
     # Y_cam = (v - cy) * depth / fy
     # Z_cam = depth
+    finite_mask = np.isfinite(depth)
+    depth_clean = np.where(finite_mask, depth, 0.0)
     camera_points = np.stack(
         [
-            (u_grid - cx) / fx * depth,
-            (v_grid - cy) / fy * depth,
-            depth,
+            (u_grid - cx) / fx * depth_clean,
+            (v_grid - cy) / fy * depth_clean,
+            depth_clean,
         ],
         axis=-1,
     )  # Shape: (N, H, W, 3)
+    camera_points[~finite_mask] = np.nan
 
     # In OpenCV camera convention: p_cam = R * p_world + T
     # Therefore: p_world = R^T * (p_cam - T)
@@ -228,6 +231,103 @@ def voxel_grid_fusion(
         np.add.at(sum_cols, inverse_indices, c_arr)
         fused_cols = (sum_cols / counts[:, None]).clip(0, 255).astype(np.uint8)
         return fused_pts, fused_cols
+
+
+def filter_by_multiview_support(
+    points: np.ndarray,
+    colors: np.ndarray,
+    extrinsics: np.ndarray,
+    intrinsics: np.ndarray,
+    depth_maps: np.ndarray,
+    confidence_maps: Optional[np.ndarray] = None,
+    min_camera_support: int = 2,
+    rtol: float = 0.08,
+    min_confidence: float = 1.5,
+    return_support_counts: bool = False
+) -> Union[Tuple[np.ndarray, np.ndarray], Tuple[np.ndarray, np.ndarray, np.ndarray]]:
+    """
+    Filters 3D points based on principled multi-view camera support and depth consistency.
+    A point P is supported by camera i if:
+    1. It projects into camera i's sensor bounds [0, W) x [0, H).
+    2. Camera depth Z_cam > 0.
+    3. Relative depth error |Z_cam - d_i(u, v)| / d_i(u, v) <= rtol.
+    4. If confidence_maps provided, c_i(u, v) >= min_confidence.
+
+    Points with camera support count < min_camera_support are rejected as unsupported
+    single-view fringe artifacts.
+    """
+    pts = np.asarray(points, dtype=np.float64)
+    cols = np.asarray(colors)
+    N_pts = len(pts)
+    if N_pts == 0:
+        if return_support_counts:
+            return pts.astype(np.float32), cols, np.zeros(0, dtype=np.int32)
+        return pts.astype(np.float32), cols
+
+    d_arr = np.squeeze(depth_maps)
+    if d_arr.ndim == 2:
+        d_arr = d_arr[None, ...]
+    num_cams, H, W = d_arr.shape
+
+    if confidence_maps is not None:
+        c_arr = np.squeeze(confidence_maps)
+        if c_arr.ndim == 2:
+            c_arr = c_arr[None, ...]
+    else:
+        c_arr = None
+
+    ext = np.asarray(extrinsics)
+    if ext.ndim == 2:
+        ext = ext[None, ...]
+
+    intr = np.asarray(intrinsics)
+    if intr.ndim == 2:
+        intr = intr[None, ...]
+
+    support_counts = np.zeros(N_pts, dtype=np.int32)
+
+    for i in range(num_cams):
+        R = ext[i, :3, :3]
+        t = ext[i, :3, 3]
+        K = intr[i]
+        d_map = d_arr[i]
+        c_map = c_arr[i] if c_arr is not None else None
+
+        P_cam = (R @ pts.T + t[:, None]).T
+        Z_cam = P_cam[:, 2]
+        in_front = Z_cam > 0.05
+
+        u = np.round(K[0, 0] * P_cam[:, 0] / np.maximum(Z_cam, 1e-6) + K[0, 2]).astype(np.int64)
+        v = np.round(K[1, 1] * P_cam[:, 1] / np.maximum(Z_cam, 1e-6) + K[1, 2]).astype(np.int64)
+
+        in_bounds = in_front & (u >= 0) & (u < W) & (v >= 0) & (v < H)
+        valid_idx = np.where(in_bounds)[0]
+
+        if len(valid_idx) == 0:
+            continue
+
+        u_v = u[valid_idx]
+        v_v = v[valid_idx]
+        pred_d = d_map[v_v, u_v]
+        z_v = Z_cam[valid_idx]
+
+        rel_diff = np.abs(z_v - pred_d) / np.maximum(pred_d, 1e-6)
+        consistent = rel_diff <= rtol
+
+        if c_map is not None:
+            pred_c = c_map[v_v, u_v]
+            consistent = consistent & (pred_c >= min_confidence)
+
+        support_counts[valid_idx[consistent]] += 1
+
+    mask = support_counts >= min_camera_support
+    filtered_pts = pts[mask].astype(np.float32)
+    filtered_cols = cols[mask]
+
+    if return_support_counts:
+        return filtered_pts, filtered_cols, support_counts[mask]
+    return filtered_pts, filtered_cols
+
 
 
 def create_point_cloud(

@@ -1,0 +1,179 @@
+{
+  "pipeline": "GeneralReconstructionPipeline",
+  "timestamp_utc": "2026-10-18T19:51:07Z",
+  "scene_classification": "river_bridge_flight_corridor",
+  "coordinate_units_note": "Model-predicted relative coordinate units; unverified against ground truth GCPs.",
+  "disaster_readiness_evaluation": {
+    "scale_verification_status": {
+      "is_metric_ground_truth_calibrated": false,
+      "scale_units": "model_relative_uncalibrated",
+      "explanation": "Predicted coordinates reflect internal model scale. Centimetre-level physical accuracy is unverified without surveyor GCPs or RTK telemetry."
+    },
+    "coverage_diagnostics": {
+      "spatial_extents": [
+        9.1611,
+        1.6538,
+        6.3349
+      ],
+      "bounding_volume": 95.9781,
+      "estimated_ground_footprint": 58.0342,
+      "retained_points": 2071267,
+      "mesh_vertices": 323203,
+      "mesh_triangles": 637405
+    },
+    "uncertainty_and_occlusion": {
+      "weakly_observed_ray_ratio": 0.3037,
+      "sub_canopy_occlusion_detected": false,
+      "unobserved_ground_status": "PARTIALLY_VISIBLE"
+    },
+    "geometric_integrity": {
+      "is_edge_manifold": false,
+      "is_vertex_manifold": false,
+      "has_finite_coordinates": true
+    },
+    "operational_readiness_verdict": {
+      "rough_visual_reconnaissance": "ACCEPTABLE",
+      "tactical_pathfinding_assessment": "NOT_RECOMMENDED",
+      "metric_engineering_and_clearance": "NOT_PERMITTED_WITHOUT_GCP",
+      "operational_warnings": [
+        "Predominantly forward camera translation. Distant depth observations exhibit smaller stereo parallax; far-field confidence naturally decreases toward the horizon.",
+        "Coordinate units are model-relative and unverified against Ground Control Points (GCPs). Do NOT use for precision metric clearance measurements.",
+        "High proportion of weakly observed regions (30.4% low confidence). Structural voids or occlusion likely."
+      ]
+    }
+  },
+  "trajectory_diagnostics": {
+    "num_frames": 8,
+    "camera_centers": [
+      [
+        0.0,
+        -0.0,
+        0.0
+      ],
+      [
+        0.0014,
+        -0.0132,
+        0.0583
+      ],
+      [
+        0.0049,
+        -0.0273,
+        0.1188
+      ],
+      [
+        0.0106,
+        -0.0414,
+        0.176
+      ],
+      [
+        0.0106,
+        -0.0444,
+        0.1893
+      ],
+      [
+        0.0103,
+        -0.0444,
+        0.1899
+      ],
+      [
+        0.0102,
+        -0.0446,
+        0.1899
+      ],
+      [
+        0.0124,
+        -0.0485,
+        0.2073
+      ]
+    ],
+    "mean_camera_center": [
+      0.0076,
+      -0.033,
+      0.1412
+    ],
+    "total_path_length": 0.2136,
+    "net_translation": 0.2132,
+    "trajectory_extent": 0.2072,
+    "mean_frame_rotation_deg": 0.91,
+    "motion_type": "forward_axial_motion",
+    "warnings": [
+      "Predominantly forward camera translation. Distant depth observations exhibit smaller stereo parallax; far-field confidence naturally decreases toward the horizon."
+    ]
+  },
+  "adaptive_parameters": {
+    "resolved_min_depth": 0.1,
+    "resolved_max_depth": 6.1111,
+    "resolved_min_confidence": 0.5,
+    "resolved_voxel_size": null,
+    "scene_max_extent": 5.7182,
+    "median_depth_z": 1.2882,
+    "mean_focal_length_px": 490.64
+  },
+  "point_cloud": {
+    "raw_filtered_points": 2071267,
+    "active_points": 2071267,
+    "is_voxel_fused": false,
+    "voxel_size": null,
+    "surface_roughness_residual": 0.001161,
+    "bounds_min": [
+      -4.2745,
+      -1.4803,
+      0.3905
+    ],
+    "bounds_max": [
+      4.8865,
+      0.1735,
+      6.7254
+    ],
+    "extents": [
+      9.1611,
+      1.6538,
+      6.3349
+    ]
+  },
+  "surface_mesh": {
+    "vertex_count": 323203,
+    "triangle_count": 637405,
+    "has_vertex_colors": true,
+    "has_vertex_normals": true,
+    "is_edge_manifold": false,
+    "is_vertex_manifold": false,
+    "mesh_bounds_min": [
+      -3.7879,
+      -1.4846,
+      0.3695
+    ],
+    "mesh_bounds_max": [
+      4.884,
+      0.1811,
+      6.6924
+    ],
+    "mesh_extents": [
+      8.6719,
+      1.6657,
+      6.3229
+    ],
+    "color_stats": {
+      "mean_rgb": [
+        0.6665,
+        0.7103,
+        0.7402
+      ],
+      "std_rgb": [
+        0.1492,
+        0.1351,
+        0.1386
+      ]
+    },
+    "meshing_time_sec": 18.853
+  },
+  "performance": {
+    "total_pipeline_time_sec": 31.488
+  },
+  "artifacts": {
+    "point_cloud_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\river_bridge_flight_corridor\\reconstruction\\point_cloud_filtered.ply",
+    "fused_ply": null,
+    "surface_mesh_ply": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\river_bridge_flight_corridor\\reconstruction\\surface_mesh.ply",
+    "surface_mesh_obj": "C:\\Users\\25beevdt025\\Desktop\\FORGE\\outputs\\accuracy_experiment\\river_bridge_flight_corridor\\reconstruction\\surface_mesh.obj"
+  }
+}
